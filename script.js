@@ -76,9 +76,19 @@
       const leftChildren = sideChildren.filter((c) => c.dataset.side === 'left');
       const rightChildren = sideChildren.filter((c) => c.dataset.side === 'right');
 
+      const isMainCollapsed = el.classList.contains('collapsed');
+
       // Position left sub-nodes
       let leftY = cursorY;
       leftChildren.forEach((child) => {
+        if (isMainCollapsed) {
+          child.style.display = 'none';
+          elements.filter((d) => d.dataset.parent === child.id && d.classList.contains('day-node'))
+            .forEach((d) => d.style.display = 'none');
+          return;
+        }
+        child.style.display = 'block';
+
         const cw = child.offsetWidth;
         const ch = child.offsetHeight;
 
@@ -153,6 +163,14 @@
       // Position right sub-nodes
       let rightY = cursorY;
       rightChildren.forEach((child) => {
+        if (isMainCollapsed) {
+          child.style.display = 'none';
+          elements.filter((d) => d.dataset.parent === child.id && d.classList.contains('day-node'))
+            .forEach((d) => d.style.display = 'none');
+          return;
+        }
+        child.style.display = 'block';
+
         const cw = child.offsetWidth;
         const ch = child.offsetHeight;
         const cx = centerX + w / 2 + branchGapX;
@@ -379,12 +397,20 @@
     if (!node) return;
     if (statusMenu.classList.contains('open')) return;
 
-    // Toggle children if it's a sub-node
-    if (node.classList.contains('sub-node')) {
-      const hasDayChildren = Array.from(canvas.children).some(
-        (d) => d.dataset.parent === node.id && d.classList.contains('day-node')
-      );
-      if (hasDayChildren) {
+    // Toggle children if it's a sub-node or main-node
+    if (node.classList.contains('sub-node') || node.classList.contains('main-node')) {
+      let hasChildren = false;
+      if (node.classList.contains('sub-node')) {
+        hasChildren = Array.from(canvas.children).some(
+          (d) => d.dataset.parent === node.id && d.classList.contains('day-node')
+        );
+      } else if (node.classList.contains('main-node')) {
+        hasChildren = Array.from(canvas.children).some(
+          (c) => c.dataset.parent === node.id && (c.classList.contains('sub-node') || c.classList.contains('habit-node') || c.classList.contains('tip-callout'))
+        );
+      }
+
+      if (hasChildren) {
         node.classList.toggle('collapsed');
         const posMap = layoutNodes();
         drawConnectors(posMap);
