@@ -13,7 +13,7 @@
 <!-- Header -->
 <header class="roadmap-header">
   <h1>16-Month .NET Backend Roadmap</h1>
-  <p class="header-subtitle">Backend Engineering · Systems Integration · 10 hrs/week</p>
+  <p class="header-subtitle">Backend Engineering &middot; Systems Integration &middot; 15 hrs/week</p>
   <div class="progress-bar-container">
     <div class="progress-bar" id="progressBar">
       <span class="progress-text" id="progressText">0%</span>
@@ -37,16 +37,10 @@
 <div class="roadmap-canvas" id="roadmapCanvas">
   <svg class="connectors" id="connectorSvg"></svg>
   <div class="tip-callout" id="rulesCallout" data-parent="" data-side="right">
-    Weekly pattern: 4 hrs learning · 4 hrs building · 2 hrs review/refactor/notes. Every month: 1 deliverable, 1 GitHub push, 1 README update, 1 refactor.
+    Weekly pattern: 6 hrs learning &middot; 6 hrs building &middot; 3 hrs review/refactor/notes. Every month: 1 deliverable, 1 GitHub push, 1 README update, 1 refactor.
   </div>
-  <!-- RULES -->
-  <div class="tip-callout" id="rulesCallout" data-parent="" data-side="right">
-    Weekly pattern: 4 hrs learning · 4 hrs building · 2 hrs review/refactor/notes. Every month: 1 deliverable, 1 GitHub push, 1 README update, 1 refactor.
-  </div>
-
-  <!-- ===================== PHASE 1 ===================== -->
   <div class="year-label year-label-1" id="phase1Label" data-parent="" data-side="center">⚡ PHASE 1<br><small>Core Programming & Developer Foundations</small></div>
-  <!-- MONTH 1 -->
+    <!-- MONTH 1 -->
   <div class="node main-node" id="month1" data-parent="phase1Label" data-side="center"
        data-details="🏁 Core Language and Logic|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🏁 Month 1: Core Language and Logic (Part 1)
@@ -100,27 +94,27 @@
        data-details="Refactor the kiosk app into clean methods|Add a proper README.md explaining the project|Push to GitHub with clean commits|Review: does every method have a single responsibility?|Goal: polished project with README ready">
     Day 5 — Project Commit
   </div>
-  <div class="node sub-node" id="m1w3" data-parent="month1" data-side="right"
+  <div class="node sub-node" id="m1w3" data-parent="month1" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Enums and [Flags]|Day 2: struct vs class|Day 3: Generics — List&lt;T&gt;, Dictionary&lt;TKey, TValue&gt;|Day 4: String handling — interpolation, StringBuilder, Span|Day 5: Extend kiosk with enums|✅ Deliverable: type-safe kiosk app">
     📅 Week 3: Enums, Structs &amp; Type Safety
   </div>
-  <div class="node day-node" id="m1w3_d1" data-parent="m1w3" data-side="right"
+  <div class="node day-node" id="m1w3_d1" data-parent="m1w3" data-side="left"
        data-details="Create enums for device status: enum DeviceStatus { Online, Offline, Error }|Create enums for scan results: enum ScanResultType { Success, Failure, Timeout }|Learn [Flags] enums for combinable options|Use enums in switch expressions for clean pattern matching|Goal: enums replace magic strings and numbers">
     Day 1 — Enums
   </div>
-  <div class="node day-node" id="m1w3_d2" data-parent="m1w3" data-side="right"
+  <div class="node day-node" id="m1w3_d2" data-parent="m1w3" data-side="left"
        data-details="Learn when to use struct vs class|Create a DeviceAddress struct with IP and Port fields|Structs are value types — they copy on assignment|Classes are reference types — they share references|Goal: know the right tool for small data containers">
     Day 2 — Structs
   </div>
-  <div class="node day-node" id="m1w3_d3" data-parent="m1w3" data-side="right"
+  <div class="node day-node" id="m1w3_d3" data-parent="m1w3" data-side="left"
        data-details="Learn List&lt;T&gt; and Dictionary&lt;TKey, TValue&gt;|C# generics are stricter than TypeScript generics — enforced at compile time|Create List&lt;string&gt; and Dictionary&lt;string, int&gt;|Compare to JS arrays and objects — C# collections are strongly typed|Goal: comfortable with generic collections">
     Day 3 — Generics Intro
   </div>
-  <div class="node day-node" id="m1w3_d4" data-parent="m1w3" data-side="right"
+  <div class="node day-node" id="m1w3_d4" data-parent="m1w3" data-side="left"
        data-details="String interpolation: $&quot;Hello {name}&quot; — you know this from JS template literals|StringBuilder for building large strings efficiently in loops|string.Format() for formatted output|Span&lt;char&gt; basics — high-performance string slicing (awareness level)|Goal: know the C# string toolkit">
     Day 4 — String Handling
   </div>
-  <div class="node day-node" id="m1w3_d5" data-parent="m1w3" data-side="right"
+  <div class="node day-node" id="m1w3_d5" data-parent="m1w3" data-side="left"
        data-details="Extend the kiosk app with enums for menu options and scan results|Replace any magic numbers or strings with proper enums|Add type-safe collections for scan history|Commit: git add . &amp;&amp; git commit -m &quot;feat: enums and type-safe collections&quot;|Goal: the app uses C#'s type system properly">
     Day 5 — Mini Exercise
   </div>
@@ -148,105 +142,105 @@
        data-details="Push a polished kiosk app with enums, events, records, nullability, pattern matching|Write a README section comparing C# patterns to their JS/TS equivalents|Review: does the code feel idiomatic C#, not translated JavaScript?|Tag: git tag v1.0 — C# foundations complete|Goal: Month 1 done — you think in C#, not JS">
     Day 5 — Month Review
   </div>
-  <div class="node sub-node" id="m2w1" data-parent="month1" data-side="left"
+  <div class="node sub-node" id="m2w1" data-parent="month1" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Classes vs objects theory|Day 2: Create BiometricScanner class|Day 3: Constructors and new keyword|Day 4: Fields: SerialNumber, Manufacturer, IsConnected|Day 5: Create multiple scanner instances|✅ Deliverable: OOP class with instances">
     📅 Week 5: Classes & Objects
   </div>
-  <div class="node day-node" id="m2w1_d1" data-parent="m2w1" data-side="left"
+  <div class="node day-node" id="m2w1_d1" data-parent="m2w1" data-side="right"
        data-details="Read: 'What is object-oriented programming' — focus on the real-world analogy (a Scanner is an object with state and behavior)|Understand: a class is a blueprint; an object is an instance of that blueprint|Consider: a BiometricScanner has properties (SerialNumber, IsConnected) and behaviors (Connect, Scan)|Write in a notebook: 3 real-world objects from your work and their properties|Goal: OOP mental model is clear before writing any code">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m2w1_d2" data-parent="m2w1" data-side="left"
+  <div class="node day-node" id="m2w1_d2" data-parent="m2w1" data-side="right"
        data-details="Create a new project: dotnet new console -n OopKiosk|Add a file BiometricScanner.cs in the project folder|Write: public class BiometricScanner { } — an empty class|In Program.cs: BiometricScanner scanner = new BiometricScanner();|Run: dotnet run — it compiles → class exists, object created">
     Day 2 — First Class
   </div>
-  <div class="node day-node" id="m2w1_d3" data-parent="m2w1" data-side="left"
+  <div class="node day-node" id="m2w1_d3" data-parent="m2w1" data-side="right"
        data-details="Add a constructor: public BiometricScanner(string serial) { SerialNumber = serial; }|Add a public field (for now): public string SerialNumber;|In Program.cs: var scanner = new BiometricScanner('SN-001'); Console.WriteLine(scanner.SerialNumber);|Try creating two instances with different serial numbers and printing both|Goal: you understand constructors initialize state; each object is independent">
     Day 3 — Constructors
   </div>
-  <div class="node day-node" id="m2w1_d4" data-parent="m2w1" data-side="left"
+  <div class="node day-node" id="m2w1_d4" data-parent="m2w1" data-side="right"
        data-details="Replace the public field with a property: public string SerialNumber { get; private set; }|Add: public string Manufacturer { get; private set; } and public bool IsConnected { get; private set; }|Update the constructor to accept and set all three|In Program.cs print all three properties for two different scanner objects|Goal: you know the difference between fields and auto-properties">
     Day 4 — Fields and Properties
   </div>
-  <div class="node day-node" id="m2w1_d5" data-parent="m2w1" data-side="left"
+  <div class="node day-node" id="m2w1_d5" data-parent="m2w1" data-side="right"
        data-details="Create 3 scanner instances: SN-001 (Dermalog), SN-002 (Thales), SN-003 (NEC)|Print each one's details using Console.WriteLine|Try accessing scanner.IsConnected directly — it should fail because it's private set|Understand: private set means only the class can change it — external code can only read|Commit: git add . &amp;&amp; git commit -m 'feat: BiometricScanner class with properties'">
     Day 5 — Mini Exercise
   </div>
-  <div class="node sub-node" id="m2w2" data-parent="month1" data-side="left"
+  <div class="node sub-node" id="m2w2" data-parent="month1" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: public, private — protect state|Day 2: Properties with { get; set; }|Day 3: Validation — no empty serial numbers|Day 4: Methods: PowerOn(), Connect(), Disconnect()|Day 5: Refactor for cleanliness|✅ Deliverable: validated, encapsulated class">
     📅 Week 6: Encapsulation & Validation
   </div>
-  <div class="node day-node" id="m2w2_d1" data-parent="m2w2" data-side="left"
+  <div class="node day-node" id="m2w2_d1" data-parent="m2w2" data-side="right"
        data-details="Read: difference between public, private, and protected — 3 minutes|Rule: fields should almost always be private; properties expose them with controlled access|Add a private field: private string _internalLog = ''; — accessible only inside the class|Try accessing _internalLog from Program.cs — observe the compile error|Goal: you instinctively make internals private and expose only what consumers need">
     Day 1 — Access Modifiers
   </div>
-  <div class="node day-node" id="m2w2_d2" data-parent="m2w2" data-side="left"
+  <div class="node day-node" id="m2w2_d2" data-parent="m2w2" data-side="right"
        data-details="Replace auto-properties with full properties that have getter/setter logic|Example: public string SerialNumber { get =&gt; _serialNumber; private set =&gt; _serialNumber = value; }|Keep the backing field private: private string _serialNumber;|For IsConnected use: public bool IsConnected { get; private set; } — this is fine as auto-property|Goal: you understand backing fields vs auto-properties">
     Day 2 — Properties
   </div>
-  <div class="node day-node" id="m2w2_d3" data-parent="m2w2" data-side="left"
+  <div class="node day-node" id="m2w2_d3" data-parent="m2w2" data-side="right"
        data-details="Add validation in the constructor: if (string.IsNullOrWhiteSpace(serial)) throw new ArgumentException('Serial number cannot be empty');|Test: try creating a scanner with empty string — it should throw|Add validation for manufacturer: must not be null or empty|Goal: objects are always valid at creation — invalid objects cannot exist">
     Day 3 — Validation
   </div>
-  <div class="node day-node" id="m2w2_d4" data-parent="m2w2" data-side="left"
+  <div class="node day-node" id="m2w2_d4" data-parent="m2w2" data-side="right"
        data-details="Add methods to the class: public void PowerOn() { IsConnected = false; Console.WriteLine($'{SerialNumber}: powered on'); }|Add: public bool Connect() { IsConnected = true; return true; }|Add: public void Disconnect() { IsConnected = false; }|In Program.cs: call PowerOn(), Connect(), print IsConnected, then Disconnect() and print again|Goal: the object's methods control its own state transitions">
     Day 4 — Methods
   </div>
-  <div class="node day-node" id="m2w2_d5" data-parent="m2w2" data-side="left"
+  <div class="node day-node" id="m2w2_d5" data-parent="m2w2" data-side="right"
        data-details="Review the entire BiometricScanner class — does every field have a reason to be private?|Does every property expose only what callers need?|Remove any public fields — replace with properties|Check: does the class have any logic that belongs elsewhere?|Commit: git add . &amp;&amp; git commit -m 'refactor: encapsulate BiometricScanner properly'">
     Day 5 — Review
   </div>
-  <!-- MONTH 2 -->
+    <!-- MONTH 2 -->
   <div class="node main-node" id="month2" data-parent="month1" data-side="center"
        data-details="🏁 Core Language and Logic|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🏁 Month 2: Core Language and Logic (Part 2)
     <span class="months-badge">~60 hrs</span>
   </div>
-  <div class="node sub-node" id="m2w3" data-parent="month2" data-side="right"
+  <div class="node sub-node" id="m2w3" data-parent="month2" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Base class Device|Day 2: BiometricScanner inherits Device|Day 3: virtual/override — Calibrate()|Day 4: Composition — NetworkCard inside scanner|Day 5: Draw class diagram, match to code|✅ Deliverable: inheritance + composition demo">
     📅 Week 7: Inheritance & Composition
   </div>
-  <div class="node day-node" id="m2w3_d1" data-parent="m2w3" data-side="right"
+  <div class="node day-node" id="m2w3_d1" data-parent="m2w3" data-side="left"
        data-details="Create a new file: Device.cs|Write a base class: public class Device { public string SerialNumber { get; protected set; } public string Manufacturer { get; protected set; } public bool IsConnected { get; protected set; } }|Add a constructor: public Device(string serial, string manufacturer) { ... }|The base class captures what ALL devices share — scanners, printers, card readers etc|Goal: shared state and initialization live in one place">
     Day 1 — Base Class
   </div>
-  <div class="node day-node" id="m2w3_d2" data-parent="m2w3" data-side="right"
+  <div class="node day-node" id="m2w3_d2" data-parent="m2w3" data-side="left"
        data-details="Modify BiometricScanner: public class BiometricScanner : Device|Update its constructor: public BiometricScanner(string serial, string mfr) : base(serial, mfr) { }|Remove any duplicated properties from BiometricScanner — they now come from Device|In Program.cs create a BiometricScanner and access SerialNumber — it comes from Device|Goal: inheritance passes properties and constructor chaining through base()">
     Day 2 — Inheritance
   </div>
-  <div class="node day-node" id="m2w3_d3" data-parent="m2w3" data-side="right"
+  <div class="node day-node" id="m2w3_d3" data-parent="m2w3" data-side="left"
        data-details="In Device add: public virtual void Calibrate() { Console.WriteLine($'{SerialNumber}: generic calibration'); }|In BiometricScanner add: public override void Calibrate() { Console.WriteLine($'{SerialNumber}: biometric calibration sequence'); }|In Program.cs call scanner.Calibrate() — it uses the override|Also call it via Device variable: Device d = scanner; d.Calibrate(); — same override fires (polymorphism!)|Goal: virtual+override enables subclass-specific behavior">
     Day 3 — Virtual/Override
   </div>
-  <div class="node day-node" id="m2w3_d4" data-parent="m2w3" data-side="right"
+  <div class="node day-node" id="m2w3_d4" data-parent="m2w3" data-side="left"
        data-details="Create a new class: NetworkCard.cs with properties: IpAddress, MacAddress, IsOnline|In BiometricScanner add: public NetworkCard Network { get; private set; }|Initialize it in the constructor: Network = new NetworkCard('192.168.1.50', '00:1A:2B:3C:4D:5E');|Print: scanner.Network.IpAddress — composition means owning another object|Discuss (in code comment): inheritance = 'is a', composition = 'has a'">
     Day 4 — Composition
   </div>
-  <div class="node day-node" id="m2w3_d5" data-parent="m2w3" data-side="right"
+  <div class="node day-node" id="m2w3_d5" data-parent="m2w3" data-side="left"
        data-details="On paper or in a text file draw: Device → BiometricScanner (has) → NetworkCard|Write a comment block at the top of each file explaining the relationship|Match the diagram to the actual code structure|Ask: could I replace inheritance with composition here? When would I?|Commit: git add . &amp;&amp; git commit -m 'feat: inheritance, composition, and Calibrate override'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m2w4" data-parent="month2" data-side="right"
+  <div class="node sub-node" id="m2w4" data-parent="month2" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Why interfaces matter for SDK integration|Day 2: IScanner with Connect() and Scan()|Day 3: FingerprintScanner and RetinaScanner|Day 4: List<IScanner> — loop different types|Day 5: README: why interfaces help swap vendors|✅ Deliverable: interface-based polymorphism">
     📅 Week 8: Interfaces & Polymorphism
   </div>
-  <div class="node day-node" id="m2w4_d1" data-parent="m2w4" data-side="right"
+  <div class="node day-node" id="m2w4_d1" data-parent="m2w4" data-side="left"
        data-details="Read: why interfaces exist — an interface is a contract, not implementation|Real example: you write code against IScanner, not BiometricScanner — you can swap the real device for a fake during tests|Key rule: depend on abstractions not concretions|Write a comment explaining this in plain English before writing any interface code|Goal: you understand the WHY before the syntax">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m2w4_d2" data-parent="m2w4" data-side="right"
+  <div class="node day-node" id="m2w4_d2" data-parent="m2w4" data-side="left"
        data-details="Create IScanner.cs: public interface IScanner { bool Connect(); ScanResult Scan(); void Disconnect(); bool IsConnected { get; } }|Create ScanResult.cs: public class ScanResult { public bool Success { get; set; } public string Message { get; set; } }|Implement the interface in BiometricScanner: public class BiometricScanner : Device, IScanner|Make sure Connect(), Scan(), Disconnect() match the interface signatures exactly|Goal: the class compiles — it fulfills the contract">
     Day 2 — First Interface
   </div>
-  <div class="node day-node" id="m2w4_d3" data-parent="m2w4" data-side="right"
+  <div class="node day-node" id="m2w4_d3" data-parent="m2w4" data-side="left"
        data-details="Create FingerprintScanner.cs that also implements IScanner|Create RetinaScanner.cs that also implements IScanner|Give each a unique Scan() implementation (e.g., simulating different result messages)|Each class can have its own constructor but must implement all interface members|Goal: two independent classes satisfying the same contract">
     Day 3 — Implementations
   </div>
-  <div class="node day-node" id="m2w4_d4" data-parent="m2w4" data-side="right"
+  <div class="node day-node" id="m2w4_d4" data-parent="m2w4" data-side="left"
        data-details="In Program.cs: var scanners = new List&lt;IScanner&gt; { new FingerprintScanner('FP-001'), new RetinaScanner('RT-002') };|Loop: foreach (var s in scanners) { s.Connect(); var r = s.Scan(); Console.WriteLine(r.Message); }|Notice: the loop doesn't know or care which type it's calling — this is polymorphism|Add a third scanner type mid-loop — the loop still works without changes|Goal: you see the power of coding to an interface">
     Day 4 — Polymorphism
   </div>
-  <div class="node day-node" id="m2w4_d5" data-parent="m2w4" data-side="right"
+  <div class="node day-node" id="m2w4_d5" data-parent="m2w4" data-side="left"
        data-details="Open README.md and add a section: 'Design Decisions'|Explain in plain English: why IScanner exists, what it enables (testing, swapping vendors)|Add a small ASCII diagram: IScanner ← BiometricScanner / FingerprintScanner / RetinaScanner|Commit everything and push|Review month 2 — you now understand the 4 pillars of OOP in working code">
     Day 5 — Month Review
   </div>
@@ -274,27 +268,27 @@
        data-details="Build a mini simulator: run 5 fake scans, each with a random EmployeeId from a fixed list|Store each ScanResult in the list|After all scans, look up each employee name and print a summary table|Commit: git add . &amp;&amp; git commit -m 'feat: scan list and employee dictionary lookup'|Goal: List and Dictionary work together in a real data flow">
     Day 5 — Mini Exercise
   </div>
-  <div class="node sub-node" id="m3w2" data-parent="month2" data-side="left"
+  <div class="node sub-node" id="m3w2" data-parent="month2" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: LINQ and lambda theory|Day 2: .Where() — filter failed scans|Day 3: .Select() — extract IDs|Day 4: .OrderBy() and .OrderByDescending()|Day 5: Daily report: totals, successes, failures|✅ Deliverable: LINQ-powered reports">
     📅 Week 10: LINQ Basics
   </div>
-  <div class="node day-node" id="m3w2_d1" data-parent="m3w2" data-side="left"
+  <div class="node day-node" id="m3w2_d1" data-parent="m3w2" data-side="right"
        data-details="Read: LINQ = Language Integrated Query — it lets you query collections like SQL|Lambda syntax: results.Where(r =&gt; r.Success) — r is each item, =&gt; is 'such that'|Try: var successes = results.Where(r =&gt; r.Success).ToList();|Print successes.Count|Goal: you can read and write basic lambda expressions">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m3w2_d2" data-parent="m3w2" data-side="left"
+  <div class="node day-node" id="m3w2_d2" data-parent="m3w2" data-side="right"
        data-details="Filter for failed scans: var failures = results.Where(r =&gt; !r.Success).ToList();|Print each failure's EmployeeId and Message|Chain: results.Where(r =&gt; !r.Success &amp;&amp; r.Timestamp.Hour &gt; 12)|Count failures: int failCount = results.Count(r =&gt; !r.Success);|Goal: filtering is your most-used LINQ operation — practice it well">
     Day 2 — Filtering
   </div>
-  <div class="node day-node" id="m3w2_d3" data-parent="m3w2" data-side="left"
+  <div class="node day-node" id="m3w2_d3" data-parent="m3w2" data-side="right"
        data-details="Project to a new shape: var ids = results.Select(r =&gt; r.EmployeeId).ToList();|This gives a List&lt;string&gt; of just the IDs — no ScanResult objects|Project to an anonymous type: results.Select(r =&gt; new { r.EmployeeId, r.Timestamp })|Print each projected item's EmployeeId|Goal: Select transforms the shape of data — like SQL SELECT">
     Day 3 — Transforming
   </div>
-  <div class="node day-node" id="m3w2_d4" data-parent="m3w2" data-side="left"
+  <div class="node day-node" id="m3w2_d4" data-parent="m3w2" data-side="right"
        data-details="Sort ascending: results.OrderBy(r =&gt; r.Timestamp)|Sort descending: results.OrderByDescending(r =&gt; r.Timestamp)|Sort by success first then by employee: results.OrderBy(r =&gt; r.Success).ThenBy(r =&gt; r.EmployeeId)|Print the sorted list to confirm order|Goal: sorting is one line of code with LINQ">
     Day 4 — Sorting
   </div>
-  <div class="node day-node" id="m3w2_d5" data-parent="m3w2" data-side="left"
+  <div class="node day-node" id="m3w2_d5" data-parent="m3w2" data-side="right"
        data-details="Build a daily report method: static void PrintReport(List&lt;ScanResult&gt; results)|Print: Total: X | Successful: Y | Failed: Z|Print the last 3 scans sorted by timestamp descending|Print the employee with the most scans (use GroupBy + Max)|Commit: git add . &amp;&amp; git commit -m 'feat: LINQ reports on scan data'">
     Day 5 — Daily Report
   </div>
@@ -346,9 +340,8 @@
        data-details="Review what you've built: a console app with OOP classes, LINQ queries, async methods, and JSON file storage|This is KioskSimulator v2 — tag it: git tag v2.0|Push with: git push origin main --tags|Update README.md: list the 4 key features, add dotnet run instructions|Celebrate — you have a working layered application">
     Day 5 — Phase Review
   </div>
-  <!-- ===================== PHASE 2 ===================== -->
   <div class="year-label year-label-1" id="phase2Label" data-parent="month3" data-side="center">🔧 PHASE 2<br><small>Professional Coding & Web Foundations</small></div>
-  <!-- MONTH 3 -->
+    <!-- MONTH 3 -->
   <div class="node main-node" id="month3" data-parent="phase2Label" data-side="center"
        data-details="🏗️ Object-Oriented Design|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🏗️ Month 3: Object-Oriented Design (Part 1)
@@ -402,27 +395,27 @@
        data-details="Review all test method names — rename any that are vague like Test1 or MyTest|Good pattern: MethodName_Scenario_ExpectedBehavior — e.g. Scan_WhenDeviceOffline_ReturnsFalse|Group tests into regions or separate files per class being tested|Run dotnet test one more time — all green|Commit: git add . &amp;&amp; git commit -m 'test: edge case and failure tests'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m4w3" data-parent="month3" data-side="right"
+  <div class="node sub-node" id="m4w3" data-parent="month3" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Why not test against real hardware|Day 2: Moq — mock IScanner|Day 3: Simulated success returns|Day 4: Simulated hardware failure|Day 5: Notes on mocking for SDK code|✅ Deliverable: mocked tests working">
     📅 Week 15: Mocking & Dependency Thinking
   </div>
-  <div class="node day-node" id="m4w3_d1" data-parent="m4w3" data-side="right"
+  <div class="node day-node" id="m4w3_d1" data-parent="m4w3" data-side="left"
        data-details="Read: if your unit test calls the real BiometricScanner hardware, it becomes flaky and slow|The solution: replace the real dependency with a fake that you control|This is Dependency Inversion: your business logic should not depend on concrete hardware classes|It should depend on IScanner — then tests can inject a fake IScanner|Write this in your notes with an example before coding">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m4w3_d2" data-parent="m4w3" data-side="right"
+  <div class="node day-node" id="m4w3_d2" data-parent="m4w3" data-side="left"
        data-details="Run: dotnet add package Moq from the test project|Create a mock: var mockScanner = new Mock&lt;IScanner&gt;();|Setup: mockScanner.Setup(s =&gt; s.Scan()).Returns(new ScanResult { Success = true });|Use the mock: IScanner scanner = mockScanner.Object; var result = scanner.Scan();|Assert result.Success == true — the mock returned what you told it to">
     Day 2 — Moq Setup
   </div>
-  <div class="node day-node" id="m4w3_d3" data-parent="m4w3" data-side="right"
+  <div class="node day-node" id="m4w3_d3" data-parent="m4w3" data-side="left"
        data-details="Setup the mock to return a successful scan result|Write a test that calls business logic (e.g. ScanService.ProcessScan) using the mock scanner|Assert the result's EmployeeId or Success field|The service code doesn't know it's talking to a fake — that's the point|Goal: you can test any code that depends on IScanner without real hardware">
     Day 3 — Simulated Success
   </div>
-  <div class="node day-node" id="m4w3_d4" data-parent="m4w3" data-side="right"
+  <div class="node day-node" id="m4w3_d4" data-parent="m4w3" data-side="left"
        data-details="Setup the mock to throw: mockScanner.Setup(s =&gt; s.Scan()).Throws&lt;TimeoutException&gt;();|Write a test that verifies your service handles the timeout gracefully|Assert: no exception leaks out, a fallback error result is returned|This tests: what happens when hardware fails mid-scan|Goal: failure paths are as well-tested as success paths">
     Day 4 — Simulated Failure
   </div>
-  <div class="node day-node" id="m4w3_d5" data-parent="m4w3" data-side="right"
+  <div class="node day-node" id="m4w3_d5" data-parent="m4w3" data-side="left"
        data-details="Write 2 paragraphs in your notes: why mocking matters for SDK-style code|Key point: you work with real SDKs that control hardware — you can't run those SDKs in CI — mocking lets you test around them|Commit all tests: git add . &amp;&amp; git commit -m 'test: mocking with Moq for IScanner'|Review: you now have happy path, failure, and exception tests all passing">
     Day 5 — Review
   </div>
@@ -450,105 +443,105 @@
        data-details="Run all tests one final time: dotnet test — all green|Make sure you haven't broken existing functionality while refactoring|Review the overall structure: can a new developer understand the project in 5 minutes?|Commit: git add . &amp;&amp; git commit -m 'refactor: extract services, apply DI, clean responsibilities' and push|Goal: Month 4 done — you have a tested, structured, DI-aware codebase">
     Day 5 — Month Review
   </div>
-  <div class="node sub-node" id="m5w1" data-parent="month3" data-side="left"
+  <div class="node sub-node" id="m5w1" data-parent="month3" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: REST API design — resource routes|Day 2: API blueprint — payloads, params, errors|Day 3: OpenAPI/Swagger spec and UI|Day 4: Postman collection versioned in Git|Day 5: Configuration — appsettings, env vars, secrets|✅ Deliverable: API blueprint + Postman collection">
     📅 Week 17: REST API Design &amp; OpenAPI (Accelerated)
   </div>
-  <div class="node day-node" id="m5w1_d1" data-parent="m5w1" data-side="left"
+  <div class="node day-node" id="m5w1_d1" data-parent="m5w1" data-side="right"
        data-details="Study resource-oriented route design — URLs are nouns, HTTP methods are verbs|Design: GET /api/terminals, POST /api/scans, GET /api/terminals/{id}/heartbeats|You already know this from frontend — focus on DESIGNING APIs, not just consuming them|Write 10 REST routes for your kiosk system|Goal: think like an API designer, not just a consumer">
     Day 1 — REST Design
   </div>
-  <div class="node day-node" id="m5w1_d2" data-parent="m5w1" data-side="left"
+  <div class="node day-node" id="m5w1_d2" data-parent="m5w1" data-side="right"
        data-details="Design request/response payloads with JSON examples|Define route params, query params, headers, and standard error shapes|Create API-blueprint.md — your contract document|Include: authentication method, all routes, error format|Goal: a complete API contract before writing any code">
     Day 2 — API Blueprint
   </div>
-  <div class="node day-node" id="m5w1_d3" data-parent="m5w1" data-side="left"
+  <div class="node day-node" id="m5w1_d3" data-parent="m5w1" data-side="right"
        data-details="Learn OpenAPI spec — machine-readable API description in YAML/JSON|Explore editor.swagger.io — see live Swagger UI from a spec|Compare: YAML definition → auto-generated Swagger forms|Understand: specs generate documentation, client SDKs, and test tools automatically|Goal: understand why OpenAPI matters for integration work">
     Day 3 — OpenAPI/Swagger
   </div>
-  <div class="node day-node" id="m5w1_d4" data-parent="m5w1" data-side="left"
+  <div class="node day-node" id="m5w1_d4" data-parent="m5w1" data-side="right"
        data-details="Create a Postman collection &quot;Kiosk API&quot; with folders: Terminals, Scans, Heartbeats|Add your designed requests from the blueprint|Use environment variables: {{base_url}} for flexible URL switching|Export collection to docs/postman-collection.json and commit to Git|Goal: anyone cloning the repo can import and test the API">
     Day 4 — Postman
   </div>
-  <div class="node day-node" id="m5w1_d5" data-parent="m5w1" data-side="left"
+  <div class="node day-node" id="m5w1_d5" data-parent="m5w1" data-side="right"
        data-details="Learn appsettings.json, appsettings.Development.json, and environment variables|Understand user secrets: dotnet user-secrets — for local dev passwords|Rule: never commit secrets to Git — use .env files or secrets manager|Write in your notes: 3 configurable values in your kiosk system|Goal: security-conscious configuration habits">
     Day 5 — Config Theory
   </div>
-  <div class="node sub-node" id="m5w2" data-parent="month3" data-side="left"
+  <div class="node sub-node" id="m5w2" data-parent="month3" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: gRPC theory — protobuf, service-to-service|Day 2: Write .proto file for DeviceService|Day 3: gRPC server in .NET|Day 4: gRPC client calling the server|Day 5: Compare gRPC vs REST for integration|✅ Deliverable: working gRPC service">
     📅 Week 18: gRPC Fundamentals
   </div>
-  <div class="node day-node" id="m5w2_d1" data-parent="m5w2" data-side="left"
+  <div class="node day-node" id="m5w2_d1" data-parent="m5w2" data-side="right"
        data-details="Read: gRPC uses HTTP/2, Protocol Buffers (binary), and is strongly typed|Key difference from REST: binary format, code generation, streaming support|Why integration engineers care: internal service-to-service is faster with gRPC|REST for public APIs, gRPC for internal service communication|Goal: understand when and why to use gRPC">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m5w2_d2" data-parent="m5w2" data-side="left"
+  <div class="node day-node" id="m5w2_d2" data-parent="m5w2" data-side="right"
        data-details="Write a .proto file for DeviceService|Define methods: RegisterDevice, SendHeartbeat, GetDeviceStatus|Define messages: DeviceRequest, HeartbeatRequest, DeviceResponse|Understand: .proto is the contract — like OpenAPI but for gRPC|Goal: you can write a Protocol Buffer service definition">
     Day 2 — Proto Files
   </div>
-  <div class="node day-node" id="m5w2_d3" data-parent="m5w2" data-side="left"
+  <div class="node day-node" id="m5w2_d3" data-parent="m5w2" data-side="right"
        data-details="Run: dotnet new grpc -n DeviceGrpcServer|Look at the generated code — proto compiler creates C# classes|Implement the service: override the generated base class methods|Run the server and verify it starts on a port|Goal: a gRPC server runs on your machine">
     Day 3 — Server
   </div>
-  <div class="node day-node" id="m5w2_d4" data-parent="m5w2" data-side="left"
+  <div class="node day-node" id="m5w2_d4" data-parent="m5w2" data-side="right"
        data-details="Create a console app as gRPC client|Add the Grpc.Net.Client NuGet package|Call RegisterDevice and SendHeartbeat from the client|Print the response — verify round-trip communication|Goal: client and server communicate via gRPC">
     Day 4 — Client
   </div>
-  <div class="node day-node" id="m5w2_d5" data-parent="m5w2" data-side="left"
+  <div class="node day-node" id="m5w2_d5" data-parent="m5w2" data-side="right"
        data-details="Compare gRPC vs REST: performance, tooling, browser support, debugging|REST: human-readable, browser-friendly, universal|gRPC: faster, typed, streaming, but harder to debug|Write a comparison document for your portfolio|Goal: you can recommend the right protocol for each scenario">
     Day 5 — Review
   </div>
-  <!-- MONTH 4 -->
+    <!-- MONTH 4 -->
   <div class="node main-node" id="month4" data-parent="month3" data-side="center"
        data-details="🏗️ Object-Oriented Design|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🏗️ Month 4: Object-Oriented Design (Part 2)
     <span class="months-badge">~60 hrs</span>
   </div>
-  <div class="node sub-node" id="m5w3" data-parent="month4" data-side="right"
+  <div class="node sub-node" id="m5w3" data-parent="month4" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: WebSockets and real-time theory|Day 2: SignalR hub for device status|Day 3: Client connection and live updates|Day 4: Groups for per-terminal broadcasts|Day 5: Document: SignalR vs polling vs gRPC streaming|✅ Deliverable: real-time SignalR hub">
     📅 Week 19: SignalR &amp; Real-Time Communication
   </div>
-  <div class="node day-node" id="m5w3_d1" data-parent="m5w3" data-side="right"
+  <div class="node day-node" id="m5w3_d1" data-parent="m5w3" data-side="left"
        data-details="Read: WebSockets enable bidirectional, persistent connections|Why it matters: terminal status updates, live scan feeds, device alerts|HTTP polling wastes bandwidth; WebSockets push instantly|SignalR abstracts WebSockets — handles fallback and reconnection|Goal: understand the real-time communication landscape">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m5w3_d2" data-parent="m5w3" data-side="right"
+  <div class="node day-node" id="m5w3_d2" data-parent="m5w3" data-side="left"
        data-details="Create a SignalR hub: public class DeviceHub : Hub|Add methods: SendStatusUpdate, NotifyScanComplete|Register: app.MapHub&lt;DeviceHub&gt;(&quot;/hubs/devices&quot;)|Configure in Program.cs: builder.Services.AddSignalR()|Goal: a SignalR hub is running and ready for connections">
     Day 2 — SignalR Hub
   </div>
-  <div class="node day-node" id="m5w3_d3" data-parent="m5w3" data-side="right"
+  <div class="node day-node" id="m5w3_d3" data-parent="m5w3" data-side="left"
        data-details="Connect a simple client (console or browser) to the hub|Receive real-time device status changes as they happen|Test: change a terminal status on the server — see the client update instantly|Compare latency: SignalR push vs HTTP polling every 5 seconds|Goal: experience the power of real-time communication">
     Day 3 — Client Connection
   </div>
-  <div class="node day-node" id="m5w3_d4" data-parent="m5w3" data-side="right"
+  <div class="node day-node" id="m5w3_d4" data-parent="m5w3" data-side="left"
        data-details="Use SignalR groups: await Groups.AddToGroupAsync(connectionId, &quot;terminal-1&quot;)|Broadcast to specific groups: Clients.Group(&quot;terminal-1&quot;).SendAsync(&quot;StatusUpdate&quot;, payload)|This enables: per-terminal or per-site status monitoring|Scale consideration: groups are in-memory by default|Goal: targeted real-time broadcasts">
     Day 4 — Groups
   </div>
-  <div class="node day-node" id="m5w3_d5" data-parent="m5w3" data-side="right"
+  <div class="node day-node" id="m5w3_d5" data-parent="m5w3" data-side="left"
        data-details="Write a comparison: SignalR vs polling vs gRPC streaming|SignalR: easy, browser-compatible, real-time push|Polling: simple but wasteful, good for low-frequency updates|gRPC streaming: high-performance server-to-server|Add to your protocol comparison document|Goal: you can recommend the right real-time approach">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m5w4" data-parent="month4" data-side="right"
+  <div class="node sub-node" id="m5w4" data-parent="month4" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: TCP vs UDP basics|Day 2: TcpClient — simple client/server|Day 3: Message framing — length-prefix, delimiters|Day 4: Serial awareness + network troubleshooting (ping, tracert, nslookup, Wireshark)|Day 5: Protocol comparison + network troubleshooting checklist|✅ Deliverable: TCP basics + protocol comparison + network diagnostics">
     📅 Week 20: TCP/IP, Device Communication &amp; Network Troubleshooting
   </div>
-  <div class="node day-node" id="m5w4_d1" data-parent="m5w4" data-side="right"
+  <div class="node day-node" id="m5w4_d1" data-parent="m5w4" data-side="left"
        data-details="Learn TCP vs UDP: TCP is reliable and ordered, UDP is fast but unreliable|Many biometric devices and hardware SDKs communicate over raw TCP, not HTTP|Understand: your work with biometric devices likely uses TCP under the hood|Key concepts: socket, connection, port, packet|Goal: understand the transport layer your SDKs depend on">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m5w4_d2" data-parent="m5w4" data-side="right"
+  <div class="node day-node" id="m5w4_d2" data-parent="m5w4" data-side="left"
        data-details="Use System.Net.Sockets.TcpClient and TcpListener|Create a simple echo server: listen on port 9000, read message, send back|Create a client: connect to localhost:9000, send &quot;hello&quot;, read response|Observe: raw bytes — no HTTP layer, no JSON parsing, just raw data|Goal: you can build TCP-level communication">
     Day 2 — TcpClient
   </div>
-  <div class="node day-node" id="m5w4_d3" data-parent="m5w4" data-side="right"
+  <div class="node day-node" id="m5w4_d3" data-parent="m5w4" data-side="left"
        data-details="Problem: TCP is a stream — messages can arrive fragmented or merged|Solution: message framing — prefix each message with its length (4-byte int)|Build a length-prefixed protocol: write length header + message bytes|Read: read 4 bytes for length, then read exactly that many bytes for the message|Goal: understand why raw TCP needs framing — this is how real SDKs work">
     Day 3 — Message Framing
   </div>
-  <div class="node day-node" id="m5w4_d4" data-parent="m5w4" data-side="right"
+  <div class="node day-node" id="m5w4_d4" data-parent="m5w4" data-side="left"
        data-details="Study System.IO.Ports.SerialPort at a high level — RS-232 and USB-serial devices|Then learn essential network troubleshooting: ping, tracert/traceroute, nslookup, netstat, and basic Wireshark usage|Understand firewall rules, NAT, and proxy issues — daily pain points when deploying biometric devices behind corporate networks|These diagnostics are what you'll use when a device &quot;can't connect&quot; from a client site|Goal: network troubleshooting toolkit for device deployment">
     Day 4 — Serial &amp; Network Diagnostics
   </div>
-  <div class="node day-node" id="m5w4_d5" data-parent="m5w4" data-side="right"
+  <div class="node day-node" id="m5w4_d5" data-parent="m5w4" data-side="left"
        data-details="Write a protocol comparison document: REST vs gRPC vs SignalR vs TCP vs Serial|When to use each: public API (REST), internal services (gRPC), real-time UI (SignalR), hardware (TCP/Serial)|Include a network troubleshooting checklist for device connectivity issues|This document becomes a portfolio piece — interviewers love protocol breadth|Goal: Month 5 done — you understand 5 communication protocols + network diagnostics">
     Day 5 — Month Review
   </div>
@@ -576,27 +569,27 @@
        data-details="Put a breakpoint on the return Ok(...) line in your controller|Run in debug mode (F5 in VS Code)|Hit the endpoint in Postman — execution pauses at your breakpoint|Use the debug console to inspect variables|Step through: request arrives → route matches → controller method called → response returned">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m6w2" data-parent="month4" data-side="left"
+  <div class="node sub-node" id="m6w2" data-parent="month4" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Request/response DTOs|Day 2: GET + POST endpoints|Day 3: API versioning — URL and header versioning|Day 4: Backward compatibility — safe field additions|Day 5: Test with Swagger/Postman + cleanup|✅ Deliverable: versioned CRUD endpoints">
     📅 Week 22: Models, DTOs, CRUD &amp; API Versioning
   </div>
-  <div class="node day-node" id="m6w2_d1" data-parent="m6w2" data-side="left"
+  <div class="node day-node" id="m6w2_d1" data-parent="m6w2" data-side="right"
        data-details="Create Models/SubmitScanRequest.cs: { string EmployeeId, string ScanType, DateTime Timestamp }|Create Models/ScanResponse.cs: { Guid ScanId, bool Success, string Message, DateTime ProcessedAt }|Add [Required] attributes to fields that must not be null (using System.ComponentModel.DataAnnotations)|These DTOs separate your API surface from your internal domain objects|Goal: you have distinct request and response contracts">
     Day 1 — DTOs
   </div>
-  <div class="node day-node" id="m6w2_d2" data-parent="m6w2" data-side="left"
+  <div class="node day-node" id="m6w2_d2" data-parent="m6w2" data-side="right"
        data-details="Add to TerminalsController: [HttpGet] and [HttpPost] endpoints|Return mock scan results with GET, accept scan payload with POST|Run in Postman: GET /api/terminals, POST /api/terminals/1/scans|Try sending without required fields — observe 400 Bad Request from data annotations|Goal: you can accept and validate a JSON request body">
     Day 2 — GET/POST Endpoints
   </div>
-  <div class="node day-node" id="m6w2_d3" data-parent="m6w2" data-side="left"
+  <div class="node day-node" id="m6w2_d3" data-parent="m6w2" data-side="right"
        data-details="Learn URL versioning: /api/v1/scans vs /api/v2/scans|Learn header versioning: Api-Version header|Understand why integration APIs must never break existing device clients — deployed devices cannot be updated instantly|Add version prefix to your routes: [Route(&quot;api/v1/[controller]&quot;)]|Goal: your API routes are versioned from the start">
     Day 3 — API Versioning
   </div>
-  <div class="node day-node" id="m6w2_d4" data-parent="m6w2" data-side="left"
+  <div class="node day-node" id="m6w2_d4" data-parent="m6w2" data-side="right"
        data-details="Learn how to add new fields without breaking old clients|Study nullable new fields, default values, and response envelope patterns|Critical: deployed devices cannot be updated instantly — your API must be backward compatible|Test: add a new optional field to ScanResponse and verify old clients still work|Goal: you think about backward compatibility before every API change">
     Day 4 — Backward Compatibility
   </div>
-  <div class="node day-node" id="m6w2_d5" data-parent="m6w2" data-side="left"
+  <div class="node day-node" id="m6w2_d5" data-parent="m6w2" data-side="right"
        data-details="Test all endpoints with Swagger and Postman|Review naming: are controller, method, and DTO names consistent and clear?|Folder structure: Models/, Controllers/ — are files in the right place?|Remove the WeatherForecast sample — it's just template noise|Commit: git add . &amp;&amp; git commit -m 'feat: versioned TerminalsController with GET/POST endpoints'">
     Day 5 — Review
   </div>
@@ -648,9 +641,8 @@
        data-details="Commit the end-to-end working state: simulator → API, real third-party API integration, webhook receiver|Tag: git tag v3.0 — full integration pipeline working|Push to GitHub|Update README: Simulator → HTTP POST → KioskApi → Third-Party API + Webhook Receiver|Phase 2 done: you have a real REST API with DI, config, real API consumption, and webhook handling">
     Day 5 — Phase Review
   </div>
-  <!-- ===================== PHASE 3 ===================== -->
   <div class="year-label year-label-1" id="phase3Label" data-parent="month6" data-side="center">🗄️ PHASE 3<br><small>Data & Security Core</small></div>
-  <!-- MONTH 5 -->
+    <!-- MONTH 5 -->
   <div class="node main-node" id="month5" data-parent="phase3Label" data-side="center"
        data-details="🔌 APIs and Data|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🔌 Month 5: APIs and Data (Part 1)
@@ -704,27 +696,27 @@
        data-details="Create a file scripts/create-tables.sql in your kiosk project|Copy the CREATE TABLE and INSERT statements you've written into this file|Comment each statement explaining what it does and why|Run the script on a fresh database to verify it creates everything from scratch|Commit: git add . &amp;&amp; git commit -m 'sql: schema creation and seed scripts'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m7w3" data-parent="month5" data-side="right"
+  <div class="node sub-node" id="m7w3" data-parent="month5" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: INNER JOIN, LEFT JOIN theory|Day 2: Join scans with employees|Day 3: GROUP BY — count per terminal|Day 4: ORDER BY, HAVING|Day 5: Repeat until queries feel natural|✅ Deliverable: complex query practice">
     📅 Week 27: JOINs & Aggregation
   </div>
-  <div class="node day-node" id="m7w3_d1" data-parent="m7w3" data-side="right"
+  <div class="node day-node" id="m7w3_d1" data-parent="m7w3" data-side="left"
        data-details="Read: INNER JOIN returns rows that match in BOTH tables — unmatched rows are excluded|LEFT JOIN returns all rows from the left table plus matching rows from the right (NULLs for non-matching)|Syntax: SELECT t.Location, s.EmployeeId FROM Scans s INNER JOIN Terminals t ON s.TerminalId = t.Id|Understand the ON clause — it's the join condition|Write: when would you use LEFT JOIN instead of INNER JOIN?">
     Day 1 — JOIN Theory
   </div>
-  <div class="node day-node" id="m7w3_d2" data-parent="m7w3" data-side="right"
+  <div class="node day-node" id="m7w3_d2" data-parent="m7w3" data-side="left"
        data-details="Run: SELECT t.Location, s.EmployeeId, s.Timestamp, s.Success FROM Scans s INNER JOIN Terminals t ON s.TerminalId = t.Id|Order by Timestamp to see chronological results|Try LEFT JOIN: SELECT t.Location, s.EmployeeId FROM Terminals t LEFT JOIN Scans s ON s.TerminalId = t.Id|Observe: terminals with no scans appear with NULL values on the right side|Goal: you can join two tables on a FK relationship">
     Day 2 — Execution
   </div>
-  <div class="node day-node" id="m7w3_d3" data-parent="m7w3" data-side="right"
+  <div class="node day-node" id="m7w3_d3" data-parent="m7w3" data-side="left"
        data-details="Run: SELECT EmployeeId, COUNT(*) AS ScanCount FROM Scans GROUP BY EmployeeId|This counts scans per employee — like a GROUP BY aggregation|Add: HAVING COUNT(*) &gt; 1 to filter to employees with more than 1 scan|Run: SELECT TerminalId, COUNT(*) AS TotalScans, SUM(CAST(Success AS INT)) AS Successes FROM Scans GROUP BY TerminalId|Goal: GROUP BY is SQL's equivalent of LINQ .GroupBy()">
     Day 3 — GROUP BY
   </div>
-  <div class="node day-node" id="m7w3_d4" data-parent="m7w3" data-side="right"
+  <div class="node day-node" id="m7w3_d4" data-parent="m7w3" data-side="left"
        data-details="Run: SELECT EmployeeId, COUNT(*) AS ScanCount FROM Scans GROUP BY EmployeeId ORDER BY ScanCount DESC|Add: HAVING ScanCount &gt; 5 — wait, this is an error: must use COUNT(*) &gt; 5 in HAVING or alias in WHERE|Fix: SELECT EmployeeId, COUNT(*) AS ScanCount FROM Scans GROUP BY EmployeeId HAVING COUNT(*) &gt; 1|Understand: WHERE filters before grouping; HAVING filters after|Run: ORDER BY Timestamp DESC — most recent scans first">
     Day 4 — ORDER BY/HAVING
   </div>
-  <div class="node day-node" id="m7w3_d5" data-parent="m7w3" data-side="right"
+  <div class="node day-node" id="m7w3_d5" data-parent="m7w3" data-side="left"
        data-details="Repeat yesterday's queries from memory without looking at your notes|Type them fresh and fix errors using the error messages|Goal: SELECT, JOIN, GROUP BY, ORDER BY, HAVING are fluent — you don't need to look up syntax|Add the most useful queries to your scripts/ folder as reports.sql|Commit: git add . &amp;&amp; git commit -m 'sql: reporting queries — joins, grouping, ordering'">
     Day 5 — Review
   </div>
@@ -752,105 +744,105 @@
        data-details="Draw the final schema on paper one more time — from memory|Confirm: Terminals (PK), Employees (if using), Scans (PK, FK → Terminals)|Check: all columns have correct types, all FKs are correct, indexes are on FK and lookup columns|Store final schema script in scripts/create-db.sql|Commit and push — Month 7 done: you have database design skills">
     Day 5 — Month Review
   </div>
-  <div class="node sub-node" id="m8w1" data-parent="month5" data-side="left"
+  <div class="node sub-node" id="m8w1" data-parent="month5" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: What an ORM is|Day 2: Install EF Core packages|Day 3: Create ApplicationDbContext|Day 4: Register in Program.cs|Day 5: Add DbSet<Terminal>, DbSet<Scan>|✅ Deliverable: EF Core configured">
     📅 Week 29: DbContext & Setup
   </div>
-  <div class="node day-node" id="m8w1_d1" data-parent="m8w1" data-side="left"
+  <div class="node day-node" id="m8w1_d1" data-parent="m8w1" data-side="right"
        data-details="Read: ORM = Object-Relational Mapper — translates between C# classes (objects) and database tables (relations)|Without ORM: you write raw SQL strings in C# — fragile, verbose, error-prone|With EF Core: write C# classes; EF Core generates SQL at runtime|Key concept: your C# class Terminal maps to the Terminals table; each property maps to a column|Goal: you understand what EF Core does and why it's the default choice in .NET">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m8w1_d2" data-parent="m8w1" data-side="left"
+  <div class="node day-node" id="m8w1_d2" data-parent="m8w1" data-side="right"
        data-details="In KioskApi project run: dotnet add package Microsoft.EntityFrameworkCore.SqlServer|Run: dotnet add package Microsoft.EntityFrameworkCore.Tools|Run: dotnet add package Microsoft.EntityFrameworkCore.Design|Verify installed: dotnet list package — see all three packages listed|Goal: EF Core is installed and ready to use">
     Day 2 — Packages
   </div>
-  <div class="node day-node" id="m8w1_d3" data-parent="m8w1" data-side="left"
+  <div class="node day-node" id="m8w1_d3" data-parent="m8w1" data-side="right"
        data-details="Create Data/ApplicationDbContext.cs|Add: public class ApplicationDbContext : DbContext|Add constructor: public ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : base(options) { }|This class is the bridge between your C# code and the database|EF Core uses the constructor's options to know which database to connect to">
     Day 3 — DbContext
   </div>
-  <div class="node day-node" id="m8w1_d4" data-parent="m8w1" data-side="left"
+  <div class="node day-node" id="m8w1_d4" data-parent="m8w1" data-side="right"
        data-details="In Program.cs add: builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt; options.UseSqlServer(builder.Configuration.GetConnectionString('Default')));|In appsettings.Development.json add: { 'ConnectionStrings': { 'Default': 'Server=localhost;Database=KioskDb;Integrated Security=True;TrustServerCertificate=True' } }|Run: dotnet build — confirm it compiles|Goal: the DI container knows how to create ApplicationDbContext, injecting db connection config automatically">
     Day 4 — Registration
   </div>
-  <div class="node day-node" id="m8w1_d5" data-parent="m8w1" data-side="left"
+  <div class="node day-node" id="m8w1_d5" data-parent="m8w1" data-side="right"
        data-details="Create entity classes: Models/Terminal.cs with Id (int), Location (string), IsOnline (bool)|Create Models/Scan.cs with Id (int), TerminalId (int), EmployeeId (string), Timestamp (DateTime), Success (bool)|In ApplicationDbContext add: public DbSet&lt;Terminal&gt; Terminals { get; set; }|Add: public DbSet&lt;Scan&gt; Scans { get; set; }|Goal: EF Core knows about your two tables — DbSet = table">
     Day 5 — DbSets
   </div>
-  <div class="node sub-node" id="m8w2" data-parent="month5" data-side="left"
+  <div class="node sub-node" id="m8w2" data-parent="month5" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Code-first approach|Day 2: First migration|Day 3: dotnet ef database update|Day 4: Add property, second migration|Day 5: Inspect generated tables|✅ Deliverable: migrations working">
     📅 Week 30: Migrations
   </div>
-  <div class="node day-node" id="m8w2_d1" data-parent="m8w2" data-side="left"
+  <div class="node day-node" id="m8w2_d1" data-parent="m8w2" data-side="right"
        data-details="Read: code-first means you define C# classes → EF Core generates the SQL schema (CREATE TABLE statements)|Alternative: database-first (reverse-engineer from existing DB) — useful for legacy systems|For new projects, code-first is standard because your schema version-controlled in migrations|Key insight: instead of writing SQL DDL by hand, you write C# → EF generates SQL for you|Goal: code-first concept is clear">
     Day 1 — Code First
   </div>
-  <div class="node day-node" id="m8w2_d2" data-parent="m8w2" data-side="left"
+  <div class="node day-node" id="m8w2_d2" data-parent="m8w2" data-side="right"
        data-details="Run: dotnet ef migrations add InitialCreate|Look at the generated Migrations/ folder — see the Up() and Down() methods|Up() has the SQL that creates your tables; Down() reverses it|Open the migration file — read the CreateTable calls and compare to what you'd write in SQL|Goal: you understand migrations are versioned change scripts">
     Day 2 — First Migration
   </div>
-  <div class="node day-node" id="m8w2_d3" data-parent="m8w2" data-side="left"
+  <div class="node day-node" id="m8w2_d3" data-parent="m8w2" data-side="right"
        data-details="Run: dotnet ef database update|Open SSMS — refresh KioskDb — see Terminals and Scans tables created by EF Core|Also see: __EFMigrationsHistory table — EF tracks which migrations have been applied|Run the update a second time — it's a no-op since the migration is already applied|Goal: your schema is now managed by EF Core migrations">
     Day 3 — Database Update
   </div>
-  <div class="node day-node" id="m8w2_d4" data-parent="m8w2" data-side="left"
+  <div class="node day-node" id="m8w2_d4" data-parent="m8w2" data-side="right"
        data-details="Add a new property to Terminal: public string? Notes { get; set; } (nullable)|Run: dotnet ef migrations add AddNotesToTerminal|Open the migration — see AlterTable with AddColumn|Run: dotnet ef database update — the column is added without recreating the table|Goal: schema evolution via migrations is safe and reversible">
     Day 4 — Iteration
   </div>
-  <div class="node day-node" id="m8w2_d5" data-parent="m8w2" data-side="left"
+  <div class="node day-node" id="m8w2_d5" data-parent="m8w2" data-side="right"
        data-details="Open SSMS and inspect the tables EF Core created: column names, data types, constraints|Compare: does the SQL schema match what you designed in Month 7?|Fix discrepancies: rename columns via [Column('Name')] attribute or fluent API in OnModelCreating|Run one more migration to apply renames|Commit: git add . &amp;&amp; git commit -m 'feat: EF Core setup with 2 migrations'">
     Day 5 — Review
   </div>
-  <!-- MONTH 6 -->
+    <!-- MONTH 6 -->
   <div class="node main-node" id="month6" data-parent="month5" data-side="center"
        data-details="🔌 APIs and Data|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🔌 Month 6: APIs and Data (Part 2)
     <span class="months-badge">~60 hrs</span>
   </div>
-  <div class="node sub-node" id="m8w3" data-parent="month6" data-side="right"
+  <div class="node sub-node" id="m8w3" data-parent="month6" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Navigation properties|Day 2: One-to-many: terminal → scans|Day 3: .Include() for related data|Day 4: Delete behavior — parent/child|Day 5: Understand object graph|✅ Deliverable: relationships configured">
     📅 Week 31: Relationships & Querying
   </div>
-  <div class="node day-node" id="m8w3_d1" data-parent="m8w3" data-side="right"
+  <div class="node day-node" id="m8w3_d1" data-parent="m8w3" data-side="left"
        data-details="Add to Terminal.cs: public ICollection&lt;Scan&gt; Scans { get; set; } = new List&lt;Scan&gt;();|This is the navigation property — EF Core uses it to understand the relationship|Add to Scan.cs: public Terminal Terminal { get; set; } — the other side of the relationship|EF Core will infer the FK from the property name convention (TerminalId → Terminal.Id)|Goal: EF Core represents both sides of a relationship">
     Day 1 — Navigation Properties
   </div>
-  <div class="node day-node" id="m8w3_d2" data-parent="m8w3" data-side="right"
+  <div class="node day-node" id="m8w3_d2" data-parent="m8w3" data-side="left"
        data-details="Run: dotnet ef migrations add AddNavigationProperties|Run: dotnet ef database update — check if FK constraint was created in SSMS|Seed data using ApplicationDbContext: add a Terminal and related Scans in OnModelCreating or a seed method|In a test: create a Terminal object, assign Scans to it, save — EF handles the FK automatically|Goal: you save related objects via the parent without manually managing FKs">
     Day 2 — One-to-Many
   </div>
-  <div class="node day-node" id="m8w3_d3" data-parent="m8w3" data-side="right"
+  <div class="node day-node" id="m8w3_d3" data-parent="m8w3" data-side="left"
        data-details="Run a query that needs Include: var terminals = await context.Terminals.Include(t =&gt; t.Scans).ToListAsync();|Without Include: Scans is null (lazy loading is off by default in EF Core)|With Include: EF generates a JOIN and populates Scans for each Terminal|Print terminal.Scans.Count for each terminal to verify data was loaded|Goal: you know Include prevents the N+1 query problem">
     Day 3 — Include
   </div>
-  <div class="node day-node" id="m8w3_d4" data-parent="m8w3" data-side="right"
+  <div class="node day-node" id="m8w3_d4" data-parent="m8w3" data-side="left"
        data-details="Read: when you delete a parent (Terminal), what happens to related children (Scans)?|Options: Cascade (delete scans too), Restrict (error — refuse delete), SetNull (set FK to null)|Add fluent configuration: modelBuilder.Entity&lt;Terminal&gt;().HasMany(t =&gt; t.Scans).WithOne(s =&gt; s.Terminal).OnDelete(DeleteBehavior.Cascade);|Test: delete a terminal and verify its scans were also deleted|Goal: FK delete behavior is explicitly configured, not left to defaults">
     Day 4 — Delete Behavior
   </div>
-  <div class="node day-node" id="m8w3_d5" data-parent="m8w3" data-side="right"
+  <div class="node day-node" id="m8w3_d5" data-parent="m8w3" data-side="left"
        data-details="Draw the object graph: Terminal { Scans: [Scan, Scan, Scan] }|Confirm this matches the database FK structure: Scans.TerminalId → Terminals.Id|Write a query that loads terminals with their 5 most recent scans (use .Include, .OrderByDescending, .Take(5))|Run it and verify the data|Commit: git add . &amp;&amp; git commit -m 'feat: EF Core relationships and eager loading'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m8w4" data-parent="month6" data-side="right"
+  <div class="node sub-node" id="m8w4" data-parent="month6" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: GET from SQL not memory|Day 2: POST via EF Core SaveChangesAsync|Day 3: End-to-end: simulator → API → DB|Day 4: Verify rows in SSMS|Day 5: Commit first persistent backend|✅ Deliverable: API backed by SQL Server">
     📅 Week 32: API → Real Persistence
   </div>
-  <div class="node day-node" id="m8w4_d1" data-parent="m8w4" data-side="right"
+  <div class="node day-node" id="m8w4_d1" data-parent="m8w4" data-side="left"
        data-details="Update the Terminals GET endpoint: inject ApplicationDbContext, replace mock data with real DB query|var terminals = await context.Terminals.ToListAsync(); return Ok(terminals);|Run the API and hit GET /api/terminals — see real data from SQL Server|Verify: SSMS and API response show the same terminal data|One endpoint, real data — this is the payoff of 3 weeks of EF Core setup">
     Day 1 — GET Refactor
   </div>
-  <div class="node day-node" id="m8w4_d2" data-parent="m8w4" data-side="right"
+  <div class="node day-node" id="m8w4_d2" data-parent="m8w4" data-side="left"
        data-details="Update the POST scan endpoint: accept the request body, create a Scan entity, save to DB|context.Scans.Add(new Scan { TerminalId = id, EmployeeId = request.EmployeeId, Timestamp = DateTime.UtcNow, Success = true });|await context.SaveChangesAsync(); — this sends the SQL INSERT|Return 201 Created with the new scan's ID|Goal: you can create records in the database from an API endpoint">
     Day 2 — POST Refactor
   </div>
-  <div class="node day-node" id="m8w4_d3" data-parent="m8w4" data-side="right"
+  <div class="node day-node" id="m8w4_d3" data-parent="m8w4" data-side="left"
        data-details="Run the simulator: send a POST to the API with a real JSON body|Open SSMS: SELECT * FROM Scans — confirm the row was inserted|Check: Timestamp is correct (UTC), TerminalId matches the route parameter|Try submitting with an invalid TerminalId — observe FK violation error|Handle FK violation gracefully: return 404 Not Found, not 500">
     Day 3 — End-to-End Test
   </div>
-  <div class="node day-node" id="m8w4_d4" data-parent="m8w4" data-side="right"
+  <div class="node day-node" id="m8w4_d4" data-parent="m8w4" data-side="left"
        data-details="In SSMS run queries: SELECT * FROM Terminals; SELECT * FROM Scans; SELECT * FROM __EFMigrationsHistory|Verify row counts match what you submitted via API|Run the JOIN query from Month 7 on real data — verify it works against EF-generated schema|Check: are column names the same as what EF created?|Goal: your API, EF Core, and raw SQL all see the same data">
     Day 4 — Verification
   </div>
-  <div class="node day-node" id="m8w4_d5" data-parent="m8w4" data-side="right"
+  <div class="node day-node" id="m8w4_d5" data-parent="m8w4" data-side="left"
        data-details="Run API → POST scan → check SSMS → run simulator → POST again — do this 3 times quickly|Verify all rows appear in the database|Tag: git tag phase2-db-done|Update README: add 'Database' section explaining EF Core, migrations, and connection string setup|Push everything — you have a persistent backend">
     Day 5 — Month Review
   </div>
@@ -878,27 +870,27 @@
        data-details="Design the two auth flows on paper:|Flow 1: Admin → POST /api/auth/login (username+password) → receives JWT → uses JWT for all admin endpoints|Flow 2: Terminal → includes X-API-Key in every request → no login flow → middleware validates key|Write this in docs/security-model.md|Commit: git add . &amp;&amp; git commit -m 'docs: security model design'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m9w2" data-parent="month6" data-side="left"
+  <div class="node sub-node" id="m9w2" data-parent="month6" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Configure JWT in ASP.NET Core|Day 2: Mock login endpoint|Day 3: [Authorize] on admin endpoints|Day 4: Test with/without token in Postman|Day 5: Clean up token generation|✅ Deliverable: JWT-protected admin API">
     📅 Week 34: JWT for Admin Endpoints
   </div>
-  <div class="node day-node" id="m9w2_d1" data-parent="m9w2" data-side="left"
+  <div class="node day-node" id="m9w2_d1" data-parent="m9w2" data-side="right"
        data-details="Install: dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer|In Program.cs configure: builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =&gt; { options.TokenValidationParameters = new TokenValidationParameters { ValidateIssuerSigningKey = true, IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)), ValidateIssuer = false, ValidateAudience = false }; });|Add: app.UseAuthentication(); app.UseAuthorization(); — ORDER MATTERS: auth before authorization|Add the secret key to appsettings.Development.json (never to appsettings.json that gets committed)|Goal: JWT middleware is configured">
     Day 1 — Setup
   </div>
-  <div class="node day-node" id="m9w2_d2" data-parent="m9w2" data-side="left"
+  <div class="node day-node" id="m9w2_d2" data-parent="m9w2" data-side="right"
        data-details="Create AuthController.cs with POST /api/auth/login|Accept: { 'username': '...', 'password': '...' } — hardcode one valid admin user for now|If credentials match: generate a JWT using JwtSecurityTokenHandler|Include claims: sub (userId), role: 'admin', expiry: DateTime.UtcNow.AddHours(8)|Return: { 'token': '...' } — the client will send this in future requests">
     Day 2 — Login Endpoint
   </div>
-  <div class="node day-node" id="m9w2_d3" data-parent="m9w2" data-side="left"
+  <div class="node day-node" id="m9w2_d3" data-parent="m9w2" data-side="right"
        data-details="Add [Authorize] to the ScansController or one specific admin endpoint|Run the API and try hitting that endpoint without a token — get 401 Unauthorized|Get a token from POST /api/auth/login|In Postman: Authorization → Bearer Token → paste the JWT|Hit the protected endpoint again — 200 OK this time|Goal: [Authorize] gate works correctly">
     Day 3 — Authorize
   </div>
-  <div class="node day-node" id="m9w2_d4" data-parent="m9w2" data-side="left"
+  <div class="node day-node" id="m9w2_d4" data-parent="m9w2" data-side="right"
        data-details="In Postman create 2 requests: 'Login (get token)' and 'Get admin scans (protected)'|In 'Get admin scans' set the Bearer token from the login response|Test: expired token → 401, valid token → 200, no token → 401|Test: tamper with the token by changing one character → 401 (signature validation catches it)|Goal: JWT validation is solid — tampered tokens are rejected">
     Day 4 — Testing
   </div>
-  <div class="node day-node" id="m9w2_d5" data-parent="m9w2" data-side="left"
+  <div class="node day-node" id="m9w2_d5" data-parent="m9w2" data-side="right"
        data-details="Review the token generation code: is the secret key long enough? (min 32 chars)|Check: is the secret key stored safely? Not in appsettings.json?|Check: does the token have an expiry claim?|Remove any hardcoded test users — replace with a config-based credential for now|Commit: git add . &amp;&amp; git commit -m 'feat: JWT auth with login endpoint and protected routes'">
     Day 5 — Review
   </div>
@@ -950,9 +942,8 @@
        data-details="Commit a secure, validated, and OIDC-protected API.">
     Day 5 — Phase Review
   </div>
-  <!-- ===================== PHASE 4 ===================== -->
   <div class="year-label year-label-1" id="phase4Label" data-parent="month9" data-side="center">⚙️ PHASE 4<br><small>Reliability & Operability</small></div>
-  <!-- MONTH 7 -->
+    <!-- MONTH 7 -->
   <div class="node main-node" id="month7" data-parent="phase4Label" data-side="center"
        data-details="🛡️ Reliability and Operability|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🛡️ Month 7: Reliability and Operability (Part 1)
@@ -1006,27 +997,27 @@
        data-details="Make 10 API calls of different types: successful GET, failed POST, unauthorized, not found|Read the log output from beginning to end — does it tell a coherent story?|Can you determine from logs alone what happened during each call?|Remove any logger.LogDebug calls that log sensitive data (passwords, full scan payloads)|Commit: git add . &amp;&amp; git commit -m 'feat: Serilog structured logging'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m10w3" data-parent="month7" data-side="right"
+  <div class="node sub-node" id="m10w3" data-parent="month7" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Message template placeholders|Day 2: Log objects carefully|Day 3: Add TerminalId, EmployeeId context|Day 4: JSON-formatted log output|Day 5: Remove noisy logs|✅ Deliverable: clean contextual logs">
     📅 Week 39: Contextual Logging
   </div>
-  <div class="node day-node" id="m10w3_d1" data-parent="m10w3" data-side="right"
+  <div class="node day-node" id="m10w3_d1" data-parent="m10w3" data-side="left"
        data-details="Read: message templates use curly braces for properties: 'User {UserId} scanned at terminal {TerminalId}'|The value is stored separately from the message — this is what makes it queryable|Bad: logger.LogInformation('User ' + userId + ' scanned') — string concat loses structure|Good: logger.LogInformation('User {UserId} scanned at {TerminalId}', userId, terminalId)|Practice: rewrite 3 log statements using proper templates">
     Day 1 — Message Templates
   </div>
-  <div class="node day-node" id="m10w3_d2" data-parent="m10w3" data-side="right"
+  <div class="node day-node" id="m10w3_d2" data-parent="m10w3" data-side="left"
        data-details="Be careful logging objects: logger.LogInformation('Scan: {@scan}', scan) — the @ tells Serilog to serialize|Without @: you get the type name (ToStrring() result); with @: you get all properties as JSON|However: never log sensitive fields like SSN, biometric data, or passwords|Practice: log a ScanResult using destructuring, then check that no sensitive fields are exposed|Add a [JsonIgnore] attribute to any sensitive property to prevent accidental logging">
     Day 2 — Object Logging
   </div>
-  <div class="node day-node" id="m10w3_d3" data-parent="m10w3" data-side="right"
+  <div class="node day-node" id="m10w3_d3" data-parent="m10w3" data-side="left"
        data-details="Read: correlation ID = a unique ID generated per request and passed through all services|When debugging a multi-service system, you filter logs by correlation ID to trace one request end-to-end|Add middleware to generate/extract X-Correlation-ID header: if missing, generate a Guid|Store it in HttpContext.Items['CorrelationId']|Pass it to all downstream log messages">
     Day 3 — Context
   </div>
-  <div class="node day-node" id="m10w3_d4" data-parent="m10w3" data-side="right"
+  <div class="node day-node" id="m10w3_d4" data-parent="m10w3" data-side="left"
        data-details="Add 'Serilog.Sinks.File' package: dotnet add package Serilog.Sinks.File|Configure file sink in appsettings.json: WriteTo File with path: 'Logs/kiosk-.log' and rollingInterval: Day|Restart the API — a log file should appear in the Logs/ folder|Add Logs/ to .gitignore — you don't want 50MB log files committed to Git|Test: make API calls, open the log file, verify structured JSON entries">
     Day 4 — JSON Logs
   </div>
-  <div class="node day-node" id="m10w3_d5" data-parent="m10w3" data-side="right"
+  <div class="node day-node" id="m10w3_d5" data-parent="m10w3" data-side="left"
        data-details="Make 5 API calls — write the correlation ID for each in a note|Open the log file and search for one correlation ID — trace all its log entries|Can you see: request in, validation, DB call, response out — all linked by correlation ID?|This is what production debugging looks like|Commit: git add . &amp;&amp; git commit -m 'feat: file logging, structured templates, correlation IDs'">
     Day 5 — Review
   </div>
@@ -1054,105 +1045,105 @@
        data-details="Configure Serilog rolling log files: one file per day, max size, retention|Verify /health returns meaningful JSON with per-dependency status|Test: disable the database — health check should report Unhealthy|Commit a fully observable API: structured logs, correlation IDs, health checks, metrics|Goal: Month 10 done — your API is production-observable">
     Day 5 — Month Review
   </div>
-  <div class="node sub-node" id="m11w1" data-parent="month7" data-side="left"
+  <div class="node sub-node" id="m11w1" data-parent="month7" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: IHostedService, BackgroundService|Day 2: Scaffold worker class|Day 3: Repeating async loop with Task.Delay|Day 4: Register worker in Program.cs|Day 5: Confirm worker + API coexist|✅ Deliverable: background worker running">
     📅 Week 41: Hosted Services
   </div>
-  <div class="node day-node" id="m11w1_d1" data-parent="m11w1" data-side="left"
+  <div class="node day-node" id="m11w1_d1" data-parent="m11w1" data-side="right"
        data-details="Read: IHostedService is an interface for long-running background processes in ASP.NET Core|Background workers run in the same process as the API but independently — they don't handle HTTP requests|Use cases: polling for terminal heartbeats, sending daily reports, cleanup jobs|BackgroundService is an abstract class implementing IHostedService — it's easier to use|Read the BackgroundService.cs source on GitHub — understand ExecuteAsync">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m11w1_d2" data-parent="m11w1" data-side="left"
+  <div class="node day-node" id="m11w1_d2" data-parent="m11w1" data-side="right"
        data-details="Create Workers/HeartbeatWorker.cs|Inherit from BackgroundService|Add the class and the required method: protected override async Task ExecuteAsync(CancellationToken stoppingToken) { }|Add a logger dependency: inject ILogger&lt;HeartbeatWorker&gt;|Add a using statement: using Microsoft.Extensions.Hosting; — this is where BackgroundService lives">
     Day 2 — Scaffold
   </div>
-  <div class="node day-node" id="m11w1_d3" data-parent="m11w1" data-side="left"
+  <div class="node day-node" id="m11w1_d3" data-parent="m11w1" data-side="right"
        data-details="Inside ExecuteAsync add a loop: while (!stoppingToken.IsCancellationRequested) { logger.LogInformation('Worker ping at {Time}', DateTimeOffset.UtcNow); await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken); }|The stoppingToken is cancelled when the application shuts down — your loop must check it|The Task.Delay also accepts the stoppingToken — it will throw TaskCanceledException on shutdown (which is expected and safe)|Run: dotnet run — see the worker ping every 10 seconds in the log">
     Day 3 — Loop
   </div>
-  <div class="node day-node" id="m11w1_d4" data-parent="m11w1" data-side="left"
+  <div class="node day-node" id="m11w1_d4" data-parent="m11w1" data-side="right"
        data-details="Register the worker in Program.cs: builder.Services.AddHostedService&lt;HeartbeatWorker&gt;();|Observe: the worker starts when the app starts and stops when the app stops|Confirm: the worker and the HTTP API run SIMULTANEOUSLY — they're on different threads|Add a second log: logger.LogInformation('Worker completed cycle {Count}', cycleCount++);|Goal: you understand that background workers are concurrent with API request handling">
     Day 4 — Registration
   </div>
-  <div class="node day-node" id="m11w1_d5" data-parent="m11w1" data-side="left"
+  <div class="node day-node" id="m11w1_d5" data-parent="m11w1" data-side="right"
        data-details="Start the app → make API requests → observe both API logs and worker logs interleaved in the output|Confirm: API handles requests immediately without waiting for the worker cycle|Stop the app (Ctrl+C) — observe graceful shutdown: worker stops cleanly after current cycle|Write a comment in the code explaining the worker's purpose|Commit: git add . &amp;&amp; git commit -m 'feat: HeartbeatWorker background service'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m11w2" data-parent="month7" data-side="left"
+  <div class="node sub-node" id="m11w2" data-parent="month7" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Simulate terminal heartbeat checks|Day 2: Mark terminals offline after timeout|Day 3: Add worker logging|Day 4: Graceful shutdown with CancellationToken|Day 5: Clean the polling loop|✅ Deliverable: heartbeat monitor working">
     📅 Week 42: Polling & Health Logic
   </div>
-  <div class="node day-node" id="m11w2_d1" data-parent="m11w2" data-side="left"
+  <div class="node day-node" id="m11w2_d1" data-parent="m11w2" data-side="right"
        data-details="Update ExecuteAsync to simulate checking terminals: fetch all terminals from a repository or config|For each terminal: log its ID and fake a ping: logger.LogInformation('Checking terminal {Id}...', t.Id);|Add a fake delay: await Task.Delay(200, stoppingToken); to simulate network roundtrip|Print: 'Terminal {Id} is {Status}' using a random bool for now|Goal: worker iterates over data and logs results for each item">
     Day 1 — Polling
   </div>
-  <div class="node day-node" id="m11w2_d2" data-parent="m11w2" data-side="left"
+  <div class="node day-node" id="m11w2_d2" data-parent="m11w2" data-side="right"
        data-details="Add logic to mark terminals offline: if terminal hasn't sent a heartbeat in &gt; 5 minutes, mark IsOnline = false|Use DateTime.UtcNow.Subtract(terminal.LastHeartbeat).TotalMinutes &gt; 5|For now: update an in-memory dictionary (real DB update comes next week)|Log: 'Terminal {Id} marked OFFLINE — last seen {LastSeen}' using LogWarning|Goal: the worker detects stale terminals using time comparison">
     Day 2 — Logic
   </div>
-  <div class="node day-node" id="m11w2_d3" data-parent="m11w2" data-side="left"
+  <div class="node day-node" id="m11w2_d3" data-parent="m11w2" data-side="right"
        data-details="Add info logs at cycle start and end: 'Heartbeat check started' and 'Heartbeat check completed — {online} online, {offline} offline'|Add warning logs for each offline terminal|Add error log if the entire poll iteration throws an unexpected exception|Goal: reading only the logs, an operator can understand what the worker is doing every 10 seconds">
     Day 3 — Logging
   </div>
-  <div class="node day-node" id="m11w2_d4" data-parent="m11w2" data-side="left"
+  <div class="node day-node" id="m11w2_d4" data-parent="m11w2" data-side="right"
        data-details="Read: CancellationToken represents cooperative cancellation — the token fires when the app shuts down|Your worker MUST respond to cancellation — otherwise the process hangs on shutdown|Pass stoppingToken to every async call that supports it: await Task.Delay(1000, stoppingToken); await dbContext.Terminals.ToListAsync(stoppingToken);|Wrap the loop body in try/catch for TaskCanceledException — catch it silently (it's expected on shutdown)|Goal: Ctrl+C causes a clean, fast shutdown without hanging">
     Day 4 — Graceful Shutdown
   </div>
-  <div class="node day-node" id="m11w2_d5" data-parent="m11w2" data-side="left"
+  <div class="node day-node" id="m11w2_d5" data-parent="m11w2" data-side="right"
        data-details="Test graceful shutdown: start the app, wait for 2 worker cycles, press Ctrl+C|Observe in logs: worker completes its current iteration and stops cleanly|Check: no 'unhandled exception' messages on shutdown|Timing: shutdown should complete within 2 seconds|Commit: git add . &amp;&amp; git commit -m 'feat: heartbeat polling logic with logging and graceful shutdown'">
     Day 5 — Review
   </div>
-  <!-- MONTH 8 -->
+    <!-- MONTH 8 -->
   <div class="node main-node" id="month8" data-parent="month7" data-side="center"
        data-details="🛡️ Reliability and Operability|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🛡️ Month 8: Reliability and Operability (Part 2)
     <span class="months-badge">~60 hrs</span>
   </div>
-  <div class="node sub-node" id="m11w3" data-parent="month8" data-side="right"
+  <div class="node sub-node" id="m11w3" data-parent="month8" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Why scoped ≠ singleton in workers|Day 2: IServiceScopeFactory injection|Day 3: Resolve DbContext inside loop|Day 4: Query database from worker|Day 5: Verify no resource leaks|✅ Deliverable: worker with safe DI">
     📅 Week 43: DI in Workers
   </div>
-  <div class="node day-node" id="m11w3_d1" data-parent="m11w3" data-side="right"
+  <div class="node day-node" id="m11w3_d1" data-parent="m11w3" data-side="left"
        data-details="This is an important architectural concept: BackgroundService is registered as a SINGLETON (one instance, lives forever)|ApplicationDbContext (via AddDbContext) is registered as SCOPED (created per HTTP request, disposed when request ends)|Problem: you cannot inject a scoped service directly into a singleton — the scoped service would be shared across all requests, causing data corruption|Solution: inject IServiceScopeFactory into the worker, create a new scope per cycle, resolve DbContext within that scope|Write this pattern in your notes — you'll use it constantly">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m11w3_d2" data-parent="m11w3" data-side="right"
+  <div class="node day-node" id="m11w3_d2" data-parent="m11w3" data-side="left"
        data-details="Inject IServiceScopeFactory into HeartbeatWorker constructor instead of ApplicationDbContext|Inside the loop: using var scope = _scopeFactory.CreateScope();|Resolve: var context = scope.ServiceProvider.GetRequiredService&lt;ApplicationDbContext&gt;();|Now you have a fresh DbContext per cycle — safe to use, will be disposed at end of using block|Goal: scoped services are always resolved from a scope, never long-lived in a singleton">
     Day 2 — Scope Factory
   </div>
-  <div class="node day-node" id="m11w3_d3" data-parent="m11w3" data-side="right"
+  <div class="node day-node" id="m11w3_d3" data-parent="m11w3" data-side="left"
        data-details="Use the resolved DbContext: var terminals = await context.Terminals.ToListAsync(stoppingToken);|This is a real database query from inside the background worker|For each terminal: check last heartbeat, update IsOnline, save: await context.SaveChangesAsync(stoppingToken);|Test: update a terminal's IsOnline state manually in SSMS, watch the worker detect and log it|Goal: worker reads from and writes to the database correctly">
     Day 3 — Scoped Resolution
   </div>
-  <div class="node day-node" id="m11w3_d4" data-parent="m11w3" data-side="right"
+  <div class="node day-node" id="m11w3_d4" data-parent="m11w3" data-side="left"
        data-details="Add error handling around the DB operations: if the database is down, the worker should log the error and wait before retrying — not crash|Wrap context operations in try/catch: catch (SqlException ex) { logger.LogError(ex, 'DB error in heartbeat worker'); await Task.Delay(30000, stoppingToken); }|The worker continues running even if one cycle fails — it doesn't take down the API|Test: stop SQL Server → watch the worker log DB errors every 30 seconds → restart SQL Server → worker recovers|Goal: the worker is resilient to temporary DB failures">
     Day 4 — DB Query
   </div>
-  <div class="node day-node" id="m11w3_d5" data-parent="m11w3" data-side="right"
+  <div class="node day-node" id="m11w3_d5" data-parent="m11w3" data-side="left"
        data-details="Review the complete worker: scope factory → new scope → resolve DbContext → query → update → dispose|Verify no memory leaks: the using statement on the scope ensures disposal|Add a metric: log how long each cycle takes using Stopwatch|Commit: git add . &amp;&amp; git commit -m 'feat: worker uses IServiceScopeFactory for scoped EF Core access'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m11w4" data-parent="month8" data-side="right"
+  <div class="node sub-node" id="m11w4" data-parent="month8" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: DateTime.UtcNow, DateTimeOffset, time zones|Day 2: Build timed summary job|Day 3: Batch export — CSV file from DB|Day 4: Batch import — CSV to DB with validation|Day 5: Commit workers + batch ETL|✅ Deliverable: scheduled tasks + batch import/export">
     📅 Week 44: Scheduling, Batch Processing &amp; UTC
   </div>
-  <div class="node day-node" id="m11w4_d1" data-parent="m11w4" data-side="right"
+  <div class="node day-node" id="m11w4_d1" data-parent="m11w4" data-side="left"
        data-details="Learn DateTime.UtcNow and DateTimeOffset — always use UTC in code, convert to local only in UI|DateTime.Now gives local machine time — this breaks when deployed to a server in a different timezone|DateTimeOffset includes timezone info — safer than DateTime for distributed integration systems|Understand time zone handling when coordinating between devices in different locations|Goal: time handling is correct in your distributed system">
     Day 1 — Time Math
   </div>
-  <div class="node day-node" id="m11w4_d2" data-parent="m11w4" data-side="right"
+  <div class="node day-node" id="m11w4_d2" data-parent="m11w4" data-side="left"
        data-details="Create a ScheduledSummaryWorker that runs daily|Use time math: nextRun = DateTime.UtcNow.Date.AddDays(1)|Wait until then: await Task.Delay(delay, stoppingToken)|After running: log the summary, aggregate scan totals, loop|Goal: a real aggregate query on today's data — not mock data">
     Day 2 — Scheduled Task
   </div>
-  <div class="node day-node" id="m11w4_d3" data-parent="m11w4" data-side="right"
+  <div class="node day-node" id="m11w4_d3" data-parent="m11w4" data-side="left"
        data-details="Build a scheduled batch export: query the database for the day's scans|Write them to a CSV file and log the export|Many integration systems require nightly data exports to partners or legacy systems|Use CsvHelper NuGet package or manual StringBuilder for CSV generation|Goal: you can export data to CSV on a schedule — this is the ETL pattern">
     Day 3 — Batch Export
   </div>
-  <div class="node day-node" id="m11w4_d4" data-parent="m11w4" data-side="right"
+  <div class="node day-node" id="m11w4_d4" data-parent="m11w4" data-side="left"
        data-details="Build a file-based import: read a CSV of employee records|Validate each row — skip bad rows with structured logging|Upsert into the database: insert new, update existing|This is the ETL (Extract-Transform-Load) pattern you will encounter in every integration job|Goal: you can import external data files safely into your system">
     Day 4 — Batch Import
   </div>
-  <div class="node day-node" id="m11w4_d5" data-parent="m11w4" data-side="right"
+  <div class="node day-node" id="m11w4_d5" data-parent="m11w4" data-side="left"
        data-details="Review all workers: HeartbeatWorker, ScheduledSummaryWorker, and batch import/export|Confirm: all use scope factory, handle errors, respect stoppingToken|Tag: git tag month-11-workers-done|Update README: add 'Background Workers' and 'Batch ETL' sections|Push: git push origin main --tags">
     Day 5 — Month Review
   </div>
@@ -1180,27 +1171,27 @@
        data-details="In your notes: write why this pattern matters — when Dermalog releases a breaking SDK update, only the adapter changes, not all business logic|Draw the dependency direction: ScanService → IVendorScannerAdapter ← FakeDermalogAdapter|Compare: what would happen if ScanService used FakeDermalogAdapter directly?|Commit: git add . &amp;&amp; git commit -m 'feat: vendor adapter pattern with IVendorScannerAdapter'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m12w2" data-parent="month8" data-side="left"
+  <div class="node sub-node" id="m12w2" data-parent="month8" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Timeouts, retries, transient vs permanent failure|Day 2: Map SDK errors to app errors|Day 3: Which errors retry, which fail fast|Day 4: SDK debugging — Wireshark on SDK traffic, vendor logs, failure isolation|Day 5: SDK Debugging Playbook doc|✅ Deliverable: resilient integration layer + debugging playbook">
     📅 Week 46: Integration Boundaries &amp; SDK Debugging
   </div>
-  <div class="node day-node" id="m12w2_d1" data-parent="m12w2" data-side="left"
+  <div class="node day-node" id="m12w2_d1" data-parent="m12w2" data-side="right"
        data-details="Read: transient failures are temporary — network blip, DB busy, thread pool exhausted — they often succeed on retry|Permanent failures do NOT benefit from retry: invalid API key, malformed request, not found|Retrying permanent failures wastes time and can cause cascading damage (e.g. retrying a write 10x creates 10 records)|Identify: which failures in your kiosk system are transient (network timeouts, scanner busy) vs permanent (bad employee ID)?|Write a table with 5 examples of each">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m12w2_d2" data-parent="m12w2" data-side="left"
+  <div class="node day-node" id="m12w2_d2" data-parent="m12w2" data-side="right"
        data-details="Create error types: ScannerTimeoutException (transient), ScannerOfflineException (transient), InvalidEmployeeException (permanent)|In FakeDermalogAdapter: throw one based on a random number during ScanAsync|In IVendorScannerAdapter wrapper: catch vendor-specific exceptions and rethrow as YOUR exceptions|This is error translation — your business code only handles YOUR exceptions, not Dermalog-specific error codes|Goal: your code is vendor-agnostic even for error handling">
     Day 2 — Error Mapping
   </div>
-  <div class="node day-node" id="m12w2_d3" data-parent="m12w2" data-side="left"
+  <div class="node day-node" id="m12w2_d3" data-parent="m12w2" data-side="right"
        data-details="List which exceptions should trigger a retry: ScannerTimeoutException (yes), InvalidEmployeeException (no)|Design the retry policy: up to 3 attempts, 1 second wait between attempts, only for transient exceptions|Implement manually (Polly comes later): for (int i = 0; i &lt; 3; i++) { try { return await adapter.ScanAsync(); } catch (ScannerTimeoutException) { if (i == 2) throw; await Task.Delay(1000); } }|Test: trigger repeated timeout → see retries in logs → eventual failure or success">
     Day 3 — Resilience Thinking
   </div>
-  <div class="node day-node" id="m12w2_d4" data-parent="m12w2" data-side="left"
+  <div class="node day-node" id="m12w2_d4" data-parent="m12w2" data-side="right"
        data-details="SDK Debugging Skills — you will use these every week at work|Use Wireshark or RawCap on the loopback adapter to capture what bytes the SDK actually sends and receives over TCP|Read vendor SDK log files — most SDKs write verbose logs when a debug flag is enabled; find it and enable it|Practice reproducing SDK failures in isolation: disconnect the cable, block the port, send a malformed command|This lets you distinguish your code's fault from the vendor SDK's fault — critical for incident response|Document the debugging steps in your notes — invisible on most CVs but immediately visible in interviews">
     Day 4 — SDK Debugging Skills
   </div>
-  <div class="node day-node" id="m12w2_d5" data-parent="m12w2" data-side="left"
+  <div class="node day-node" id="m12w2_d5" data-parent="m12w2" data-side="right"
        data-details="Write a one-page SDK Debugging Playbook — a checklist of steps you follow when a biometric device stops responding|Example checklist: 1. Is the device powered? 2. Is the cable connected? 3. Can you ping the device IP? 4. What does the vendor SDK log say? 5. What does Wireshark show on the connection? 6. Does the vendor's own test tool work?|This is a real interview talking point — it shows you debug systematically, not randomly|Commit: git add . &amp;&amp; git commit -m 'feat: SDK error translation, retry logic, and debugging playbook'|Keep adapter code focused — if it grows beyond ~100 lines, split responsibility">
     Day 5 — SDK Playbook
   </div>
@@ -1252,9 +1243,12 @@
        data-details="Commit a polished Year 1 foundation. Write a README that explains adapters, data mapping, format diversity, SOAP integration, offline fallback, workers, and observability.">
     Day 5 — Phase Review
   </div>
-  <!-- ===================== PHASE 5 ===================== -->
+    <div class="node tip-node" id="year1_complete" data-parent="month8" data-side="center"
+       data-details="Milestone reached: From absolute beginner to persistent, integrated backend architecture.">
+    🎉 Year 1 complete (~480 hrs)
+  </div>
   <div class="year-label year-label-1" id="phase5Label" data-parent="month12" data-side="center">📡 PHASE 5<br><small>Messaging, Resilience & Containers</small></div>
-  <!-- MONTH 9 -->
+    <!-- MONTH 9 -->
   <div class="node main-node" id="month9" data-parent="phase5Label" data-side="center"
        data-details="📨 Advanced Messaging|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     📨 Month 9: Advanced Messaging (Part 1)
@@ -1308,27 +1302,27 @@
        data-details="Create a 3-minute screen recording notes: describe each UI section and what it tells you|Alternatively: write a detailed description of the queue lifecycle in your notes|Understand: you'll use this UI for debugging when messages pile up in production|Commit your notes: git add . &amp;&amp; git commit -m 'docs: RabbitMQ setup and UI walkthrough'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m13w3" data-parent="month9" data-side="right"
+  <div class="node sub-node" id="m13w3" data-parent="month9" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Install RabbitMQ.Client|Day 2: Create connection and channel|Day 3: Declare queue from code|Day 4: Publish scans from API|Day 5: Verify messages arrive|✅ Deliverable: C# producer publishing">
     📅 Week 51: Producer in C#
   </div>
-  <div class="node day-node" id="m13w3_d1" data-parent="m13w3" data-side="right"
+  <div class="node day-node" id="m13w3_d1" data-parent="m13w3" data-side="left"
        data-details="In KioskApi project: dotnet add package RabbitMQ.Client|Read the official RabbitMQ .NET tutorial on rabbitmq.com (Tutorial 1: Hello World)|Note: the library uses IModel (channel) which is NOT thread-safe — one channel per thread or use IConnection per publish|Understand the object hierarchy: ConnectionFactory → IConnection → IModel (channel) → queue operations|For production, a managed connection/channel pool is preferred — for now we'll use a simple approach">
     Day 1 — Package
   </div>
-  <div class="node day-node" id="m13w3_d2" data-parent="m13w3" data-side="right"
+  <div class="node day-node" id="m13w3_d2" data-parent="m13w3" data-side="left"
        data-details="Create Services/RabbitMqConnection.cs — a singleton that holds the IConnection|Inject: IConnection via constructor, created from ConnectionFactory { HostName = 'localhost', Port = 5672, UserName = 'guest', Password = 'guest' }|Register as singleton in Program.cs: builder.Services.AddSingleton&lt;IConnection&gt;(sp =&gt; { var factory = new ConnectionFactory { HostName = 'localhost' }; return factory.CreateConnection(); });|Verify: connection is established on startup — log 'RabbitMQ connected'">
     Day 2 — Connection
   </div>
-  <div class="node day-node" id="m13w3_d3" data-parent="m13w3" data-side="right"
+  <div class="node day-node" id="m13w3_d3" data-parent="m13w3" data-side="left"
        data-details="Create Messaging/ScanPublisher.cs with method: Task PublishScanAsync(ScanSubmittedMessage message)|Inside: var channel = _connection.CreateModel(); then channel.QueueDeclare('scans-queue', durable: true, exclusive: false, autoDelete: false)|This is idempotent — declaring an existing queue with the same settings does nothing|Serialize the message to JSON bytes: var body = JsonSerializer.SerializeToUtf8Bytes(message);">
     Day 3 — Queue Declaration
   </div>
-  <div class="node day-node" id="m13w3_d4" data-parent="m13w3" data-side="right"
+  <div class="node day-node" id="m13w3_d4" data-parent="m13w3" data-side="left"
        data-details="Publish: channel.BasicPublish(exchange: '', routingKey: 'scans-queue', basicProperties: null, body: body);|The empty string exchange means: route directly to the named queue by routing key|Call PublishScanAsync from TerminalsController.SubmitScan after validation succeeds|Run the API and submit a scan via Postman — then check the RabbitMQ UI: scans-queue should have 1 message">
     Day 4 — Publishing
   </div>
-  <div class="node day-node" id="m13w3_d5" data-parent="m13w3" data-side="right"
+  <div class="node day-node" id="m13w3_d5" data-parent="m13w3" data-side="left"
        data-details="Test publishing 5 scans — queue depth should reach 5 (since no consumer is running yet)|Open RabbitMQ UI → Queues → scans-queue → Get Messages → read the payload — it should be your JSON|Verify: message persists in queue even after API restart (because durable: true)|Commit: git add . &amp;&amp; git commit -m 'feat: KioskApi publishes scan events to RabbitMQ scans-queue'">
     Day 5 — Review
   </div>
@@ -1356,105 +1350,105 @@
        data-details="Review: does the Worker handle connection failures? What happens if RabbitMQ restarts while the Worker runs?|For now: log the error and let the worker crash — process restart is acceptable for Week 1|Add: try/catch around connection setup, log clear error: 'Cannot connect to RabbitMQ — retrying in 10s'|Commit: git add . &amp;&amp; git commit -m 'feat: TerminalWorker consumes from scans-queue via RabbitMQ'">
     Day 5 — Month Review
   </div>
-  <div class="node sub-node" id="m14w1" data-parent="month9" data-side="left"
+  <div class="node sub-node" id="m14w1" data-parent="month9" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Worker saves messages to SQL|Day 2: API → Queue → Worker → DB path|Day 3: Add consume/save/error logs|Day 4: Push many scans, verify DB|Day 5: Stabilize worker|✅ Deliverable: messages persisted to DB">
     📅 Week 53: Saving Consumed Messages
   </div>
-  <div class="node day-node" id="m14w1_d1" data-parent="m14w1" data-side="left"
+  <div class="node day-node" id="m14w1_d1" data-parent="m14w1" data-side="right"
        data-details="The worker now needs to SAVE each consumed message to SQL Server — not just log it|Add EF Core to TerminalWorker: dotnet add package Microsoft.EntityFrameworkCore.SqlServer|Reference the shared ApplicationDbContext (add a project reference to KioskApi or extract to a shared library)|For simplicity: re-define the same DbContext in the worker, pointing to the same DB|Register it with AddDbContextFactory (factory is better than AddDbContext in a non-request context)">
     Day 1 — Worker Logic
   </div>
-  <div class="node day-node" id="m14w1_d2" data-parent="m14w1" data-side="left"
+  <div class="node day-node" id="m14w1_d2" data-parent="m14w1" data-side="right"
        data-details="In the Received handler: using var scope = _scopeFactory.CreateScope(); var context = scope.ServiceProvider.GetRequiredService&lt;ApplicationDbContext&gt;();|Create a Scan entity from the message: new Scan { EmployeeId = message.EmployeeId, TerminalId = message.TerminalId, Timestamp = message.Timestamp, Success = message.Success }|Save: context.Scans.Add(scan); await context.SaveChangesAsync();|Only AFTER saving: channel.BasicAck(deliveryTag, false);|Goal: scan is persisted to DB before the acknowledgment is sent">
     Day 2 — Happy Path
   </div>
-  <div class="node day-node" id="m14w1_d3" data-parent="m14w1" data-side="left"
+  <div class="node day-node" id="m14w1_d3" data-parent="m14w1" data-side="right"
        data-details="Log at each step: 'Processing scan for {EmployeeId}...', 'Scan saved to DB', 'Ack sent to RabbitMQ'|Test: submit 5 scans via API → start Worker → watch it process and save each → check SSMS|Verify row count in Scans table matches the number of messages processed|Check: Processing, Saving, Ack events all appear in the correct order in logs">
     Day 3 — Logging
   </div>
-  <div class="node day-node" id="m14w1_d4" data-parent="m14w1" data-side="left"
+  <div class="node day-node" id="m14w1_d4" data-parent="m14w1" data-side="right"
        data-details="Test repeated runs: submit 3 scans, stop Worker (before it processes), restart Worker|Expected: Worker picks up the 3 unprocessed messages (they're still in queue) and saves them|Verify: no duplicate saves, no lost messages|This works because BasicAck was never sent for unprocessed messages — RabbitMQ requeues them on worker disconnect">
     Day 4 — Testing
   </div>
-  <div class="node day-node" id="m14w1_d5" data-parent="m14w1" data-side="left"
+  <div class="node day-node" id="m14w1_d5" data-parent="m14w1" data-side="right"
        data-details="Review: is there any risk of processing a message but failing to save? Yes: if DB is down after receiving the message but before saving|Current behavior: no ack → RabbitMQ requeues → Worker retries on restart — that's the correct behavior for now|Document this behavior in comments near the BasicAck call|Commit: git add . &amp;&amp; git commit -m 'feat: worker saves consumed messages to SQL Server'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m14w2" data-parent="month9" data-side="left"
+  <div class="node sub-node" id="m14w2" data-parent="month9" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Auto-ack vs manual ack|Day 2: Ack only after successful save|Day 3: Simulate save failure|Day 4: Kill worker mid-process, restart|Day 5: Understand durability|✅ Deliverable: manual ack working">
     📅 Week 54: Message Acknowledgements
   </div>
-  <div class="node day-node" id="m14w2_d1" data-parent="m14w2" data-side="left"
+  <div class="node day-node" id="m14w2_d1" data-parent="m14w2" data-side="right"
        data-details="Read: auto-ack = RabbitMQ removes the message from the queue as soon as it's delivered, regardless of processing success|Problem: if your worker crashes mid-processing, the message is gone — lost forever|Manual ack = you explicitly acknowledge success after processing; if worker crashes before ack, RabbitMQ requeues|Rule: ALWAYS use manual acknowledgment for any message that touches external systems (DB, files, APIs)|Set autoAck: false in your BasicConsume call — confirm it's correct">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m14w2_d2" data-parent="m14w2" data-side="left"
+  <div class="node day-node" id="m14w2_d2" data-parent="m14w2" data-side="right"
        data-details="Verify your consumer uses manual ack: channel.BasicConsume(queue: 'scans-queue', autoAck: false, consumer: consumer);|The Ack is: channel.BasicAck(ea.DeliveryTag, multiple: false); — called AFTER SaveChangesAsync succeeds|If SaveChangesAsync throws: DO NOT call BasicAck — let the message return to queue|Add try/catch around the DB save: catch (Exception ex) { logger.LogError(ex, 'Failed to save scan...'); channel.BasicNack(ea.DeliveryTag, multiple: false, requeue: true); }">
     Day 2 — Manual Ack
   </div>
-  <div class="node day-node" id="m14w2_d3" data-parent="m14w2" data-side="left"
+  <div class="node day-node" id="m14w2_d3" data-parent="m14w2" data-side="right"
        data-details="Test manual ack:|1. Submit 1 scan to the queue|2. Set a breakpoint AFTER the DB save but BEFORE BasicAck|3. Kill the Worker at the breakpoint (Ctrl+C or stop debugger)|4. Check RabbitMQ UI — message should be in 'Unacknowledged' state before Worker dies, then requeued|5. Restart Worker — it processes the message again|Goal: no message loss on crash">
     Day 3 — Failure Test
   </div>
-  <div class="node day-node" id="m14w2_d4" data-parent="m14w2" data-side="left"
+  <div class="node day-node" id="m14w2_d4" data-parent="m14w2" data-side="right"
        data-details="Test BasicNack (negative ack with requeue: true):|1. Temporarily make SaveChangesAsync throw (change connection string to invalid)|2. Watch the worker receive message → try to save → DB fails → BasicNack → message requeues|3. The worker retries immediately → infinite loop warning!|4. Fix: add a delay before requeue, or track retry count per delivery tag|This is the poison message problem — you'll solve it next week with dead-letter queues">
     Day 4 — Restart Test
   </div>
-  <div class="node day-node" id="m14w2_d5" data-parent="m14w2" data-side="left"
+  <div class="node day-node" id="m14w2_d5" data-parent="m14w2" data-side="right"
        data-details="For now: add a simple retry counter using ea.BasicProperties.Headers or in-memory dictionary keyed by DeliveryTag|After 3 retries: BasicNack with requeue: false (discard the message) and log error|This is your temporary poison message protection before setting up DLQ properly|Commit: git add . &amp;&amp; git commit -m 'feat: manual ack with retry limit before discard'">
     Day 5 — Review
   </div>
-  <!-- MONTH 10 -->
+    <!-- MONTH 10 -->
   <div class="node main-node" id="month10" data-parent="month9" data-side="center"
        data-details="📨 Advanced Messaging|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     📨 Month 10: Advanced Messaging (Part 2)
     <span class="months-badge">~60 hrs</span>
   </div>
-  <div class="node sub-node" id="m14w3" data-parent="month10" data-side="right"
+  <div class="node sub-node" id="m14w3" data-parent="month10" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Why duplicates happen|Day 2: Add unique MessageId|Day 3: Ignore already-processed messages|Day 4: Send duplicates, verify one save|Day 5: Document idempotency|✅ Deliverable: duplicate prevention">
     📅 Week 55: Idempotency
   </div>
-  <div class="node day-node" id="m14w3_d1" data-parent="m14w3" data-side="right"
+  <div class="node day-node" id="m14w3_d1" data-parent="m14w3" data-side="left"
        data-details="Read: if a message arrives twice and is processed twice, you end up with duplicate records in your DB|This can happen if: the worker processes the message and saves to DB, but crashes before sending BasicAck — RabbitMQ requeues and the message is processed again on restart|Idempotency = processing the same message twice produces the same result as processing it once|Solution: generate a unique MessageId for each scan submission; before saving, check if it already exists in DB">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m14w3_d2" data-parent="m14w3" data-side="right"
+  <div class="node day-node" id="m14w3_d2" data-parent="m14w3" data-side="left"
        data-details="Add MessageId to ScanSubmittedMessage: public Guid MessageId { get; set; } = Guid.NewGuid();|In KioskApi: set MessageId when creating the message object before publishing|Add MessageId column to Scan table: add migration and update DB|Add a UNIQUE index on Scans.MessageId: CREATE UNIQUE INDEX IX_Scans_MessageId ON Scans(MessageId);|This database constraint guarantees uniqueness at the storage level">
     Day 2 — Message IDs
   </div>
-  <div class="node day-node" id="m14w3_d3" data-parent="m14w3" data-side="right"
+  <div class="node day-node" id="m14w3_d3" data-parent="m14w3" data-side="left"
        data-details="In the Worker's Received handler: before saving, check if MessageId already exists:|var exists = await context.Scans.AnyAsync(s =&gt; s.MessageId == message.MessageId);|If exists: log 'Duplicate message detected — skipping' and BasicAck (remove from queue — it was already processed)|If not exists: save normally then BasicAck|This is the idempotency check pattern">
     Day 3 — Duplicate Check
   </div>
-  <div class="node day-node" id="m14w3_d4" data-parent="m14w3" data-side="right"
+  <div class="node day-node" id="m14w3_d4" data-parent="m14w3" data-side="left"
        data-details="Test duplicate detection:|1. Publish 1 message via API|2. Stop the Worker AFTER DB save but BEFORE BasicAck|3. Restart Worker — it will receive the same message again (requeued)|4. The worker should detect the duplicate and skip the save — only 1 DB row despite 2 deliveries|5. Verify in SSMS: SELECT * FROM Scans WHERE MessageId = '...' — 1 row only">
     Day 4 — Duplicate Test
   </div>
-  <div class="node day-node" id="m14w3_d5" data-parent="m14w3" data-side="right"
+  <div class="node day-node" id="m14w3_d5" data-parent="m14w3" data-side="left"
        data-details="Document the idempotency strategy in a code comment near the duplicate check|Explain: why we check the DB rather than memory (memory is lost on restart)|Note: the unique index is the safety net — even if the code check somehow fails, the DB constraint prevents duplicates|Commit: git add . &amp;&amp; git commit -m 'feat: idempotent message processing using MessageId deduplication'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m14w4" data-parent="month10" data-side="right"
+  <div class="node sub-node" id="m14w4" data-parent="month10" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Poison message handling|Day 2: Configure DLQ|Day 3: Reject/Nack bad messages to DLQ|Day 4: Publish invalid payloads, verify DLQ|Day 5: Commit reliable messaging arch|✅ Deliverable: DLQ configured">
     📅 Week 56: Dead-Letter Queues
   </div>
-  <div class="node day-node" id="m14w4_d1" data-parent="m14w4" data-side="right"
+  <div class="node day-node" id="m14w4_d1" data-parent="m14w4" data-side="left"
        data-details="Read: a poison message is a message that repeatedly fails processing — malformed JSON, invalid data, business rule violation|If requeued after every failure, it blocks the queue and consumes worker resources in an infinite retry loop|Solution: the Dead Letter Queue (DLQ) — after N failures, route the message to a separate DLQ for investigation|RabbitMQ supports this natively: configure x-dead-letter-exchange on the main queue|Operators can then inspect the DLQ and decide to reprocess, fix, or discard the message">
     Day 1 — Poison Messages
   </div>
-  <div class="node day-node" id="m14w4_d2" data-parent="m14w4" data-side="right"
+  <div class="node day-node" id="m14w4_d2" data-parent="m14w4" data-side="left"
        data-details="Create the DLQ: channel.QueueDeclare('scans-dlq', durable: true, exclusive: false, autoDelete: false)|Configure the main queue to route to DLQ after max retries:|var args = new Dictionary&lt;string, object&gt; { { 'x-dead-letter-exchange', '' }, { 'x-dead-letter-routing-key', 'scans-dlq' } };|channel.QueueDeclare('scans-queue', durable: true, exclusive: false, autoDelete: false, arguments: args);|Note: you may need to delete and recreate the queue since you're changing its arguments">
     Day 2 — DLQ Setup
   </div>
-  <div class="node day-node" id="m14w4_d3" data-parent="m14w4" data-side="right"
+  <div class="node day-node" id="m14w4_d3" data-parent="m14w4" data-side="left"
        data-details="Track retry count per message using the x-death header added by RabbitMQ|When requeuing after failure: check x-death count header; if &gt;= 3: channel.BasicNack(deliveryTag, multiple: false, requeue: false) — this triggers the DLQ routing|If &lt; 3: channel.BasicNack(..., requeue: true) — put it back in the main queue|Log clearly: 'Message failed after 3 attempts — routing to DLQ: {MessageId}'">
     Day 3 — Reject/Nack
   </div>
-  <div class="node day-node" id="m14w4_d4" data-parent="m14w4" data-side="right"
+  <div class="node day-node" id="m14w4_d4" data-parent="m14w4" data-side="left"
        data-details="Test the DLQ flow:|1. Publish a message with invalid JSON (malformed payload)|2. Watch the Worker: receive → deserialize fails → Nack → requeue → retry → repeat 3 times|3. After 3 failures: Nack without requeue → RabbitMQ routes to scans-dlq|4. Check the DLQ in the Management UI — your poison message should appear there|5. The main queue is now clear — other messages can proceed">
     Day 4 — Testing
   </div>
-  <div class="node day-node" id="m14w4_d5" data-parent="m14w4" data-side="right"
+  <div class="node day-node" id="m14w4_d5" data-parent="m14w4" data-side="left"
        data-details="Tag: git tag month-14-messaging|Push: git push origin main --tags|Update README messaging section: explain queue, DLQ, idempotency, and manual ack strategy|Write: what would you need to add to reprocess DLQ messages? (A tool to re-publish from DLQ to main queue)|Commit all DLQ code: git add . &amp;&amp; git commit -m 'feat: dead-letter queue for poison messages'">
     Day 5 — Month Review
   </div>
@@ -1482,27 +1476,27 @@
        data-details="Write a docker-cheat-sheet.md in your project docs/|Include: pull, run, ps, stop, start, rm, logs, exec, images, inspect|For each: include the exact command and a 1-line explanation|Commit: git add . &amp;&amp; git commit -m 'docs: Docker command cheat sheet'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m15w2" data-parent="month10" data-side="left"
+  <div class="node sub-node" id="m15w2" data-parent="month10" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: FROM, WORKDIR, COPY, RUN, EXPOSE, ENTRYPOINT|Day 2: Create Dockerfile for API|Day 3: Build image|Day 4: Run API in container with port mapping|Day 5: Verify API works from Docker|✅ Deliverable: containerized API">
     📅 Week 58: Dockerfile
   </div>
-  <div class="node day-node" id="m15w2_d1" data-parent="m15w2" data-side="left"
+  <div class="node day-node" id="m15w2_d1" data-parent="m15w2" data-side="right"
        data-details="Read the syntax of a Dockerfile: each instruction is a layer that gets cached|FROM: base image (dotnet/aspnet:8.0 for runtime, dotnet/sdk:8.0 for build)|WORKDIR: sets the working directory inside the container filesystem|COPY: copies files from host to container|RUN: executes a command inside the container during build (e.g. dotnet restore)|EXPOSE: documents which port the app listens on (informational, doesn't actually publish)|ENTRYPOINT or CMD: the command that runs when the container starts">
     Day 1 — Syntax
   </div>
-  <div class="node day-node" id="m15w2_d2" data-parent="m15w2" data-side="left"
+  <div class="node day-node" id="m15w2_d2" data-parent="m15w2" data-side="right"
        data-details="Create a Dockerfile in the KioskApi project root:|FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build|WORKDIR /src|COPY . .|RUN dotnet restore|RUN dotnet publish -c Release -o /out|FROM mcr.microsoft.com/dotnet/aspnet:8.0 WORKDIR /app COPY --from=build /out . ENTRYPOINT ['dotnet', 'KioskApi.dll']|Wait — this is multi-stage; first write just the single-stage version to understand it">
     Day 2 — Draft
   </div>
-  <div class="node day-node" id="m15w2_d3" data-parent="m15w2" data-side="left"
+  <div class="node day-node" id="m15w2_d3" data-parent="m15w2" data-side="right"
        data-details="Single-stage Dockerfile first (no optimization):|FROM mcr.microsoft.com/dotnet/sdk:8.0|WORKDIR /app|COPY . .|RUN dotnet publish -c Release -o /publish|EXPOSE 8080|ENTRYPOINT ['dotnet', '/publish/KioskApi.dll']|Run: docker build -t kioskapi:v1 .|If it compiles: success — the image is built">
     Day 3 — Build
   </div>
-  <div class="node day-node" id="m15w2_d4" data-parent="m15w2" data-side="left"
+  <div class="node day-node" id="m15w2_d4" data-parent="m15w2" data-side="right"
        data-details="Run: docker run -p 8080:8080 -e ASPNETCORE_URLS=http://+:8080 kioskapi:v1|Open localhost:8080/api/terminals in browser or Postman — does it respond?|If you get a connection error to SQL Server: expected — the container can't reach localhost SQL Server|Fix for now: return mock data (comment out real DB call) and retest|Goal: the API runs inside a Docker container and responds to HTTP requests">
     Day 4 — Run
   </div>
-  <div class="node day-node" id="m15w2_d5" data-parent="m15w2" data-side="left"
+  <div class="node day-node" id="m15w2_d5" data-parent="m15w2" data-side="right"
        data-details="Add .dockerignore file: bin/, obj/, *.user, .git, appsettings.Development.json|This prevents unnecessary files from being copied into the build context (like your node_modules would in a JS project)|Rebuild the image: docker build -t kioskapi:v1 . — fast if nothing changed (Docker layer caching)|Check image size: docker images — the SDK image will be large (500MB+); next step is multi-stage">
     Day 5 — Review
   </div>
@@ -1554,9 +1548,8 @@
        data-details="Commit integration tests and run the full stack locally via compose.">
     Day 5 — Phase Review
   </div>
-  <!-- ===================== PHASE 6 ===================== -->
   <div class="year-label year-label-1" id="phase6Label" data-parent="month15" data-side="center">☁️ PHASE 6<br><small>Cloud & Delivery</small></div>
-  <!-- MONTH 11 -->
+    <!-- MONTH 11 -->
   <div class="node main-node" id="month11" data-parent="phase6Label" data-side="center"
        data-details="☁️ Cloud and Delivery|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     ☁️ Month 11: Cloud and Delivery (Part 1)
@@ -1610,27 +1603,27 @@
        data-details="Document IaC setup and destroy infrastructure to save costs.">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m16w3" data-parent="month11" data-side="right"
+  <div class="node sub-node" id="m16w3" data-parent="month11" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: What is managed SQL|Day 2: Create Azure SQL|Day 3: Firewall rules, SSMS connection|Day 4: Push schema via migrations|Day 5: Point API to Azure SQL|✅ Deliverable: cloud database connected">
     📅 Week 63: Cloud Config &amp; Migrations
   </div>
-  <div class="node day-node" id="m16w3_d1" data-parent="m16w3" data-side="right"
+  <div class="node day-node" id="m16w3_d1" data-parent="m16w3" data-side="left"
        data-details="Learn Azure KeyVault and secret injection.">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m16w3_d2" data-parent="m16w3" data-side="right"
+  <div class="node day-node" id="m16w3_d2" data-parent="m16w3" data-side="left"
        data-details="Provision KeyVault and wire it to App Service.">
     Day 2 — Provision
   </div>
-  <div class="node day-node" id="m16w3_d3" data-parent="m16w3" data-side="right"
+  <div class="node day-node" id="m16w3_d3" data-parent="m16w3" data-side="left"
        data-details="Allow your IP and connect securely to Azure SQL.">
     Day 3 — Firewall
   </div>
-  <div class="node day-node" id="m16w3_d4" data-parent="m16w3" data-side="right"
+  <div class="node day-node" id="m16w3_d4" data-parent="m16w3" data-side="left"
        data-details="Run Database Migrations automatically in CI/CD.">
     Day 4 — Migrations
   </div>
-  <div class="node day-node" id="m16w3_d5" data-parent="m16w3" data-side="right"
+  <div class="node day-node" id="m16w3_d5" data-parent="m16w3" data-side="left"
        data-details="Point deployed API to Azure SQL securely.">
     Day 5 — Review
   </div>
@@ -1658,105 +1651,105 @@
        data-details="Tag: git tag month-16-azure|Final test: deploy → configure Azure SQL connection string → submit scan from Postman → verify in SSMS|Everything runs in Azure: App Service + Azure SQL — fully cloud-deployed|Commit docs: git add . &amp;&amp; git commit -m 'docs: complete Azure deployment guide'|Push: git push origin main --tags">
     Day 5 — Month Review
   </div>
-  <div class="node sub-node" id="m17w1" data-parent="month11" data-side="left"
+  <div class="node sub-node" id="m17w1" data-parent="month11" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Enable App Service logs|Day 2: View CPU, memory, request metrics|Day 3: Add Application Insights|Day 4: Hit API, observe telemetry|Day 5: Learn to inspect cloud failures|✅ Deliverable: monitoring operational">
     📅 Week 65: Cloud Logging & Monitoring
   </div>
-  <div class="node day-node" id="m17w1_d1" data-parent="m17w1" data-side="left"
+  <div class="node day-node" id="m17w1_d1" data-parent="m17w1" data-side="right"
        data-details="In Azure Portal → App Service → Log stream — see live logs from your running container|These are the Serilog logs you configured — now streaming from your cloud deployment|Try making an API call and watch the log appear in real time|Also check: Platform logs for HTTP request logs (method, status, duration) — enable in Diagnostic settings|Goal: you can observe your running production app without SSH access">
     Day 1 — Log Stream
   </div>
-  <div class="node day-node" id="m17w1_d2" data-parent="m17w1" data-side="left"
+  <div class="node day-node" id="m17w1_d2" data-parent="m17w1" data-side="right"
        data-details="In App Service → Monitoring → Metrics tab — see real-time graphs:|Requests: how many HTTP calls per minute|Response time: P50, P95 latency|Errors: 4xx and 5xx counts|CPU and Memory: resource utilization|Create alerts: if 5xx &gt; 5 in a minute → email you — set up in Alerts tab">
     Day 2 — Metrics
   </div>
-  <div class="node day-node" id="m17w1_d3" data-parent="m17w1" data-side="left"
+  <div class="node day-node" id="m17w1_d3" data-parent="m17w1" data-side="right"
        data-details="Install Application Insights: dotnet add package Microsoft.ApplicationInsights.AspNetCore|Register: builder.Services.AddApplicationInsightsTelemetry(builder.Configuration['APPINSIGHTS_INSTRUMENTATIONKEY']);|In Azure Portal: create an Application Insights resource → copy the Instrumentation Key|Add it to App Service configuration: APPINSIGHTS_INSTRUMENTATIONKEY = your key|Redeploy — in a few minutes: App Insights starts collecting request data automatically">
     Day 3 — App Insights Basics
   </div>
-  <div class="node day-node" id="m17w1_d4" data-parent="m17w1" data-side="left"
+  <div class="node day-node" id="m17w1_d4" data-parent="m17w1" data-side="right"
        data-details="In Azure Portal → Application Insights → Live Metrics — watch real-time telemetry as requests arrive|Explore: Requests, Failures, Dependencies (your SQL Server calls), Users|Click on a failed request: see the full call stack and properties|App Insights shows you: which SQL queries ran, how long they took, which ones failed|Goal: you can debug a production issue using telemetry without reading raw log files">
     Day 4 — Telemetry
   </div>
-  <div class="node day-node" id="m17w1_d5" data-parent="m17w1" data-side="left"
+  <div class="node day-node" id="m17w1_d5" data-parent="m17w1" data-side="right"
        data-details="Trigger a 500 error: call an endpoint with bad input that causes an unhandled exception|Find the error in App Insights: Failures → Operations → click the error → see stack trace|Note the correlation ID in the trace — matches your Serilog logs|Write in your notes: what tools you'd use to diagnose production issues: Log Stream vs Metrics vs App Insights vs SSMS|Commit nothing — this is operational knowledge">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m17w2" data-parent="month11" data-side="left"
+  <div class="node sub-node" id="m17w2" data-parent="month11" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: CI fundamentals|Day 2: Create workflow YAML|Day 3: Add dotnet build step|Day 4: Add dotnet test step|Day 5: Push and watch CI run|✅ Deliverable: CI pipeline running">
     📅 Week 66: GitHub Actions Basics
   </div>
-  <div class="node day-node" id="m17w2_d1" data-parent="m17w2" data-side="left"
+  <div class="node day-node" id="m17w2_d1" data-parent="m17w2" data-side="right"
        data-details="Read: CI (Continuous Integration) = automatically build and test every code push|This catches: compilation errors, test failures, broken dependencies — before they reach production|GitHub Actions is GitHub's built-in CI/CD engine — workflows defined in .github/workflows/*.yml|A workflow runs on events (push, pull_request) and executes jobs made of steps|Read the GitHub Actions docs quickstart — 10 minutes">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m17w2_d2" data-parent="m17w2" data-side="left"
+  <div class="node day-node" id="m17w2_d2" data-parent="m17w2" data-side="right"
        data-details="Create .github/workflows/ci.yml in your repository|Add the YAML structure: name: CI, on: push: branches: [main], pull_request: branches: [main]|Add a job: build: runs-on: ubuntu-latest|Add steps: uses: actions/checkout@v4 (checks out code) then uses: actions/setup-dotnet@v4 with dotnet-version: 8.0.x|This is the foundation — runs on every push to main and on all PRs">
     Day 2 — Workflow File
   </div>
-  <div class="node day-node" id="m17w2_d3" data-parent="m17w2" data-side="left"
+  <div class="node day-node" id="m17w2_d3" data-parent="m17w2" data-side="right"
        data-details="Add the build step: - name: Build, run: dotnet build --no-restore|Before it: - name: Restore, run: dotnet restore|Commit and push to GitHub — watch the workflow run in GitHub → Actions tab|See the green checkmark (or red failure) — click to see step-by-step logs|Goal: every push to main triggers an automated build — failures are visible immediately">
     Day 3 — Build Step
   </div>
-  <div class="node day-node" id="m17w2_d4" data-parent="m17w2" data-side="left"
+  <div class="node day-node" id="m17w2_d4" data-parent="m17w2" data-side="right"
        data-details="Add the test step after build: - name: Test, run: dotnet test --no-build -- verbosity normal|Commit and push — watch the tests run in GitHub Actions|If tests pass: green checkmark on the commit in GitHub repository view|If tests fail: red ✗ and email notification — the build is broken|This is the core CI value: a broken commit is caught automatically, before deployment">
     Day 4 — Test Step
   </div>
-  <div class="node day-node" id="m17w2_d5" data-parent="m17w2" data-side="left"
+  <div class="node day-node" id="m17w2_d5" data-parent="m17w2" data-side="right"
        data-details="Review the workflow file — is every step clearly named?|Add a badge to README.md: copy the workflow badge URL from GitHub Actions → ... → Create status badge|Paste in README: ![CI](https://github.com/{user}/{repo}/actions/workflows/ci.yml/badge.svg)|Now the README shows live build status|Commit: git add . &amp;&amp; git commit -m 'ci: add GitHub Actions CI workflow'">
     Day 5 — Review
   </div>
-  <!-- MONTH 12 -->
+    <!-- MONTH 12 -->
   <div class="node main-node" id="month12" data-parent="month11" data-side="center"
        data-details="☁️ Cloud and Delivery|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     ☁️ Month 12: Cloud and Delivery (Part 2)
     <span class="months-badge">~60 hrs</span>
   </div>
-  <div class="node sub-node" id="m17w3" data-parent="month12" data-side="right"
+  <div class="node sub-node" id="m17w3" data-parent="month12" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Protected branches theory|Day 2: Require build+test before merge|Day 3: Intentionally break a test|Day 4: Fix and restore green|Day 5: Define repo workflow rules|✅ Deliverable: quality gates enforced">
     📅 Week 67: Branch Protection & Gates
   </div>
-  <div class="node day-node" id="m17w3_d1" data-parent="m17w3" data-side="right"
+  <div class="node day-node" id="m17w3_d1" data-parent="m17w3" data-side="left"
        data-details="Read: branch protection rules prevent direct pushes to main and require CI to pass before merging|This enforces: all code goes through a PR → CI passes on that PR → then it can merge to main|In GitHub: Settings → Branches → Add rule → Branch name pattern: main|Enable: Require a pull request before merging, Require status checks to pass (select your CI workflow)|If anyone tries to push directly to main: GitHub rejects it">
     Day 1 — Branch Protection
   </div>
-  <div class="node day-node" id="m17w3_d2" data-parent="m17w3" data-side="right"
+  <div class="node day-node" id="m17w3_d2" data-parent="m17w3" data-side="left"
        data-details="Create a branch: git checkout -b test/branch-protection|Push it: git push origin test/branch-protection|Open a PR on GitHub: main ← test/branch-protection|Watch: CI runs automatically on the PR|See: 'Checks' section in the PR showing CI status — merge button is disabled until CI passes">
     Day 2 — Configuration
   </div>
-  <div class="node day-node" id="m17w3_d3" data-parent="m17w3" data-side="right"
+  <div class="node day-node" id="m17w3_d3" data-parent="m17w3" data-side="left"
        data-details="In your test branch: break a test intentionally — change an assertion to fail|Commit and push — watch CI fail on the PR|In GitHub: the merge button stays disabled with 'Some checks were not successful'|Fix the test — push — CI runs again — goes green — merge button becomes available|This is the safety net in action: a broken change cannot be merged to main">
     Day 3 — Failing Build
   </div>
-  <div class="node day-node" id="m17w3_d4" data-parent="m17w3" data-side="right"
+  <div class="node day-node" id="m17w3_d4" data-parent="m17w3" data-side="left"
        data-details="Merge the PR — the test branch commits are now on main|Delete the test branch: git branch -d test/branch-protection &amp;&amp; git push origin --delete test/branch-protection|Run the CI workflow manually: GitHub Actions → your workflow → Run workflow → select main branch|Watch it run on demand: useful for verifying the main branch is green after a manual config change|Goal: branch protection + CI is a core quality tool">
     Day 4 — Fix and Re-run
   </div>
-  <div class="node day-node" id="m17w3_d5" data-parent="m17w3" data-side="right"
+  <div class="node day-node" id="m17w3_d5" data-parent="m17w3" data-side="left"
        data-details="Document your branching strategy in CONTRIBUTING.md:|Feature work → feature branch → PR → CI must pass → code review → merge to main|Direct pushes to main are blocked|Hotfixes → hotfix branch → PR → same process|Commit: git add . &amp;&amp; git commit -m 'docs: branching and PR workflow documentation'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m17w4" data-parent="month12" data-side="right"
+  <div class="node sub-node" id="m17w4" data-parent="month12" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Add deploy credentials to Secrets|Day 2: Create deploy workflow|Day 3: Deploy from main after CI passes|Day 4: Change something, verify auto-deploy|Day 5: CI/CD basics in place|✅ Deliverable: automated deployment">
     📅 Week 68: Basic CD
   </div>
-  <div class="node day-node" id="m17w4_d1" data-parent="m17w4" data-side="right"
+  <div class="node day-node" id="m17w4_d1" data-parent="m17w4" data-side="left"
        data-details="Read: CD (Continuous Deployment) = automatically deploy when CI passes on main|GitHub Actions can deploy to Azure App Service using the azure/webapps-deploy action|First: get the publish profile from Azure Portal → App Service → Get publish profile → download XML file|In GitHub: Settings → Secrets → Actions → New secret: AZURE_WEBAPP_PUBLISH_PROFILE → paste the XML content|The secret is encrypted and only accessible in your workflows">
     Day 1 — Secrets
   </div>
-  <div class="node day-node" id="m17w4_d2" data-parent="m17w4" data-side="right"
+  <div class="node day-node" id="m17w4_d2" data-parent="m17w4" data-side="left"
        data-details="Add a deploy job to ci.yml that runs AFTER the build job:|deploy: needs: build, runs-on: ubuntu-latest, if: github.ref == 'refs/heads/main'|Steps: checkout, setup-dotnet, publish (dotnet publish -c Release -o ./publish)|Then: uses: azure/webapps-deploy@v2, with: app-name: kiosk-api-{yourname}, publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}, package: ./publish|The if condition ensures deploy only runs on main, not on PRs">
     Day 2 — Deploy Workflow
   </div>
-  <div class="node day-node" id="m17w4_d3" data-parent="m17w4" data-side="right"
+  <div class="node day-node" id="m17w4_d3" data-parent="m17w4" data-side="left"
        data-details="Make code change: add a new field to your health endpoint response: { 'version': '1.1.0', 'status': 'healthy' }|Commit, push to a feature branch, open PR — CI runs (build + test only, no deploy)|Merge to main — CI runs again — now includes deploy job — app is deployed to Azure|Visit your Azure URL — see the new version field in /health response|This is the CI/CD pipeline: merge to main → automatic deployment to Azure">
     Day 3 — Pipeline Link
   </div>
-  <div class="node day-node" id="m17w4_d4" data-parent="m17w4" data-side="right"
+  <div class="node day-node" id="m17w4_d4" data-parent="m17w4" data-side="left"
        data-details="Verify the full CD flow: code change → PR → merge to main → automated deploy → live on Azure — end-to-end in under 5 minutes|Check: does the Azure app show the updated response?|Check: deployment history in Azure Portal → App Service → Deployment Center|Know: if the deploy fails, the old version stays running — Azure preserves the last good state|Test this: intentionally break the deploy (bad config) — old version still runs">
     Day 4 — Verification
   </div>
-  <div class="node day-node" id="m17w4_d5" data-parent="m17w4" data-side="right"
+  <div class="node day-node" id="m17w4_d5" data-parent="m17w4" data-side="left"
        data-details="Tag: git tag month-17-cicd|Write CI/CD section in README.md: how the pipeline works, how to trigger a deploy, how to check status|Push all changes: git push origin main --tags|Reflect: your CI/CD pipeline now ensures every change is tested before going live — this is essential for professional development|Phase 4 (deployment, CI/CD, monitoring) is complete">
     Day 5 — Month Review
   </div>
@@ -1784,27 +1777,27 @@
        data-details="Review: is the scope testable and completable in 4 weeks? Be honest|If no: cut scope. The goal is a COMPLETE, WORKING, DOCUMENTED system — not a partially-built ambitious one|Write capstone/SCOPE.md with a clear Done/Not Done checklist|Commit: git add . &amp;&amp; git commit -m 'capstone: scope, entities, flow, and security design'|This week of planning prevents a month of confusion">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m18w2" data-parent="month12" data-side="left"
+  <div class="node sub-node" id="m18w2" data-parent="month12" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Scaffold clean API project|Day 2: Add EF Core and models|Day 3: Build device + admin endpoints|Day 4: Add validators and errors|Day 5: Test thoroughly|✅ Deliverable: core API functional">
     📅 Week 70: Build the Core API
   </div>
-  <div class="node day-node" id="m18w2_d1" data-parent="m18w2" data-side="left"
+  <div class="node day-node" id="m18w2_d1" data-parent="m18w2" data-side="right"
        data-details="Create a fresh project: KioskCapstone — clean structure, no leftover template code|Folder structure: Controllers/, Services/, Middleware/, Data/, Models/, Workers/, Migrations/, Validators/|Add NuGet: EF Core, FluentValidation, Serilog, JWT Bearer, RabbitMQ.Client|Configure Serilog immediately — structured JSON to console and file|Create the DbContext and entity classes from your finalized schema">
     Day 1 — Scaffold
   </div>
-  <div class="node day-node" id="m18w2_d2" data-parent="m18w2" data-side="left"
+  <div class="node day-node" id="m18w2_d2" data-parent="m18w2" data-side="right"
        data-details="Add migrations: dotnet ef migrations add InitialCapstoneSchema → dotnet ef database update|Add EF Core seed data: 2 terminals with API keys, 1 admin user (hashed password), 3 employees|Register services in Program.cs using the patterns you've practiced|Verify: dotnet run, visit /health, see 'healthy' response with DB connectivity check|Goal: project scaffolds cleanly with no hacks or commented-out code">
     Day 2 — Persistence
   </div>
-  <div class="node day-node" id="m18w2_d3" data-parent="m18w2" data-side="left"
+  <div class="node day-node" id="m18w2_d3" data-parent="m18w2" data-side="right"
        data-details="Implement all 5 core endpoints:|POST /api/auth/login (admin login, returns JWT)|GET /api/terminals (admin: list all terminals) [Authorize]|GET /api/terminals/{id}/scans (admin: get scans for terminal) [Authorize]|POST /api/terminals/{id}/scans (terminal: submit scan) [ApiKey middleware]|POST /api/terminals/{id}/heartbeat (terminal: update last-seen) [ApiKey middleware]|Test each one in Postman before moving to the next">
     Day 3 — Endpoints
   </div>
-  <div class="node day-node" id="m18w2_d4" data-parent="m18w2" data-side="left"
+  <div class="node day-node" id="m18w2_d4" data-parent="m18w2" data-side="right"
        data-details="Apply FluentValidation to every POST endpoint — validate all required fields, lengths, formats|Apply the global exception middleware — no raw stack traces|Apply Serilog request logging with correlation IDs|Ensure authentication middleware is in the correct order: UseAuthentication → UseAuthorization → MapControllers|Run your full Postman collection: every endpoint responds correctly, validation fires on bad input">
     Day 4 — Validation
   </div>
-  <div class="node day-node" id="m18w2_d5" data-parent="m18w2" data-side="left"
+  <div class="node day-node" id="m18w2_d5" data-parent="m18w2" data-side="right"
        data-details="Write integration test checklist: each endpoint + expected status code + payload|Execute the checklist manually from Postman — mark each as pass or fail|Fix any fails before moving on — the API must be solid before adding infrastructure|Commit: git add . &amp;&amp; git commit -m 'feat: capstone API v1 — all core endpoints working with auth and validation'">
     Day 5 — Review
   </div>
@@ -1856,9 +1849,8 @@
        data-details="Tag: git tag capstone-v1|Push: git push origin main --tags|Write capstone/RUN.md: exact commands to run the full capstone from a clean machine|Include: prerequisites (Docker Desktop), steps (clone, create .env, docker compose up), verification (Postman collection)|Phase 4 capstone backend v1 is complete and deployable">
     Day 5 — Phase Review
   </div>
-  <!-- ===================== PHASE 7 ===================== -->
   <div class="year-label year-label-1" id="phase7Label" data-parent="month18" data-side="center">📐 PHASE 7<br><small>Portfolio, Performance & Hardening</small></div>
-  <!-- MONTH 13 -->
+    <!-- MONTH 13 -->
   <div class="node main-node" id="month13" data-parent="phase7Label" data-side="center"
        data-details="🛠️ Real-World Experience|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🛠️ Month 13: Real-World Experience (Part 1)
@@ -1912,27 +1904,27 @@
        data-details="Review: how does the API validate the token without asking Auth0 on every request?|It downloads the public key (JWKS) from auth0-domain.com/.well-known/jwks.json once, caches it, and uses it to verify token signatures locally|This is why stateless JWT validation is so fast|Optional: hit the .well-known/openid-configuration URL for your Auth0 domain in the browser to see the metadata|Commit: git add . &amp;&amp; git commit -m 'feat: RBAC policies and M2M client credentials flow'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m19w3" data-parent="month13" data-side="right"
+  <div class="node sub-node" id="m19w3" data-parent="month13" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Standardize naming/folders|Day 2: Remove dead code|Day 3: Strengthen validation|Day 4: Verify error contract consistency|Day 5: Clean code baseline|✅ Deliverable: polished codebase">
     📅 Week 75: Code Polish
   </div>
-  <div class="node day-node" id="m19w3_d1" data-parent="m19w3" data-side="right"
+  <div class="node day-node" id="m19w3_d1" data-parent="m19w3" data-side="left"
        data-details="Read: Cross-Origin Resource Sharing (CORS) is a browser security feature|By default, an SPA running on localhost:3000 cannot call an API on localhost:5000 — the browser blocks it|The API must send specific CORS headers allowing the SPA's origin (e.g., Access-Control-Allow-Origin: http://localhost:3000)|If you see 'CORS policy blocked...' in Chrome console, you need to configure CORS in the API, not the frontend">
     Day 1 — Naming
   </div>
-  <div class="node day-node" id="m19w3_d2" data-parent="m19w3" data-side="right"
+  <div class="node day-node" id="m19w3_d2" data-parent="m19w3" data-side="left"
        data-details="Configure CORS in ASP.NET Core Program.cs|builder.Services.AddCors(options =&gt; { options.AddPolicy('AllowFrontend', policy =&gt; policy.WithOrigins(builder.Configuration['FrontendUrl']).AllowAnyMethod().AllowAnyHeader()); });|app.UseCors('AllowFrontend'); — MUST be before UseAuthorization|Add 'FrontendUrl': 'http://localhost:3000' to appsettings.json|Goal: the API is prepared to accept web requests from a specific frontend">
     Day 2 — Cleanup
   </div>
-  <div class="node day-node" id="m19w3_d3" data-parent="m19w3" data-side="right"
+  <div class="node day-node" id="m19w3_d3" data-parent="m19w3" data-side="left"
        data-details="Read: what is an API Gateway? A single entry point that sits in front of multiple microservices or a monolith|Benefits: routing, SSL termination, rate limiting, central auth, CORS handling|Popular options: Nginx, Azure API Management, Ocelot (for .NET)|We'll use YARP (Yet Another Reverse Proxy) — a highly performant library by Microsoft to build gateways in .NET">
     Day 3 — Validation
   </div>
-  <div class="node day-node" id="m19w3_d4" data-parent="m19w3" data-side="right"
+  <div class="node day-node" id="m19w3_d4" data-parent="m19w3" data-side="left"
        data-details="Create a new empty web project: dotnet new web -n KioskGateway|Add YARP: dotnet add package Yarp.ReverseProxy|In Program.cs: builder.Services.AddReverseProxy().LoadFromConfig(builder.Configuration.GetSection('ReverseProxy'));|app.MapReverseProxy();|Run the gateway empty — it will do nothing yet, but you've set up the core engine">
     Day 4 — Error Contracts
   </div>
-  <div class="node day-node" id="m19w3_d5" data-parent="m19w3" data-side="right"
+  <div class="node day-node" id="m19w3_d5" data-parent="m19w3" data-side="left"
        data-details="Configure YARP in appsettings.json|Create a Route (match /api/{**catch-all}) and a Cluster (destination = http://localhost:5000 where your real API runs)|Run the Gateway (e.g., on port 7000), run the real API on 5000|Send a Postman request to localhost:7000/api/terminals — verify it forwards to 5000 and returns the response|Commit: git add . &amp;&amp; git commit -m 'feat: YARP API gateway setup'">
     Day 5 — Review
   </div>
@@ -1960,105 +1952,105 @@
        data-details="Tag: git tag month-19-security|Update README: add 'YARP API Gateway' and 'Auth0 Integration' sections|Draw an architecture diagram: Client → Gateway (Rate Limiting) → Auth Middleware → Kiosk API vs Reporting API|Push: git push origin main --tags|Month 19 is complete — your system is now enterprise-grade security-wise">
     Day 5 — Month Review
   </div>
-  <div class="node sub-node" id="m20w1" data-parent="month13" data-side="left"
+  <div class="node sub-node" id="m20w1" data-parent="month13" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Transient failures theory|Day 2: Polly — add retry policies|Day 3: Exponential backoff|Day 4: Log retries clearly|Day 5: Don't retry permanent failures|✅ Deliverable: retry logic working">
     📅 Week 77: Retry Patterns
   </div>
-  <div class="node day-node" id="m20w1_d1" data-parent="m20w1" data-side="left"
+  <div class="node day-node" id="m20w1_d1" data-parent="m20w1" data-side="right"
        data-details="Read: Monolith vs Microservices|Monolith = one deployed unit, shared DB. Microservices = multiple deployed units, independent DBs|Why split? Independent deployment, independent scaling, team autonomy, technology diversity|Why NOT split? Extreme complexity in monitoring, deployment, distributed transactions, data consistency|Rule: default to a modular monolith; only extract microservices if scaling/team size demands it">
     Day 1 — Theory
   </div>
-  <div class="node day-node" id="m20w1_d2" data-parent="m20w1" data-side="left"
+  <div class="node day-node" id="m20w1_d2" data-parent="m20w1" data-side="right"
        data-details="Identify a boundary in your Kiosk system: Scans (core operational data) vs Reports/Analytics (heavy reads, slow aggregates)|Design: we will split the KioskApi into two independent APIs: ScanningApi (handles POSTs) and ReportingApi (handles complex stats)|Data ownership rule: a microservice must own its database. The Reporting API cannot just query the Scanning API's SQL Server database|Draw this new architecture on paper">
     Day 2 — Polly
   </div>
-  <div class="node day-node" id="m20w1_d3" data-parent="m20w1" data-side="left"
+  <div class="node day-node" id="m20w1_d3" data-parent="m20w1" data-side="right"
        data-details="Read about Event-Driven Architecture (EDA) for microservice data sharing|How does ReportingApi get scan data if it can't read the Scanning DB?|Answer: ScanningApi publishes a 'ScanProcessedEvent' to RabbitMQ. ReportingApi subscribes, reads the event, and writes to its own reporting-optimized database (like ElasticSearch or a read-heavy SQL DB)|This is the 'Choreography' pattern">
     Day 3 — Backoff
   </div>
-  <div class="node day-node" id="m20w1_d4" data-parent="m20w1" data-side="left"
+  <div class="node day-node" id="m20w1_d4" data-parent="m20w1" data-side="right"
        data-details="Create the ReportingApi project, setup EF Core for a new 'ReportingDb' database|Entities: DailyScanSummary (Date, TerminalId, SuccessCount, FailCount)|Setup RabbitMQ subscription to a fanout exchange (or topic exchange) named 'kiosk.events'|Goal: scaffolding the reporting service">
     Day 4 — Logging
   </div>
-  <div class="node day-node" id="m20w1_d5" data-parent="m20w1" data-side="left"
+  <div class="node day-node" id="m20w1_d5" data-parent="m20w1" data-side="right"
        data-details="Update the main Kiosk API / Terminal Worker: after saving a scan, publish an event to 'kiosk.events' exchange|Message: { EventType: 'ScanCompleted', ScanId: 1, Timestamp: ..., Success: true, TerminalId: 4 }|Test: submit scan → saved in KioskDb → event published to RabbitMQ exchange|Commit: git add . &amp;&amp; git commit -m 'feat: event publishing for microservice choregraphy'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m20w2" data-parent="month13" data-side="left"
+  <div class="node sub-node" id="m20w2" data-parent="month13" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Timeout behavior|Day 2: Open, half-open, closed states|Day 3: Add breaker around dependency|Day 4: Trigger failures, observe|Day 5: Document where breakers belong|✅ Deliverable: circuit breaker demo">
     📅 Week 78: Timeouts & Circuit Breakers
   </div>
-  <div class="node day-node" id="m20w2_d1" data-parent="m20w2" data-side="left"
+  <div class="node day-node" id="m20w2_d1" data-parent="m20w2" data-side="right"
        data-details="In ReportingApi: write the consumer that listens to the 'kiosk.events' exchange|On receive: deserialize, check if a DailyScanSummary row exists for that Date/TerminalId, update counts, save changes|Use IServiceScopeFactory for DbContext as learned in Month 11|Test: fire 5 events into the exchange manually via MQ UI → verify ReportingDb updates correctly">
     Day 1 — Timeouts
   </div>
-  <div class="node day-node" id="m20w2_d2" data-parent="m20w2" data-side="left"
+  <div class="node day-node" id="m20w2_d2" data-parent="m20w2" data-side="right"
        data-details="End-to-End Microservices Test:|Start KioskApi, TerminalWorker, ReportingApi, RabbitMQ, SQL Server natively or via Docker Compose|Submit 10 scans to KioskApi|Verify: 10 rows in KioskDb Scans table, 1 summarized row in ReportingDb with count=10|This is eventual consistency — the read model updates milliseconds after the write model">
     Day 2 — Circuit Breaker Theory
   </div>
-  <div class="node day-node" id="m20w2_d3" data-parent="m20w2" data-side="left"
+  <div class="node day-node" id="m20w2_d3" data-parent="m20w2" data-side="right"
        data-details="Read: 'Distributed Transactions' and 'Sagas'|What if service A succeeds but service B fails? Read about the Outbox Pattern|Outbox Pattern: KioskApi saves the scan to DB AND saves the outgoing event to a local 'Outbox' table in the SAME database transaction|A background worker reads the Outbox table and publishes to RabbitMQ reliably|Understand why this prevents data inconsistencies if RabbitMQ is down when the DB commits">
     Day 3 — Implementation
   </div>
-  <div class="node day-node" id="m20w2_d4" data-parent="m20w2" data-side="left"
+  <div class="node day-node" id="m20w2_d4" data-parent="m20w2" data-side="right"
        data-details="Refactor KioskApi to use the Outbox Pattern (basic version)|Add OutboxMessages table to KioskDb|Modify save logic: context.Scans.Add(scan); context.OutboxMessages.Add(new OutboxMessage { Payload = json }); await context.SaveChangesAsync();|Create a BackgroundService that polls OutboxMessages every 2 seconds, publishes to RabbitMQ, and deletes the row|Test: kill RabbitMQ, submit scan (succeeds, sits in outbox), start RabbitMQ (worker publishes and clears outbox)">
     Day 4 — Testing
   </div>
-  <div class="node day-node" id="m20w2_d5" data-parent="m20w2" data-side="left"
+  <div class="node day-node" id="m20w2_d5" data-parent="m20w2" data-side="right"
        data-details="Review the complexity you just added: Outbox tables, background publishers, eventual consistency, multiple DBs|This is the true cost of microservices. It solves scaling but drastically increases architectural overhead|Write a 1-page pros/cons entry in docs/microservices-tradeoffs.md|Commit: git add . &amp;&amp; git commit -m 'feat: outbox pattern for reliable event publishing'">
     Day 5 — Review
   </div>
-  <!-- MONTH 14 -->
+    <!-- MONTH 14 -->
   <div class="node main-node" id="month14" data-parent="month13" data-side="center"
        data-details="🛠️ Real-World Experience|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🛠️ Month 14: Real-World Experience (Part 2)
     <span class="months-badge">~60 hrs</span>
   </div>
-  <div class="node sub-node" id="m20w3" data-parent="month14" data-side="right"
+  <div class="node sub-node" id="m20w3" data-parent="month14" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Bulk-generate scan messages|Day 2: Watch queue depth + worker throughput|Day 3: Slow consumer intentionally|Day 4: Restore speed, verify drain|Day 5: Write performance notes|✅ Deliverable: load test documented">
     📅 Week 79: Load & Queue Backlog
   </div>
-  <div class="node day-node" id="m20w3_d1" data-parent="m20w3" data-side="right"
+  <div class="node day-node" id="m20w3_d1" data-parent="m20w3" data-side="left"
        data-details="Read: Centralized Logging and Distributed Tracing|With N microservices, analyzing an error requires looking at N log files|Solution: Seq, ElasticSearch, or Application Insights as a centralized log sink|Configure all 4 projects (Gateway, KioskApi, Worker, ReportingApi) to write logs to Seq (run Seq in Docker: datalust/seq)|View Seq UI at localhost:5341 — see all logs streaming into one dashboard">
     Day 1 — Bulk Simulation
   </div>
-  <div class="node day-node" id="m20w3_d2" data-parent="m20w3" data-side="right"
+  <div class="node day-node" id="m20w3_d2" data-parent="m20w3" data-side="left"
        data-details="Implement W3C Trace Context (built into .NET Activity API) to track a single request across ALL services|Ensure HTTP calls from Gateway to KioskApi pass the 'traceparent' header (YARP does this automatically)|Ensure RabbitMQ messages carry the TraceId in message headers|Modify RabbitMQ publisher to inject Activity.Current.Id into message properties|Modify RabbitMQ consumer to extract it and start a new Activity">
     Day 2 — Observe
   </div>
-  <div class="node day-node" id="m20w3_d3" data-parent="m20w3" data-side="right"
+  <div class="node day-node" id="m20w3_d3" data-parent="m20w3" data-side="left"
        data-details="Test Distributed Tracing:|Submit a scan → flows through Gateway → KioskApi → Outbox Worker → RabbitMQ → ReportingApi|Open Seq dashboard, filter by the single TraceId|You should see logs from ALL 5 components interleaved in exact chronological order for that single business action|This capability is non-negotiable for microservice architectures">
     Day 3 — Slow Consumer
   </div>
-  <div class="node day-node" id="m20w3_d4" data-parent="m20w3" data-side="right"
+  <div class="node day-node" id="m20w3_d4" data-parent="m20w3" data-side="left"
        data-details="Read: gRPC vs REST. REST uses JSON over HTTP/1.1 (human readable, bulky, slower). gRPC uses Protobuf over HTTP/2 (binary, strict contracts, very fast)|gRPC is ideal for internal service-to-service communication (e.g., KioskApi calling an internal ValidationService)|Create a standalone gRPC project: dotnet new grpc -n VerificationService|Look at the .proto file — this is the interface definition language (IDL)">
     Day 4 — Recovery
   </div>
-  <div class="node day-node" id="m20w3_d5" data-parent="m20w3" data-side="right"
+  <div class="node day-node" id="m20w3_d5" data-parent="m20w3" data-side="left"
        data-details="Modify the verification.proto file: create a VerifyEmployeeRequest (employeeId) and VerifyEmployeeResponse (isValid, name)|Run generic build — Visual Studio generates the C# base classes automatically from the .proto file|Implement the service class (inherits from generated base class) and return mock data for valid employees|Commit: git add . &amp;&amp; git commit -m 'feat: initial gRPC VerificationService'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m20w4" data-parent="month14" data-side="right"
+  <div class="node sub-node" id="m20w4" data-parent="month14" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Shut down DB — observe|Day 2: Stop worker — inspect queue|Day 3: Inject malformed messages|Day 4: Re-send duplicates|Day 5: Document resilience test results|✅ Deliverable: failure drill report">
     📅 Week 80: Failure Drills
   </div>
-  <div class="node day-node" id="m20w4_d1" data-parent="m20w4" data-side="right"
+  <div class="node day-node" id="m20w4_d1" data-parent="m20w4" data-side="left"
        data-details="In KioskApi: add Grpc.Net.Client package|Add a service reference to the verification.proto file (set GrpcServices='Client' in csproj)|Build project — the client stubs are generated automatically|Use the gRPC client to call the VerificationService during scan submission (e.g., verifying an employee ID exists before accepting the scan)|Check performance: gRPC calls are typically single-digit milliseconds">
     Day 1 — DB Down
   </div>
-  <div class="node day-node" id="m20w4_d2" data-parent="m20w4" data-side="right"
+  <div class="node day-node" id="m20w4_d2" data-parent="m20w4" data-side="left"
        data-details="Read about gRPC deadlines and cancellation. If VerificationService hangs, KioskApi shouldn't hang forever|Pass a deadline to the gRPC call: var response = await client.VerifyEmployeeAsync(req, deadline: DateTime.UtcNow.AddSeconds(2));|Test: make the gRPC server Task.Delay(5000) and verify the client throws a RpcException with StatusCode.DeadlineExceeded|Handle this explicitly: fallback to accepting the scan, or reject with 503">
     Day 2 — Worker Down
   </div>
-  <div class="node day-node" id="m20w4_d3" data-parent="m20w4" data-side="right"
+  <div class="node day-node" id="m20w4_d3" data-parent="m20w4" data-side="left"
        data-details="Update docker-compose.yml to include ReportingApi, Seq, and VerificationService|The stack is now 7 containers: Gateway, KioskApi, Worker, ReportingApi, VerificationService, RabbitMQ, SQLServer, Seq|Run docker compose up — watch the orchestration of a distributed system|This is simulating a realistic cloud-native deployment environment">
     Day 3 — Bad Messages
   </div>
-  <div class="node day-node" id="m20w4_d4" data-parent="m20w4" data-side="right"
+  <div class="node day-node" id="m20w4_d4" data-parent="m20w4" data-side="left"
        data-details="Perform an infrastructure stress test:|While sending load, docker stop verification-service (simulate crash). What happens? (KioskApi should handle gRPC errors gracefully)|docker start verification-service (simulate recovery). KioskApi reconnects automatically (gRPC channels manage connection pooling)|This tests the system's resilience to component failure in a distributed environment">
     Day 4 — Duplicates
   </div>
-  <div class="node day-node" id="m20w4_d5" data-parent="m20w4" data-side="right"
+  <div class="node day-node" id="m20w4_d5" data-parent="m20w4" data-side="left"
        data-details="Tag: git tag month-20-microservices|Update README architecture diagram to show all services, gRPC links, RabbitMQ links, and the Gateway|Push: git push origin main --tags|Month 20 complete: you have built and orchestrated a secure, observable, event-driven microservice system">
     Day 5 — Month Review
   </div>
@@ -2086,27 +2078,27 @@
        data-details="In the HTML/JS client: add a listener for the event|connection.on('ReceiveScanUpdate', (data) =&gt; { document.body.innerHTML += '&lt;div&gt;Scan update: ' + data.TerminalId + '&lt;/div&gt;'; });|End-to-end Test: Open HTML page → Send POST scan to KioskApi via Postman → Watch the HTML page update instantly without refreshing|Commit: git add . &amp;&amp; git commit -m 'feat: SignalR live dashboard updates'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m21w2" data-parent="month14" data-side="left"
+  <div class="node sub-node" id="m21w2" data-parent="month14" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Scaffold minimal UI or improve API|Day 2: Terminal status view/endpoint|Day 3: Recent scans view/endpoint|Day 4: Failures view/endpoint|Day 5: Keep it functional, not fancy|✅ Deliverable: admin layer working">
     📅 Week 82: Build the Minimal Layer
   </div>
-  <div class="node day-node" id="m21w2_d1" data-parent="m21w2" data-side="left"
+  <div class="node day-node" id="m21w2_d1" data-parent="m21w2" data-side="right"
        data-details="Read: SignalR Groups. Sending to 'Clients.All' wastes bandwidth. Usually you want to send data only to users viewing a specific terminal|Update JS to call a Hub method: connection.invoke('SubscribeToTerminal', terminalId);|In the Hub, implement that method: Groups.AddToGroupAsync(Context.ConnectionId, $'Terminal_{terminalId}');|Update backend publisher: _hubContext.Clients.Group($'Terminal_{terminalId}').SendAsync(...)|Test: multiple clients subscribed to different terminals — ensure they only get relevant data">
     Day 1 — Scaffold
   </div>
-  <div class="node day-node" id="m21w2_d2" data-parent="m21w2" data-side="left"
+  <div class="node day-node" id="m21w2_d2" data-parent="m21w2" data-side="right"
        data-details="Read about SignalR authentication. Browsers can't easily send Authorization headers during the WebSocket handshake|Solution: send the JWT token in the query string: ?access_token=...|Configure JwtBearerOptions in Program.cs to read the token from context.Request.Query['access_token'] if the path starts with /hubs/|Add [Authorize] to LiveDashboardHub|Test connection with and without a valid token">
     Day 2 — Terminal Status
   </div>
-  <div class="node day-node" id="m21w2_d3" data-parent="m21w2" data-side="left"
+  <div class="node day-node" id="m21w2_d3" data-parent="m21w2" data-side="right"
        data-details="WebHooks scenario: sometimes an external system (like an HR application) wants to be notified when a specific employee scans|Instead of SignalR (for browsers), build a WebHook dispatcher (for APIs)|Create a WebHookSubscription table (Url, Secret, EventType)|When a scan event matches, use HttpClient to POST the payload to the registered Url|This is how you integrate your system into other corporate systems dynamically">
     Day 3 — Recent Scans
   </div>
-  <div class="node day-node" id="m21w2_d4" data-parent="m21w2" data-side="left"
+  <div class="node day-node" id="m21w2_d4" data-parent="m21w2" data-side="right"
        data-details="Build the WebHook sender: format payload, calculate HMAC signature using the Secret (for security, so the receiver knows it's really from you)|Include signature in an X-Signature header|Use Polly to wrap the HttpClient call in a retry policy (in case the receiving HR system is temporarily down)|Test using a mock receiver (e.g., webhook.site)">
     Day 4 — Failures View
   </div>
-  <div class="node day-node" id="m21w2_d5" data-parent="m21w2" data-side="left"
+  <div class="node day-node" id="m21w2_d5" data-parent="m21w2" data-side="right"
        data-details="Review real-time paradigms: WebSockets/SignalR (for UIs), WebHooks (for system-to-system push), Event Brokers/RabbitMQ (for internal async)|Draw a diagram mapping which technology to use when|Commit: git add . &amp;&amp; git commit -m 'feat: SignalR groups, auth, and webhook dispatcher'|Now you understand push-based architectures">
     Day 5 — Review
   </div>
@@ -2158,9 +2150,8 @@
        data-details="Tag: git tag month-21-realtime|Document SignalR, Redis, and Hangfire implementations in architecture docs|Run your full suite of end-to-end tests via Postman or script against the docker-compose stack|Commit: git add . &amp;&amp; git commit -m 'refactor: replaced background service with Hangfire for durable jobs'|Push: git push origin main --tags">
     Day 5 — Month Review
   </div>
-  <!-- ===================== PHASE 8 ===================== -->
   <div class="year-label year-label-1" id="phase8Label" data-parent="month21" data-side="center">✈️ PHASE 8<br><small>Career Positioning & Job Execution</small></div>
-  <!-- MONTH 15 -->
+    <!-- MONTH 15 -->
   <div class="node main-node" id="month15" data-parent="phase8Label" data-side="center"
        data-details="🎯 Interview Preparation|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🎯 Month 15: Interview Preparation (Part 1)
@@ -2214,27 +2205,27 @@
        data-details="Database connection pooling: HttpClient connection exhaustion vs SQL connection pooling|ADO.NET automatically pools DB connections. Don't cache DbContext instances statically; keep them scoped so connections return to the pool|Verify MinPoolSize and MaxPoolSize in your Connection String|Check: docker exec into SQL Server, run sp_who2 to see active connections while running a stress test|Commit: git add . &amp;&amp; git commit -m 'chore: concurrency, projections, query tuning'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m22w3" data-parent="month15" data-side="right"
+  <div class="node sub-node" id="m22w3" data-parent="month15" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Update professional title|Day 2: Write summary of direction|Day 3: Add capstone and technologies|Day 4: Set Germany-focused preferences|Day 5: Keep profile clear|✅ Deliverable: LinkedIn optimized">
     📅 Week 87: LinkedIn
   </div>
-  <div class="node day-node" id="m22w3_d1" data-parent="m22w3" data-side="right"
+  <div class="node day-node" id="m22w3_d1" data-parent="m22w3" data-side="left"
        data-details="C# Language Features deeply: Pattern matching updates|Rewrite multiple nested if/else statements using 'switch expression' syntax (introduced in C# 8, enhanced in 11)|var result = scanType switch { 'fingerprint' =&gt; ProcessFP(), 'retina' =&gt; ProcessRet(), _ =&gt; throw new ArgumentException() };|Go through old services and modernize switch statements to switch expressions for terseness and readability">
     Day 1 — Headline
   </div>
-  <div class="node day-node" id="m22w3_d2" data-parent="m22w3" data-side="right"
+  <div class="node day-node" id="m22w3_d2" data-parent="m22w3" data-side="left"
        data-details="Records vs Classes. Classes compare by reference (mem address), Records compare by value (content)|var a = new Dto(1); var b = new Dto(1); (a == b) is false for classes, true for records|Records also provide easy non-destructive mutation via 'with' keyword: var newRecord = oldRecord with { Status = 'Updated' };|Convert all simple data-holding classes (Command objects, Events) to records">
     Day 2 — About Section
   </div>
-  <div class="node day-node" id="m22w3_d3" data-parent="m22w3" data-side="right"
+  <div class="node day-node" id="m22w3_d3" data-parent="m22w3" data-side="left"
        data-details="Primary Constructors (C# 12 feature). Instead of verbose constructor injection: public MyService(ILogger logger) { _logger = logger; }|Use C# 12: public class MyService(ILogger&lt;MyService&gt; logger) { public void Do() =&gt; logger.Log('...'); }|Update your Dependency Injection in controllers and services to use Primary Constructors to drastically reduce boilerplate code">
     Day 3 — Projects
   </div>
-  <div class="node day-node" id="m22w3_d4" data-parent="m22w3" data-side="right"
+  <div class="node day-node" id="m22w3_d4" data-parent="m22w3" data-side="left"
        data-details="Global Usings and Implicit Usings. Remove boilerplate file headers|In a modern C# project, System, System.Linq, System.Collections.Generic are implicitly included|Move common cross-project usings (like Serilog, FluentValidation, your own Models namespace) into a GlobalUsings.cs file: global using Microsoft.EntityFrameworkCore;|Clean up every .cs file — some will have zero using statements at the top">
     Day 4 — Preferences
   </div>
-  <div class="node day-node" id="m22w3_d5" data-parent="m22w3" data-side="right"
+  <div class="node day-node" id="m22w3_d5" data-parent="m22w3" data-side="left"
        data-details="Nullable Reference Types (NRT) tuning. Enable &lt;Nullable&gt;enable&lt;/Nullable&gt; in .csproj (usually default now)|Resolve ALL nullable warnings. If something can be null, handle it or mark the type as string?|If you know it's not null but the compiler doesn't, use the null-forgiving operator (!) carefully|This eliminates NullReferenceExceptions in production by making them compile-time errors|Commit: git add . &amp;&amp; git commit -m 'refactor: modernize C# features (records, primary constructors, NRT)'">
     Day 5 — Review
   </div>
@@ -2262,105 +2253,105 @@
        data-details="Tag: git tag month-22-performance|Run the K6 load test against your optimized code. Compare new metrics vs baseline. Did caching, projection, and array pooling improve throughput?|Document findings in docs/performance-tuning.md|Push changes and tags|Month 22 complete: you know how to build fast, scalable, modern C# apps">
     Day 5 — Month Review
   </div>
-  <div class="node sub-node" id="m23w1" data-parent="month15" data-side="left"
+  <div class="node sub-node" id="m23w1" data-parent="month15" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Collect 20-30 Germany target jobs|Day 2: Extract common requirements|Day 3: Identify repeated weaknesses|Day 4: Update portfolio wording|Day 5: Choose target role families|✅ Deliverable: target role list">
     📅 Week 89: Market Reconnaissance
   </div>
-  <div class="node day-node" id="m23w1_d1" data-parent="m23w1" data-side="left"
+  <div class="node day-node" id="m23w1_d1" data-parent="m23w1" data-side="right"
        data-details="Read about System Design Principles: CAP Theorem (Consistency, Availability, Partition Tolerance)|In any distributed system network failure (Partition) is inevitable. You must choose between Consistency (returns right data or error) or Availability (always returns data, but might be stale)|Your Kiosk system prioritizing local offline storage favors Availability. Your Reporting Db favors Availability via Eventual Consistency|Write a paragraph mapping your architecture to CAP theorem tradeoffs">
     Day 1 — Search
   </div>
-  <div class="node day-node" id="m23w1_d2" data-parent="m23w1" data-side="left"
+  <div class="node day-node" id="m23w1_d2" data-parent="m23w1" data-side="right"
        data-details="Idempotency patterns at scale. What if the client generates the ID but network drops the response? Client retries, backend drops duplicate.|Add an Idempotency-Key header requirement to POST endpoints. Store the key in Redis with a 24-hour TTL mapped to the HTTP response payload|If the same key arrives again, short-circuit processing and return the EXACT same response from Redis instantly|Implement this as IdempotencyMiddleware in KioskApi">
     Day 2 — Analysis
   </div>
-  <div class="node day-node" id="m23w1_d3" data-parent="m23w1" data-side="left"
+  <div class="node day-node" id="m23w1_d3" data-parent="m23w1" data-side="right"
        data-details="Read about CQRS (Command Query Responsibility Segregation).|Separating reads (Queries) from writes (Commands). Your endpoints shouldn't mix them|Refactor a complex area using the MediatR library. Install MediatR|Create SubmitScanCommand (IRequest) and SubmitScanCommandHandler. Controller just calls _mediator.Send(command)|This drastically shrinks controllers and enforces a strict boundary for business use cases">
     Day 3 — Gap Check
   </div>
-  <div class="node day-node" id="m23w1_d4" data-parent="m23w1" data-side="left"
+  <div class="node day-node" id="m23w1_d4" data-parent="m23w1" data-side="right"
        data-details="Create GetTerminalReportQuery and GetTerminalReportQueryHandler|Queries don't need EF Tracking. Use context.Scans.AsNoTracking() to speed up reads|Commands use EF tracking because they mutate data|Understand the mental shift: controllers define HTTP boundary; MediatR handlers define the business use-case boundary">
     Day 4 — Adjustment
   </div>
-  <div class="node day-node" id="m23w1_d5" data-parent="m23w1" data-side="left"
+  <div class="node day-node" id="m23w1_d5" data-parent="m23w1" data-side="right"
        data-details="Review the MediatR implementation. Some developers hate the indirection, some love the decoupling.|Add MediatR PipelinBehaviors. Instead of repeating FluentValidation checks in every controller, register a ValidationBehavior that intercepts all commands, runs validators, and throws a standard ValidationException if it fails|Result: Controllers have zero validation logic, zero business logic. They just map HTTP to C# commands.|Commit: git add . &amp;&amp; git commit -m 'feat: CQRS via MediatR with pipeline validation'">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m23w2" data-parent="month15" data-side="left"
+  <div class="node sub-node" id="m23w2" data-parent="month15" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: OOP, interfaces, async, exceptions|Day 2: DI, middleware, controllers, config|Day 3: EF Core, migrations, relationships|Day 4: Testing and mocking|Day 5: Explain them out loud|✅ Deliverable: technical review complete">
     📅 Week 90: C# & .NET Review
   </div>
-  <div class="node day-node" id="m23w2_d1" data-parent="m23w2" data-side="left"
+  <div class="node day-node" id="m23w2_d1" data-parent="m23w2" data-side="right"
        data-details="Clean Architecture / Hexagonal Architecture / Onion Architecture principles.|Core domain (entities) in the center with NO dependencies. Application layer (use cases/handlers) depends only on Domain. Infrastructure (EF Core, RabbitMQ, HttpClients) depends on Application layer via interfaces. API (Controllers) depends on Application layer|Draw this series of concentric circles on paper. Does your Kiosk app follow this? No, it's mostly a layered monolith right now">
     Day 1 — C# Review
   </div>
-  <div class="node day-node" id="m23w2_d2" data-parent="m23w2" data-side="left"
+  <div class="node day-node" id="m23w2_d2" data-parent="m23w2" data-side="right"
        data-details="Attempt an architectural refactor: create 3 new class library projects (.csproj)|1. Kiosk.Domain (no NuGet packages except very basic ones; pure C# entities/interfaces)|2. Kiosk.Application (MediatR handlers, DTOs, interface implementations)|3. Kiosk.Infrastructure (EF Core DbContext, RabbitMQ producers, Serilog config)|The Main KioskApi (presentation layer) references Application and Infrastructure to construct dependency injection, but Application DOES NOT reference Infrastructure">
     Day 2 — .NET Review
   </div>
-  <div class="node day-node" id="m23w2_d3" data-parent="m23w2" data-side="left"
+  <div class="node day-node" id="m23w2_d3" data-parent="m23w2" data-side="right"
        data-details="Move files to the correct projects. Fix namespace errors. Build will break aggressively|Move DbContext to Infrastructure. Move IScanRepository interface to Application layer. Infrastructure implements IScanRepository. Application layer depends on IScanRepository|This is the Dependency Inversion Principle applied at an architectural scale|Fix build errors. This is hard work but teaches you profound lessons about coupling">
     Day 3 — EF Core Review
   </div>
-  <div class="node day-node" id="m23w2_d4" data-parent="m23w2" data-side="left"
+  <div class="node day-node" id="m23w2_d4" data-parent="m23w2" data-side="right"
        data-details="Once it builds, run the test suite. If tests pass, migration succeeds|Evaluate: why did we do this? Because tomorrow, if you replace SQL Server with MongoDB, or RabbitMQ with Kafka, you ONLY rewrite the Infrastructure project. The Domain and Application projects do not change or recompile|This protects business logic from infrastructure churn">
     Day 4 — Testing Review
   </div>
-  <div class="node day-node" id="m23w2_d5" data-parent="m23w2" data-side="left"
+  <div class="node day-node" id="m23w2_d5" data-parent="m23w2" data-side="right"
        data-details="Update integration tests to point to the new project structure|Since Domain and Application are completely decoupled from DB, write blazing fast unit tests for a MediatR handler using purely mocked interfaces. No DbContext required|Commit this massive refactor: git add . &amp;&amp; git commit -m 'refactor: migrated to Clean Architecture with Domain/Application/Infrastructure layers'">
     Day 5 — Practice
   </div>
-  <!-- MONTH 16 -->
+    <!-- MONTH 16 -->
   <div class="node main-node" id="month16" data-parent="month15" data-side="center"
        data-details="🎯 Interview Preparation|⏱️ ~60 hrs (6 weeks × 10 hrs)|📅 15 hours per week">
     🎯 Month 16: Interview Preparation (Part 2)
     <span class="months-badge">~60 hrs</span>
   </div>
-  <div class="node sub-node" id="m23w3" data-parent="month16" data-side="right"
+  <div class="node sub-node" id="m23w3" data-parent="month16" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: JOINs, GROUP BY, indexes|Day 2: REST design and errors|Day 3: JWT, API keys, validation|Day 4: Capstone architecture storytelling|Day 5: Focus on clarity, not jargon|✅ Deliverable: system design practice">
     📅 Week 91: SQL, APIs & System Design
   </div>
-  <div class="node day-node" id="m23w3_d1" data-parent="m23w3" data-side="right"
+  <div class="node day-node" id="m23w3_d1" data-parent="m23w3" data-side="left"
        data-details="Read about Observability vs Monitoring. Monitoring tells you a system is broken (CPU at 100%). Observability lets you ask arbitrary questions to find out WHY it's broken (Show me all requests slower than 2 seconds, grouping by tenant ID, where an external API was called)|Install OpenTelemetry .NET SDKs (the industry standard replacing vendor-specific agents)|Configure OpenTelemetry traces, metrics, and logs in Program.cs, exporting via OTLP protocol string to Seq or Jaeger">
     Day 1 — SQL Review
   </div>
-  <div class="node day-node" id="m23w3_d2" data-parent="m23w3" data-side="right"
+  <div class="node day-node" id="m23w3_d2" data-parent="m23w3" data-side="left"
        data-details="Run a Jaeger container via docker-compose: image: jaegertracing/all-in-one. Open localhost:16686|Fire requests into KioskApi. Open Jaeger UI. View the trace waterfall: Middleware → Controller → EF Core query execution time → RabbitMQ publish time|This visualization instantly exposes performance bottlenecks (like an N+1 query loop clearly visible as 100 tiny DB spans)|Goal: you know how to trace a request through a distributed system visually">
     Day 2 — REST Review
   </div>
-  <div class="node day-node" id="m23w3_d3" data-parent="m23w3" data-side="right"
+  <div class="node day-node" id="m23w3_d3" data-parent="m23w3" data-side="left"
        data-details="Add custom Metrics. Observability isn't just traces; it's counters and histograms|Create a System.Diagnostics.Metrics.Meter named 'Kiosk.Metrics'|Create a Counter&lt;int&gt; for 'scans_processed_total', and a Histogram&lt;double&gt; for 'scan_processing_duration_ms'|Increment counter on each scan. Record time elapsed in histogram|Expose a /metrics endpoint using the Prometheus exporter (OpenTelemetry.Exporter.Prometheus.AspNetCore)">
     Day 3 — Security Review
   </div>
-  <div class="node day-node" id="m23w3_d4" data-parent="m23w3" data-side="right"
+  <div class="node day-node" id="m23w3_d4" data-parent="m23w3" data-side="left"
        data-details="Run Prometheus and Grafana containers locally in compose|Configure Prometheus to scrape your /metrics endpoint every 5 seconds|Open Grafana, connect Prometheus as a data source, build a dashboard panel showing 'Scans Processed Per Minute' as a live line graph|This is a complete, industry-standard Observability stack (OpenTelemetry + Prometheus + Grafana)">
     Day 4 — Architecture Story
   </div>
-  <div class="node day-node" id="m23w3_d5" data-parent="m23w3" data-side="right"
+  <div class="node day-node" id="m23w3_d5" data-parent="m23w3" data-side="left"
        data-details="Trigger load via K6. Watch your custom Grafana dashboard light up with live traffic metrics|This is what SREs (Site Reliability Engineers) and DevOps teams look at during a product launch or an outage|Take a screenshot of Jaeger and Grafana. Include it in the README.md|Commit: git add . &amp;&amp; git commit -m 'feat: OpenTelemetry tracing and Prometheus metrics'">
     Day 5 — Focus
   </div>
-  <div class="node sub-node" id="m23w4" data-parent="month16" data-side="right"
+  <div class="node sub-node" id="m23w4" data-parent="month16" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: 'Tell me about yourself' — 90s + 2min|Day 2: Capstone deep dive|Day 3: Debugging and failure stories|Day 4: Trade-off explanations|Day 5: Full mock interview|✅ Deliverable: mock interview completed">
     📅 Week 92: Behavioral & Project Storytelling
   </div>
-  <div class="node day-node" id="m23w4_d1" data-parent="m23w4" data-side="right"
+  <div class="node day-node" id="m23w4_d1" data-parent="m23w4" data-side="left"
        data-details="Security deep dive: OWASP Top 10 API vulnerabilities|Broken Object Level Authorization (BOLA/IDOR): User A asks for /api/scans/userB. If it works, that's BOLA. Ensure your MediatR handlers always enforce that the JWT Sub claim matches the requested resource owner, or enforce Admin role|Test for BOLA: login as a terminal, try to fetch another terminal's config. Assert it fails with 403 Forbidden">
     Day 1 — Introduction
   </div>
-  <div class="node day-node" id="m23w4_d2" data-parent="m23w4" data-side="right"
+  <div class="node day-node" id="m23w4_d2" data-parent="m23w4" data-side="left"
        data-details="Mass Assignment: User sends POST /scans with { 'employeeId':'123', 'isAdmin':true } hoping your mapping framework blindly applies all JSON fields to the Database entity|Fix: validate strict DTO mapping. Never bind incoming JSON directly to EF Entities. You already do this by mapping DTOs to Entities, but double-check every endpoint.|SQL Injection: EF Core protects against this, but if you use context.Database.ExecuteSqlRaw, ensure parameters are parameterized, never string-interpolated into the SQL command">
     Day 2 — Capstone Deep Dive
   </div>
-  <div class="node day-node" id="m23w4_d3" data-parent="m23w4" data-side="right"
+  <div class="node day-node" id="m23w4_d3" data-parent="m23w4" data-side="left"
        data-details="Secrets Scanning: install a tool like git-secrets or use GitHub Advanced Security to scan your repository history. Did you commit an API key in month 9? If yes, it must be considered compromised in the real world.|Learn how to use BFG Repo-Cleaner or git filter-repo to scrub secrets from git history (advanced task for educational purposes, in reality just roll/revoke the secret)">
     Day 3 — Debugging Stories
   </div>
-  <div class="node day-node" id="m23w4_d4" data-parent="m23w4" data-side="right"
+  <div class="node day-node" id="m23w4_d4" data-parent="m23w4" data-side="left"
        data-details="Code Review Simulation: imagine a senior engineer reviewing your codebase|Write a self-review document: 'Areas I'm proud of' (Clean Architecture, Observability), 'Technical Debt to address' (Missing unit tests for edge cases, brittle Docker network config)|This level of self-awareness is exactly what managers look for in mid-to-senior promotions">
     Day 4 — Trade-offs
   </div>
-  <div class="node day-node" id="m23w4_d5" data-parent="m23w4" data-side="right"
+  <div class="node day-node" id="m23w4_d5" data-parent="m23w4" data-side="left"
        data-details="Tag: git tag month-23-architecture|Push tags and history. Complete final system documentation update|Month 23 complete. Your project is no longer a tutorial; it's a production-ready, cloud-native, observable, clean architecture solution">
     Day 5 — Month Review
   </div>
@@ -2388,27 +2379,27 @@
        data-details="Spend 2 hours doing mock behavior interviews based on the STAR format (Situation, Task, Action, Result).|Question: 'Tell me about a time you had to deal with a bug that was hard to reproduce.'|Answer using your Distributed Tracing / Correlation ID implementation.|Question: 'Tell me about a time you made an architectural mistake.' (Maybe tight coupling early on, fixed via interfaces/Clean Architecture).|Practice saying these aloud, recording yourself, and playing it back.">
     Day 5 — Review
   </div>
-  <div class="node sub-node" id="m24w2" data-parent="month16" data-side="left"
+  <div class="node sub-node" id="m24w2" data-parent="month16" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Recruiter/hiring manager messages|Day 2: Request referrals|Day 3: Join relevant communities|Day 4: Improve outreach quality|Day 5: Stay targeted and professional|✅ Deliverable: active outreach running">
     📅 Week 94: Outreach
   </div>
-  <div class="node day-node" id="m24w2_d1" data-parent="m24w2" data-side="left"
+  <div class="node day-node" id="m24w2_d1" data-parent="m24w2" data-side="right"
        data-details="System Design Prep: The core of mid/senior interviews.|Framework: 1. Requirements Clarification 2. Back-of-envelope Estimation 3. High-level Design 4. Detailed Design (Data models, API) 5. Bottlenecks &amp; Tradeoffs.|Practice problem 1: 'Design a URL shortener like bit.ly.'|Sketch it out on paper. Think about read vs write ratio. Where does cache fit? What database type? (NoSQL Key-Value store). How to handle collisions?">
     Day 1 — Outreach
   </div>
-  <div class="node day-node" id="m24w2_d2" data-parent="m24w2" data-side="left"
+  <div class="node day-node" id="m24w2_d2" data-parent="m24w2" data-side="right"
        data-details="System Design Practice problem 2: 'Design a ticketing system for popular concerts.'|Key challenge: Concurrency and overselling. Two users attempt to buy the last ticket at the exact same millisecond.|How do you handle this? Database row locking (Pessimistic concurrency), row versioning (Optimistic concurrency), or putting all requests on a single-threaded queue (RabbitMQ ordering).|Reference your learning from EF Core Concurrency tokens (Month 22) as the answer.">
     Day 2 — Referrals
   </div>
-  <div class="node day-node" id="m24w2_d3" data-parent="m24w2" data-side="left"
+  <div class="node day-node" id="m24w2_d3" data-parent="m24w2" data-side="right"
        data-details="System Design Practice problem 3: 'Design a live leader-board for a massive multiplayer game.'|Key challenge: High throughput writes, low latency reads, complex sorting on the fly.|SQL Server GROUP BY count sorting will buckle under the load.|Solution: Redis Sorted Sets (ZADD, ZREVRANGE). Mention your experience with Redis from Month 21 caching, and how distributed memory layers solve DB bottlenecking.">
     Day 3 — Communities
   </div>
-  <div class="node day-node" id="m24w2_d4" data-parent="m24w2" data-side="left"
+  <div class="node day-node" id="m24w2_d4" data-parent="m24w2" data-side="right"
        data-details="Read about CAP Theorem and NoSQL databases. You used SQL Server (relational). Why would you ever use MongoDB or Cassandra?|Document the differences: SQL provides ACID guarantees, rigid schema, good for financial / strict relational data.|NoSQL (Document/Columnar) provides high write throughput, flexible schema, easy horizontal scaling (sharding), but trades off complex joins and immediate consistency for Eventual Consistency.">
     Day 4 — Quality
   </div>
-  <div class="node day-node" id="m24w2_d5" data-parent="m24w2" data-side="left"
+  <div class="node day-node" id="m24w2_d5" data-parent="m24w2" data-side="right"
        data-details="Algorithms and Data Structures review. You won't focus heavily on Leetcode hards for backend roles, but basics matter.|Review Array vs Linked List tradeoffs.|Understand HashMaps/Dictionaries (O(1) lookups). Why are they O(1)? How do hash collisions happen?|Explain Big-O notation simply (Time complexity vs Space complexity).|Do 2 'Easy' logic problems on Leetcode to build confidence reading novel problem statements quickly.">
     Day 5 — Review
   </div>
@@ -2460,8 +2451,6 @@
        data-details="Conclusion of the 24-Month Roadmap.|Your final assignment: REST.|Burnout is real. Reward yourself for an incredible display of discipline, consistency, and problem-solving grit.|When you are ready, start submitting those applications. The tech industry needs builders like you. Good luck!">
     Day 5 — Roadmap Complete!
   </div>
-</div>
-
 <script src="script.js"></script>
 </body>
 </html>
