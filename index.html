@@ -12,7 +12,7 @@
 
 <!-- Header -->
 <header class="roadmap-header">
-  <h1>24-Month .NET Backend Roadmap</h1>
+  <h1>16-Month .NET Backend Roadmap</h1>
   <p class="header-subtitle">Backend Engineering · Systems Integration · 10 hrs/week</p>
   <div class="progress-bar-container">
     <div class="progress-bar" id="progressBar">
@@ -45,13 +45,7 @@
   <!-- ===================== PHASE 1 ===================== -->
   <div class="year-label year-label-1" id="phase1Label" data-parent="" data-side="center">⚡ PHASE 1<br><small>Core Programming & Developer Foundations</small></div>
 
-    <!-- MONTH 1 -->
-  <div class="node main-node" id="month1" data-parent="phase1Label" data-side="center"
-       data-details="💻 C# Crash Course (Accelerated)|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days|You already know Git, IDE, and basic programming from frontend work. This month focuses on C# language specifics.">
-    💻 Month 1: C# Crash Course (Accelerated)
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m1w1" data-parent="month1" data-side="left"
+    <div class="node sub-node" id="m1w1" data-parent="month1" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Setup .NET SDK + GitHub repo|Day 2: C# types — differences from JS/TS|Day 3: Control flow with C# syntax and pattern matching|Day 4: Exception handling — stricter than JS|Day 5: Build kiosk console app|✅ Deliverable: first C# console app">
     📅 Week 1: C# Syntax Sprint
   </div>
@@ -152,13 +146,7 @@
   </div>
 
 
-  <!-- MONTH 2 -->
-  <div class="node main-node" id="month2" data-parent="month1" data-side="center"
-       data-details="🧱 Object-Oriented Programming|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🧱 Month 2: Object-Oriented Programming
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m2w1" data-parent="month2" data-side="left"
+    <div class="node sub-node" id="m2w1" data-parent="month1" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Classes vs objects theory|Day 2: Create BiometricScanner class|Day 3: Constructors and new keyword|Day 4: Fields: SerialNumber, Manufacturer, IsConnected|Day 5: Create multiple scanner instances|✅ Deliverable: OOP class with instances">
     📅 Week 5: Classes & Objects
   </div>
@@ -183,7 +171,7 @@
     Day 5 — Mini Exercise
   </div>
 
-  <div class="node sub-node" id="m2w2" data-parent="month2" data-side="left"
+  <div class="node sub-node" id="m2w2" data-parent="month1" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: public, private — protect state|Day 2: Properties with { get; set; }|Day 3: Validation — no empty serial numbers|Day 4: Methods: PowerOn(), Connect(), Disconnect()|Day 5: Refactor for cleanliness|✅ Deliverable: validated, encapsulated class">
     📅 Week 6: Encapsulation & Validation
   </div>
@@ -259,13 +247,7 @@
   </div>
 
 
-  <!-- MONTH 3 -->
-  <div class="node main-node" id="month3" data-parent="month2" data-side="center"
-       data-details="📦 Collections, LINQ, Async & JSON|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    📦 Month 3: Collections, LINQ, Async & JSON
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m3w1" data-parent="month3" data-side="left"
+    <div class="node sub-node" id="m3w1" data-parent="month2" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: List<T> — List<ScanResult>|Day 2: Add, remove, count, iterate|Day 3: Dictionary<TKey, TValue>|Day 4: Lookup flow — ID to name|Day 5: Save scans + show employee names|✅ Deliverable: collection-based scan manager">
     📅 Week 9: Collections
   </div>
@@ -290,7 +272,7 @@
     Day 5 — Mini Exercise
   </div>
 
-  <div class="node sub-node" id="m3w2" data-parent="month3" data-side="left"
+  <div class="node sub-node" id="m3w2" data-parent="month2" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: LINQ and lambda theory|Day 2: .Where() — filter failed scans|Day 3: .Select() — extract IDs|Day 4: .OrderBy() and .OrderByDescending()|Day 5: Daily report: totals, successes, failures|✅ Deliverable: LINQ-powered reports">
     📅 Week 10: LINQ Basics
   </div>
@@ -315,7 +297,7 @@
     Day 5 — Daily Report
   </div>
 
-  <div class="node sub-node" id="m3w3" data-parent="month3" data-side="right"
+  <div class="node sub-node" id="m3w3" data-parent="month2" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Main thread and blocking|Day 2: Thread.Sleep — simulate slow hardware|Day 3: Task and Task.Delay|Day 4: async/await theory|Day 5: Identify where async helps scanners|✅ Deliverable: async understanding documented">
     📅 Week 11: Blocking vs Async
   </div>
@@ -340,7 +322,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m3w4" data-parent="month3" data-side="right"
+  <div class="node sub-node" id="m3w4" data-parent="month2" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: System.Text.Json — serialize ScanResult|Day 2: Deserialize JSON to object|Day 3: Save scan history to .json file|Day 4: async Task<bool>, Task<ScanResult>|Day 5: Commit KioskSimulator v2|✅ Deliverable: KioskSimulator v2 with JSON + async">
     📅 Week 12: JSON, File I/O & Async Methods
   </div>
@@ -373,13 +355,7 @@
   <!-- ===================== PHASE 2 ===================== -->
   <div class="year-label year-label-1" id="phase2Label" data-parent="month3" data-side="center">🔧 PHASE 2<br><small>Professional Coding & Web Foundations</small></div>
 
-  <!-- MONTH 4 -->
-  <div class="node main-node" id="month4" data-parent="phase2Label" data-side="center"
-       data-details="🧪 Testing & Code Quality|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🧪 Month 4: Testing & Code Quality
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m4w1" data-parent="month4" data-side="left"
+    <div class="node sub-node" id="m4w1" data-parent="month3" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Why automated tests matter|Day 2: xUnit test project setup|Day 3: AAA pattern — Arrange, Act, Assert|Day 4: Test kiosk logic methods|Day 5: Run via IDE and dotnet test|✅ Deliverable: first test project">
     📅 Week 13: Unit Testing Fundamentals
   </div>
@@ -404,7 +380,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m4w2" data-parent="month4" data-side="left"
+  <div class="node sub-node" id="m4w2" data-parent="month3" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Nulls, empty strings, negatives|Day 2: Tests for bad input|Day 3: Assert.Throws() for exceptions|Day 4: Fix bugs exposed by tests|Day 5: Improve test naming and readability|✅ Deliverable: edge-case tests passing">
     📅 Week 14: Edge Cases & Failures
   </div>
@@ -429,7 +405,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m4w3" data-parent="month4" data-side="right"
+  <div class="node sub-node" id="m4w3" data-parent="month3" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Why not test against real hardware|Day 2: Moq — mock IScanner|Day 3: Simulated success returns|Day 4: Simulated hardware failure|Day 5: Notes on mocking for SDK code|✅ Deliverable: mocked tests working">
     📅 Week 15: Mocking & Dependency Thinking
   </div>
@@ -454,7 +430,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m4w4" data-parent="month4" data-side="right"
+  <div class="node sub-node" id="m4w4" data-parent="month3" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: What is dependency injection|Day 2: Move logic into services|Day 3: Interface-based design|Day 4: Remove duplication, simplify|Day 5: Commit stable tested simulator|✅ Deliverable: DI-aware tested codebase">
     📅 Week 16: DI Basics & Quality
   </div>
@@ -480,13 +456,7 @@
   </div>
 
 
-    <!-- MONTH 5 -->
-  <div class="node main-node" id="month5" data-parent="month4" data-side="center"
-       data-details="🌐 API Design, Protocol Diversity &amp; Configuration (Accelerated)|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days|You know HTTP/REST from frontend — this month adds gRPC, SignalR, TCP, and API design.">
-    🌐 Month 5: API Design &amp; Protocol Diversity
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m5w1" data-parent="month5" data-side="left"
+    <div class="node sub-node" id="m5w1" data-parent="month3" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: REST API design — resource routes|Day 2: API blueprint — payloads, params, errors|Day 3: OpenAPI/Swagger spec and UI|Day 4: Postman collection versioned in Git|Day 5: Configuration — appsettings, env vars, secrets|✅ Deliverable: API blueprint + Postman collection">
     📅 Week 17: REST API Design &amp; OpenAPI (Accelerated)
   </div>
@@ -511,7 +481,7 @@
     Day 5 — Config Theory
   </div>
 
-  <div class="node sub-node" id="m5w2" data-parent="month5" data-side="left"
+  <div class="node sub-node" id="m5w2" data-parent="month3" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: gRPC theory — protobuf, service-to-service|Day 2: Write .proto file for DeviceService|Day 3: gRPC server in .NET|Day 4: gRPC client calling the server|Day 5: Compare gRPC vs REST for integration|✅ Deliverable: working gRPC service">
     📅 Week 18: gRPC Fundamentals
   </div>
@@ -536,7 +506,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m5w3" data-parent="month5" data-side="right"
+  <div class="node sub-node" id="m5w3" data-parent="month4" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: WebSockets and real-time theory|Day 2: SignalR hub for device status|Day 3: Client connection and live updates|Day 4: Groups for per-terminal broadcasts|Day 5: Document: SignalR vs polling vs gRPC streaming|✅ Deliverable: real-time SignalR hub">
     📅 Week 19: SignalR &amp; Real-Time Communication
   </div>
@@ -561,7 +531,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m5w4" data-parent="month5" data-side="right"
+  <div class="node sub-node" id="m5w4" data-parent="month4" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: TCP vs UDP basics|Day 2: TcpClient — simple client/server|Day 3: Message framing — length-prefix, delimiters|Day 4: Serial awareness + network troubleshooting (ping, tracert, nslookup, Wireshark)|Day 5: Protocol comparison + network troubleshooting checklist|✅ Deliverable: TCP basics + protocol comparison + network diagnostics">
     📅 Week 20: TCP/IP, Device Communication &amp; Network Troubleshooting
   </div>
@@ -587,13 +557,7 @@
   </div>
 
 
-  <!-- MONTH 6 -->
-  <div class="node main-node" id="month6" data-parent="month5" data-side="center"
-       data-details="🚀 ASP.NET Core Web API|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🚀 Month 6: ASP.NET Core Web API
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m6w1" data-parent="month6" data-side="left"
+    <div class="node sub-node" id="m6w1" data-parent="month4" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: dotnet new webapi|Day 2: Program.cs — boot and service registration|Day 3: TerminalsController with [ApiController]|Day 4: First GET — return mock JSON|Day 5: Trace route → controller → action|✅ Deliverable: first API running">
     📅 Week 21: Project Scaffold & Controllers
   </div>
@@ -618,7 +582,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m6w2" data-parent="month6" data-side="left"
+  <div class="node sub-node" id="m6w2" data-parent="month4" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Request/response DTOs|Day 2: GET + POST endpoints|Day 3: API versioning — URL and header versioning|Day 4: Backward compatibility — safe field additions|Day 5: Test with Swagger/Postman + cleanup|✅ Deliverable: versioned CRUD endpoints">
     📅 Week 22: Models, DTOs, CRUD &amp; API Versioning
   </div>
@@ -643,7 +607,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m6w3" data-parent="month6" data-side="right"
+  <div class="node sub-node" id="m6w3" data-parent="month4" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Create ScanService|Day 2: Register services via DI|Day 3: appsettings.json configuration|Day 4: IConfiguration / IOptions pattern|Day 5: Thin controllers, fat services|✅ Deliverable: service-layer API">
     📅 Week 23: Services, DI & Configuration
   </div>
@@ -668,7 +632,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m6w4" data-parent="month6" data-side="right"
+  <div class="node sub-node" id="m6w4" data-parent="month4" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: HttpClient + IHttpClientFactory — send JSON to API|Day 2: Real third-party API integration (auth, rate limits, pagination)|Day 3: Webhook receiving — POST endpoint for external events|Day 4: Debug end-to-end flow with breakpoints|Day 5: Commit simulator → API + real API + webhook|✅ Deliverable: full integration pipeline">
     📅 Week 24: API Integration, Real-World APIs &amp; Webhooks
   </div>
@@ -701,13 +665,7 @@
   <!-- ===================== PHASE 3 ===================== -->
   <div class="year-label year-label-1" id="phase3Label" data-parent="month6" data-side="center">🗄️ PHASE 3<br><small>Data & Security Core</small></div>
 
-  <!-- MONTH 7 -->
-  <div class="node main-node" id="month7" data-parent="phase3Label" data-side="center"
-       data-details="🗃️ SQL Fundamentals|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🗃️ Month 7: SQL Fundamentals
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m7w1" data-parent="month7" data-side="left"
+    <div class="node sub-node" id="m7w1" data-parent="month5" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Tables, rows, columns, constraints|Day 2: Primary keys, identity, GUIDs|Day 3: Foreign keys — table connections|Day 4: Normalization — reduce duplication|Day 5: Draw schema: terminals, scans, employees, logs|✅ Deliverable: schema design on paper">
     📅 Week 25: Relational Concepts
   </div>
@@ -732,7 +690,7 @@
     Day 5 — Schema Design
   </div>
 
-  <div class="node sub-node" id="m7w2" data-parent="month7" data-side="left"
+  <div class="node sub-node" id="m7w2" data-parent="month5" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Install SQL Server Express + SSMS|Day 2: CREATE TABLE, INSERT INTO|Day 3: SELECT with WHERE|Day 4: UPDATE, DELETE safely|Day 5: Save SQL scripts to Git|✅ Deliverable: SQL scripts in repo">
     📅 Week 26: Basic SQL
   </div>
@@ -757,7 +715,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m7w3" data-parent="month7" data-side="right"
+  <div class="node sub-node" id="m7w3" data-parent="month5" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: INNER JOIN, LEFT JOIN theory|Day 2: Join scans with employees|Day 3: GROUP BY — count per terminal|Day 4: ORDER BY, HAVING|Day 5: Repeat until queries feel natural|✅ Deliverable: complex query practice">
     📅 Week 27: JOINs & Aggregation
   </div>
@@ -782,7 +740,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m7w4" data-parent="month7" data-side="right"
+  <div class="node sub-node" id="m7w4" data-parent="month5" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Connection strings|Day 2: Windows auth vs SQL auth|Day 3: What indexes are and why queries slow|Day 4: Basic C# database connection test|Day 5: Finalize schema and DB setup|✅ Deliverable: local DB ready for EF Core">
     📅 Week 28: Indexes & App Mapping
   </div>
@@ -808,13 +766,7 @@
   </div>
 
 
-  <!-- MONTH 8 -->
-  <div class="node main-node" id="month8" data-parent="month7" data-side="center"
-       data-details="🔗 EF Core & Persistence|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🔗 Month 8: EF Core & Persistence
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m8w1" data-parent="month8" data-side="left"
+    <div class="node sub-node" id="m8w1" data-parent="month5" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: What an ORM is|Day 2: Install EF Core packages|Day 3: Create ApplicationDbContext|Day 4: Register in Program.cs|Day 5: Add DbSet<Terminal>, DbSet<Scan>|✅ Deliverable: EF Core configured">
     📅 Week 29: DbContext & Setup
   </div>
@@ -839,7 +791,7 @@
     Day 5 — DbSets
   </div>
 
-  <div class="node sub-node" id="m8w2" data-parent="month8" data-side="left"
+  <div class="node sub-node" id="m8w2" data-parent="month5" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Code-first approach|Day 2: First migration|Day 3: dotnet ef database update|Day 4: Add property, second migration|Day 5: Inspect generated tables|✅ Deliverable: migrations working">
     📅 Week 30: Migrations
   </div>
@@ -864,7 +816,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m8w3" data-parent="month8" data-side="right"
+  <div class="node sub-node" id="m8w3" data-parent="month6" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Navigation properties|Day 2: One-to-many: terminal → scans|Day 3: .Include() for related data|Day 4: Delete behavior — parent/child|Day 5: Understand object graph|✅ Deliverable: relationships configured">
     📅 Week 31: Relationships & Querying
   </div>
@@ -889,7 +841,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m8w4" data-parent="month8" data-side="right"
+  <div class="node sub-node" id="m8w4" data-parent="month6" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: GET from SQL not memory|Day 2: POST via EF Core SaveChangesAsync|Day 3: End-to-end: simulator → API → DB|Day 4: Verify rows in SSMS|Day 5: Commit first persistent backend|✅ Deliverable: API backed by SQL Server">
     📅 Week 32: API → Real Persistence
   </div>
@@ -915,13 +867,7 @@
   </div>
 
 
-  <!-- MONTH 9 -->
-  <div class="node main-node" id="month9" data-parent="month8" data-side="center"
-       data-details="🔐 Security, Validation & Errors|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🔐 Month 9: Security, Validation & Errors
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m9w1" data-parent="month9" data-side="left"
+    <div class="node sub-node" id="m9w1" data-parent="month6" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Authentication vs authorization|Day 2: Why APIs use stateless auth|Day 3: JWT: header, payload, signature|Day 4: Device vs human auth models|Day 5: Design security model on paper|✅ Deliverable: security design document">
     📅 Week 33: Auth Theory
   </div>
@@ -946,7 +892,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m9w2" data-parent="month9" data-side="left"
+  <div class="node sub-node" id="m9w2" data-parent="month6" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Configure JWT in ASP.NET Core|Day 2: Mock login endpoint|Day 3: [Authorize] on admin endpoints|Day 4: Test with/without token in Postman|Day 5: Clean up token generation|✅ Deliverable: JWT-protected admin API">
     📅 Week 34: JWT for Admin Endpoints
   </div>
@@ -971,7 +917,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m9w3" data-parent="month9" data-side="right"
+  <div class="node sub-node" id="m9w3" data-parent="month6" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Middleware theory|Day 2: X-API-Key middleware|Day 3: Protect scan submission endpoint|Day 4: Simulator sends API key header|Day 5: Verify unauthorized rejection|✅ Deliverable: API key auth working">
     📅 Week 35: API Keys for Devices &amp; Validation
   </div>
@@ -996,7 +942,7 @@
     Day 5 — Error Contract
   </div>
 
-  <div class="node sub-node" id="m9w4" data-parent="month9" data-side="right"
+  <div class="node sub-node" id="m9w4" data-parent="month6" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Validate before business logic|Day 2: FluentValidation setup|Day 3: Clean 400 Bad Request responses|Day 4: Standard 400/401/404/500 shapes|Day 5: Commit secure, validated API|✅ Deliverable: predictable error responses">
     📅 Week 36: Validation & Error Contracts
   </div>
@@ -1029,13 +975,7 @@
   <!-- ===================== PHASE 4 ===================== -->
   <div class="year-label year-label-1" id="phase4Label" data-parent="month9" data-side="center">⚙️ PHASE 4<br><small>Reliability & Operability</small></div>
 
-  <!-- MONTH 10 -->
-  <div class="node main-node" id="month10" data-parent="phase4Label" data-side="center"
-       data-details="📋 Logging, Exceptions & Tracing|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    📋 Month 10: Logging, Exceptions & Tracing
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m10w1" data-parent="month10" data-side="left"
+    <div class="node sub-node" id="m10w1" data-parent="month7" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Why scattered try/catch fails|Day 2: Exception-handling middleware|Day 3: Register in pipeline|Day 4: Force exception, observe clean 500|Day 5: Hide stack traces from clients|✅ Deliverable: global error middleware">
     📅 Week 37: Global Exception Handling
   </div>
@@ -1060,7 +1000,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m10w2" data-parent="month10" data-side="left"
+  <div class="node sub-node" id="m10w2" data-parent="month7" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Structured logging theory|Day 2: Install Serilog|Day 3: LogInformation, LogWarning, LogError|Day 4: Config in appsettings.json|Day 5: Trigger API calls, inspect logs|✅ Deliverable: structured logging working">
     📅 Week 38: Serilog Setup
   </div>
@@ -1085,7 +1025,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m10w3" data-parent="month10" data-side="right"
+  <div class="node sub-node" id="m10w3" data-parent="month7" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Message template placeholders|Day 2: Log objects carefully|Day 3: Add TerminalId, EmployeeId context|Day 4: JSON-formatted log output|Day 5: Remove noisy logs|✅ Deliverable: clean contextual logs">
     📅 Week 39: Contextual Logging
   </div>
@@ -1110,7 +1050,7 @@
     Day 5 — Review
   </div>
 
-    <div class="node sub-node" id="m10w4" data-parent="month10" data-side="right"
+    <div class="node sub-node" id="m10w4" data-parent="month7" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Correlation IDs — X-Correlation-ID middleware + LogContext|Day 2: Health checks — IHealthCheck for DB, queue, devices|Day 3: Custom health check for terminal heartbeat freshness|Day 4: Application metrics — counters for scans, failures, terminals|Day 5: Rolling log files + verify health endpoint|✅ Deliverable: fully observable API">
     📅 Week 40: Correlation IDs, Health Checks &amp; Metrics
   </div>
@@ -1136,13 +1076,7 @@
   </div>
 
 
-  <!-- MONTH 11 -->
-  <div class="node main-node" id="month11" data-parent="month10" data-side="center"
-       data-details="⏰ Background Workers|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    ⏰ Month 11: Background Workers
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m11w1" data-parent="month11" data-side="left"
+    <div class="node sub-node" id="m11w1" data-parent="month7" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: IHostedService, BackgroundService|Day 2: Scaffold worker class|Day 3: Repeating async loop with Task.Delay|Day 4: Register worker in Program.cs|Day 5: Confirm worker + API coexist|✅ Deliverable: background worker running">
     📅 Week 41: Hosted Services
   </div>
@@ -1167,7 +1101,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m11w2" data-parent="month11" data-side="left"
+  <div class="node sub-node" id="m11w2" data-parent="month7" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Simulate terminal heartbeat checks|Day 2: Mark terminals offline after timeout|Day 3: Add worker logging|Day 4: Graceful shutdown with CancellationToken|Day 5: Clean the polling loop|✅ Deliverable: heartbeat monitor working">
     📅 Week 42: Polling & Health Logic
   </div>
@@ -1192,7 +1126,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m11w3" data-parent="month11" data-side="right"
+  <div class="node sub-node" id="m11w3" data-parent="month8" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Why scoped ≠ singleton in workers|Day 2: IServiceScopeFactory injection|Day 3: Resolve DbContext inside loop|Day 4: Query database from worker|Day 5: Verify no resource leaks|✅ Deliverable: worker with safe DI">
     📅 Week 43: DI in Workers
   </div>
@@ -1217,7 +1151,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m11w4" data-parent="month11" data-side="right"
+  <div class="node sub-node" id="m11w4" data-parent="month8" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: DateTime.UtcNow, DateTimeOffset, time zones|Day 2: Build timed summary job|Day 3: Batch export — CSV file from DB|Day 4: Batch import — CSV to DB with validation|Day 5: Commit workers + batch ETL|✅ Deliverable: scheduled tasks + batch import/export">
     📅 Week 44: Scheduling, Batch Processing &amp; UTC
   </div>
@@ -1243,13 +1177,7 @@
   </div>
 
 
-  <!-- MONTH 12 -->
-  <div class="node main-node" id="month12" data-parent="month11" data-side="center"
-       data-details="🔌 Integration Patterns & SDK Design|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🔌 Month 12: Integration Patterns & SDK Design
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m12w1" data-parent="month12" data-side="left"
+    <div class="node sub-node" id="m12w1" data-parent="month8" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Why wrap vendor SDKs|Day 2: Adapter pattern around mock vendor|Day 3: Isolate vendor-specific code|Day 4: Add second fake vendor|Day 5: Document vendor lock-in protection|✅ Deliverable: adapter-based SDK wrapper">
     📅 Week 45: Wrapping External SDKs
   </div>
@@ -1274,7 +1202,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m12w2" data-parent="month12" data-side="left"
+  <div class="node sub-node" id="m12w2" data-parent="month8" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Timeouts, retries, transient vs permanent failure|Day 2: Map SDK errors to app errors|Day 3: Which errors retry, which fail fast|Day 4: SDK debugging — Wireshark on SDK traffic, vendor logs, failure isolation|Day 5: SDK Debugging Playbook doc|✅ Deliverable: resilient integration layer + debugging playbook">
     📅 Week 46: Integration Boundaries &amp; SDK Debugging
   </div>
@@ -1299,7 +1227,7 @@
     Day 5 — SDK Playbook
   </div>
 
-  <div class="node sub-node" id="m12w3" data-parent="month12" data-side="right"
+  <div class="node sub-node" id="m12w3" data-parent="month8" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: What happens when API is down|Day 2: Save failed submissions locally|Day 3: Add resend/recovery logic|Day 4: Turn off API, verify fallback|Day 5: Document offline-first behavior|✅ Deliverable: offline fallback working">
     📅 Week 47: Offline Thinking & Fallback
   </div>
@@ -1324,7 +1252,7 @@
     Day 5 — Review
   </div>
 
-    <div class="node sub-node" id="m12w4" data-parent="month12" data-side="right"
+    <div class="node sub-node" id="m12w4" data-parent="month8" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Data mapping theory — vendor-specific vs canonical models|Day 2: Canonical models — explicit manual mapping|Day 3: Non-JSON formats — XML, CSV, fixed-width parsing|Day 4: Architecture review — draw and document the system|Day 5: Year 1 foundation commit with full README|✅ Deliverable: data mapping + format diversity + polished Year 1">
     📅 Week 48: Legacy Integrations &amp; Format Diversity
   </div>
@@ -1357,13 +1285,7 @@
   <!-- ===================== PHASE 5 ===================== -->
   <div class="year-label year-label-1" id="phase5Label" data-parent="month12" data-side="center">📡 PHASE 5<br><small>Messaging, Resilience & Containers</small></div>
 
-  <!-- MONTH 13 -->
-  <div class="node main-node" id="month13" data-parent="phase5Label" data-side="center"
-       data-details="🐇 RabbitMQ Fundamentals|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🐇 Month 13: RabbitMQ Fundamentals
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m13w1" data-parent="month13" data-side="left"
+    <div class="node sub-node" id="m13w1" data-parent="month9" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Sync vs async communication|Day 2: Producers, consumers, queues, exchanges|Day 3: Why brokers absorb spikes|Day 4: Draw scan flow through RabbitMQ|Day 5: Finalize message flow design|✅ Deliverable: message architecture diagram">
     📅 Week 49: Messaging Theory
   </div>
@@ -1388,7 +1310,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m13w2" data-parent="month13" data-side="left"
+  <div class="node sub-node" id="m13w2" data-parent="month9" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Docker: rabbitmq:management|Day 2: Explore management UI (15672)|Day 3: Create queue manually|Day 4: Publish test messages|Day 5: Verify queue lifecycle|✅ Deliverable: RabbitMQ running locally">
     📅 Week 50: Running RabbitMQ
   </div>
@@ -1413,7 +1335,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m13w3" data-parent="month13" data-side="right"
+  <div class="node sub-node" id="m13w3" data-parent="month9" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Install RabbitMQ.Client|Day 2: Create connection and channel|Day 3: Declare queue from code|Day 4: Publish scans from API|Day 5: Verify messages arrive|✅ Deliverable: C# producer publishing">
     📅 Week 51: Producer in C#
   </div>
@@ -1438,7 +1360,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m13w4" data-parent="month13" data-side="right"
+  <div class="node sub-node" id="m13w4" data-parent="month9" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Choose worker or separate app|Day 2: Connect to RabbitMQ|Day 3: Listen for messages|Day 4: Deserialize payloads to objects|Day 5: Confirm API ↔ worker via queue|✅ Deliverable: end-to-end queue flow">
     📅 Week 52: Consumer in C#
   </div>
@@ -1464,13 +1386,7 @@
   </div>
 
 
-  <!-- MONTH 14 -->
-  <div class="node main-node" id="month14" data-parent="month13" data-side="center"
-       data-details="✉️ Reliable Messaging & Idempotency|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    ✉️ Month 14: Reliable Messaging & Idempotency
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m14w1" data-parent="month14" data-side="left"
+    <div class="node sub-node" id="m14w1" data-parent="month9" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Worker saves messages to SQL|Day 2: API → Queue → Worker → DB path|Day 3: Add consume/save/error logs|Day 4: Push many scans, verify DB|Day 5: Stabilize worker|✅ Deliverable: messages persisted to DB">
     📅 Week 53: Saving Consumed Messages
   </div>
@@ -1495,7 +1411,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m14w2" data-parent="month14" data-side="left"
+  <div class="node sub-node" id="m14w2" data-parent="month9" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Auto-ack vs manual ack|Day 2: Ack only after successful save|Day 3: Simulate save failure|Day 4: Kill worker mid-process, restart|Day 5: Understand durability|✅ Deliverable: manual ack working">
     📅 Week 54: Message Acknowledgements
   </div>
@@ -1520,7 +1436,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m14w3" data-parent="month14" data-side="right"
+  <div class="node sub-node" id="m14w3" data-parent="month10" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Why duplicates happen|Day 2: Add unique MessageId|Day 3: Ignore already-processed messages|Day 4: Send duplicates, verify one save|Day 5: Document idempotency|✅ Deliverable: duplicate prevention">
     📅 Week 55: Idempotency
   </div>
@@ -1545,7 +1461,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m14w4" data-parent="month14" data-side="right"
+  <div class="node sub-node" id="m14w4" data-parent="month10" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Poison message handling|Day 2: Configure DLQ|Day 3: Reject/Nack bad messages to DLQ|Day 4: Publish invalid payloads, verify DLQ|Day 5: Commit reliable messaging arch|✅ Deliverable: DLQ configured">
     📅 Week 56: Dead-Letter Queues
   </div>
@@ -1571,13 +1487,7 @@
   </div>
 
 
-  <!-- MONTH 15 -->
-  <div class="node main-node" id="month15" data-parent="month14" data-side="center"
-       data-details="🐳 Docker, Compose & Secrets|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🐳 Month 15: Docker, Compose & Secrets
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m15w1" data-parent="month15" data-side="left"
+    <div class="node sub-node" id="m15w1" data-parent="month10" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Images vs containers theory|Day 2: Install Docker Desktop|Day 3: Run hello-world|Day 4: docker ps, docker stop, docker logs|Day 5: Document key commands|✅ Deliverable: Docker basics understood">
     📅 Week 57: Docker Fundamentals
   </div>
@@ -1602,7 +1512,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m15w2" data-parent="month15" data-side="left"
+  <div class="node sub-node" id="m15w2" data-parent="month10" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: FROM, WORKDIR, COPY, RUN, EXPOSE, ENTRYPOINT|Day 2: Create Dockerfile for API|Day 3: Build image|Day 4: Run API in container with port mapping|Day 5: Verify API works from Docker|✅ Deliverable: containerized API">
     📅 Week 58: Dockerfile
   </div>
@@ -1627,7 +1537,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m15w3" data-parent="month15" data-side="right"
+  <div class="node sub-node" id="m15w3" data-parent="month10" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Why runtime-only images are better|Day 2: .NET SDK image for build|Day 3: ASP.NET runtime image|Day 4: Rebuild and compare sizes|Day 5: Save production Dockerfile|✅ Deliverable: optimized multi-stage image">
     📅 Week 59: Multi-Stage Build
   </div>
@@ -1652,7 +1562,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m15w4" data-parent="month15" data-side="right"
+  <div class="node sub-node" id="m15w4" data-parent="month10" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: compose for API, worker, RabbitMQ, SQL|Day 2: Service-name networking|Day 3: Move connection strings to env vars|Day 4: .env file + .gitignore|Day 5: Boot full stack with one command|✅ Deliverable: one-command local stack">
     📅 Week 60: Docker Compose & Secrets
   </div>
@@ -1685,13 +1595,7 @@
   <!-- ===================== PHASE 6 ===================== -->
   <div class="year-label year-label-1" id="phase6Label" data-parent="month15" data-side="center">☁️ PHASE 6<br><small>Cloud & Delivery</small></div>
 
-  <!-- MONTH 16 -->
-  <div class="node main-node" id="month16" data-parent="phase6Label" data-side="center"
-       data-details="🌍 First Cloud Deployment|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🌍 Month 16: First Cloud Deployment
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m16w1" data-parent="month16" data-side="left"
+    <div class="node sub-node" id="m16w1" data-parent="month11" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Create Azure account|Day 2: Learn resource groups|Day 3: Install Azure CLI|Day 4: Explore App Service, SQL, monitoring|Day 5: Plan resource list|✅ Deliverable: Azure account ready">
     📅 Week 61: Azure Setup
   </div>
@@ -1716,7 +1620,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m16w2" data-parent="month16" data-side="left"
+  <div class="node sub-node" id="m16w2" data-parent="month11" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: What is App Service|Day 2: Create App Service plan + Web App|Day 3: Deploy from CLI or Visual Studio|Day 4: Verify public URL works|Day 5: Document deployment steps|✅ Deliverable: API live in Azure">
     📅 Week 62: Infrastructure as Code (IaC)
   </div>
@@ -1741,7 +1645,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m16w3" data-parent="month16" data-side="right"
+  <div class="node sub-node" id="m16w3" data-parent="month11" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: What is managed SQL|Day 2: Create Azure SQL|Day 3: Firewall rules, SSMS connection|Day 4: Push schema via migrations|Day 5: Point API to Azure SQL|✅ Deliverable: cloud database connected">
     📅 Week 63: Cloud Config &amp; Migrations
   </div>
@@ -1766,7 +1670,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m16w4" data-parent="month16" data-side="right"
+  <div class="node sub-node" id="m16w4" data-parent="month11" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Azure app settings / env vars|Day 2: Remove secrets from code|Day 3: Verify cloud config works|Day 4: Break config intentionally, debug|Day 5: Commit working cloud deployment|✅ Deliverable: configured cloud system">
     📅 Week 64: Cloud Configuration
   </div>
@@ -1792,13 +1696,7 @@
   </div>
 
 
-  <!-- MONTH 17 -->
-  <div class="node main-node" id="month17" data-parent="month16" data-side="center"
-       data-details="🔄 Monitoring & CI/CD|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🔄 Month 17: Monitoring & CI/CD
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m17w1" data-parent="month17" data-side="left"
+    <div class="node sub-node" id="m17w1" data-parent="month11" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Enable App Service logs|Day 2: View CPU, memory, request metrics|Day 3: Add Application Insights|Day 4: Hit API, observe telemetry|Day 5: Learn to inspect cloud failures|✅ Deliverable: monitoring operational">
     📅 Week 65: Cloud Logging & Monitoring
   </div>
@@ -1823,7 +1721,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m17w2" data-parent="month17" data-side="left"
+  <div class="node sub-node" id="m17w2" data-parent="month11" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: CI fundamentals|Day 2: Create workflow YAML|Day 3: Add dotnet build step|Day 4: Add dotnet test step|Day 5: Push and watch CI run|✅ Deliverable: CI pipeline running">
     📅 Week 66: GitHub Actions Basics
   </div>
@@ -1848,7 +1746,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m17w3" data-parent="month17" data-side="right"
+  <div class="node sub-node" id="m17w3" data-parent="month12" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Protected branches theory|Day 2: Require build+test before merge|Day 3: Intentionally break a test|Day 4: Fix and restore green|Day 5: Define repo workflow rules|✅ Deliverable: quality gates enforced">
     📅 Week 67: Branch Protection & Gates
   </div>
@@ -1873,7 +1771,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m17w4" data-parent="month17" data-side="right"
+  <div class="node sub-node" id="m17w4" data-parent="month12" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Add deploy credentials to Secrets|Day 2: Create deploy workflow|Day 3: Deploy from main after CI passes|Day 4: Change something, verify auto-deploy|Day 5: CI/CD basics in place|✅ Deliverable: automated deployment">
     📅 Week 68: Basic CD
   </div>
@@ -1899,13 +1797,7 @@
   </div>
 
 
-  <!-- MONTH 18 -->
-  <div class="node main-node" id="month18" data-parent="month17" data-side="center"
-       data-details="🏗️ Capstone Backend v1|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🏗️ Month 18: Capstone Backend v1
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m18w1" data-parent="month18" data-side="left"
+    <div class="node sub-node" id="m18w1" data-parent="month12" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Define scope clearly|Day 2: Finalize entities/models|Day 3: Finalize data flow|Day 4: Finalize admin vs device auth|Day 5: Clean architecture notes|✅ Deliverable: architecture document">
     📅 Week 69: Capstone Architecture
   </div>
@@ -1930,7 +1822,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m18w2" data-parent="month18" data-side="left"
+  <div class="node sub-node" id="m18w2" data-parent="month12" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Scaffold clean API project|Day 2: Add EF Core and models|Day 3: Build device + admin endpoints|Day 4: Add validators and errors|Day 5: Test thoroughly|✅ Deliverable: core API functional">
     📅 Week 70: Build the Core API
   </div>
@@ -1955,7 +1847,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m18w3" data-parent="month18" data-side="right"
+  <div class="node sub-node" id="m18w3" data-parent="month12" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Publish scans to RabbitMQ|Day 2: Worker consumes and processes|Day 3: Add idempotency|Day 4: Add DLQ handling|Day 5: Verify stability|✅ Deliverable: message-driven backend">
     📅 Week 71: MassTransit &amp; Enterprise Messaging
   </div>
@@ -1980,7 +1872,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m18w4" data-parent="month18" data-side="right"
+  <div class="node sub-node" id="m18w4" data-parent="month12" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Dockerize capstone services|Day 2: Deploy API and DB|Day 3: Configure secrets/env|Day 4: End-to-end smoke tests|Day 5: Commit deployable capstone v1|✅ Deliverable: deployed capstone backend">
     📅 Week 72: Deploy & Smoke Test
   </div>
@@ -2013,13 +1905,7 @@
   <!-- ===================== PHASE 7 ===================== -->
   <div class="year-label year-label-1" id="phase7Label" data-parent="month18" data-side="center">📐 PHASE 7<br><small>Portfolio, Performance & Hardening</small></div>
 
-  <!-- MONTH 19 -->
-  <div class="node main-node" id="month19" data-parent="phase7Label" data-side="center"
-       data-details="📝 Architecture & Documentation|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    📝 Month 19: Architecture & Documentation
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m19w1" data-parent="month19" data-side="left"
+    <div class="node sub-node" id="m19w1" data-parent="month13" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Open Draw.io or similar|Day 2: System component diagram|Day 3: Sequence diagram — scan flow|Day 4: Failure diagram — DB/worker down|Day 5: Export diagrams to repo|✅ Deliverable: architecture diagrams">
     📅 Week 73: Diagrams
   </div>
@@ -2044,7 +1930,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m19w2" data-parent="month19" data-side="left"
+  <div class="node sub-node" id="m19w2" data-parent="month13" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Clear project description|Day 2: Architecture decisions — why RabbitMQ, JWT, Docker|Day 3: Run Locally setup guide|Day 4: Cloud deployment notes|Day 5: Readable by hiring managers|✅ Deliverable: professional README">
     📅 Week 74: README Upgrade
   </div>
@@ -2069,7 +1955,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m19w3" data-parent="month19" data-side="right"
+  <div class="node sub-node" id="m19w3" data-parent="month13" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Standardize naming/folders|Day 2: Remove dead code|Day 3: Strengthen validation|Day 4: Verify error contract consistency|Day 5: Clean code baseline|✅ Deliverable: polished codebase">
     📅 Week 75: Code Polish
   </div>
@@ -2094,7 +1980,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m19w4" data-parent="month19" data-side="right"
+  <div class="node sub-node" id="m19w4" data-parent="month13" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Write 2-3 min system explanation|Day 2: Improve pinned repo quality|Day 3: Record short demo|Day 4: Start updating LinkedIn|Day 5: Publish or save the demo|✅ Deliverable: first demo recording">
     📅 Week 76: Demo & Public Positioning
   </div>
@@ -2120,13 +2006,7 @@
   </div>
 
 
-  <!-- MONTH 20 -->
-  <div class="node main-node" id="month20" data-parent="month19" data-side="center"
-       data-details="🛡️ Performance & Resilience Drills|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🛡️ Month 20: Performance & Resilience Drills
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m20w1" data-parent="month20" data-side="left"
+    <div class="node sub-node" id="m20w1" data-parent="month13" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Transient failures theory|Day 2: Polly — add retry policies|Day 3: Exponential backoff|Day 4: Log retries clearly|Day 5: Don't retry permanent failures|✅ Deliverable: retry logic working">
     📅 Week 77: Retry Patterns
   </div>
@@ -2151,7 +2031,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m20w2" data-parent="month20" data-side="left"
+  <div class="node sub-node" id="m20w2" data-parent="month13" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Timeout behavior|Day 2: Open, half-open, closed states|Day 3: Add breaker around dependency|Day 4: Trigger failures, observe|Day 5: Document where breakers belong|✅ Deliverable: circuit breaker demo">
     📅 Week 78: Timeouts & Circuit Breakers
   </div>
@@ -2176,7 +2056,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m20w3" data-parent="month20" data-side="right"
+  <div class="node sub-node" id="m20w3" data-parent="month14" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Bulk-generate scan messages|Day 2: Watch queue depth + worker throughput|Day 3: Slow consumer intentionally|Day 4: Restore speed, verify drain|Day 5: Write performance notes|✅ Deliverable: load test documented">
     📅 Week 79: Load & Queue Backlog
   </div>
@@ -2201,7 +2081,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m20w4" data-parent="month20" data-side="right"
+  <div class="node sub-node" id="m20w4" data-parent="month14" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Shut down DB — observe|Day 2: Stop worker — inspect queue|Day 3: Inject malformed messages|Day 4: Re-send duplicates|Day 5: Document resilience test results|✅ Deliverable: failure drill report">
     📅 Week 80: Failure Drills
   </div>
@@ -2227,13 +2107,7 @@
   </div>
 
 
-  <!-- MONTH 21 -->
-  <div class="node main-node" id="month21" data-parent="month20" data-side="center"
-       data-details="📊 Minimal Admin Layer|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    📊 Month 21: Minimal Admin Layer
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m21w1" data-parent="month21" data-side="left"
+    <div class="node sub-node" id="m21w1" data-parent="month14" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Dashboard vs API-first polish|Day 2: Define smallest useful scope|Day 3: Add missing reporting endpoints|Day 4: Ensure admin path is secured|Day 5: Keep scope small|✅ Deliverable: scope defined, endpoints added">
     📅 Week 81: Scope Decision
   </div>
@@ -2258,7 +2132,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m21w2" data-parent="month21" data-side="left"
+  <div class="node sub-node" id="m21w2" data-parent="month14" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Scaffold minimal UI or improve API|Day 2: Terminal status view/endpoint|Day 3: Recent scans view/endpoint|Day 4: Failures view/endpoint|Day 5: Keep it functional, not fancy|✅ Deliverable: admin layer working">
     📅 Week 82: Build the Minimal Layer
   </div>
@@ -2283,7 +2157,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m21w3" data-parent="month21" data-side="right"
+  <div class="node sub-node" id="m21w3" data-parent="month14" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Total scans today metric|Day 2: Simple health visibility|Day 3: Improve clarity and usability|Day 4: Verify auth and error handling|Day 5: Support the demo|✅ Deliverable: reporting metrics added">
     📅 Week 83: Reporting & Readability
   </div>
@@ -2308,7 +2182,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m21w4" data-parent="month21" data-side="right"
+  <div class="node sub-node" id="m21w4" data-parent="month14" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Polish CV draft|Day 2: Improve LinkedIn headline/About|Day 3: Select first 10 target roles|Day 4: Prepare job-tracking sheet|Day 5: Begin light application testing|✅ Deliverable: CV draft + first applications">
     📅 Week 84: First Light Applications
   </div>
@@ -2341,13 +2215,7 @@
   <!-- ===================== PHASE 8 ===================== -->
   <div class="year-label year-label-1" id="phase8Label" data-parent="month21" data-side="center">✈️ PHASE 8<br><small>Career Positioning & Job Execution</small></div>
 
-  <!-- MONTH 22 -->
-  <div class="node main-node" id="month22" data-parent="phase8Label" data-side="center"
-       data-details="📄 CV, GitHub & LinkedIn|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    📄 Month 22: CV, GitHub & LinkedIn
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m22w1" data-parent="month22" data-side="left"
+    <div class="node sub-node" id="m22w1" data-parent="month15" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Clean one-page CV|Day 2: Headline: .NET Backend / Systems Integration|Day 3: Outcome-focused experience framing|Day 4: List technologies honestly|Day 5: Remove weak wording|✅ Deliverable: professional CV v1">
     📅 Week 85: CV Foundations
   </div>
@@ -2372,7 +2240,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m22w2" data-parent="month22" data-side="left"
+  <div class="node sub-node" id="m22w2" data-parent="month15" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Pin strongest repos|Day 2: Profile README|Day 3: Improve capstone README again|Day 4: Add diagrams/screenshots|Day 5: Work is understandable quickly|✅ Deliverable: polished GitHub profile">
     📅 Week 86: GitHub Profile
   </div>
@@ -2397,7 +2265,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m22w3" data-parent="month22" data-side="right"
+  <div class="node sub-node" id="m22w3" data-parent="month15" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Update professional title|Day 2: Write summary of direction|Day 3: Add capstone and technologies|Day 4: Set Germany-focused preferences|Day 5: Keep profile clear|✅ Deliverable: LinkedIn optimized">
     📅 Week 87: LinkedIn
   </div>
@@ -2422,7 +2290,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m22w4" data-parent="month22" data-side="right"
+  <div class="node sub-node" id="m22w4" data-parent="month15" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Compare CV to real job listings|Day 2: Add missing keywords: APIs, Docker, messaging, SQL|Day 3: Tighten wording|Day 4: ATS check if needed|Day 5: Finalize public positioning|✅ Deliverable: keyword-aligned assets">
     📅 Week 88: Positioning Review
   </div>
@@ -2448,13 +2316,7 @@
   </div>
 
 
-  <!-- MONTH 23 -->
-  <div class="node main-node" id="month23" data-parent="month22" data-side="center"
-       data-details="🎯 Interview Prep|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🎯 Month 23: Interview Prep
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m23w1" data-parent="month23" data-side="left"
+    <div class="node sub-node" id="m23w1" data-parent="month15" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Collect 20-30 Germany target jobs|Day 2: Extract common requirements|Day 3: Identify repeated weaknesses|Day 4: Update portfolio wording|Day 5: Choose target role families|✅ Deliverable: target role list">
     📅 Week 89: Market Reconnaissance
   </div>
@@ -2479,7 +2341,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m23w2" data-parent="month23" data-side="left"
+  <div class="node sub-node" id="m23w2" data-parent="month15" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: OOP, interfaces, async, exceptions|Day 2: DI, middleware, controllers, config|Day 3: EF Core, migrations, relationships|Day 4: Testing and mocking|Day 5: Explain them out loud|✅ Deliverable: technical review complete">
     📅 Week 90: C# & .NET Review
   </div>
@@ -2504,7 +2366,7 @@
     Day 5 — Practice
   </div>
 
-  <div class="node sub-node" id="m23w3" data-parent="month23" data-side="right"
+  <div class="node sub-node" id="m23w3" data-parent="month16" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: JOINs, GROUP BY, indexes|Day 2: REST design and errors|Day 3: JWT, API keys, validation|Day 4: Capstone architecture storytelling|Day 5: Focus on clarity, not jargon|✅ Deliverable: system design practice">
     📅 Week 91: SQL, APIs & System Design
   </div>
@@ -2529,7 +2391,7 @@
     Day 5 — Focus
   </div>
 
-  <div class="node sub-node" id="m23w4" data-parent="month23" data-side="right"
+  <div class="node sub-node" id="m23w4" data-parent="month16" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: 'Tell me about yourself' — 90s + 2min|Day 2: Capstone deep dive|Day 3: Debugging and failure stories|Day 4: Trade-off explanations|Day 5: Full mock interview|✅ Deliverable: mock interview completed">
     📅 Week 92: Behavioral & Project Storytelling
   </div>
@@ -2555,13 +2417,7 @@
   </div>
 
 
-  <!-- MONTH 24 -->
-  <div class="node main-node" id="month24" data-parent="month23" data-side="center"
-       data-details="🎉 Applications & Momentum|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 10 hours per week · 5 days">
-    🎉 Month 24: Applications & Momentum
-    <span class="months-badge">~40 hrs</span>
-  </div>
-  <div class="node sub-node" id="m24w1" data-parent="month24" data-side="left"
+    <div class="node sub-node" id="m24w1" data-parent="month16" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Tailor CV by role family|Day 2: Send first serious batch|Day 3: Track company, role, date, status|Day 4: Follow-up templates|Day 5: Keep process organized|✅ Deliverable: first applications sent">
     📅 Week 93: Application Wave 1
   </div>
@@ -2586,7 +2442,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m24w2" data-parent="month24" data-side="left"
+  <div class="node sub-node" id="m24w2" data-parent="month16" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: Recruiter/hiring manager messages|Day 2: Request referrals|Day 3: Join relevant communities|Day 4: Improve outreach quality|Day 5: Stay targeted and professional|✅ Deliverable: active outreach running">
     📅 Week 94: Outreach
   </div>
@@ -2611,7 +2467,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m24w3" data-parent="month24" data-side="right"
+  <div class="node sub-node" id="m24w3" data-parent="month16" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Technical review refresh|Day 2: Take-home task approach|Day 3: Architecture explanation|Day 4: HR question rehearsal|Day 5: Stay consistent and calm|✅ Deliverable: interview-ready">
     📅 Week 95: Interview Cycle
   </div>
@@ -2636,7 +2492,7 @@
     Day 5 — Review
   </div>
 
-  <div class="node sub-node" id="m24w4" data-parent="month24" data-side="right"
+  <div class="node sub-node" id="m24w4" data-parent="month16" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Verify all repo links work|Day 2: Re-check demo, README|Day 3: Send application wave 2|Day 4: Update CV from feedback|Day 5: Roadmap complete — you are ready! 🎉|✅ Deliverable: portfolio finalized, applications active">
     📅 Week 96: Portfolio Final & Wave 2
   </div>

@@ -49,11 +49,11 @@ Every month should produce:
 
 ---
 
-# Phase 1: Core Programming and Developer Foundations
+---
 
-## Month 1: C# Crash Course and First Project (Accelerated)
+# Phase 1: Core Language and Logic
 
-You already know Git, an IDE, and basic programming from your frontend work. This month focuses on **C# language specifics** and getting productive fast.
+## Month 1: Core Language and Logic (Part 1) (~60 hrs)
 
 ### Week 1: C# Syntax Sprint
 
@@ -103,17 +103,6 @@ You already know Git, an IDE, and basic programming from your frontend work. Thi
 
 **Day 5 (Month Review):** Push a polished kiosk app demonstrating C#-specific features. Write a README section comparing C# patterns to their JS/TS equivalents.
 
-### Month 1 Output
-
-* 1 working console app using C#-specific features (enums, events, records, nullability)
-* 1 GitHub repository with README
-* clear understanding of how C# differs from JavaScript/TypeScript
-* debugging proficiency in Visual Studio
-
----
-
-## Month 2: Object-Oriented Programming (OOP)
-
 ### Week 5: Classes and Objects
 
 **Day 1 (Theory):** Learn what classes and objects are and why OOP models real systems.
@@ -138,6 +127,20 @@ You already know Git, an IDE, and basic programming from your frontend work. Thi
 
 **Day 5 (Review):** Refactor the class to be cleaner and safer.
 
+### Month 1 Output
+
+*   **Completed frontend roadmap** — you already know Git, IDE tools, HTTP, REST, JSON, debugging, and JavaScript/TypeScript fundamentals.
+*   **Active biometric SDK integration work** — you already write production integration code, handle device communication, and understand real-world SDK challenges.
+*   **Months 1 and 5 are compressed** to skip what you already know and reinvest that time into protocol diversity, data mapping, and observability — skills that separate integration engineers from generic backend developers.
+*   **Start light job applications by Month 16**, not Month 22. Your real-world experience makes you employable earlier than a pure self-taught candidate.
+*   aim to finish the **week outcome**
+*   do not panic if one "day" takes two days
+*   debugging is part of learning, not delay
+*   always favor **building and documenting** over endless watching
+*   **document your real biometric work patterns alongside this roadmap** — real-world integration experience is your biggest competitive advantage
+
+## Month 2: Core Language and Logic (Part 2) (~60 hrs)
+
 ### Week 7: Inheritance and Composition
 
 **Day 1 (Base Class):** Create a base class `Device`.
@@ -161,16 +164,6 @@ You already know Git, an IDE, and basic programming from your frontend work. Thi
 **Day 4 (Polymorphism):** Use `List<IScanner>` and loop through multiple implementations.
 
 **Day 5 (Month Review):** Update the README to explain why interfaces make vendor replacement easier.
-
-### Month 2 Output
-
-* OOP project with classes and interfaces
-* simple class diagram
-* README explaining abstraction and swapability
-
----
-
-## Month 3: Collections, LINQ, Async Basics, JSON, and Files
 
 ### Week 9: Collections
 
@@ -220,18 +213,23 @@ You already know Git, an IDE, and basic programming from your frontend work. Thi
 
 **Day 5 (Phase Review):** Commit `KioskSimulator v2` using collections, LINQ, JSON, and async.
 
-### Month 3 Output
+### Month 2 Output
 
-* kiosk simulator v2
-* scan history JSON save/load
-* simple LINQ reports
-* async scanner simulation
+*   **4 hours learning**
+*   **4 hours building**
+*   **2 hours review, refactor, notes, README, and Git**
+*   **1 working deliverable**
+*   **1 cleaned GitHub push**
+*   **1 improved README or notes section**
+*   **1 refactor or quality improvement**
+* 1 working console app using C#-specific features (enums, events, records, nullability)
+* 1 GitHub repository with README
 
 ---
 
-# Phase 2: Professional Coding and Web Foundations
+# Phase 2: Object-Oriented Design
 
-## Month 4: Testing, Dependency Thinking, and Code Quality
+## Month 3: Object-Oriented Design (Part 1) (~60 hrs)
 
 ### Week 13: Unit Testing Fundamentals
 
@@ -281,19 +279,6 @@ You already know Git, an IDE, and basic programming from your frontend work. Thi
 
 **Day 5 (Month Review):** Commit a stable, tested, better-structured simulator.
 
-### Month 4 Output
-
-* test project
-* basic mocking
-* first DI understanding
-* stable unit-tested logic
-
----
-
-## Month 5: API Design, Protocol Diversity, and Configuration (Accelerated)
-
-You already know HTTP methods, status codes, JSON, and browser dev tools from frontend work. This month skips the basics and focuses on **API design thinking** and **protocol diversity** — skills that separate integration engineers from generic backend developers.
-
 ### Week 17: REST API Design and OpenAPI (Accelerated)
 
 **Day 1 (REST Design):** Study resource-oriented route design. Design `/api/terminals`, `/api/scans`, `/api/terminals/{id}/heartbeats`.
@@ -318,6 +303,20 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Review):** Compare gRPC vs REST for different integration scenarios. Note: REST for public APIs, gRPC for internal service-to-service.
 
+### Month 3 Output
+
+* clear understanding of how C# differs from JavaScript/TypeScript
+* debugging proficiency in Visual Studio
+* OOP project with classes and interfaces
+* simple class diagram
+* README explaining abstraction and swapability
+* kiosk simulator v2
+* scan history JSON save/load
+* simple LINQ reports
+* async scanner simulation
+
+## Month 4: Object-Oriented Design (Part 2) (~60 hrs)
+
 ### Week 19: SignalR and Real-Time Communication
 
 **Day 1 (Theory):** Learn WebSockets and why real-time updates matter for device monitoring (terminal status, live scan feeds).
@@ -341,19 +340,6 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 **Day 4 (Serial and Network Diagnostics):** Study `System.IO.Ports.SerialPort` at a high level. Then learn essential network troubleshooting: `ping`, `tracert`/`traceroute`, `nslookup`, `netstat`, and basic Wireshark usage. Understand firewall rules, NAT, and proxy issues — these are daily pain points when deploying biometric devices behind corporate networks.
 
 **Day 5 (Month Review):** Write a protocol comparison document: REST vs gRPC vs SignalR vs TCP vs Serial. When to use each in integration scenarios. Include a network troubleshooting checklist for device connectivity issues.
-
-### Month 5 Output
-
-* API design blueprint with OpenAPI
-* working gRPC service
-* SignalR real-time hub
-* TCP socket basics
-* network troubleshooting fundamentals and checklist
-* protocol comparison document
-
----
-
-## Month 6: ASP.NET Core Web API and Service Structure
 
 ### Week 21: Project Scaffold and Controllers
 
@@ -403,20 +389,23 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Phase Review):** Commit the first end-to-end flow: simulator -> API, real third-party API integration, and webhook receiver.
 
-### Month 6 Output
+### Month 4 Output
 
-* first ASP.NET Core API with versioned routes
-* service layer with DI
-* appsettings-based config
-* simulator posting to API
-* real third-party API integration experience
-* webhook receiver endpoint
+* test project
+* basic mocking
+* first DI understanding
+* stable unit-tested logic
+* API design blueprint with OpenAPI
+* working gRPC service
+* SignalR real-time hub
+* TCP socket basics
+* network troubleshooting fundamentals and checklist
 
 ---
 
-# Phase 3: Data and Security Core
+# Phase 3: APIs and Data
 
-## Month 7: SQL Fundamentals and Query Thinking
+## Month 5: APIs and Data (Part 1) (~60 hrs)
 
 ### Week 25: Relational Concepts
 
@@ -466,17 +455,6 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Month Review):** Finalize schema and local DB setup.
 
-### Month 7 Output
-
-* local SQL environment
-* schema design
-* working SQL scripts
-* first understanding of indexes
-
----
-
-## Month 8: EF Core and Persistence
-
 ### Week 29: DbContext and Setup
 
 **Day 1 (Theory):** Learn what an ORM is.
@@ -501,6 +479,20 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Review):** Inspect database tables created by EF Core.
 
+### Month 5 Output
+
+* protocol comparison document
+* first ASP.NET Core API with versioned routes
+* service layer with DI
+* appsettings-based config
+* simulator posting to API
+* real third-party API integration experience
+* webhook receiver endpoint
+* local SQL environment
+* schema design
+
+## Month 6: APIs and Data (Part 2) (~60 hrs)
+
 ### Week 31: Relationships and Querying
 
 **Day 1 (Navigation Properties):** Add navigation properties.
@@ -524,17 +516,6 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 **Day 4 (Verification):** Inspect rows in SSMS.
 
 **Day 5 (Month Review):** Commit your first persistent backend.
-
-### Month 8 Output
-
-* EF Core integration
-* migrations
-* real database persistence
-* API backed by SQL
-
----
-
-## Month 9: Security, Validation, and Error Handling
 
 ### Week 33: Authentication and Authorization Theory
 
@@ -584,18 +565,23 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Phase Review):** Commit a secure, validated, and OIDC-protected API.
 
-### Month 9 Output
+### Month 6 Output
 
+* working SQL scripts
+* first understanding of indexes
+* EF Core integration
+* migrations
+* real database persistence
+* API backed by SQL
 * OAuth2/OIDC-secured admin API
 * API key protected device endpoint
 * validators
-* standard error contracts
 
 ---
 
 # Phase 4: Reliability and Operability
 
-## Month 10: Logging, Exceptions, and Tracing
+## Month 7: Reliability and Operability (Part 1) (~60 hrs)
 
 ### Week 37: Global Exception Handling
 
@@ -645,19 +631,6 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Month Review):** Configure rolling log files. Verify health endpoint returns meaningful status. Commit a fully observable API.
 
-### Month 10 Output
-
-* global exception handling
-* structured logging with Serilog
-* correlation ID flow
-* health check endpoints for DB, queue, and device services
-* basic application metrics
-* traceable, observable system
-
----
-
-## Month 11: Background Workers and Time-Based Logic
-
 ### Week 41: Hosted Services
 
 **Day 1 (Theory):** Learn `IHostedService` and `BackgroundService`.
@@ -682,6 +655,20 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Review):** Clean the loop.
 
+### Month 7 Output
+
+* standard error contracts
+* global exception handling
+* structured logging with Serilog
+* correlation ID flow
+* health check endpoints for DB, queue, and device services
+* basic application metrics
+* traceable, observable system
+* background worker
+* terminal heartbeat logic
+
+## Month 8: Reliability and Operability (Part 2) (~60 hrs)
+
 ### Week 43: DI in Workers
 
 **Day 1 (Theory):** Learn why scoped services cannot be injected directly into singleton workers.
@@ -705,18 +692,6 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 **Day 4 (Batch Import):** Build a file-based import: read a CSV of employee records, validate each row, skip bad rows with structured logging, and upsert into the database. This is the ETL pattern you will encounter in every integration job.
 
 **Day 5 (Month Review):** Commit a working worker-based background task with batch import/export capabilities.
-
-### Month 11 Output
-
-* background worker
-* terminal heartbeat logic
-* scheduled task with batch import/export
-* CSV-based ETL pattern
-* proper scoped service usage in workers
-
----
-
-## Month 12: Integration Patterns and SDK-Style Design
 
 ### Week 45: Wrapping External SDKs
 
@@ -766,8 +741,11 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Phase Review):** Commit a polished Year 1 foundation. Write a README that explains adapters, data mapping, format diversity, SOAP integration, offline fallback, workers, and observability.
 
-### Month 12 Output
+### Month 8 Output
 
+* scheduled task with batch import/export
+* CSV-based ETL pattern
+* proper scoped service usage in workers
 * SDK-style adapter layer
 * canonical data models with vendor mapping
 * XML, CSV, and multi-format parsing
@@ -775,31 +753,13 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 * cleaner system structure
 * Year 1 polished foundation
 
----
-
-## Docker CLI Primer (Before Phase 5)
-
-Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hours on these Docker basics so you are not learning Docker and messaging simultaneously.
-
-**Concepts:** Image = blueprint. Container = running instance. `docker run` creates and starts a container. `docker ps` lists running containers. `docker logs <name>` reads container output. `docker stop <name>` stops gracefully. `docker rm <name>` removes stopped containers.
-
-**Commands to practice:**
-
-*   `docker run -d --name rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management` — run RabbitMQ with management UI
-*   `docker ps` — confirm it is running
-*   `docker logs rabbit` — read startup logs
-*   `docker stop rabbit && docker rm rabbit` — clean up
-*   `docker run -d -e ACCEPT_EULA=Y -e SA_PASSWORD=YourPass -p 1433:1433 mcr.microsoft.com/mssql/server:2022-latest` — run SQL Server in a container
-
-**Volume basics:** `docker run -v C:/data:/var/opt/mssql/data ...` persists data across container restarts. Without a volume, all container data is lost on `docker rm`.
-
-**Why this matters now:** For the next 3 months you will use Docker to run RabbitMQ and SQL Server locally without installing them. In Month 15 you will write your own Dockerfiles. For now, just consume existing images.
+🎉 **Year 1 complete (~480 hrs).** You can build, test, and adapt.
 
 ---
 
-# Phase 5: Messaging, Resilience, and Containers
+# Phase 5: Advanced Messaging
 
-## Month 13: RabbitMQ Fundamentals
+## Month 9: Advanced Messaging (Part 1) (~60 hrs)
 
 ### Week 49: Messaging Theory
 
@@ -849,17 +809,6 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Month Review):** Confirm API and worker communicate through the queue.
 
-### Month 13 Output
-
-* RabbitMQ local environment
-* message producer
-* message consumer
-* first async processing flow
-
----
-
-## Month 14: Reliable Messaging and Idempotency
-
 ### Week 53: Saving Consumed Messages
 
 **Day 1 (Worker Logic):** Save consumed messages to SQL.
@@ -884,6 +833,20 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Review):** Understand durability clearly.
 
+### Month 9 Output
+
+*   `docker run -d --name rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management` — run RabbitMQ with management UI
+*   `docker ps` — confirm it is running
+*   `docker logs rabbit` — read startup logs
+*   `docker stop rabbit && docker rm rabbit` — clean up
+*   `docker run -d -e ACCEPT_EULA=Y -e SA_PASSWORD=YourPass -p 1433:1433 mcr.microsoft.com/mssql/server:2022-latest` — run SQL Server in a container
+* RabbitMQ local environment
+* message producer
+* message consumer
+* first async processing flow
+
+## Month 10: Advanced Messaging (Part 2) (~60 hrs)
+
 ### Week 55: Idempotency
 
 **Day 1 (Theory):** Learn why duplicates happen.
@@ -907,17 +870,6 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 **Day 4 (Testing):** Publish invalid payloads.
 
 **Day 5 (Month Review):** Commit reliable messaging architecture.
-
-### Month 14 Output
-
-* reliable queue pipeline
-* manual acknowledgements
-* idempotency
-* DLQ support
-
----
-
-## Month 15: Docker, Compose, Configuration, and Secrets
 
 ### Week 57: Docker Fundamentals
 
@@ -967,18 +919,23 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Phase Review):** Commit integration tests and run the full stack locally via compose.
 
-### Month 15 Output
+### Month 10 Output
 
+* reliable queue pipeline
+* manual acknowledgements
+* idempotency
+* DLQ support
 * containerized API
 * multi-stage build
 * compose-based local stack
 * basic secret/config hygiene + Testcontainers
+* deployed API
 
 ---
 
 # Phase 6: Cloud and Delivery
 
-## Month 16: First Cloud Deployment
+## Month 11: Cloud and Delivery (Part 1) (~60 hrs)
 
 ### Week 61: Azure Setup
 
@@ -1028,17 +985,6 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Month Review):** Commit a working deployed API and DB.
 
-### Month 16 Output
-
-* deployed API
-* managed SQL database
-* cloud config handling
-* deployment notes
-
----
-
-## Month 17: Monitoring and CI/CD
-
 ### Week 65: Cloud Logging and Monitoring
 
 **Day 1 (Log Stream):** Enable App Service logs.
@@ -1063,6 +1009,20 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Review):** Push and watch workflow run.
 
+### Month 11 Output
+
+* managed SQL database
+* cloud config handling
+* deployment notes
+* CI workflow
+* test/build automation
+* basic cloud monitoring
+* simple deployment pipeline
+* production-style capstone backend v1
+* deployed system
+
+## Month 12: Cloud and Delivery (Part 2) (~60 hrs)
+
 ### Week 67: Branch Protection and Quality Gates
 
 **Day 1 (Branch Protection):** Learn protected branches.
@@ -1086,17 +1046,6 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 **Day 4 (Verification):** Confirm visible change deploys.
 
 **Day 5 (Month Review):** CI/CD basics are now in place.
-
-### Month 17 Output
-
-* CI workflow
-* test/build automation
-* basic cloud monitoring
-* simple deployment pipeline
-
----
-
-## Month 18: Capstone Backend v1
 
 ### Week 69: Capstone Architecture
 
@@ -1146,18 +1095,23 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Phase Review):** Commit a deployable capstone backend v1.
 
-### Month 18 Output
+### Month 12 Output
 
-* production-style capstone backend v1
-* deployed system
 * MassTransit message-driven flow
 * end-to-end working architecture
+* diagrams
+* polished README
+* cleaned code
+* first demo
+* early career-facing assets
+* resilience drills
+* retry and timeout understanding
 
 ---
 
-# Phase 7: Portfolio, Performance, and Hardening
+# Phase 7: Real-World Experience
 
-## Month 19: Architecture, Documentation, and Career Positioning Start
+## Month 13: Real-World Experience (Part 1) (~60 hrs)
 
 ### Week 73: Diagrams
 
@@ -1207,18 +1161,6 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Month Review):** Publish or save the demo.
 
-### Month 19 Output
-
-* diagrams
-* polished README
-* cleaned code
-* first demo
-* early career-facing assets
-
----
-
-## Month 20: Performance and Resilience Drills
-
 ### Week 77: Retry Patterns
 
 **Day 1 (Theory):** Learn transient failures and retries.
@@ -1243,6 +1185,20 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Review):** Document where breakers belong.
 
+### Month 13 Output
+
+* basic performance notes
+* stronger interview material
+* minimal admin/reporting layer
+* first professional CV draft
+* LinkedIn cleanup started
+* first light applications
+* final CV v1
+* polished GitHub
+* improved LinkedIn
+
+## Month 14: Real-World Experience (Part 2) (~60 hrs)
+
 ### Week 79: Load and Queue Backlog
 
 **Day 1 (Bulk Simulation):** Generate many scan messages.
@@ -1266,17 +1222,6 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 **Day 4 (Duplicates):** Re-send duplicates.
 
 **Day 5 (Month Review):** Document results in the repo.
-
-### Month 20 Output
-
-* resilience drills
-* retry and timeout understanding
-* basic performance notes
-* stronger interview material
-
----
-
-## Month 21: Minimal Admin Layer and Light Applications Begin
 
 ### Week 81: Scope Decision
 
@@ -1326,18 +1271,23 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Month Review):** Begin very light application testing.
 
-### Month 21 Output
+### Month 14 Output
 
-* minimal admin/reporting layer
-* first professional CV draft
-* LinkedIn cleanup started
-* first light applications
+* keyword-aligned positioning
+* role targeting clarity
+* interview answer bank
+* capstone explanation confidence
+* stronger application readiness
+* active job search process
+* application tracking system
+* interview repetition
+* final portfolio polish
 
 ---
 
-# Phase 8: Career Positioning and Job Execution
+# Phase 8: Interview Preparation
 
-## Month 22: CV, GitHub, LinkedIn, and Market Fit
+## Month 15: Interview Preparation (Part 1) (~60 hrs)
 
 ### Week 85: CV Foundations
 
@@ -1387,17 +1337,6 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Month Review):** Finalize public positioning assets.
 
-### Month 22 Output
-
-* final CV v1
-* polished GitHub
-* improved LinkedIn
-* keyword-aligned positioning
-
----
-
-## Month 23: Interview Preparation and Targeted Applications
-
 ### Week 89: Market Reconnaissance
 
 **Day 1 (Search):** Collect 20-30 Germany-focused target jobs.
@@ -1422,6 +1361,20 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5:** Practice explaining them out loud.
 
+### Month 15 Output
+
+* Systems Integration Engineer
+* Integration Engineer
+* .NET Backend Developer
+* Implementation Engineer
+* Solutions Engineer with backend focus
+* IoT / Device Integration Engineer
+* Technical Support / Integration Engineer with coding ability
+* Integrationsingenieur (Germany-specific title)
+* **Real production integration experience** with biometric SDKs and devices
+
+## Month 16: Interview Preparation (Part 2) (~60 hrs)
+
 ### Week 91: SQL, APIs, and System Design
 
 **Day 1:** Review joins, grouping, indexes.
@@ -1445,17 +1398,6 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 **Day 4:** Practice trade-off explanations.
 
 **Day 5 (Month Review):** Run a full mock interview.
-
-### Month 23 Output
-
-* role targeting clarity
-* interview answer bank
-* capstone explanation confidence
-* stronger application readiness
-
----
-
-## Month 24: Application Execution and Interview Momentum
 
 ### Week 93: Application Wave 1
 
@@ -1505,39 +1447,8 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Roadmap Completion):** You now have a serious backend portfolio, a deployable capstone, and realistic readiness for junior .NET backend / systems integration roles.
 
-### Month 24 Output
+### Month 16 Output
 
-* active job search process
-* application tracking system
-* interview repetition
-* final portfolio polish
-
----
-
-# Final outcome
-
-If you follow this seriously at **10 hours per week**, combined with your **existing frontend experience** and **active biometric SDK integration work**, the realistic result is:
-
-**You become a strong .NET backend / systems integration candidate, with real-world integration experience, a deployable backend system, practical knowledge of APIs, multiple protocols (REST, gRPC, SignalR, TCP), SQL, security, messaging, data mapping, multi-format parsing (JSON, XML, CSV), batch ETL, webhook handling, network troubleshooting, background workers, Docker, Azure, observability, and enough project depth to compete for mid-level roles.**
-
-## Best-fit target roles
-
-Apply to roles such as:
-
-* Systems Integration Engineer
-* Integration Engineer
-* .NET Backend Developer
-* Implementation Engineer
-* Solutions Engineer with backend focus
-* IoT / Device Integration Engineer
-* Technical Support / Integration Engineer with coding ability
-* Integrationsingenieur (Germany-specific title)
-
-## Your competitive advantage
-
-Unlike most self-taught candidates, you bring:
-
-* **Real production integration experience** with biometric SDKs and devices
 * **Completed frontend skills** giving you full-stack awareness
 * **Protocol diversity** (REST, gRPC, SignalR, TCP, Serial) beyond typical backend developers
 * **Data mapping and format diversity** — JSON, XML, CSV transformations between vendor-specific and canonical models
@@ -1547,15 +1458,8 @@ Unlike most self-taught candidates, you bring:
 * **Observability skills** (health checks, metrics, structured logging) that production systems require
 * **Windows Services deployment** — deploying self-contained executables on-site, managing service lifecycle, handling updates safely
 * **SDK-level debugging** — Wireshark packet capture on SDK traffic, vendor log analysis, firmware version troubleshooting, isolating device faults from application faults
-
-## What this roadmap does not promise
-
-It does **not** automatically make you mid-level by title.
-Mid-level usually needs:
-
 * more repetition
 * real team experience
 * real production incidents
 * more ownership over time
 
-But combined with your real work experience, it absolutely can make you **competitive for mid-level roles**, not just junior ones.
