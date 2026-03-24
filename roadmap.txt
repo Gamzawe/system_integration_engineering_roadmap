@@ -1,0 +1,1561 @@
+Good. Here is the **clean final version** with the corrections built in.
+
+I kept your **month/week/day style**, but I adjusted it to be more realistic for **10 hours per week**, more aligned with **.NET backend / systems integration**, and better for **actual hiring**.
+
+---
+
+# 24-Month .NET Backend and Systems Integration Roadmap
+
+**Weekly load:** 10 hours
+**Target outcome:** become a **strong junior-to-mid .NET backend / systems integration engineer**, with realistic potential for **mid-level roles** if your portfolio and real work experience are strong.
+
+## Your starting advantage
+
+This roadmap is adjusted for your profile:
+
+*   **Completed frontend roadmap** — you already know Git, IDE tools, HTTP, REST, JSON, debugging, and JavaScript/TypeScript fundamentals.
+*   **Active biometric SDK integration work** — you already write production integration code, handle device communication, and understand real-world SDK challenges.
+*   **Months 1 and 5 are compressed** to skip what you already know and reinvest that time into protocol diversity, data mapping, and observability — skills that separate integration engineers from generic backend developers.
+*   **Start light job applications by Month 16**, not Month 22. Your real-world experience makes you employable earlier than a pure self-taught candidate.
+
+## Execution rules
+
+Use this roadmap as a **structured guide**, not a prison.
+
+That means:
+
+*   aim to finish the **week outcome**
+*   do not panic if one "day" takes two days
+*   debugging is part of learning, not delay
+*   always favor **building and documenting** over endless watching
+*   **document your real biometric work patterns alongside this roadmap** — real-world integration experience is your biggest competitive advantage
+
+## Weekly study pattern
+
+Use this every week:
+
+*   **4 hours learning**
+*   **4 hours building**
+*   **2 hours review, refactor, notes, README, and Git**
+
+## Monthly success rule
+
+Every month should produce:
+
+*   **1 working deliverable**
+*   **1 cleaned GitHub push**
+*   **1 improved README or notes section**
+*   **1 refactor or quality improvement**
+
+---
+
+# Phase 1: Core Programming and Developer Foundations
+
+## Month 1: C# Crash Course and First Project (Accelerated)
+
+You already know Git, an IDE, and basic programming from your frontend work. This month focuses on **C# language specifics** and getting productive fast.
+
+### Week 1: C# Syntax Sprint
+
+**Day 1 (Setup):** Install Visual Studio Community or VS Code, install the .NET SDK, verify with `dotnet --version`, create a GitHub repo with `.gitignore` for .NET.
+
+**Day 2 (C# Types):** Run `dotnet new console`. Learn `string`, `int`, `bool`, `double`, `DateTime`, `int.Parse()`, and `int.TryParse()`. Note differences from JavaScript/TypeScript.
+
+**Day 3 (Control Flow):** `if/else`, `switch`, `while`, `for` — same concepts as JS but learn C# syntax and pattern matching.
+
+**Day 4 (Exceptions):** Learn `try/catch/finally`. Note: C# exceptions are stricter than JS. Practice `InvalidOperationException`, `ArgumentException`, `FormatException`.
+
+**Day 5 (Mini Project):** Build a kiosk-style console app with menu, input validation, and exception handling.
+
+### Week 2: Methods, Debugging, and C# Specifics
+
+**Day 1 (Methods):** Create methods with parameters, return values, `out`, and `ref`. Learn method overloading (not available in JS).
+
+**Day 2 (Value vs Reference):** Learn the difference between value types (`int`, `struct`) and reference types (`class`, `string`). This is critical in C# and different from JS.
+
+**Day 3 (Nullability):** Learn nullable types (`int?`), null-conditional (`?.`), null-coalescing (`??`), and nullable reference type annotations. C# takes nulls more seriously than JS.
+
+**Day 4 (Debugging):** You know browser DevTools. Now learn Visual Studio breakpoints, step over, step into, watch variables, and the Immediate Window.
+
+**Day 5 (Project Commit):** Refactor the kiosk app into clean methods, add a proper README, and push.
+
+### Week 3: Enums, Structs, and Type Safety
+
+**Day 1 (Enums):** Create enums for device status, scan result types. Learn `[Flags]` enums.
+
+**Day 2 (Structs):** Learn when to use `struct` vs `class`. Create a `ScanCoordinate` or `DeviceAddress` struct.
+
+**Day 3 (Generics Intro):** Learn `List<T>`, `Dictionary<TKey, TValue>`, and why C# generics are stricter than TS generics.
+
+**Day 4 (String Handling):** String interpolation, `StringBuilder`, `string.Format()`, `Span<char>` basics.
+
+**Day 5 (Mini Exercise):** Extend the kiosk app with enums for menu options and scan results.
+
+### Week 4: Functional Patterns and Month Consolidation
+
+**Day 1 (Delegates and Lambdas):** Learn `Action`, `Func`, and lambda syntax. Compare to JS arrow functions.
+
+**Day 2 (Events):** Learn the event pattern in C#. Create a `ScanCompleted` event on the kiosk.
+
+**Day 3 (Tuples and Records):** Learn tuple returns and `record` types for immutable data.
+
+**Day 4 (Pattern Matching):** Learn `is`, `switch` expressions, and property patterns.
+
+**Day 5 (Month Review):** Push a polished kiosk app demonstrating C#-specific features. Write a README section comparing C# patterns to their JS/TS equivalents.
+
+### Month 1 Output
+
+* 1 working console app using C#-specific features (enums, events, records, nullability)
+* 1 GitHub repository with README
+* clear understanding of how C# differs from JavaScript/TypeScript
+* debugging proficiency in Visual Studio
+
+---
+
+## Month 2: Object-Oriented Programming (OOP)
+
+### Week 5: Classes and Objects
+
+**Day 1 (Theory):** Learn what classes and objects are and why OOP models real systems.
+
+**Day 2 (First Class):** Create a `BiometricScanner` class.
+
+**Day 3 (Constructors):** Learn constructors and create objects with `new`.
+
+**Day 4 (Fields and Properties):** Add `SerialNumber`, `Manufacturer`, and `IsConnected`.
+
+**Day 5 (Mini Exercise):** Create multiple scanner instances and print their details.
+
+### Week 6: Encapsulation and Validation
+
+**Day 1 (Access Modifiers):** Learn `public`, `private`, and protected object state.
+
+**Day 2 (Properties):** Replace raw fields with properties.
+
+**Day 3 (Validation):** Prevent invalid serial numbers or empty values.
+
+**Day 4 (Methods):** Add methods like `PowerOn()`, `Connect()`, and `Disconnect()`.
+
+**Day 5 (Review):** Refactor the class to be cleaner and safer.
+
+### Week 7: Inheritance and Composition
+
+**Day 1 (Base Class):** Create a base class `Device`.
+
+**Day 2 (Inheritance):** Make `BiometricScanner` inherit from `Device`.
+
+**Day 3 (Virtual/Override):** Add a virtual method like `Calibrate()` and override it.
+
+**Day 4 (Composition):** Add a `NetworkCard` class inside `BiometricScanner`.
+
+**Day 5 (Review):** Draw class relationships and compare diagram to code.
+
+### Week 8: Interfaces and Polymorphism
+
+**Day 1 (Theory):** Learn why interfaces matter in SDK integration and backend systems.
+
+**Day 2 (First Interface):** Create `IScanner` with methods like `Connect()` and `Scan()`.
+
+**Day 3 (Implementations):** Create `FingerprintScanner` and `RetinaScanner`.
+
+**Day 4 (Polymorphism):** Use `List<IScanner>` and loop through multiple implementations.
+
+**Day 5 (Month Review):** Update the README to explain why interfaces make vendor replacement easier.
+
+### Month 2 Output
+
+* OOP project with classes and interfaces
+* simple class diagram
+* README explaining abstraction and swapability
+
+---
+
+## Month 3: Collections, LINQ, Async Basics, JSON, and Files
+
+### Week 9: Collections
+
+**Day 1 (Lists):** Learn `List<T>` and create `List<ScanResult>`.
+
+**Day 2 (Operations):** Add, remove, count, and iterate through items.
+
+**Day 3 (Dictionaries):** Learn `Dictionary<TKey, TValue>`.
+
+**Day 4 (Lookup Flow):** Map Employee IDs to names.
+
+**Day 5 (Mini Exercise):** Save scans to a list and show employee names from a dictionary.
+
+### Week 10: LINQ Basics
+
+**Day 1 (Theory):** Learn LINQ and lambda expressions.
+
+**Day 2 (Filtering):** Use `.Where()` for failed scans.
+
+**Day 3 (Transforming):** Use `.Select()` to extract employee IDs.
+
+**Day 4 (Sorting):** Use `.OrderBy()` and `.OrderByDescending()`.
+
+**Day 5 (Daily Report):** Create a report for total scans, successes, and failures.
+
+### Week 11: Blocking vs Async
+
+**Day 1 (Main Thread):** Learn what blocking means.
+
+**Day 2 (Thread.Sleep):** Simulate slow hardware.
+
+**Day 3 (Task and Task.Delay):** Learn `Task` and `Task.Delay()`.
+
+**Day 4 (Async/Await Theory):** Understand async and await at a practical level.
+
+**Day 5 (Review):** Identify where async helps in scanner simulations.
+
+### Week 12: JSON, File I/O, and Async Methods
+
+**Day 1 (JSON Serialization):** Use `System.Text.Json` to serialize `ScanResult`.
+
+**Day 2 (Deserialization):** Read JSON back into an object.
+
+**Day 3 (File I/O):** Save scan history to a `.json` file.
+
+**Day 4 (Async Methods):** Change scanner methods to `Task<bool>` or `Task<ScanResult>`.
+
+**Day 5 (Phase Review):** Commit `KioskSimulator v2` using collections, LINQ, JSON, and async.
+
+### Month 3 Output
+
+* kiosk simulator v2
+* scan history JSON save/load
+* simple LINQ reports
+* async scanner simulation
+
+---
+
+# Phase 2: Professional Coding and Web Foundations
+
+## Month 4: Testing, Dependency Thinking, and Code Quality
+
+### Week 13: Unit Testing Fundamentals
+
+**Day 1 (Theory):** Learn why automated tests matter.
+
+**Day 2 (xUnit Setup):** Create an xUnit test project.
+
+**Day 3 (AAA Pattern):** Write Arrange / Act / Assert tests.
+
+**Day 4 (Testing Methods):** Test small logic methods from the kiosk project.
+
+**Day 5 (Review):** Run tests using IDE and `dotnet test`.
+
+### Week 14: Edge Cases and Failures
+
+**Day 1 (Theory):** Study nulls, empty strings, negatives, and invalid inputs.
+
+**Day 2 (Failure Tests):** Write tests for bad input.
+
+**Day 3 (Exceptions):** Use `Assert.Throws()`.
+
+**Day 4 (Refactoring):** Fix logic exposed by tests.
+
+**Day 5 (Review):** Improve test naming and readability.
+
+### Week 15: Mocking and Dependency Thinking
+
+**Day 1 (Theory):** Learn why unit tests should not depend on real hardware.
+
+**Day 2 (Moq Setup):** Install Moq and mock `IScanner`.
+
+**Day 3 (Simulated Success):** Return success from a fake scanner.
+
+**Day 4 (Simulated Failure):** Simulate hardware failure or timeout.
+
+**Day 5 (Review):** Write notes on how mocking helps with SDK-style code.
+
+### Week 16: Dependency Injection Basics and Quality
+
+**Day 1 (DI Theory):** Learn what dependency injection is and why it matters in .NET.
+
+**Day 2 (Service Thinking):** Move logic into services instead of placing everything in `Program.cs` or controllers.
+
+**Day 3 (Interface-Based Design):** Use interfaces for scanner service, file store, or report generator.
+
+**Day 4 (Code Quality):** Remove duplication and simplify method responsibilities.
+
+**Day 5 (Month Review):** Commit a stable, tested, better-structured simulator.
+
+### Month 4 Output
+
+* test project
+* basic mocking
+* first DI understanding
+* stable unit-tested logic
+
+---
+
+## Month 5: API Design, Protocol Diversity, and Configuration (Accelerated)
+
+You already know HTTP methods, status codes, JSON, and browser dev tools from frontend work. This month skips the basics and focuses on **API design thinking** and **protocol diversity** — skills that separate integration engineers from generic backend developers.
+
+### Week 17: REST API Design and OpenAPI (Accelerated)
+
+**Day 1 (REST Design):** Study resource-oriented route design. Design `/api/terminals`, `/api/scans`, `/api/terminals/{id}/heartbeats`.
+
+**Day 2 (API Blueprint):** Design request/response payloads, route params, query params, headers, and standard error shapes for your upcoming backend.
+
+**Day 3 (OpenAPI/Swagger):** Learn OpenAPI spec and Swagger UI. Explore public Swagger interfaces and compare to manual JSON requests.
+
+**Day 4 (Postman):** Create a Postman collection for your API blueprint. Save and version it in Git.
+
+**Day 5 (Config Theory):** Learn `appsettings.json`, environment variables, user secrets, and why secrets do not belong in code.
+
+### Week 18: gRPC Fundamentals
+
+**Day 1 (Theory):** Learn what gRPC is, how it differs from REST, and why it is used for service-to-service communication. Understand Protocol Buffers.
+
+**Day 2 (Proto Files):** Write a `.proto` file for a `DeviceService` with `RegisterDevice` and `SendHeartbeat` methods.
+
+**Day 3 (Server):** Create a basic gRPC server in .NET using `dotnet new grpc`.
+
+**Day 4 (Client):** Create a gRPC client and call the server.
+
+**Day 5 (Review):** Compare gRPC vs REST for different integration scenarios. Note: REST for public APIs, gRPC for internal service-to-service.
+
+### Week 19: SignalR and Real-Time Communication
+
+**Day 1 (Theory):** Learn WebSockets and why real-time updates matter for device monitoring (terminal status, live scan feeds).
+
+**Day 2 (SignalR Hub):** Create a SignalR hub for device status updates using `dotnet` templates.
+
+**Day 3 (Client Connection):** Connect a simple client (console or browser) to the hub. Receive real-time device status changes.
+
+**Day 4 (Groups):** Use SignalR groups to broadcast updates per terminal or per site.
+
+**Day 5 (Review):** Document when to use SignalR vs polling vs gRPC streaming.
+
+### Week 20: TCP/IP, Device Communication, and Network Troubleshooting
+
+**Day 1 (Theory):** Learn TCP vs UDP basics. Understand that many hardware SDKs and biometric devices communicate over raw TCP sockets, not HTTP.
+
+**Day 2 (TcpClient):** Use `System.Net.Sockets.TcpClient` to create a simple client/server.
+
+**Day 3 (Message Framing):** Learn why raw TCP needs message framing (length-prefix, delimiters). Build a simple length-prefixed protocol.
+
+**Day 4 (Serial and Network Diagnostics):** Study `System.IO.Ports.SerialPort` at a high level. Then learn essential network troubleshooting: `ping`, `tracert`/`traceroute`, `nslookup`, `netstat`, and basic Wireshark usage. Understand firewall rules, NAT, and proxy issues — these are daily pain points when deploying biometric devices behind corporate networks.
+
+**Day 5 (Month Review):** Write a protocol comparison document: REST vs gRPC vs SignalR vs TCP vs Serial. When to use each in integration scenarios. Include a network troubleshooting checklist for device connectivity issues.
+
+### Month 5 Output
+
+* API design blueprint with OpenAPI
+* working gRPC service
+* SignalR real-time hub
+* TCP socket basics
+* network troubleshooting fundamentals and checklist
+* protocol comparison document
+
+---
+
+## Month 6: ASP.NET Core Web API and Service Structure
+
+### Week 21: Project Scaffold and Controllers
+
+**Day 1 (Setup):** Run `dotnet new webapi`.
+
+**Day 2 (Program.cs):** Learn how the app boots and where services are registered.
+
+**Day 3 (Controllers):** Create `TerminalsController`.
+
+**Day 4 (First Endpoint):** Return mock JSON from a `GET`.
+
+**Day 5 (Review):** Trace how route -> controller -> action works.
+
+### Week 22: Models, DTOs, CRUD, and API Versioning
+
+**Day 1 (DTOs):** Create request and response DTOs.
+
+**Day 2 (GET/POST Endpoints):** Return mock scan results with GET. Accept a scan payload with POST.
+
+**Day 3 (API Versioning):** Learn URL versioning (`/api/v1/scans`) and header versioning. Understand why integration APIs must never break existing device clients. Add version prefix to your routes.
+
+**Day 4 (Backward Compatibility):** Learn how to add new fields without breaking old clients. Study nullable new fields, default values, and response envelope patterns. This is critical — deployed devices cannot be updated instantly.
+
+**Day 5 (Review):** Test all endpoints with Swagger and Postman. Clean up naming and folders.
+
+### Week 23: Services, DI, and Configuration
+
+**Day 1 (Service Layer):** Create a service like `ScanService`.
+
+**Day 2 (DI Registration):** Register services in the container.
+
+**Day 3 (App Settings):** Add config in `appsettings.json`.
+
+**Day 4 (IConfiguration / Options):** Read config cleanly.
+
+**Day 5 (Review):** Keep controllers thin and services responsible for logic.
+
+### Week 24: API Integration, Real-World APIs, and Webhooks
+
+**Day 1 (HttpClient):** Learn `HttpClient` and `IHttpClientFactory`. Understand why you should not `new HttpClient()` directly. Send JSON from the kiosk simulator to your API.
+
+**Day 2 (Real Third-Party API):** Integrate against a real public API (e.g., OpenWeatherMap, REST Countries, or any free API requiring an API key). Deal with real-world pain: authentication headers, rate limits, pagination, inconsistent error responses. This is what vendor SDK integration actually feels like.
+
+**Day 3 (Webhook Receiving):** Create a `POST /api/webhooks/device-events` endpoint that receives incoming events from external systems. Validate the payload structure, verify an HMAC signature header, and process idempotently. Webhooks are how most integration partners notify your system of changes.
+
+**Day 4 (Debugging):** Step through the full flow: simulator -> API, third-party API call, and webhook receipt. Use breakpoints and watch requests arrive.
+
+**Day 5 (Phase Review):** Commit the first end-to-end flow: simulator -> API, real third-party API integration, and webhook receiver.
+
+### Month 6 Output
+
+* first ASP.NET Core API with versioned routes
+* service layer with DI
+* appsettings-based config
+* simulator posting to API
+* real third-party API integration experience
+* webhook receiver endpoint
+
+---
+
+# Phase 3: Data and Security Core
+
+## Month 7: SQL Fundamentals and Query Thinking
+
+### Week 25: Relational Concepts
+
+**Day 1 (Theory):** Learn tables, rows, columns, and constraints.
+
+**Day 2 (Primary Keys):** Study identity columns, GUIDs, and IDs.
+
+**Day 3 (Foreign Keys):** Learn relationships.
+
+**Day 4 (Normalization):** Study how to reduce duplicated data.
+
+**Day 5 (Schema Design):** Draw schema for terminals, scans, employees, and logs.
+
+### Week 26: Basic SQL
+
+**Day 1 (Setup):** Install SQL Server Express and SSMS or Azure Data Studio.
+
+**Day 2 (CREATE/INSERT):** Create tables and insert test data.
+
+**Day 3 (SELECT/WHERE):** Read filtered data.
+
+**Day 4 (UPDATE/DELETE):** Modify data safely.
+
+**Day 5 (Review):** Save SQL scripts to Git.
+
+### Week 27: Joins and Aggregation
+
+**Day 1 (JOIN Theory):** Learn `INNER JOIN` and `LEFT JOIN`.
+
+**Day 2 (Execution):** Join scans to employees.
+
+**Day 3 (GROUP BY):** Count scans per employee or terminal.
+
+**Day 4 (ORDER BY/HAVING):** Filter grouped data.
+
+**Day 5 (Review):** Repeat until queries feel natural.
+
+### Week 28: Indexes and App Mapping
+
+**Day 1 (Connection Strings):** Learn what they are.
+
+**Day 2 (Auth):** Learn Windows auth vs SQL auth.
+
+**Day 3 (Indexes):** Learn what an index is and why queries slow down.
+
+**Day 4 (Connectivity Test):** Write a basic C# database connection test.
+
+**Day 5 (Month Review):** Finalize schema and local DB setup.
+
+### Month 7 Output
+
+* local SQL environment
+* schema design
+* working SQL scripts
+* first understanding of indexes
+
+---
+
+## Month 8: EF Core and Persistence
+
+### Week 29: DbContext and Setup
+
+**Day 1 (Theory):** Learn what an ORM is.
+
+**Day 2 (Packages):** Install EF Core packages.
+
+**Day 3 (DbContext):** Create `ApplicationDbContext`.
+
+**Day 4 (Registration):** Register it in `Program.cs`.
+
+**Day 5 (DbSets):** Add `DbSet<Terminal>`, `DbSet<Scan>`, and related models.
+
+### Week 30: Migrations
+
+**Day 1 (Code First):** Learn the code-first approach.
+
+**Day 2 (First Migration):** Run first migration.
+
+**Day 3 (Database Update):** Update the database.
+
+**Day 4 (Iteration):** Change a property and create a second migration.
+
+**Day 5 (Review):** Inspect database tables created by EF Core.
+
+### Week 31: Relationships and Querying
+
+**Day 1 (Navigation Properties):** Add navigation properties.
+
+**Day 2 (One-to-Many):** Model terminal-to-scans relationship.
+
+**Day 3 (Include):** Learn `.Include()`.
+
+**Day 4 (Delete Behavior):** Handle parent-child deletion issues.
+
+**Day 5 (Review):** Understand the object graph clearly.
+
+### Week 32: API Refactor to Real Persistence
+
+**Day 1 (GET Refactor):** Read from SQL instead of memory.
+
+**Day 2 (POST Refactor):** Save via EF Core.
+
+**Day 3 (End-to-End Test):** Send a scan and verify persistence.
+
+**Day 4 (Verification):** Inspect rows in SSMS.
+
+**Day 5 (Month Review):** Commit your first persistent backend.
+
+### Month 8 Output
+
+* EF Core integration
+* migrations
+* real database persistence
+* API backed by SQL
+
+---
+
+## Month 9: Security, Validation, and Error Handling
+
+### Week 33: Authentication and Authorization Theory
+
+**Day 1 (Concepts):** Learn authentication vs authorization.
+
+**Day 2 (Stateless APIs):** Understand why APIs often avoid server-side sessions.
+
+**Day 3 (JWT Theory):** Learn header, payload, signature.
+
+**Day 4 (Device vs Human Security):** Learn why users and devices may use different auth methods.
+
+**Day 5 (Review):** Design a simple security model on paper.
+
+### Week 34: JWT for Admin Endpoints
+
+**Day 1 (Setup):** Configure JWT auth in ASP.NET Core.
+
+**Day 2 (Login Endpoint):** Create a mock login endpoint.
+
+**Day 3 (Authorize):** Protect admin endpoints with `[Authorize]`.
+
+**Day 4 (Testing):** Test with and without token in Postman.
+
+**Day 5 (Review):** Clean up token generation.
+
+### Week 35: API Keys for Device Endpoints
+
+**Day 1 (Middleware Theory):** Learn how middleware intercepts requests.
+
+**Day 2 (API Key Middleware):** Check for `X-API-Key`.
+
+**Day 3 (Secure Device Endpoint):** Protect scan submission endpoint.
+
+**Day 4 (Console Update):** Send API key from simulator.
+
+**Day 5 (Review):** Verify unauthorized device rejection.
+
+### Week 36: Validation and Standard Error Responses
+
+**Day 1 (Validation Theory):** Understand input validation before business logic.
+
+**Day 2 (FluentValidation):** Add validators.
+
+**Day 3 (Bad Request):** Return clean validation messages.
+
+**Day 4 (Error Contract):** Standardize 400, 401, 404, and 500 response shapes.
+
+**Day 5 (Phase Review):** Commit a secure, validated, predictable API.
+
+### Month 9 Output
+
+* JWT-secured admin API
+* API key protected device endpoint
+* validators
+* standard error contracts
+
+---
+
+# Phase 4: Reliability and Operability
+
+## Month 10: Logging, Exceptions, and Tracing
+
+### Week 37: Global Exception Handling
+
+**Day 1 (Theory):** Learn why scattered `try/catch` is weak.
+
+**Day 2 (Middleware):** Create exception-handling middleware.
+
+**Day 3 (Pipeline):** Register it in ASP.NET Core.
+
+**Day 4 (Testing):** Force exceptions and observe responses.
+
+**Day 5 (Review):** Hide stack traces from clients.
+
+### Week 38: Serilog Setup
+
+**Day 1 (Theory):** Learn structured logging.
+
+**Day 2 (Packages):** Install Serilog.
+
+**Day 3 (Basic Logs):** Add info, warning, and error logs.
+
+**Day 4 (Configuration):** Move logging config to `appsettings.json`.
+
+**Day 5 (Review):** Trigger API calls and inspect logs.
+
+### Week 39: Contextual Logging
+
+**Day 1 (Message Templates):** Learn placeholders.
+
+**Day 2 (Object Logging):** Log objects carefully.
+
+**Day 3 (Context):** Add `TerminalId`, `EmployeeId`, or `RequestId`.
+
+**Day 4 (JSON Logs):** Output logs in JSON.
+
+**Day 5 (Review):** Remove noisy logs.
+
+### Week 40: Correlation IDs, Health Checks, and Metrics
+
+**Day 1 (Correlation IDs):** Add `X-Correlation-ID` middleware. Push correlation ID into Serilog `LogContext`. Trace one request end-to-end.
+
+**Day 2 (Health Checks):** Implement `IHealthCheck` in ASP.NET Core. Add health checks for database connectivity, RabbitMQ connection, and device service availability. Expose `/health` endpoint.
+
+**Day 3 (Custom Health Checks):** Create a custom health check for terminal heartbeat freshness (e.g., "are all terminals reporting within the last 5 minutes?"). This is critical for integration systems.
+
+**Day 4 (Metrics Awareness):** Learn what application metrics are. Add basic counters: total scans processed, failed scans, active terminals. Use `System.Diagnostics.Metrics` or a simple in-memory counter. Understand the concept of Prometheus/Grafana without necessarily setting them up.
+
+**Day 5 (Month Review):** Configure rolling log files. Verify health endpoint returns meaningful status. Commit a fully observable API.
+
+### Month 10 Output
+
+* global exception handling
+* structured logging with Serilog
+* correlation ID flow
+* health check endpoints for DB, queue, and device services
+* basic application metrics
+* traceable, observable system
+
+---
+
+## Month 11: Background Workers and Time-Based Logic
+
+### Week 41: Hosted Services
+
+**Day 1 (Theory):** Learn `IHostedService` and `BackgroundService`.
+
+**Day 2 (Scaffold):** Create a worker class.
+
+**Day 3 (Loop):** Implement a repeating async loop.
+
+**Day 4 (Registration):** Register the worker.
+
+**Day 5 (Review):** Confirm worker and API run together.
+
+### Week 42: Polling and Health Logic
+
+**Day 1 (Polling):** Simulate terminal heartbeat checks.
+
+**Day 2 (Logic):** Mark terminals offline after timeout.
+
+**Day 3 (Logging):** Add worker logs.
+
+**Day 4 (Graceful Shutdown):** Learn safe stop behavior.
+
+**Day 5 (Review):** Clean the loop.
+
+### Week 43: DI in Workers
+
+**Day 1 (Theory):** Learn why scoped services cannot be injected directly into singleton workers.
+
+**Day 2 (Scope Factory):** Use `IServiceScopeFactory`.
+
+**Day 3 (Scoped Resolution):** Resolve `DbContext` safely inside the loop.
+
+**Day 4 (DB Query):** Query the database from the worker.
+
+**Day 5 (Review):** Ensure no resource leaks.
+
+### Week 44: Scheduling, Batch Processing, and UTC
+
+**Day 1 (Time Math):** Learn `DateTime.UtcNow` and `DateTimeOffset`. Understand time zone handling in distributed integration systems.
+
+**Day 2 (Scheduled Task):** Build a timed summary job that aggregates scan totals.
+
+**Day 3 (Batch Export):** Build a scheduled batch export: query the database for the day's scans, write them to a CSV file, and log the export. Many integration systems require nightly data exports to partners or legacy systems. Use `CsvHelper` or manual `StringBuilder`.
+
+**Day 4 (Batch Import):** Build a file-based import: read a CSV of employee records, validate each row, skip bad rows with structured logging, and upsert into the database. This is the ETL pattern you will encounter in every integration job.
+
+**Day 5 (Month Review):** Commit a working worker-based background task with batch import/export capabilities.
+
+### Month 11 Output
+
+* background worker
+* terminal heartbeat logic
+* scheduled task with batch import/export
+* CSV-based ETL pattern
+* proper scoped service usage in workers
+
+---
+
+## Month 12: Integration Patterns and SDK-Style Design
+
+### Week 45: Wrapping External SDKs
+
+**Day 1 (Theory):** Learn why vendor SDKs should sit behind your own interface.
+
+**Day 2 (Adapter Pattern):** Wrap a fake vendor scanner API.
+
+**Day 3 (Abstraction):** Keep vendor-specific code isolated.
+
+**Day 4 (Swapability):** Add a second fake vendor.
+
+**Day 5 (Review):** Document how this reduces lock-in.
+
+### Week 46: Integration Boundaries and SDK Debugging
+
+**Day 1 (Theory):** Learn timeouts, retries, transient failure, permanent failure.
+
+**Day 2 (Error Mapping):** Translate low-level SDK errors into application errors.
+
+**Day 3 (Resilience Thinking):** Decide which errors should retry.
+
+**Day 4 (SDK Debugging Skills):** Learn how to debug real vendor SDKs — skills you'll use every week at work. Use Wireshark or RawCap on the loopback adapter to capture what bytes the SDK actually sends and receives over TCP. Learn to read vendor SDK log files (most SDKs write verbose logs when a debug flag is enabled — find it). Practice reproducing SDK failures in isolation (disconnect cable, block port, send malformed command) so you can tell the difference between your code's fault and the vendor's SDK fault. Document the debugging steps in your notes — this kind of knowledge is invisible on most CVs but immediately visible in interviews.
+
+**Day 5 (Review):** Keep integration code small and understandable. Write a one-page "SDK Debugging Playbook" — a checklist of steps you follow when a biometric device stops responding. This is a real interview talking point.
+
+### Week 47: Offline Thinking, Local Persistence, and Windows Services Deployment
+
+**Day 1 (Problem):** Study what happens if the API is unavailable.
+
+**Day 2 (Fallback Storage):** Save failed submissions locally.
+
+**Day 3 (Recovery Logic):** Add resend logic.
+
+**Day 4 (Windows Services Deployment):** Integration engineers in practice deploy software as Windows Services running on-site kiosk machines, not in Docker on day one. Learn the full deployment cycle for a .NET Worker Service as a Windows Service: use `dotnet publish -c Release --self-contained true -r win-x64 -p:PublishSingleFile=true` to produce a single executable. Install it with `sc.exe create MyService binPath= "C:\path\to\service.exe"`. Start with `sc.exe start MyService`, stop with `sc.exe stop MyService`. Configure automatic restart on failure using `sc failure MyService reset= 0 actions= restart/5000`. Understand how to update a running service safely: stop → replace binary → start. Add `UseWindowsService()` to `Program.cs` so the same codebase runs as both a console app in dev and a Windows Service in production. This is how your real biometric agents likely run today — formalizing this knowledge matters.
+
+**Day 5 (Review):** Document offline-first behavior and add a Windows Service deployment checklist to your README.
+
+### Week 48: Data Mapping, Format Diversity, and Year 1 Consolidation
+
+**Day 1 (Data Mapping Theory):** Learn why integration systems must map between vendor-specific and canonical data models. Most of your integration work will involve transforming data from one format to another.
+
+**Day 2 (Canonical Models):** Design canonical models for your system (e.g., `CanonicalScanResult`, `CanonicalDeviceStatus`) that are vendor-agnostic. Map vendor-specific DTOs to these using manual mapping (prefer explicit mapping over AutoMapper for complex integration logic — it is easier to debug and maintain).
+
+**Day 3 (Non-JSON Formats):** Integration systems rarely deal with JSON alone. Parse XML using `XDocument` and `XmlSerializer`. Read and write CSV files with `CsvHelper`. Handle fixed-width text formats with `string.Substring()` or `Span<char>`. Many legacy devices, ERP systems, and enterprise partners send XML or CSV, not JSON.
+
+**Day 4 (Architecture Review):** Draw system components. Document integration layer, logging, worker, persistence, data mapping, and format adapters. Remove hacks and duplication.
+
+**Day 5 (Phase Review):** Commit a polished Year 1 foundation. Write a README that explains the full system: adapters, data mapping, format diversity, offline fallback, workers, batch ETL, and observability.
+
+### Month 12 Output
+
+* SDK-style adapter layer
+* canonical data models with vendor mapping
+* XML, CSV, and multi-format parsing
+* offline fallback logic
+* cleaner system structure
+* Year 1 polished foundation
+
+---
+
+## Docker CLI Primer (Before Phase 5)
+
+Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hours on these Docker basics so you are not learning Docker and messaging simultaneously.
+
+**Concepts:** Image = blueprint. Container = running instance. `docker run` creates and starts a container. `docker ps` lists running containers. `docker logs <name>` reads container output. `docker stop <name>` stops gracefully. `docker rm <name>` removes stopped containers.
+
+**Commands to practice:**
+
+*   `docker run -d --name rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management` — run RabbitMQ with management UI
+*   `docker ps` — confirm it is running
+*   `docker logs rabbit` — read startup logs
+*   `docker stop rabbit && docker rm rabbit` — clean up
+*   `docker run -d -e ACCEPT_EULA=Y -e SA_PASSWORD=YourPass -p 1433:1433 mcr.microsoft.com/mssql/server:2022-latest` — run SQL Server in a container
+
+**Volume basics:** `docker run -v C:/data:/var/opt/mssql/data ...` persists data across container restarts. Without a volume, all container data is lost on `docker rm`.
+
+**Why this matters now:** For the next 3 months you will use Docker to run RabbitMQ and SQL Server locally without installing them. In Month 15 you will write your own Dockerfiles. For now, just consume existing images.
+
+---
+
+# Phase 5: Messaging, Resilience, and Containers
+
+## Month 13: RabbitMQ Fundamentals
+
+### Week 49: Messaging Theory
+
+**Day 1 (Theory):** Learn synchronous vs asynchronous communication.
+
+**Day 2 (Core Concepts):** Study producers, consumers, queues, exchanges, and routing keys.
+
+**Day 3 (Why Brokers):** Learn why brokers absorb spikes and decouple services.
+
+**Day 4 (Architecture):** Draw how scans move through RabbitMQ.
+
+**Day 5 (Review):** Finalize message flow design.
+
+### Week 50: Running RabbitMQ
+
+**Day 1 (Setup):** Run RabbitMQ with Docker.
+
+**Day 2 (UI):** Explore the management UI.
+
+**Day 3 (Manual Queue):** Create a queue manually.
+
+**Day 4 (Manual Publish):** Publish test messages.
+
+**Day 5 (Review):** Verify queue lifecycle understanding.
+
+### Week 51: Producer in C#
+
+**Day 1 (Package):** Install `RabbitMQ.Client`.
+
+**Day 2 (Connection):** Create a connection and channel.
+
+**Day 3 (Queue Declaration):** Declare queue from code.
+
+**Day 4 (Publishing):** Publish scan messages from the API.
+
+**Day 5 (Review):** Verify message arrival.
+
+### Week 52: Consumer in C#
+
+**Day 1 (Consumer Design):** Choose background worker or separate worker app.
+
+**Day 2 (Connection):** Connect to RabbitMQ.
+
+**Day 3 (Consume):** Listen to messages.
+
+**Day 4 (Deserialize):** Turn message payloads back into objects.
+
+**Day 5 (Month Review):** Confirm API and worker communicate through the queue.
+
+### Month 13 Output
+
+* RabbitMQ local environment
+* message producer
+* message consumer
+* first async processing flow
+
+---
+
+## Month 14: Reliable Messaging and Idempotency
+
+### Week 53: Saving Consumed Messages
+
+**Day 1 (Worker Logic):** Save consumed messages to SQL.
+
+**Day 2 (Happy Path):** Make API -> Queue -> Worker -> DB work cleanly.
+
+**Day 3 (Logging):** Add consume/save/error logs.
+
+**Day 4 (Testing):** Push multiple scans and verify persistence.
+
+**Day 5 (Review):** Stabilize worker behavior.
+
+### Week 54: Message Acknowledgements
+
+**Day 1 (Theory):** Learn auto-ack vs manual ack.
+
+**Day 2 (Manual Ack):** Acknowledge only after successful save.
+
+**Day 3 (Failure Test):** Simulate save failure.
+
+**Day 4 (Restart Test):** Kill and restart worker.
+
+**Day 5 (Review):** Understand durability clearly.
+
+### Week 55: Idempotency
+
+**Day 1 (Theory):** Learn why duplicates happen.
+
+**Day 2 (Message IDs):** Add unique IDs to scan messages.
+
+**Day 3 (Duplicate Check):** Ignore already-processed messages.
+
+**Day 4 (Duplicate Test):** Send duplicates and confirm one save only.
+
+**Day 5 (Review):** Document idempotency.
+
+### Week 56: Dead-Letter Queues
+
+**Day 1 (Poison Messages):** Study malformed or permanently failing messages.
+
+**Day 2 (DLQ Setup):** Configure dead-letter queue.
+
+**Day 3 (Reject/Nack):** Route bad messages to DLQ.
+
+**Day 4 (Testing):** Publish invalid payloads.
+
+**Day 5 (Month Review):** Commit reliable messaging architecture.
+
+### Month 14 Output
+
+* reliable queue pipeline
+* manual acknowledgements
+* idempotency
+* DLQ support
+
+---
+
+## Month 15: Docker, Compose, Configuration, and Secrets
+
+### Week 57: Docker Fundamentals
+
+**Day 1 (Theory):** Learn images vs containers.
+
+**Day 2 (Install):** Install Docker Desktop.
+
+**Day 3 (Run):** Run `hello-world`.
+
+**Day 4 (Commands):** Practice `docker ps`, `docker stop`, `docker logs`.
+
+**Day 5 (Review):** Write command notes.
+
+### Week 58: Dockerfile
+
+**Day 1 (Syntax):** Learn `FROM`, `WORKDIR`, `COPY`, `RUN`, `EXPOSE`, `ENTRYPOINT`.
+
+**Day 2 (Draft):** Create Dockerfile for API.
+
+**Day 3 (Build):** Build image.
+
+**Day 4 (Run):** Run API in container.
+
+**Day 5 (Review):** Verify it works.
+
+### Week 59: Multi-Stage Build
+
+**Day 1 (Theory):** Learn why multi-stage builds matter.
+
+**Day 2 (Build Stage):** Use .NET SDK image.
+
+**Day 3 (Runtime Stage):** Use ASP.NET runtime image.
+
+**Day 4 (Optimize):** Rebuild and compare sizes.
+
+**Day 5 (Review):** Save final production-style Dockerfile.
+
+### Week 60: Docker Compose and Secrets
+
+**Day 1 (Compose):** Create compose file for API, worker, RabbitMQ, and SQL.
+
+**Day 2 (Networks):** Learn service-name communication.
+
+**Day 3 (Env Vars):** Move connection strings into environment variables.
+
+**Day 4 (.env):** Add `.env` and update `.gitignore`.
+
+**Day 5 (Phase Review):** Boot the full stack with one command.
+
+### Month 15 Output
+
+* containerized API
+* multi-stage build
+* compose-based local stack
+* basic secret/config hygiene
+
+---
+
+# Phase 6: Cloud and Delivery
+
+## Month 16: First Cloud Deployment
+
+### Week 61: Azure Setup
+
+**Day 1 (Account):** Create Azure account and explore portal.
+
+**Day 2 (Resource Groups):** Learn resource grouping.
+
+**Day 3 (CLI):** Install Azure CLI.
+
+**Day 4 (Portal Navigation):** Explore App Service, SQL, monitoring, configuration.
+
+**Day 5 (Review):** Decide what resources to use.
+
+### Week 62: Deploying the API
+
+**Day 1 (App Service Theory):** Learn what App Service is.
+
+**Day 2 (Provision):** Create App Service and Web App.
+
+**Day 3 (Deploy):** Deploy from CLI or Visual Studio.
+
+**Day 4 (Verify):** Open public URL.
+
+**Day 5 (Review):** Document deploy steps.
+
+### Week 63: Azure SQL
+
+**Day 1 (Theory):** Learn managed SQL basics.
+
+**Day 2 (Provision):** Create Azure SQL.
+
+**Day 3 (Firewall):** Allow your IP and connect.
+
+**Day 4 (Migrations):** Apply schema.
+
+**Day 5 (Review):** Point deployed API to Azure SQL.
+
+### Week 64: Cloud Configuration
+
+**Day 1 (App Settings):** Learn Azure environment config.
+
+**Day 2 (Secrets):** Remove sensitive values from code.
+
+**Day 3 (Testing):** Verify cloud config works.
+
+**Day 4 (Troubleshooting):** Break config intentionally and fix it.
+
+**Day 5 (Month Review):** Commit a working deployed API and DB.
+
+### Month 16 Output
+
+* deployed API
+* managed SQL database
+* cloud config handling
+* deployment notes
+
+---
+
+## Month 17: Monitoring and CI/CD
+
+### Week 65: Cloud Logging and Monitoring
+
+**Day 1 (Log Stream):** Enable App Service logs.
+
+**Day 2 (Metrics):** View CPU, memory, requests, and errors.
+
+**Day 3 (App Insights Basics):** Add Application Insights.
+
+**Day 4 (Telemetry):** Hit API and observe telemetry.
+
+**Day 5 (Review):** Learn how to inspect cloud failures.
+
+### Week 66: GitHub Actions Basics
+
+**Day 1 (Theory):** Learn CI.
+
+**Day 2 (Workflow File):** Create a YAML workflow.
+
+**Day 3 (Build Step):** Add `dotnet build`.
+
+**Day 4 (Test Step):** Add `dotnet test`.
+
+**Day 5 (Review):** Push and watch workflow run.
+
+### Week 67: Branch Protection and Quality Gates
+
+**Day 1 (Branch Protection):** Learn protected branches.
+
+**Day 2 (Configuration):** Require build and tests before merge.
+
+**Day 3 (Failing Build):** Intentionally break a test.
+
+**Day 4 (Fix and Re-run):** Restore green build.
+
+**Day 5 (Review):** Define repo workflow rules.
+
+### Week 68: Basic CD
+
+**Day 1 (Secrets):** Add deployment credentials.
+
+**Day 2 (Deploy Workflow):** Create deploy job.
+
+**Day 3 (Pipeline Link):** Deploy from `main` or after CI passes.
+
+**Day 4 (Verification):** Confirm visible change deploys.
+
+**Day 5 (Month Review):** CI/CD basics are now in place.
+
+### Month 17 Output
+
+* CI workflow
+* test/build automation
+* basic cloud monitoring
+* simple deployment pipeline
+
+---
+
+## Month 18: Capstone Backend v1
+
+### Week 69: Capstone Architecture
+
+**Day 1 (Scope):** Define project scope clearly.
+
+**Day 2 (Entities):** Finalize models.
+
+**Day 3 (Flow):** Finalize full data flow.
+
+**Day 4 (Security):** Finalize admin vs device auth.
+
+**Day 5 (Review):** Clean architecture notes.
+
+### Week 70: Build the Core API
+
+**Day 1 (Scaffold):** Create a clean API project.
+
+**Day 2 (Persistence):** Add EF Core and models.
+
+**Day 3 (Endpoints):** Build core device and admin endpoints.
+
+**Day 4 (Validation):** Add validators and standard errors.
+
+**Day 5 (Review):** Test thoroughly.
+
+### Week 71: Queue-Based Processing
+
+**Day 1 (Publish):** Publish device scans to RabbitMQ.
+
+**Day 2 (Consume):** Process via worker.
+
+**Day 3 (Idempotency):** Prevent duplicates.
+
+**Day 4 (DLQ):** Add poison-message handling.
+
+**Day 5 (Review):** Verify stability under repeated tests.
+
+### Week 72: Deployment and Smoke Testing
+
+**Day 1 (Dockerize):** Containerize capstone services.
+
+**Day 2 (Deploy):** Deploy API and DB.
+
+**Day 3 (Config):** Configure secrets and environment settings.
+
+**Day 4 (Smoke Test):** Run end-to-end tests.
+
+**Day 5 (Phase Review):** Commit a deployable capstone backend v1.
+
+### Month 18 Output
+
+* production-style capstone backend v1
+* deployed system
+* message-driven flow
+* end-to-end working architecture
+
+---
+
+# Phase 7: Portfolio, Performance, and Hardening
+
+## Month 19: Architecture, Documentation, and Career Positioning Start
+
+### Week 73: Diagrams
+
+**Day 1 (Tool):** Use Draw.io or similar.
+
+**Day 2 (System Diagram):** Draw main components.
+
+**Day 3 (Sequence Diagram):** Show scan flow.
+
+**Day 4 (Failure Diagram):** Show what happens during failure.
+
+**Day 5 (Review):** Export and store diagrams.
+
+### Week 74: README Upgrade
+
+**Day 1 (Summary):** Write clear project overview.
+
+**Day 2 (Architecture Decisions):** Explain RabbitMQ, API keys, JWT, Docker, EF Core.
+
+**Day 3 (Run Locally):** Write setup instructions.
+
+**Day 4 (Deployment Notes):** Document deployment at a high level.
+
+**Day 5 (Review):** Make README understandable to a hiring manager.
+
+### Week 75: Code Polish
+
+**Day 1 (Naming):** Standardize naming and folders.
+
+**Day 2 (Cleanup):** Remove dead code.
+
+**Day 3 (Validation):** Strengthen weak input rules.
+
+**Day 4 (Error Contracts):** Verify consistency.
+
+**Day 5 (Review):** Produce a clean baseline.
+
+### Week 76: Demo and Public Positioning
+
+**Day 1 (Script):** Write a 2-3 minute explanation.
+
+**Day 2 (GitHub Cleanup):** Improve pinned repo quality.
+
+**Day 3 (Recording):** Record short demo.
+
+**Day 4 (LinkedIn Start):** Begin updating profile summary and skills.
+
+**Day 5 (Month Review):** Publish or save the demo.
+
+### Month 19 Output
+
+* diagrams
+* polished README
+* cleaned code
+* first demo
+* early career-facing assets
+
+---
+
+## Month 20: Performance and Resilience Drills
+
+### Week 77: Retry Patterns
+
+**Day 1 (Theory):** Learn transient failures and retries.
+
+**Day 2 (Polly):** Add retry policies carefully.
+
+**Day 3 (Backoff):** Use exponential backoff.
+
+**Day 4 (Logging):** Log retries clearly.
+
+**Day 5 (Review):** Avoid retrying the wrong failures.
+
+### Week 78: Timeouts and Circuit Breakers
+
+**Day 1 (Timeouts):** Learn timeout behavior.
+
+**Day 2 (Circuit Breaker Theory):** Study open, half-open, closed.
+
+**Day 3 (Implementation):** Add a simple breaker around simulated dependency.
+
+**Day 4 (Testing):** Trigger failure behavior.
+
+**Day 5 (Review):** Document where breakers belong.
+
+### Week 79: Load and Queue Backlog
+
+**Day 1 (Bulk Simulation):** Generate many scan messages.
+
+**Day 2 (Observe):** Watch queue depth and worker throughput.
+
+**Day 3 (Slow Consumer):** Slow the worker intentionally.
+
+**Day 4 (Recovery):** Restore speed and verify drain.
+
+**Day 5 (Review):** Write performance notes.
+
+### Week 80: Failure Drills
+
+**Day 1 (DB Down):** Shut down DB and observe behavior.
+
+**Day 2 (Worker Down):** Stop worker and inspect queue state.
+
+**Day 3 (Bad Messages):** Inject malformed messages.
+
+**Day 4 (Duplicates):** Re-send duplicates.
+
+**Day 5 (Month Review):** Document results in the repo.
+
+### Month 20 Output
+
+* resilience drills
+* retry and timeout understanding
+* basic performance notes
+* stronger interview material
+
+---
+
+## Month 21: Minimal Admin Layer and Light Applications Begin
+
+### Week 81: Scope Decision
+
+**Day 1 (Decision):** Choose minimal dashboard or API-first polish.
+
+**Day 2 (Planning):** Define smallest useful scope.
+
+**Day 3 (Backend Prep):** Add missing reporting endpoints.
+
+**Day 4 (Auth):** Ensure admin path is protected.
+
+**Day 5 (Review):** Keep scope intentionally small.
+
+### Week 82: Build the Minimal Layer
+
+**Day 1:** Scaffold minimal UI or improve admin API usability.
+
+**Day 2:** Add terminal status view or endpoint.
+
+**Day 3:** Add recent scans view or endpoint.
+
+**Day 4:** Add failures view or endpoint.
+
+**Day 5:** Keep it functional, not fancy.
+
+### Week 83: Reporting and Readability
+
+**Day 1:** Add “total scans today” metric.
+
+**Day 2:** Add simple health visibility.
+
+**Day 3:** Improve clarity and usability.
+
+**Day 4:** Verify auth and error handling.
+
+**Day 5:** Keep it useful for the demo.
+
+### Week 84: First Light Applications
+
+**Day 1:** Polish CV draft.
+
+**Day 2:** Improve LinkedIn headline and About section.
+
+**Day 3:** Select first 10 target roles.
+
+**Day 4:** Prepare job-tracking sheet.
+
+**Day 5 (Month Review):** Begin very light application testing.
+
+### Month 21 Output
+
+* minimal admin/reporting layer
+* first professional CV draft
+* LinkedIn cleanup started
+* first light applications
+
+---
+
+# Phase 8: Career Positioning and Job Execution
+
+## Month 22: CV, GitHub, LinkedIn, and Market Fit
+
+### Week 85: CV Foundations
+
+**Day 1 (Structure):** Create a clean one-page CV.
+
+**Day 2 (Headline):** Position yourself as `.NET Backend / Systems Integration Engineer`.
+
+**Day 3 (Experience Framing):** Describe real work and capstone in outcome-focused language.
+
+**Day 4 (Skills):** List technologies honestly.
+
+**Day 5 (Review):** Remove weak wording.
+
+### Week 86: GitHub Profile
+
+**Day 1 (Pinned Repos):** Pin strongest repos.
+
+**Day 2 (Profile README):** Create profile README.
+
+**Day 3 (Project README Review):** Improve capstone README again.
+
+**Day 4 (Visuals):** Add diagrams or screenshots.
+
+**Day 5 (Review):** Make work easy to understand quickly.
+
+### Week 87: LinkedIn
+
+**Day 1 (Headline):** Update professional title.
+
+**Day 2 (About Section):** Write summary of your direction.
+
+**Day 3 (Projects):** Add capstone and technologies.
+
+**Day 4 (Preferences):** Set location and Germany-focused preferences.
+
+**Day 5 (Review):** Keep profile clear and professional.
+
+### Week 88: Positioning Review
+
+**Day 1 (Keywords):** Compare CV and LinkedIn against real jobs.
+
+**Day 2 (Adjustments):** Add missing keywords like APIs, Docker, messaging, SQL, workers.
+
+**Day 3 (Proofreading):** Tighten wording.
+
+**Day 4 (ATS Check):** Run basic ATS review if needed.
+
+**Day 5 (Month Review):** Finalize public positioning assets.
+
+### Month 22 Output
+
+* final CV v1
+* polished GitHub
+* improved LinkedIn
+* keyword-aligned positioning
+
+---
+
+## Month 23: Interview Preparation and Targeted Applications
+
+### Week 89: Market Reconnaissance
+
+**Day 1 (Search):** Collect 20-30 Germany-focused target jobs.
+
+**Day 2 (Analysis):** Extract common requirements.
+
+**Day 3 (Gap Check):** Identify any repeated weakness.
+
+**Day 4 (Adjustment):** Update portfolio wording.
+
+**Day 5 (Review):** Choose target role families.
+
+### Week 90: C# and .NET Review
+
+**Day 1:** Review OOP, interfaces, async, exceptions.
+
+**Day 2:** Review DI, middleware, controllers, configuration.
+
+**Day 3:** Review EF Core and relationships.
+
+**Day 4:** Review testing and mocking.
+
+**Day 5:** Practice explaining them out loud.
+
+### Week 91: SQL, APIs, and System Design
+
+**Day 1:** Review joins, grouping, indexes.
+
+**Day 2:** Review REST design and errors.
+
+**Day 3:** Review JWT, API keys, validation.
+
+**Day 4:** Practice capstone architecture storytelling.
+
+**Day 5:** Focus on clarity.
+
+### Week 92: Behavioral and Project Storytelling
+
+**Day 1:** Prepare “Tell me about yourself”.
+
+**Day 2:** Practice capstone deep dive.
+
+**Day 3:** Prepare debugging and failure stories.
+
+**Day 4:** Practice trade-off explanations.
+
+**Day 5 (Month Review):** Run a full mock interview.
+
+### Month 23 Output
+
+* role targeting clarity
+* interview answer bank
+* capstone explanation confidence
+* stronger application readiness
+
+---
+
+## Month 24: Application Execution and Interview Momentum
+
+### Week 93: Application Wave 1
+
+**Day 1 (Tailoring):** Tailor CV slightly by role family.
+
+**Day 2 (Apply):** Send first serious batch.
+
+**Day 3 (Tracking):** Track company, role, date, and status.
+
+**Day 4 (Follow-ups):** Prepare short follow-up templates.
+
+**Day 5 (Review):** Keep process organized.
+
+### Week 94: Outreach
+
+**Day 1:** Send concise recruiter or hiring-manager messages.
+
+**Day 2:** Request referrals where possible.
+
+**Day 3:** Join relevant communities.
+
+**Day 4:** Improve outreach quality.
+
+**Day 5:** Stay targeted and professional.
+
+### Week 95: Interview Cycle
+
+**Day 1:** Run technical review again.
+
+**Day 2:** Practice take-home task approach.
+
+**Day 3:** Rehearse architecture explanation.
+
+**Day 4:** Rehearse HR questions.
+
+**Day 5:** Stay consistent.
+
+### Week 96: Portfolio Finalization and Wave 2
+
+**Day 1:** Verify repo links and docs.
+
+**Day 2:** Re-check demo and README.
+
+**Day 3:** Send second application wave.
+
+**Day 4:** Update CV/portfolio from feedback.
+
+**Day 5 (Roadmap Completion):** You now have a serious backend portfolio, a deployable capstone, and realistic readiness for junior .NET backend / systems integration roles.
+
+### Month 24 Output
+
+* active job search process
+* application tracking system
+* interview repetition
+* final portfolio polish
+
+---
+
+# Final outcome
+
+If you follow this seriously at **10 hours per week**, combined with your **existing frontend experience** and **active biometric SDK integration work**, the realistic result is:
+
+**You become a strong .NET backend / systems integration candidate, with real-world integration experience, a deployable backend system, practical knowledge of APIs, multiple protocols (REST, gRPC, SignalR, TCP), SQL, security, messaging, data mapping, multi-format parsing (JSON, XML, CSV), batch ETL, webhook handling, network troubleshooting, background workers, Docker, Azure, observability, and enough project depth to compete for mid-level roles.**
+
+## Best-fit target roles
+
+Apply to roles such as:
+
+* Systems Integration Engineer
+* Integration Engineer
+* .NET Backend Developer
+* Implementation Engineer
+* Solutions Engineer with backend focus
+* IoT / Device Integration Engineer
+* Technical Support / Integration Engineer with coding ability
+* Integrationsingenieur (Germany-specific title)
+
+## Your competitive advantage
+
+Unlike most self-taught candidates, you bring:
+
+* **Real production integration experience** with biometric SDKs and devices
+* **Completed frontend skills** giving you full-stack awareness
+* **Protocol diversity** (REST, gRPC, SignalR, TCP, Serial) beyond typical backend developers
+* **Data mapping and format diversity** — JSON, XML, CSV transformations between vendor-specific and canonical models
+* **Webhook and batch ETL patterns** — real-world integration triggers and scheduled data exchange
+* **Network troubleshooting** — diagnosing device connectivity, firewall, and proxy issues
+* **API versioning and backward compatibility** — managing deployed device clients that cannot be updated instantly
+* **Observability skills** (health checks, metrics, structured logging) that production systems require
+* **Windows Services deployment** — deploying self-contained executables on-site, managing service lifecycle, handling updates safely
+* **SDK-level debugging** — Wireshark packet capture on SDK traffic, vendor log analysis, firmware version troubleshooting, isolating device faults from application faults
+
+## What this roadmap does not promise
+
+It does **not** automatically make you mid-level by title.
+Mid-level usually needs:
+
+* more repetition
+* real team experience
+* real production incidents
+* more ownership over time
+
+But combined with your real work experience, it absolutely can make you **competitive for mid-level roles**, not just junior ones.
