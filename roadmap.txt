@@ -560,33 +560,33 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Review):** Clean up token generation.
 
-### Week 35: API Keys for Device Endpoints
+### Week 35: API Keys for Devices & Validation
 
 **Day 1 (Middleware Theory):** Learn how middleware intercepts requests.
 
-**Day 2 (API Key Middleware):** Check for `X-API-Key`.
+**Day 2 (Secure Device Endpoint):** Protect scan submission endpoint.
 
-**Day 3 (Secure Device Endpoint):** Protect scan submission endpoint.
+**Day 3 (Validation Theory):** Understand input validation before business logic.
 
-**Day 4 (Console Update):** Send API key from simulator.
+**Day 4 (Bad Request):** Return clean validation messages.
 
-**Day 5 (Review):** Verify unauthorized device rejection.
+**Day 5 (Error Contract):** Standardize 400, 401, 404, and 500 response shapes.
 
-### Week 36: Validation and Standard Error Responses
+### Week 36: OAuth2 & OpenID Connect
 
-**Day 1 (Validation Theory):** Understand input validation before business logic.
+**Day 1 (OIDC Theory):** Learn what OAuth2 and OpenID Connect (OIDC) are.
 
-**Day 2 (FluentValidation):** Add validators.
+**Day 2 (External Identity Providers):** Explore Keycloak or Microsoft Entra ID.
 
-**Day 3 (Bad Request):** Return clean validation messages.
+**Day 3 (Token Validation in .NET):** Configure ASP.NET Core to validate tokens from an external IdP.
 
-**Day 4 (Error Contract):** Standardize 400, 401, 404, and 500 response shapes.
+**Day 4 (Delegated Auth Flow):** Use Postman to get a token and call the API.
 
-**Day 5 (Phase Review):** Commit a secure, validated, predictable API.
+**Day 5 (Phase Review):** Commit a secure, validated, and OIDC-protected API.
 
 ### Month 9 Output
 
-* JWT-secured admin API
+* OAuth2/OIDC-secured admin API
 * API key protected device endpoint
 * validators
 * standard error contracts
@@ -754,17 +754,17 @@ You already know HTTP methods, status codes, JSON, and browser dev tools from fr
 
 **Day 5 (Review):** Document offline-first behavior and add a Windows Service deployment checklist to your README.
 
-### Week 48: Data Mapping, Format Diversity, and Year 1 Consolidation
+### Week 48: Legacy Integrations & Format Diversity
 
-**Day 1 (Data Mapping Theory):** Learn why integration systems must map between vendor-specific and canonical data models. Most of your integration work will involve transforming data from one format to another.
+**Day 1 (XML Parsing):** Learn `System.Xml.Linq` (XDocument) and parse XML payloads from legacy devices.
 
-**Day 2 (Canonical Models):** Design canonical models for your system (e.g., `CanonicalScanResult`, `CanonicalDeviceStatus`) that are vendor-agnostic. Map vendor-specific DTOs to these using manual mapping (prefer explicit mapping over AutoMapper for complex integration logic — it is easier to debug and maintain).
+**Day 2 (Consuming SOAP APIs):** Learn about WSDL generation and generate a client to consume a legacy SOAP service.
 
-**Day 3 (Non-JSON Formats):** Integration systems rarely deal with JSON alone. Parse XML using `XDocument` and `XmlSerializer`. Read and write CSV files with `CsvHelper`. Handle fixed-width text formats with `string.Substring()` or `Span<char>`. Many legacy devices, ERP systems, and enterprise partners send XML or CSV, not JSON.
+**Day 3 (Canonical Models & Data Mapping):** Design integration-agnostic models (`CanonicalScanResult`) and manually map SOAP/XML results to them.
 
-**Day 4 (Architecture Review):** Draw system components. Document integration layer, logging, worker, persistence, data mapping, and format adapters. Remove hacks and duplication.
+**Day 4 (Architecture Review):** Draw system components. Document legacy integration adapters, format parsers, and system boundaries.
 
-**Day 5 (Phase Review):** Commit a polished Year 1 foundation. Write a README that explains the full system: adapters, data mapping, format diversity, offline fallback, workers, batch ETL, and observability.
+**Day 5 (Phase Review):** Commit a polished Year 1 foundation. Write a README that explains adapters, data mapping, format diversity, SOAP integration, offline fallback, workers, and observability.
 
 ### Month 12 Output
 
@@ -955,24 +955,24 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Review):** Save final production-style Dockerfile.
 
-### Week 60: Docker Compose and Secrets
+### Week 60: Docker Compose & Testcontainers
 
-**Day 1 (Compose):** Create compose file for API, worker, RabbitMQ, and SQL.
+**Day 1 (Docker Compose):** Create compose file for API, worker, RabbitMQ, and SQL.
 
-**Day 2 (Networks):** Learn service-name communication.
+**Day 2 (Networks & Env Vars):** Learn service-name communication and move connection strings into `.env`.
 
-**Day 3 (Env Vars):** Move connection strings into environment variables.
+**Day 3 (Testcontainers Theory):** Understand how Testcontainers provides throwaway Docker dependencies for tests.
 
-**Day 4 (.env):** Add `.env` and update `.gitignore`.
+**Day 4 (Automated DB/RabbitMQ Tests in xUnit):** Write automated DB and RabbitMQ tests in xUnit using Testcontainers.
 
-**Day 5 (Phase Review):** Boot the full stack with one command.
+**Day 5 (Phase Review):** Commit integration tests and run the full stack locally via compose.
 
 ### Month 15 Output
 
 * containerized API
 * multi-stage build
 * compose-based local stack
-* basic secret/config hygiene
+* basic secret/config hygiene + Testcontainers
 
 ---
 
@@ -992,29 +992,29 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Review):** Decide what resources to use.
 
-### Week 62: Deploying the API
+### Week 62: Infrastructure as Code (IaC)
 
-**Day 1 (App Service Theory):** Learn what App Service is.
+**Day 1 (IaC Theory):** Learn basics of Bicep or Terraform.
 
-**Day 2 (Provision):** Create App Service and Web App.
+**Day 2 (Provision App Service via Code):** Write IaC to provision the App Service via code.
 
-**Day 3 (Deploy):** Deploy from CLI or Visual Studio.
+**Day 3 (Provision DB via Code):** Write IaC to provision Azure SQL via code.
 
-**Day 4 (Verify):** Open public URL.
+**Day 4 (GitHub Actions IaC Deployment):** Automate the infrastructure deployment in CI/CD.
 
-**Day 5 (Review):** Document deploy steps.
+**Day 5 (Review):** Document IaC setup and destroy infrastructure to save costs.
 
-### Week 63: Azure SQL
+### Week 63: Cloud Configuration & Migrations
 
-**Day 1 (Theory):** Learn managed SQL basics.
+**Day 1 (Theory):** Learn Azure KeyVault and secret injection.
 
-**Day 2 (Provision):** Create Azure SQL.
+**Day 2 (Provision):** Provision KeyVault and wire it to App Service.
 
-**Day 3 (Firewall):** Allow your IP and connect.
+**Day 3 (Firewall):** Allow your IP and connect securely to Azure SQL.
 
-**Day 4 (Migrations):** Apply schema.
+**Day 4 (Migrations):** Run Database Migrations automatically in CI/CD.
 
-**Day 5 (Review):** Point deployed API to Azure SQL.
+**Day 5 (Review):** Point deployed API to Azure SQL securely.
 
 ### Week 64: Cloud Configuration
 
@@ -1122,15 +1122,15 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 **Day 5 (Review):** Test thoroughly.
 
-### Week 71: Queue-Based Processing
+### Week 71: MassTransit & Enterprise Messaging
 
-**Day 1 (Publish):** Publish device scans to RabbitMQ.
+**Day 1 (MassTransit Setup):** Add MassTransit packages and configure RabbitMQ broker.
 
-**Day 2 (Consume):** Process via worker.
+**Day 2 (Publish/Consume Abstraction):** Create generic consumers and let MassTransit handle routing.
 
-**Day 3 (Idempotency):** Prevent duplicates.
+**Day 3 (Automated Retries):** Configure MassTransit automatic retry policies.
 
-**Day 4 (DLQ):** Add poison-message handling.
+**Day 4 (Faults & Dead-Lettering with MassTransit):** Handle fault consumers and dead-letter queues with MassTransit.
 
 **Day 5 (Review):** Verify stability under repeated tests.
 
@@ -1150,7 +1150,7 @@ Month 13 uses Docker to run RabbitMQ. Before starting Month 13, spend a few hour
 
 * production-style capstone backend v1
 * deployed system
-* message-driven flow
+* MassTransit message-driven flow
 * end-to-end working architecture
 
 ---

@@ -973,27 +973,27 @@
 
   <div class="node sub-node" id="m9w3" data-parent="month9" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Middleware theory|Day 2: X-API-Key middleware|Day 3: Protect scan submission endpoint|Day 4: Simulator sends API key header|Day 5: Verify unauthorized rejection|✅ Deliverable: API key auth working">
-    📅 Week 35: API Keys for Devices
+    📅 Week 35: API Keys for Devices &amp; Validation
   </div>
   <div class="node day-node" id="m9w3_d1" data-parent="m9w3" data-side="right"
-       data-details="Read: ASP.NET Core middleware is a pipeline — each piece processes the request, optionally calls next|Your API key check should be middleware: runs on every request, extracts the header, validates, continues or rejects|Alternative: custom [FromHeader] attribute or ActionFilter — middleware is cleaner for cross-cutting concerns|Design: which endpoints require API key (terminal endpoints) vs JWT (admin endpoints)?|Write the logic flow: request arrives → check path → apply appropriate auth scheme">
+       data-details="Learn how middleware intercepts requests.">
     Day 1 — Middleware Theory
   </div>
   <div class="node day-node" id="m9w3_d2" data-parent="m9w3" data-side="right"
-       data-details="Create Middleware/ApiKeyMiddleware.cs|In InvokeAsync: if path starts with /api/terminals: check for X-API-Key header|Compare header value to configuration value from appsettings|If missing or wrong: return 401 immediately without calling next(RequestDelegate)|If correct: call await _next(context); to continue the pipeline">
-    Day 2 — API Key Middleware
+       data-details="Protect scan submission endpoint. Send API key from simulator.">
+    Day 2 — Secure Device Endpoint
   </div>
   <div class="node day-node" id="m9w3_d3" data-parent="m9w3" data-side="right"
-       data-details="Register middleware in Program.cs: app.UseMiddleware&lt;ApiKeyMiddleware&gt;(); — before MapControllers|The order is critical: middleware runs before controllers|In appsettings: add 'ApiKey': 'your-secret-key-here' (use a real generated key like a UUID)|Test: hit /api/terminals without the header — get 401|Test: with wrong key — 401. With correct key — 200">
-    Day 3 — Secure Device Endpoint
+       data-details="Understand input validation before business logic.">
+    Day 3 — Validation Theory
   </div>
   <div class="node day-node" id="m9w3_d4" data-parent="m9w3" data-side="right"
-       data-details="Update your kiosk console simulator: add the API key to every HttpClient request|requestMessage.Headers.Add('X-API-Key', 'your-key-here');|Or use a default headers approach: client.DefaultRequestHeaders.Add('X-API-Key', apiKey);|The key should come from the simulator's appsettings, not hardcoded|Test: run simulator → request arrives at API with API key → middleware passes it through → controller handles it">
-    Day 4 — Console Update
+       data-details="Return clean validation messages.">
+    Day 4 — Bad Request
   </div>
   <div class="node day-node" id="m9w3_d5" data-parent="m9w3" data-side="right"
-       data-details="Test the rejection: run simulator without API key → see 401 in simulator output|Check: does the API return a clear error message or just 401 status?|Add a response body to 401: context.Response.WriteAsync('{&quot;error&quot;:&quot;Invalid or missing API key&quot;}');|Commit all middleware code and simulator update|Goal: unauthorized terminals are cleanly rejected with a meaningful message">
-    Day 5 — Review
+       data-details="Standardize 400, 401, 404, and 500 response shapes.">
+    Day 5 — Error Contract
   </div>
 
   <div class="node sub-node" id="m9w4" data-parent="month9" data-side="right"
@@ -1001,29 +1001,29 @@
     📅 Week 36: Validation & Error Contracts
   </div>
   <div class="node day-node" id="m9w4_d1" data-parent="m9w4" data-side="right"
-       data-details="Read: client input must be validated BEFORE it's processed — never trust caller data|Risks of not validating: SQL injection, null reference crashes, invalid business state|Validation should happen at the boundary (controller/endpoint) before calling service code|Types of validation: required fields, string length, format (email, timestamp), range (age &gt; 0)|Write: what inputs does POST /api/terminals/{id}/scans receive? What rules should each have?">
-    Day 1 — Validation Theory
+       data-details="Learn what OAuth2 and OpenID Connect (OIDC) are.">
+    Day 1 — OIDC Theory
   </div>
   <div class="node day-node" id="m9w4_d2" data-parent="m9w4" data-side="right"
-       data-details="Install FluentValidation: dotnet add package FluentValidation.AspNetCore|Create Validators/SubmitScanRequestValidator.cs|Inherit from AbstractValidator&lt;SubmitScanRequest&gt;|In constructor: RuleFor(r =&gt; r.EmployeeId).NotEmpty().MaximumLength(50);|RuleFor(r =&gt; r.ScanType).NotEmpty().Must(t =&gt; t == 'fingerprint' || t == 'retina');|Register: builder.Services.AddValidatorsFromAssemblyContaining&lt;SubmitScanRequestValidator&gt;();">
-    Day 2 — FluentValidation
+       data-details="Explore Keycloak or Microsoft Entra ID.">
+    Day 2 — External IdP
   </div>
   <div class="node day-node" id="m9w4_d3" data-parent="m9w4" data-side="right"
-       data-details="Register FluentValidation with ASP.NET Core auto-validation: builder.Services.AddFluentValidationAutoValidation();|Test: send a POST with missing EmployeeId — get 400 Bad Request|Read the response body — see field-level validation errors in JSON|Test: valid request — passes validation and reaches controller|Goal: bad input is rejected at the door with specific, actionable error messages">
-    Day 3 — Bad Request
+       data-details="Configure ASP.NET Core to validate tokens from an external IdP.">
+    Day 3 — Token Validation
   </div>
   <div class="node day-node" id="m9w4_d4" data-parent="m9w4" data-side="right"
-       data-details="Define a standard error response shape: { 'errors': ['EmployeeId is required'], 'traceId': 'abc123' }|Use a ProblemDetails format (built into ASP.NET Core): builder.Services.AddProblemDetails();|Configure validation errors to use this format|Test all 4 error types: 400 (bad input), 401 (unauth), 404 (not found), 500 (simulate crash)|Goal: every error response follows the same predictable shape">
-    Day 4 — Error Contract
+       data-details="Use Postman to get a token and call the API.">
+    Day 4 — Delegated Auth Flow
   </div>
   <div class="node day-node" id="m9w4_d5" data-parent="m9w4" data-side="right"
-       data-details="Review the entire security surface: auth, middleware, validation, error contracts|Security checklist: are all endpoints either [Authorize] or API-key protected? Is the secret key in config not code? Is all input validated before use? Are error messages safe (no stack traces)?|Run Postman tests for all error cases|Commit: git add . &amp;&amp; git commit -m 'feat: FluentValidation, standard error contracts, security hardening'|Phase 3 security layer is complete">
+       data-details="Commit a secure, validated, and OIDC-protected API.">
     Day 5 — Phase Review
   </div>
 
 
   <div class="tip-callout" id="tip9" data-parent="month9" data-side="left">
-    Phase 3 complete: Your API has real persistence, JWT/API-key auth, and validated error contracts.
+    Phase 3 complete: Your API has real persistence, OIDC/API-key auth, and validated error contracts.
   </div>
 
   <!-- ===================== PHASE 4 ===================== -->
@@ -1326,26 +1326,26 @@
 
     <div class="node sub-node" id="m12w4" data-parent="month12" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Data mapping theory — vendor-specific vs canonical models|Day 2: Canonical models — explicit manual mapping|Day 3: Non-JSON formats — XML, CSV, fixed-width parsing|Day 4: Architecture review — draw and document the system|Day 5: Year 1 foundation commit with full README|✅ Deliverable: data mapping + format diversity + polished Year 1">
-    📅 Week 48: Data Mapping, Format Diversity &amp; Year 1 Consolidation
+    📅 Week 48: Legacy Integrations &amp; Format Diversity
   </div>
   <div class="node day-node" id="m12w4_d1" data-parent="m12w4" data-side="right"
-       data-details="Read: integration systems must map between vendor-specific and canonical data models|Most of your integration work involves transforming data from one format to another|Example: VendorA sends { fingerprintHash: &quot;...&quot; }, VendorB sends { bioTemplate: &quot;...&quot; } — your system needs one canonical format|This is the core skill that separates integration engineers from general backend developers|Goal: understand why data mapping is central to integration work">
-    Day 1 — Data Mapping Theory
+       data-details="Learn System.Xml.Linq (XDocument) and parse XML payloads from legacy devices.">
+    Day 1 — XML Parsing
   </div>
   <div class="node day-node" id="m12w4_d2" data-parent="m12w4" data-side="right"
-       data-details="Design canonical models: CanonicalScanResult, CanonicalDeviceStatus — vendor-agnostic|Create vendor-specific DTOs: DermalogScanResult, ThalesScanResult|Map vendor DTOs to canonical models using explicit manual mapping|Prefer explicit mapping over AutoMapper for complex integration logic — easier to debug and maintain|Goal: your domain models are clean and vendor-free">
-    Day 2 — Canonical Models
+       data-details="Learn about WSDL generation and generate a client to consume a legacy SOAP service.">
+    Day 2 — Consuming SOAP APIs
   </div>
   <div class="node day-node" id="m12w4_d3" data-parent="m12w4" data-side="right"
-       data-details="Integration systems rarely deal with JSON alone|Parse XML using XDocument and XmlSerializer — many legacy devices and ERP systems send XML|Read and write CSV files with CsvHelper NuGet package|Handle fixed-width text formats with string.Substring() or Span&lt;char&gt;|Goal: you can transform data in any common enterprise format">
-    Day 3 — Non-JSON Formats
+       data-details="Design integration-agnostic models (CanonicalScanResult) and manually map SOAP/XML results to them.">
+    Day 3 — Canonical Models &amp; Data Mapping
   </div>
   <div class="node day-node" id="m12w4_d4" data-parent="m12w4" data-side="right"
-       data-details="Draw system components: API, services, adapters, data mappers, format adapters, workers, database|Document integration layer, logging, worker, persistence, data mapping, and format diversity|Remove hacks and duplication — clean up naming and folder structure|Write architecture decision records: why adapters? why canonical models? why RabbitMQ?|Goal: the system is documented and understandable to a new developer">
+       data-details="Draw system components. Document legacy integration adapters, format parsers, and system boundaries.">
     Day 4 — Architecture Review
   </div>
   <div class="node day-node" id="m12w4_d5" data-parent="m12w4" data-side="right"
-       data-details="Write a README explaining the full system: adapters, data mapping, format diversity, offline fallback, workers, batch ETL, observability|Tag: git tag v1.0-year1 — Year 1 foundation complete|Push everything to GitHub with clean commit history|Review: could you explain this system in a 5-minute interview walkthrough?|Goal: Year 1 done — you have a polished, documented, production-style codebase">
+       data-details="Commit a polished Year 1 foundation. Write a README that explains adapters, data mapping, format diversity, SOAP integration, offline fallback, workers, and observability.">
     Day 5 — Phase Review
   </div>
 
@@ -1661,19 +1661,19 @@
     Day 1 — Compose
   </div>
   <div class="node day-node" id="m15w4_d2" data-parent="m15w4" data-side="right"
-       data-details="Expand docker-compose.yml to add the API:|services: api: build: ./KioskApi ports: - '8080:8080' depends_on: - rabbitmq - sqlserver environment: - ConnectionStrings__Default=Server=sqlserver;...|Add rabbitmq service: image: rabbitmq:3-management, ports 5672 and 15672|Add sqlserver service: image: mcr.microsoft.com/mssql/server:2022-latest, environment SA_PASSWORD, ACCEPT_EULA=Y|Run: docker compose up — all three services should start">
-    Day 2 — Networks
+       data-details="Learn service-name communication and move connection strings into .env.">
+    Day 2 — Networks &amp; Env Vars
   </div>
   <div class="node day-node" id="m15w4_d3" data-parent="m15w4" data-side="right"
-       data-details="In Compose, services talk to each other by SERVICE NAME, not localhost|Update your API's appsettings to use: Server=sqlserver,1433 and HostName=rabbitmq — OR use environment variables in docker-compose.yml to override|Understand: docker compose creates a private network — services on the same network can reach each other by name|Test: docker compose up → API connects to RabbitMQ → submit a scan → it publishes to the Compose-managed RabbitMQ">
-    Day 3 — Env Vars
+       data-details="Understand how Testcontainers provides throwaway Docker dependencies for tests.">
+    Day 3 — Testcontainers Theory
   </div>
   <div class="node day-node" id="m15w4_d4" data-parent="m15w4" data-side="right"
-       data-details="Move sensitive config to a .env file: RABBITMQ_USER=guest, SA_PASSWORD=YourP@ssw0rd123|Reference in docker-compose.yml: SA_PASSWORD: ${SA_PASSWORD}|Add .env to .gitignore — never commit it|Test: docker compose --env-file .env up — the services use values from .env|Goal: secrets are not hardcoded in docker-compose.yml">
-    Day 4 — .env File
+       data-details="Write automated DB and RabbitMQ tests in xUnit using Testcontainers.">
+    Day 4 — Automated DB/RabbitMQ Tests
   </div>
   <div class="node day-node" id="m15w4_d5" data-parent="m15w4" data-side="right"
-       data-details="Final test: docker compose down → docker compose up -- the entire stack boots fresh|Submit 5 scans via Postman → verify they appear in SQL Server inside the container (via docker exec sqlcmd)|docker compose down --volumes — clean test: destroys all data, start fresh|Tag: git tag phase3-docker-complete|Commit: git add . &amp;&amp; git commit -m 'feat: Docker Compose for full stack — API, Worker, RabbitMQ, SQL Server'">
+       data-details="Commit integration tests and run the full stack locally via compose.">
     Day 5 — Phase Review
   </div>
 
@@ -1718,51 +1718,51 @@
 
   <div class="node sub-node" id="m16w2" data-parent="month16" data-side="left"
        data-details="⏱️ ~10 hours|Day 1: What is App Service|Day 2: Create App Service plan + Web App|Day 3: Deploy from CLI or Visual Studio|Day 4: Verify public URL works|Day 5: Document deployment steps|✅ Deliverable: API live in Azure">
-    📅 Week 62: Deploying the API
+    📅 Week 62: Infrastructure as Code (IaC)
   </div>
   <div class="node day-node" id="m16w2_d1" data-parent="m16w2" data-side="left"
-       data-details="Read: Azure App Service is a PaaS (Platform as a Service) — you deploy code, Azure manages the OS, runtime, patching, scaling|Supported: .NET, Node.js, Python, Java, PHP — choose .NET 8|Deployment options: ZIP deploy, GitHub Actions CI/CD, Azure DevOps, FTP (avoid FTP)|Service Plan: determines compute resources — F1 = free (slow), B1 = ~$15/month (decent for dev)|Create an App Service Plan: az appservice plan create --name kiosk-plan --resource-group kiosk-rg --sku F1 --is-linux">
-    Day 1 — App Service Theory
+       data-details="Learn basics of Bicep or Terraform.">
+    Day 1 — IaC Theory
   </div>
   <div class="node day-node" id="m16w2_d2" data-parent="m16w2" data-side="left"
-       data-details="Create the Web App: az webapp create --name kiosk-api-{yourname} --resource-group kiosk-rg --plan kiosk-plan --runtime 'DOTNET|8.0'|The name must be globally unique (it becomes part of the URL: kiosk-api-{yourname}.azurewebsites.net)|Verify: go to https://kiosk-api-{yourname}.azurewebsites.net — see the Azure default page|Check in portal: App Service → your app — explore the left menu: Configuration, Deployment Center, Log stream">
-    Day 2 — Provision
+       data-details="Write IaC to provision the App Service via code.">
+    Day 2 — Provision App Service
   </div>
   <div class="node day-node" id="m16w2_d3" data-parent="m16w2" data-side="left"
-       data-details="Deploy your API using ZIP deploy:|dotnet publish -c Release -o ./publish|Compress the publish folder to publish.zip|az webapp deployment source config-zip --resource-group kiosk-rg --name kiosk-api-{yourname} --src publish.zip|Wait ~30 seconds — visit the URL — you should see your API responding">
-    Day 3 — Deploy
+       data-details="Write IaC to provision Azure SQL via code.">
+    Day 3 — Provision DB
   </div>
   <div class="node day-node" id="m16w2_d4" data-parent="m16w2" data-side="left"
-       data-details="Alternative: deploy using Visual Studio|Right-click project → Publish → Azure → App Service → select your existing app → Publish|Observe: VS builds, packages, and deploys in one step|After deployment: check the URL — see your API live on the internet|Common issue: the app starts but hits an error — check Application Insights or Log Stream in the portal">
-    Day 4 — Verify
+       data-details="Automate the infrastructure deployment in CI/CD.">
+    Day 4 — GitHub Actions IaC Deployment
   </div>
   <div class="node day-node" id="m16w2_d5" data-parent="m16w2" data-side="left"
-       data-details="Test your deployed API from Postman: change base URL from localhost to your Azure URL|Does GET /api/terminals return data? (No — it needs Azure SQL — next)|Does GET /health return 'healthy'? (Yes — if your health endpoint doesn't need the DB)|Document the deployment steps in docs/azure-deployment.md|Commit: git add . &amp;&amp; git commit -m 'docs: Azure App Service deployment steps'">
+       data-details="Document IaC setup and destroy infrastructure to save costs.">
     Day 5 — Review
   </div>
 
   <div class="node sub-node" id="m16w3" data-parent="month16" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: What is managed SQL|Day 2: Create Azure SQL|Day 3: Firewall rules, SSMS connection|Day 4: Push schema via migrations|Day 5: Point API to Azure SQL|✅ Deliverable: cloud database connected">
-    📅 Week 63: Azure SQL
+    📅 Week 63: Cloud Config &amp; Migrations
   </div>
   <div class="node day-node" id="m16w3_d1" data-parent="m16w3" data-side="right"
-       data-details="Read: Azure SQL is a managed SQL Server — Microsoft handles backups, patching, HA — you just use it|Pricing: Serverless (auto-pause, pay per use — good for dev), DTU-based, vCore-based|For dev: use Serverless Basic tier — cheapest, auto-pauses when idle|In portal: search SQL Database → Create → select your subscription and kiosk-rg → database name: kiosk-db → server: create new (kiosk-server-{yourname}) → authentication: SQL auth with admin username/password">
+       data-details="Learn Azure KeyVault and secret injection.">
     Day 1 — Theory
   </div>
   <div class="node day-node" id="m16w3_d2" data-parent="m16w3" data-side="right"
-       data-details="After creation: go to the SQL server resource → Networking → allow your IP address through the firewall|Also check: allow Azure services to access (so your App Service can connect)|Test connection: open SSMS → Server name: kiosk-server-{yourname}.database.windows.net → sign in with your SQL admin credentials|If connected: you see a blank database in SSMS|Goal: you can connect to Azure SQL from your local machine">
+       data-details="Provision KeyVault and wire it to App Service.">
     Day 2 — Provision
   </div>
   <div class="node day-node" id="m16w3_d3" data-parent="m16w3" data-side="right"
-       data-details="Apply your EF Core migrations to Azure SQL:|In dotnet user-secrets or appsettings.Development.json: set the Azure SQL connection string|dotnet ef database update --connection 'Server=kiosk-server-{yourname}.database.windows.net;Database=kiosk-db;...'|Verify: SSMS shows the Terminals and Scans tables in kiosk-db|Insert one test Terminal row via SSMS: INSERT INTO Terminals (Location, IsOnline) VALUES ('Azure Lobby', 1)">
+       data-details="Allow your IP and connect securely to Azure SQL.">
     Day 3 — Firewall
   </div>
   <div class="node day-node" id="m16w3_d4" data-parent="m16w3" data-side="right"
-       data-details="Update your deployed API's config to use Azure SQL:|In Azure Portal → App Service → Configuration → New application setting|Add: ConnectionStrings__Default = your Azure SQL connection string|Save and restart the app — wait 30 seconds|Test: GET /api/terminals — should now return the real Azure SQL data|Common issue: SQL firewall — ensure 'Allow Azure services' is enabled on the SQL server">
+       data-details="Run Database Migrations automatically in CI/CD.">
     Day 4 — Migrations
   </div>
   <div class="node day-node" id="m16w3_d5" data-parent="m16w3" data-side="right"
-       data-details="From Postman: POST a scan to your Azure-deployed API — verify it appears in Azure SQL|Run a SSMS query: SELECT * FROM Scans — confirm the row from Postman is there|You now have: a real deployed API talking to a real cloud database — end to end|Quick cost check: Azure Cost Management → see your current estimated spend|Commit docs: update azure-deployment.md with Azure SQL steps">
+       data-details="Point deployed API to Azure SQL securely.">
     Day 5 — Review
   </div>
 
@@ -1957,26 +1957,26 @@
 
   <div class="node sub-node" id="m18w3" data-parent="month18" data-side="right"
        data-details="⏱️ ~10 hours|Day 1: Publish scans to RabbitMQ|Day 2: Worker consumes and processes|Day 3: Add idempotency|Day 4: Add DLQ handling|Day 5: Verify stability|✅ Deliverable: message-driven backend">
-    📅 Week 71: Queue-Based Processing
+    📅 Week 71: MassTransit &amp; Enterprise Messaging
   </div>
   <div class="node day-node" id="m18w3_d1" data-parent="m18w3" data-side="right"
-       data-details="In the capstone API: when POST /api/terminals/{id}/scans is called successfully, publish a ScanSubmittedMessage to RabbitMQ|The message contains all scan data + MessageId (Guid.NewGuid())|The controller does: validate → save partial Scan to DB (with Success=null) → publish to queue → return 202 Accepted (queued)|This way the terminal gets an immediate response without waiting for the full processing|The Worker does the real work asynchronously">
-    Day 1 — Publish
+       data-details="Add MassTransit packages and configure RabbitMQ broker.">
+    Day 1 — MassTransit Setup
   </div>
   <div class="node day-node" id="m18w3_d2" data-parent="m18w3" data-side="right"
-       data-details="Create CapstoneWorker project — BackgroundService that consumes from scans-queue|On message received: deserialize → apply idempotency check (MessageId exists?) → save Scan to DB → update Success field → BasicAck|Use IServiceScopeFactory for DbContext access|Add DLQ binding: after 3 retries, route to scans-dlq|Deploy worker as a separate service in Docker Compose">
-    Day 2 — Consume
+       data-details="Create generic consumers and let MassTransit handle routing.">
+    Day 2 — Publish/Consume Abstraction
   </div>
   <div class="node day-node" id="m18w3_d3" data-parent="m18w3" data-side="right"
-       data-details="Test idempotency: publish the same MessageId twice|Expected: first delivery saves the scan, second is detected as duplicate and skipped (1 row in DB, 2 deliveries handled gracefully)|Test DLQ: publish a message with deliberately invalid data (null EmployeeId) — after 3 retries it should appear in scans-dlq|Verify in RabbitMQ UI: scans-dlq contains the poison message">
-    Day 3 — Idempotency
+       data-details="Configure MassTransit automatic retry policies.">
+    Day 3 — Automated Retries
   </div>
   <div class="node day-node" id="m18w3_d4" data-parent="m18w3" data-side="right"
-       data-details="Run stress test: submit 20 scans via Postman Runner rapidly|Watch RabbitMQ UI: queue depth rises and falls as Worker processes|Check Scans table row count after all are consumed|Verify: 20 rows in DB, no duplicates, no missing rows|Check Worker logs: each scan logged as processed with timing information">
-    Day 4 — DLQ
+       data-details="Handle fault consumers and dead-letter queues with MassTransit.">
+    Day 4 — Faults &amp; Dead-Lettering
   </div>
   <div class="node day-node" id="m18w3_d5" data-parent="m18w3" data-side="right"
-       data-details="Fix any stability issues discovered in the stress test|Check for: message delivery ordering guarantees (RabbitMQ delivers in order but processing can be non-deterministic with multiple consumers)|Add graceful shutdown to Worker: stop consuming new messages, finish current message, exit|Commit: git add . &amp;&amp; git commit -m 'feat: capstone messaging with idempotency, DLQ, and graceful shutdown'">
+       data-details="Verify stability under repeated tests.">
     Day 5 — Review
   </div>
 
