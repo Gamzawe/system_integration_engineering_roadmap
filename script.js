@@ -174,6 +174,8 @@
         const cw = child.offsetWidth;
         const ch = child.offsetHeight;
         const cx = centerX + w / 2 + branchGapX;
+        
+
 
         child.style.position = 'absolute';
         child.style.left = cx + 'px';

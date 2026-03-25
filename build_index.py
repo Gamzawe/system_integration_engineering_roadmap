@@ -109,8 +109,8 @@ for new_m in range(1, 17):
             week_html = all_nodes[week_id]
             
             # Update data-parent and data-side!
-            # Weeks 0, 1, 2 on left. Weeks 3, 4, 5 on right. This creates visual balance!
-            side = "left" if w < 3 else "right"
+            # Alternating left and right for chronological flow!
+            side = "left" if w % 2 == 0 else "right"
             
             week_html = re.sub(r'data-parent="[^"]+"', f'data-parent="month{new_m}"', week_html)
             week_html = re.sub(r'data-side="[^"]+"', f'data-side="{side}"', week_html)
@@ -140,9 +140,47 @@ for new_m in range(1, 17):
     🎉 Year 1 complete (~480 hrs)
   </div>''')
 
+ui_elements = """</div>
+
+<!-- Status Context Menu -->
+<div class="status-menu" id="statusMenu">
+  <button class="status-menu-item" data-status="done">
+    <span class="status-dot done-dot"></span> Done
+    <span class="status-shortcut">D</span>
+  </button>
+  <button class="status-menu-item" data-status="in-progress">
+    <span class="status-dot progress-dot"></span> In Progress
+    <span class="status-shortcut">L</span>
+  </button>
+  <button class="status-menu-item" data-status="reset">
+    <span class="status-dot reset-dot"></span> Reset
+    <span class="status-shortcut">R</span>
+  </button>
+  <button class="status-menu-item" data-status="skip">
+    <span class="status-dot skip-dot"></span> Skip
+    <span class="status-shortcut">S</span>
+  </button>
+  <button class="status-menu-close" id="statusMenuClose">&times;</button>
+</div>
+
+<!-- Detail Drawer -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="detail-drawer" id="detailDrawer">
+  <button class="drawer-close" id="drawerClose">&times;</button>
+  <h2 class="drawer-title" id="drawerTitle"></h2>
+  <ul class="drawer-list" id="drawerList"></ul>
+</div>
+"""
+
 new_canvas_html = canvas_start + "\n  " + "\n  ".join(new_content) + "\n"
 
-final_html = html[:canvas_match.start()] + new_canvas_html + canvas_end
+canvas_end_cleaned = canvas_end
+if canvas_end_cleaned.strip().startswith('</div>'):
+    canvas_end_cleaned = canvas_end_cleaned.replace('</div>', ui_elements, 1)
+else:
+    new_canvas_html += ui_elements
+
+final_html = html[:canvas_match.start()] + new_canvas_html + canvas_end_cleaned
 
 with open('index_built.html', 'w', encoding='utf-8') as f:
     f.write(final_html)
