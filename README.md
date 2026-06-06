@@ -1,8 +1,8 @@
-# 24-Month .NET Backend & Systems Integration Engineering Roadmap
+# Systems Integration Engineering Roadmap
 
-Welcome to the **Interactive Systems Integration Engineering Roadmap**. This repository holds a comprehensive 24-month (96 weeks, 480 daily exercises) technical roadmap mapped into a fully interactive flowchart built from scratch using purely vanilla HTML, CSS, and JS. 
+Welcome to the **Interactive Systems Integration Engineering Roadmap**. This repository holds a comprehensive 19-month (45 weeks, 228 daily exercises) technical roadmap mapped into a fully interactive flowchart built from scratch using purely vanilla HTML, CSS, and JS. 
 
-The primary goal of this curriculum is to prepare individuals for integration engineering—bridging the gap between embedded systems, legacy business terminals (such as Biometric Scanners or APIs), and enterprise microservice backends built with .NET Coré.
+The primary goal of this curriculum is to prepare individuals for systems integration engineering — bridging the gap between edge hardware (biometric scanners, PLCs, IoT gateways), industrial protocols (Beckhoff ADS, BACnet, KNX, MQTT, OPC UA), and enterprise cloud backends with dual-cloud sovereignty (Azure & AWS).
 
 ---
 
@@ -20,16 +20,13 @@ This is much more than a plain-text markdown file. Open `index.html` in your bro
 
 ## 📚 Curriculum Structure (From Zero to Deployment)
 
-The journey comprises 8 main phases, escalating from pure programming fundamentals to cloud-native production deployments:
+The journey comprises 5 main phases, escalating from zero-allocation C# programming to cloud-native production deployments and market positioning:
 
-1. **Phase 1 (Months 1-3): Basics & Fundamentals** - Console logic, OOP principles, LINQ, JSON, and `HttpClient`.
-2. **Phase 2 (Months 4-6): The Backend Paradigm** - TDD with xUnit/Moq, ASP.NET Core MVC/API Foundations, and Swagger integration.
-3. **Phase 3 (Months 7-9): Data & Security Core** - Relational data normalization, EF Core (Code First), Identity, JWTs, and FluentValidation.
-4. **Phase 4 (Months 10-12): Observability & Infrastructure** - Middleware exception trapping, Serilog, SDK adapter patterns, and durable background workers (`IHostedService`).
-5. **Phase 5 (Months 13-15): Messaging, Resilience & Containers** - Event-driven decoupling with RabbitMQ, Docker & compose networks.
-6. **Phase 6 (Months 16-18): Cloud & CI/CD** - Azure App Service, Azure SQL provisioning, and GitHub Actions CD pipelines.
-7. **Phase 7 (Months 19-21): Portfolio, Performance & Hardening** - Auth0 integrations, Gateway architectures (YARP), circuit breakers (Polly), and caching (Redis).
-8. **Phase 8 (Months 22-24): Career Positioning & Job Execution** - LinkedIn revamps, system design behavioral interviews, and load testing.
+1. **Phase 1 (Months 1–3): Zero-Allocation C#, Python Injection & Interop** — Memory stack, Span\<T\>, Memory\<T\>, LibraryImport, async/await, Channels, serial/UART, TCP Pipelines, and the local gateway concept.
+2. **Phase 2 (Months 4–7): Edge Orchestration & Industrial Protocols** — Linux systemd daemons, Docker, K3s, CI/CD, Beckhoff TwinCAT 3 (ADS), BACnet/KNX, MQTT, and OPC UA.
+3. **Phase 3 (Months 8–10): CQRS, Kafka, & Observability** — SQLite edge queuing, sync recovery, hybrid CQRS (EF Core + Dapper), Apache Kafka, InfluxDB, Grafana, and Serilog.
+4. **Phase 4 (Months 11–13): Cloud Sovereignty & Cybersecurity** — Azure IoT Edge, AWS IoT Core (dual-cloud), IEC 62443, NCA OTCC-1:2022, mTLS, and multi-site topology.
+5. **Phase 5 (Months 14–19): Capstone, UI, C4 Models, & Market Execution** — React config UI, C4 architecture diagrams, ADRs, load testing, DACH/KSA market positioning, mock interviews, and job execution.
 
 ---
 
@@ -41,8 +38,18 @@ No dependencies, no `npm install`, no build steps.
 2. Double-click `index.html` to open it in your web browser.
 3. **Left Click** on nodes to peek at detailed learning tasks.
 4. **Click the node body (Weeks or Months)** to collapse or expand branches.
-5. **Right Click** to mark tracking states and map your 2-year journey!
+5. **Right Click** to mark tracking states and map your journey!
 
 ---
 
-*“Code is easy. Decoupled distributed integration systems are hard.”*
+## 🔧 Rebuilding
+
+If you modify `roadmap.txt`, regenerate `index.html` by running:
+
+```bash
+python build_from_roadmap.py
+```
+
+---
+
+*"Code is easy. Decoupled distributed integration systems are hard."*
