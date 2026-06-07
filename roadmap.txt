@@ -1,375 +1,426 @@
-## MONTHS 1–3: ZERO-ALLOCATION C#, PYTHON INJECTION & INTEROP
-### Week 1 — C# Fundamentals & Memory Stack
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Primitive types, stack/heap allocation, value vs. reference types. | Draw memory maps tracing heap vs stack lifecycles. | N/A (Theory baseline). | 1-page "Stack vs Heap" cheat sheet. | Can I explain why structs copy natively? |
-| **2** | struct (Value) vs class (Reference) behavior. | Write allocation tests comparing object behavior. | Code showing memory allocation differences. | Committed code with README explanation. | Do I understand when the GC triggers? |
-| **3** | DeviceStatus struct mutation. | Pass structs/classes through methods and track state changes. | DeviceStatus simulator testing method parameters. | Test result note showing mutation side effects. | Did the class mutate globally while the struct didn't? |
-| **4** | Input reading and format boundaries. | Parse mock hardware strings (e.g., TEMP:24). | First console app validating mock hardware strings. | Working C# program. | Does it handle malformed data without crashing? |
-| **5** | Null-handling and exception flow. | Inject nulls and format errors to break the app. | Updated app with robust try/catch boundaries. | Documented program flow rules. | Are all exceptions caught safely? |
-### Week 2 — Collections, LINQ, & Data Shaping
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | List<T>, Dictionary, memory overhead of resizing. | Compare list initialization vs dynamic resizing. | N/A. | Code examples of collection management. | Why do dynamically resizing lists hurt performance? |
-| **2** | LINQ (Where, Select, GroupBy). | Query mock biometric data using LINQ. | LINQ data filtering logic. | Committed LINQ logic. | Is the query executing efficiently? |
-| **3** | High-volume parsing and grouping. | Parse 10,000 records; group by terminal ID. | Large-dataset parser. | Benchmark results note. | What is the execution time for 10k records? |
-| **4** | ArrayPool<T> and buffer recycling. | Replace standard arrays with pooled arrays. | Buffer pooling implementation. | Working C# buffer logic. | Did I return the buffer to the pool? |
-| **5** | Null collections and duplicates. | Test edge cases in collection logic. | Duplicate-handling logic. | Test scenario notes. | Explain why ArrayPool prevents GC spikes. |
-### Week 3 — High-Performance Memory (Span<T> & Memory<T>)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Span<T> and GC pause mechanics. | Trace garbage collection triggers in edge devices. | N/A. | Study note on zero-allocation principles. | Why do industrial gateways crash from GC? |
-| **2** | ReadOnlySpan<byte> casting. | Cast unmanaged byte arrays without copying. | Zero-allocation byte caster. | Committed C# memory parsing code. | Is the memory truly uncopied? |
-| **3** | Slicing Span<T>. | Extract device IDs from raw binary headers via slicing. | Zero-allocation payload parser. | Working zero-allocation parser. | Prove the parser triggers zero heap allocations. |
-| **4** | Memory<T> for async operations. | Use Memory<T> where Span cannot cross await. | Async memory parser. | Async memory parsing code. | Why can Span not cross await boundaries? |
-| **5** | Benchmarking allocations. | Run BenchmarkDotNet on byte[] vs Span<T>. | Benchmark test suite. | Benchmark report. | Does the data confirm zero allocations? |
-### Week 4 — Object-Oriented Boundaries & Interfaces
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Interfaces as hardware boundaries. | Define strict boundaries between logic and hardware. | N/A. | Notes on Interface-Driven Design. | Why do we hide hardware SDKs? |
-| **2** | IScanner & IDeviceConnection. | Draft strict C# interface contracts. | Interface definitions. | C# interface contracts. | Are the contracts free of vendor-specific logic? |
-| **3** | Mock implementations. | Build a MockBiometricScanner implementing IScanner. | Mock hardware class. | Working mock scanner. | Does the mock behave like real hardware? |
-| **4** | Dependency Injection (DI). | Inject the mock scanner into a gateway service. | DI Container registration. | DI setup code. | Is manual object creation removed? |
-| **5** | Swapping implementations. | Swap the mock scanner for a dummy class. | Updated DI configuration. | Swapped implementation test. | Explain "programming against your boundary." |
-### Week 5 — Modern Native Interop ([LibraryImport])
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | [LibraryImport] and AOT marshaling. | Discard [DllImport]; learn compile-time generators. | N/A. | Notes on source generators. | Why is AOT marshaling required for modern Edge? |
-| **2** | Unmanaged C++ libraries. | Create a dummy .dll/.so biometric SDK. | Compiled C++ binary. | C++ SDK dummy file. | Does the unmanaged file compile? |
-| **3** | C# Wrappers. | Write a LibraryImport wrapper for the C++ function. | C# interop wrapper. | Working interop code. | Does C# call the C++ function safely? |
-| **4** | Complex struct marshaling. | Marshal fingerprint metadata from C to C#. | Marshaling logic mapped to C fields. | Marshaling layer. | Is memory alignment correct? |
-| **5** | Pointer cleanup & exceptions. | Handle execution exceptions across boundaries. | Safe unmanaged cleanup logic. | Pointer cleanup strategy. | Verify unmanaged memory is freed safely. |
-### Week 6 — The Python Injection & AI Workflow
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Python syntax and scripting. | Learn variables, dicts, and basic data manipulation. | N/A. | Python script fundamentals. | Can I write a basic Python function? |
-| **2** | Data generation scripting. | Write a script to generate 50k JSON telemetry lines. | Python data generator. | Working Python script. | Is the JSON schema correct? |
-| **3** | AI-assisted glue code. | Use an LLM to generate an ML preprocessing script. | AI-generated Python glue code. | Preprocessing script. | Did I review the AI code for edge-cases? |
-| **4** | C# to Python execution. | Execute the Python script from C# via Process.Start. | C# process orchestration logic. | C# Python runner. | Does C# capture the Python output? |
-| **5** | Argument passing. | Pass variables between C# and Python. | Bidirectional argument passing. | Integration test note. | Document Python's role strictly as "Glue Code." |
-### Week 7 — async/await and Task
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Task, async, await, exceptions. | Map main thread vs worker thread behavior. | N/A. | Notes on thread flow. | What blocks the main thread? |
-| **2** | Non-blocking methods. | Write async methods for connect, capture, and upload. | Asynchronous C# methods. | Async C# code. | Are the methods truly non-blocking? |
-| **3** | Simulating slow hardware. | Use Task.Delay to mimic network/device lag. | Slow hardware simulator. | Test logs showing unblocked threads. | Is the application still responsive? |
-| **4** | End-to-end refactor. | Refactor the scanner workflow to use async everywhere. | Refactored async gateway. | Committed refactored logic. | Are there any hidden Task.Wait calls? |
-| **5** | Partial failures. | Test timeouts and dropped tasks. | Exception handling for async. | Failure test documentation. | Prove the gateway survives stalled hardware. |
-### Week 8 — Cancellation and Timeouts
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | CancellationToken patterns. | Study graceful aborts and timeout boundaries. | N/A. | Notes on timeout boundaries. | How does a token cancel a running task? |
-| **2** | Cancellable methods. | Add tokens to capture and upload methods. | Token-enabled methods. | Methods accepting CancellationToken. | Do the methods listen for the token? |
-| **3** | Simulating aborts. | Trigger network timeouts and user cancellations. | Cancellation tests. | Logs showing graceful aborts. | Did the system recover cleanly? |
-| **4** | Flow integration. | Integrate cancellation into global app cleanup logic. | Gateway cancellation architecture. | Committed architecture code. | Are resources freed on cancel? |
-| **5** | Leaked tasks. | Test for background tasks that refuse to die. | Leak detection scripts. | Task cleanup report. | Explain exactly where cancellation stops. |
-### Week 9 — High-Throughput Queues (System.Threading.Channels)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | System.Threading.Channels. | Learn async producer/consumer queues and capacity. | N/A. | Notes on lock contention vs channels. | Why use Channels over lock()? |
-| **2** | Producer/Consumer setup. | Thread A produces data, Thread B consumes it. | Producer/Consumer queue. | Working Channel implementation. | Are threads safely decoupled? |
-| **3** | High-velocity simulation. | Simulate rapid biometric scans filling the queue. | Load testing script. | Load test logs. | Does the queue handle the volume? |
-| **4** | Backpressure handling. | Implement bounded channels to drop or block data. | Bounded channel logic. | Backpressure management code. | What happens when the consumer is too slow? |
-| **5** | Shutdown draining. | Test queue draining during application shutdown. | Graceful shutdown logic. | Shutdown behavior report. | Are remaining messages processed before exit? |
-### Week 10 — Serial, UART, and The Hardware Handshake
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | System.IO.Ports.SerialPort. | Learn baud rates, parity, stop bits. | N/A. | Notes on UART communication. | What causes serial data corruption? |
-| **2** | Virtual COM port connection. | Connect C# to a Wokwi simulator or local loopback. | Serial port reader. | C# code reading a serial port. | Is the port opening correctly? |
-| **3** | String interception. | Intercept raw strings like TEMP:24.5,HUM:60. | Interception logic. | Serial string interception code. | Can I capture the raw buffer? |
-| **4** | DTO Serialization. | Parse the messy string into a canonical JSON DTO. | DTO mapping logic. | Clean DTO conversion code. | Is the messy string successfully structured? |
-| **5** | Noisy lines. | Handle truncated or corrupted serial lines. | Error-tolerant parser. | Noise-handling logic. | Prove extraction works despite hardware noise. |
-### Week 11 — TCP Sockets & System.IO.Pipelines
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | System.IO.Pipelines. | Study PipeReader, PipeWriter, framing, delimiters. | N/A. | Notes on socket buffering. | Why do Pipelines replace manual byte arrays? |
-| **2** | TCP Server with Pipelines. | Write a high-performance TCP server utilizing Pipelines. | TCP Pipeline server. | Working server code. | Is buffer management automated? |
-| **3** | Payload simulation. | Simulate messages with length, command, payload, checksums. | Simulated TCP traffic generator. | Traffic simulation script. | Are checksums correctly formed? |
-| **4** | Parser integration. | Integrate the packet parser into the gateway. | TCP integration logic. | Working TCP integration. | Does it decode the simulated traffic? |
-| **5** | Fragmented packets. | Test broken frames and fragmented network packets. | Fragmentation test logic. | Test results on fragmented packets. | Does the pipeline wait for the full frame? |
-### Week 12 — The Local TCP Gateway Concept
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Gateway translation & filtering. | Map the boundary logic from edge to backend. | N/A. | System diagram (Device -> Gateway -> Backend). | What is the gateway's primary responsibility? |
-| **2** | Refactor to canonical events. | Refactor local service to emit unified canonical events. | Unified gateway architecture. | Refactored gateway code. | Are vendor specifics stripped out? |
-| **3** | Validation boundaries. | Add strict protocol separation and data validation. | Validation boundary code. | Validation logic implementation. | Does the gateway catch malformed data? |
-| **4** | Rejection rules. | Implement rules for discarding bad payloads. | Rejection logging logic. | Logging and rejection code. | Are bad payloads logged efficiently? |
-| **5** | Invalid IDs. | Test behavior with unauthorized or invalid device IDs. | Unauthorized access simulation. | Security test results. | Prove the gateway shields the cloud from bad data. |
-## MONTHS 4–7: EDGE ORCHESTRATION & INDUSTRIAL PROTOCOLS
-### Week 13 — Linux Systemd & Headless Daemons
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | .NET Generic Host on Linux. | Study worker lifecycles and background hosting. | N/A. | Notes on daemons vs console apps. | Why run as a daemon? |
-| **2** | Worker Service build. | Scaffold the C# gateway as a Worker Service. | Background service. | Working background service code. | Does it run silently? |
-| **3** | UseSystemd() integration. | Install Microsoft.Extensions.Hosting.Systemd. | Systemd integration code. | Code utilizing UseSystemd(). | Is it bound to Linux service managers? |
-| **4** | Journal logging. | Configure the daemon to route output to Linux journal. | Logging configuration. | Logging integration code. | Can logs be viewed via journalctl? |
-| **5** | Graceful shutdowns. | Simulate power loss and Linux SIGTERM signals. | Shutdown testing. | Test logs on graceful exit. | Explain how Linux manages the C# process. |
-### Week 14 — Containerization (Docker)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Image layers & isolation. | Learn Docker network and runtime basics. | Base Dockerfile. | Base Dockerfile created. | What keeps image sizes small? |
-| **2** | Alpine Linux multi-stage. | Optimize the image using multi-stage builds. | Optimized Dockerfile. | Optimized Dockerfile. | Did the image size drop significantly? |
-| **3** | Volume mounting. | Mount volumes for local SQLite database persistence. | Volume binding logic. | Docker run commands mapped. | Does data survive container destruction? |
-| **4** | Docker Compose. | Spin up the gateway and a mock database together. | docker-compose.yml. | Compose file committed. | Do the services network locally? |
-| **5** | Startup failure. | Test auto-restart policies on container crash. | Crash simulation. | Test results on restart policy. | Prove the app survives container restarts. |
-### Week 15 — K3s (Lightweight Edge Kubernetes)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | K3s vs standard Kubernetes. | Study why DACH/KSA demands K3s for industrial PCs. | N/A. | Notes on K3s architecture. | Why not use full Kubernetes on the edge? |
-| **2** | Local K3s installation. | Install a local K3s cluster. | K3s environment. | Running K3s cluster. | Is kubectl responding locally? |
-| **3** | K8s YAML translation. | Translate Compose file into Deployment/Service YAMLs. | Kubernetes YAMLs. | Working YAML files. | Are ports and volumes mapped correctly? |
-| **4** | K3s Deployment. | Deploy the C# Gateway into the local cluster. | Gateway running as a Pod. | K8s deployment logs. | Is the pod status 'Running'? |
-| **5** | Pod eviction. | Test pod eviction and rescheduling manually. | Eviction simulation. | Rescheduling behavior notes. | Explain K3s node management on a factory floor. |
-### Week 16 — CI/CD & GitHub Actions
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | GitHub Actions workflows. | Setup triggers, runners, and stages. | Base CI pipeline .yml. | Basic CI pipeline file. | Does it trigger on push? |
-| **2** | Automated unit tests. | Run Span<T> parser tests automatically. | Automated test steps. | CI file with testing logic. | Does it block failed tests? |
-| **3** | Docker image building. | Automate container build on push to main. | Container build steps. | Pipeline producing an image. | Is the image tagged properly? |
-| **4** | Multi-architecture builds. | Cross-compile the image for ARM64 and x64. | Multi-arch CI pipeline. | Pipeline handling multiple architectures. | Can this deploy to a Raspberry Pi? |
-| **5** | Broken build tracing. | Intentionally break code and trace the pipeline failure. | Failure test. | Logs showing rejected build. | Verify deployment baseline is fully automated. |
-### Week 17 — DACH Target: Beckhoff TwinCAT 3 & ADS
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | TwinCAT 3 & ADS Protocol. | Install TwinCAT 3 XAE locally. Study Port 851. | Virtual PLC setup. | Local TwinCAT running. | How does ADS route over TCP/IP? |
-| **2** | Structured Text (ST). | Write a PLC program simulating machine state. | Working virtual PLC. | ST code committed. | Is the virtual machine changing states? |
-| **3** | Beckhoff.TwinCAT.Ads. | Import the NuGet package into your service. | C# ADS Client. | C# ADS Client setup. | Can C# connect to the AMS Net ID? |
-| **4** | Read/Write PLC memory. | Write logic to read and mutate PLC variables. | C# ADS read/write logic. | Interop integration code. | Are data types mapped perfectly? |
-| **5** | Reactive Extensions (Rx). | Subscribe to real-time PLC variable changes (No polling). | Reactive event listener. | Working Rx subscription. | Prove you can control Mittelstand machinery via C#. |
-### Week 18 — KSA Target: BACnet, KNX, & Smart Buildings
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | BACnet/IP & KNX. | Study protocols for NEOM/Smart City infrastructure. | N/A. | Notes on building automation. | How does BACnet differ from Modbus? |
-| **2** | BACnet Simulator. | Spin up a software BACnet simulator (e.g., Yabe). | Running BACnet simulator. | Simulator configuration. | Are device objects visible? |
-| **3** | C# BACnet client. | Read temperature, HVAC, and occupancy states via C#. | C# BACnet integration. | C# client code. | Is C# pulling live building data? |
-| **4** | JSON DTO Translation. | Translate the BACnet payload into the canonical DTO. | BACnet to JSON translator. | Translation layer code. | Is the DTO standard across vendors? |
-| **5** | Protocol timeouts. | Test polling latency and offline sensors. | Timeout tests. | Latency report. | Prove you can integrate Saudi smart buildings. |
-### Week 19 — MQTT Fundamentals
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | MQTT Broker, QoS, Sessions. | Learn topics, pub/sub, retained messages. | N/A. | Notes on MQTT mechanics. | What is QoS 2 overhead? |
-| **2** | Publisher/Subscriber. | Write a simple C# publisher/subscriber using MQTTnet. | Working MQTT client. | C# MQTTnet implementation. | Are messages traversing the broker? |
-| **3** | Real-time events. | Simulate biometric events flowing through MQTT. | Real-time publishing logic. | Telemetry generation code. | Is JSON structured correctly? |
-| **4** | Subscription recovery. | Configure reconnect behavior. | Resilient connection logic. | C# reconnect loops. | Does it reconnect automatically? |
-| **5** | Retained messages. | Test broker outages and retained states. | Broker failure tests. | Retained state notes. | Explain QoS 0, 1, and 2 tradeoffs. |
-### Week 20 — OPC UA Basics
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | OPC UA Node Trees. | Learn security models and rich metadata vs Modbus. | N/A. | Notes on OPC UA vs polling. | Why is OPC UA the Industry 4.0 standard? |
-| **2** | C# OPC UA Client. | Study or write a simple OPC UA client. | C# OPC UA client. | OPC UA connection code. | Are certificates exchanged? |
-| **3** | Canonical Mapping. | Map an OPC UA device status concept into your DTO. | Translation layer. | Canonical mapping code. | Is the hierarchy flattened? |
-| **4** | Architecture Comparison. | Compare OPC UA modeling to Beckhoff ADS approach. | N/A. | Architecture comparison note. | Which is faster for telemetry? |
-| **5** | Node structure changes. | Test dynamic changes in the hardware node tree. | Node parsing tests. | Resilience report. | Document why OPC UA semantics win. |
-## MONTHS 8–10: CQRS, KAFKA, & OBSERVABILITY
-### Week 21 — SQLite Edge Queuing (Offline Survival)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Local durable queues. | Learn why edge agents buffer during factory network drops. | N/A. | SQLite schema design. | Why not use RAM for buffering? |
-| **2** | SQLite Integration. | Create a local DB and table for queued biometric events. | C# SQLite integration. | SQLite database code. | Is the file saved to the mounted Docker volume? |
-| **3** | Disk Persistence. | Save incoming events to disk *before* uploading. | Local persistence logic. | Edge queue implementation. | Is data written instantly? |
-| **4** | State Management. | Implement pending, sent, and failed states. | State management code. | Row update logic. | How do you prevent race conditions on rows? |
-| **5** | App restarts. | Test restarts and verify queued events survive. | Crash recovery test. | Data survival report. | Prove the device loses zero data during an outage. |
-### Week 22 — Sync Recovery & State Discipline
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Sync loop logic. | Write a loop that uploads events when connection returns. | Background sync process. | Sync loop code. | Does the loop throttle to prevent flooding? |
-| **2** | Cloud acknowledgments. | Add mark-sent behavior *only* after cloud confirmation. | Acknowledgment logic. | Safe-state update code. | Are unacknowledged events retried? |
-| **3** | Network loss simulation. | Drop network via Docker/OS and verify the queue builds. | Outage simulation. | Load test logs during outage. | Is the SQLite DB expanding? |
-| **4** | Queue draining. | Reconnect the network and verify the queue drains. | Reconnect tests. | Drain test logs. | Did everything arrive upstream? |
-| **5** | Partial batch failures. | Test scenario where half a batch fails upload. | Batch failure logic. | Exact-once replay contract. | Document exactly-once vs at-least-once limits. |
-### Week 23 — The Hybrid CQRS Database Pivot
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | CQRS Architecture. | Spin up PostgreSQL. Study EF Core vs Dapper logic. | N/A. | CQRS diagram. | Why split reads and writes? |
-| **2** | EF Core (Write Model). | Implement EF Core for relational device configurations. | EF Core Context. | Configuration models. | Are relations mapped correctly? |
-| **3** | Code-First Migrations. | Build the device registry tables using EF Core. | Migrated Postgres schema. | Database tables. | Did the migrations execute cleanly? |
-| **4** | Dapper (Read/Ingest). | Implement Dapper for high-velocity time-series ingestion. | Dapper SQL ingestion logic. | Micro-ORM integration. | Is raw SQL faster than tracking? |
-| **5** | Benchmarking. | Benchmark EF Core insert speed vs Dapper insert speed. | Benchmark test. | Performance comparison report. | Document why Dapper is required for telemetry. |
-### Week 24 — Apache Kafka Event Streaming
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Kafka Clusters. | Spin up local Kafka. Study topics and consumer groups. | Running Kafka environment. | Local Kafka cluster. | What is a partition? |
-| **2** | Confluent.Kafka Producer. | Write a Producer to publish biometric events. | Kafka Producer implementation. | C# Publisher code. | Are messages routing to the topic? |
-| **3** | Kafka Consumer. | Write a Consumer to ingest Kafka streams into Postgres. | Kafka Consumer implementation. | C# Consumer code. | Is the data hitting the DB? |
-| **4** | Consumer Group scaling. | Test load balancing with two running C# consumer instances. | Scalability tests. | Load balancing logs. | Do the instances share the partition load? |
-| **5** | Offset rewinds. | Simulate offset rewinds and partition failures. | Failure tests. | System resilience report. | Prove you can handle enterprise data securely. |
-### Week 25 — Time-Series Observability (InfluxDB)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | InfluxDB Deployment. | Deploy InfluxDB. Learn time-series vs relational modeling. | Running InfluxDB container. | Time-series database. | Why use NoSQL for telemetry? |
-| **2** | Numerical Telemetry. | Route latency, CPU, and scanner status to InfluxDB. | C# InfluxDB client. | Telemetry routing code. | Is data structured by time? |
-| **3** | High-Cardinality Tags. | Structure buckets and tags for high-cardinality queries. | Tagging schema. | Tag implementation. | Will these tags slow down queries? |
-| **4** | Retention Policies. | Set up policies to automatically drop old telemetry. | Data lifecycle configuration. | Retention settings. | Is old data purging automatically? |
-| **5** | Heavy Load Ingestion. | Test InfluxDB ingestion under heavy load. | Load tests. | Performance metrics. | Explain why Postgres isn't used for raw telemetry. |
-### Week 26 — Dashboards (Grafana) & Structured Logging
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Grafana connections. | Connect Grafana to InfluxDB and Postgres sources. | Running Grafana instance. | Data source connections. | Are queries returning data? |
-| **2** | OEE Dashboards. | Build Overall Equipment Effectiveness dashboard for hardware. | Operational dashboard. | Grafana JSON export. | Can an operator understand this screen? |
-| **3** | Serilog & Correlation IDs. | Implement structured logging in C# using Serilog. | Serilog configuration. | Structured logging setup. | Why use JSON logs instead of text? |
-| **4** | Unified tracing. | Integrate logging across Kafka and Edge Gateway. | Unified log tracing. | Cross-service logs. | Do correlation IDs match across services? |
-| **5** | Visual debugging. | Simulate a failure and trace the ID from edge to DB. | Incident tracing test. | Debugging report. | Prove you can debug the system visually. |
-## MONTHS 11–13: CLOUD SOVEREIGNTY & CYBERSECURITY
-### Week 27 — Azure IoT Edge Runtime
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | edgeAgent & edgeHub. | Study the difference between IoT Hub and IoT Edge. | N/A. | Notes on edge orchestration. | Why deploy logic *to* the edge? |
-| **2** | Edge Provisioning. | Provision an Azure IoT Edge device in the cloud. | Provisioned Edge identity. | Azure setup documentation. | Is the device online in Azure? |
-| **3** | Edge Modules. | Package your C# Gateway as a custom IoT Edge Module. | IoT Edge deployment manifest. | Deployment JSON file. | Are container routes defined? |
-| **4** | Remote Deployment. | Deploy the module remotely from Azure to local runtime. | Successful remote deployment. | Verification logs. | Did the cloud push the container? |
-| **5** | Message Routing. | Route messages through edgeHub to the cloud. | Cloud routing tests. | End-to-end data validation. | Document how central IT pushes updates to remote factories. |
-### Week 28 — Dual-Cloud Routing (AWS IoT Core for KSA)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | KSA Data Residency. | Study AWS IoT Core and AWS Bahrain Region controls. | N/A. | Notes on Sovereign Cloud. | Why must KSA data stay in the region? |
-| **2** | X.509 Device Auth. | Provision AWS IoT Core. Generate certificates. | AWS certificates loaded locally. | Key management setup. | Are keys stored securely? |
-| **3** | Parallel Publishing. | Implement MQTT publishing to both Azure and AWS routes. | Multi-cloud routing logic. | Gateway C# code. | Is the gateway cloud-agnostic? |
-| **4** | AWS IoT Rules. | Route data into an S3 bucket or DynamoDB via rules. | AWS backend integration. | Cloud architecture setup. | Is AWS receiving telemetry? |
-| **5** | Cross-Cloud Failover. | Test failover from Azure to AWS. | Failover tests. | Failover logic confirmed. | Explain how you maintain KSA data residency. |
-### Week 29 — DACH Target: IEC 62443 Compliance
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | IEC 62443-4-1. | Study Secure Product Development Lifecycle principles. | N/A. | Notes on secure-by-design. | What are the mandatory security checks? |
-| **2** | Zones & Conduits. | Map architecture into strict Industrial vs Enterprise zones. | Zone & Conduit network diagram. | Architecture diagram. | Are the boundaries isolated? |
-| **3** | SAST in CI/CD. | Implement Static Application Security Testing in GitHub. | Automated security scanning. | CI pipeline update. | Does it block insecure code? |
-| **4** | Software Bill of Materials. | Generate an SBOM for the C# application to comply with CRA. | Exported SBOM XML/JSON. | SBOM file. | Are all dependencies tracked? |
-| **5** | Threat Modeling. | Document Spoofing, Tampering, Replay mitigations. | Threat model report. | Security documentation. | Prove the architecture complies with the EU Cyber Resilience Act. |
-### Week 30 — KSA Target: NCA OTCC-1:2022 Compliance
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | NCA OTCC-1:2022. | Study Saudi National Cybersecurity Authority OT controls. | N/A. | Notes on KSA asset management. | What triggers an NCA audit? |
-| **2** | Supply Chain Risks. | Audit third-party SDK dependencies. | Dependency audit report. | Security audit logs. | Are there compromised libraries? |
-| **3** | Encryption at Rest. | Encrypt local edge data (SQLite Cipher). | Encryption-at-rest implementation. | Encrypted DB code. | Can the DB be read without a key? |
-| **4** | Remote Access Controls. | Verify network segmentation and remote firewall rules. | Firewall/routing documentation. | Network policy map. | Is arbitrary external access blocked? |
-| **5** | Compliance Matrix. | Finalize the NCA compliance matrix for your portfolio. | NCA compliance matrix. | Portfolio security asset. | Explain how you prevent a 25M SAR fine. |
-### Week 31 — Machine Trust (mTLS)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | mTLS & Machine Identity. | Learn mutual TLS and client certificates at scale. | N/A. | Notes on certificate lifecycles. | Why are API keys insufficient? |
-| **2** | Broker Authentication. | Configure local MQTT/Kafka to require client certificates. | Strict broker authentication. | Configuration files. | Does it reject uncertified connections? |
-| **3** | C# mTLS Client. | Update edge gateway to authenticate using mTLS. | mTLS C# client configuration. | Secure client code. | Is the handshake successful? |
-| **4** | Spoofing Scenarios. | Test invalid or missing client certs to trigger denial. | Access denied logs. | Security test results. | Was the rogue agent blocked? |
-| **5** | Certificate Rotation. | Document rotating client certificates without dropping comms. | Rotation strategy document. | Lifecycle management plan. | Prove API keys are insufficient for edge hardware. |
-### Week 32 — Multi-Site Topology & Configuration Profiles
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Environment config strategy. | Study site-specific configuration and defaults. | N/A. | JSON config layering approach. | How does dev differ from prod? |
-| **2** | Site Deployment Profiles. | Model Site A (Stuttgart) and Site B (Riyadh) logic. | Distinct site deployment profiles. | Config files. | Are regional endpoints defined? |
-| **3** | Multi-Tenant Database. | Add site-aware routing grouping into PostgreSQL. | Multi-tenant database design. | Schema updates. | Can you query by site? |
-| **4** | Independent Publishing. | Simulate multiple edge gateways publishing independently. | End-to-end multi-site load test. | Load test logs. | Does the backend handle parallel streams? |
-| **5** | Offline Site Simulation. | Test Site A going offline while Site B continues seamlessly. | Isolation testing. | Resilience report. | Explain how central architecture handles global sites. |
-## MONTHS 14–19: CAPSTONE, UI, C4 MODELS, & MARKET EXECUTION
-### Week 33 — The Local Configuration UI (React & TypeScript)
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Vite & React. | Scaffold a lightweight React/TypeScript frontend. | Running React development server. | Frontend repository. | Is the build tool running? |
-| **2** | C# Minimal APIs. | Build a local REST API on the gateway to serve config. | C# Minimal API endpoints. | Backend API code. | Are endpoints returning JSON? |
-| **3** | Operational Dashboard. | Create a UI to set MQTT endpoints and view local logs. | Operational React UI components. | React components. | Is the UI intuitive for a technician? |
-| **4** | Full Stack Connection. | Connect the React frontend to the C# gateway API. | Full stack local configuration flow. | Integration code. | Does changing the UI update the backend? |
-| **5** | Kestrel Serving. | Serve React static files directly from the C# Kestrel server. | Hosted application. | Deployment logic. | Prove an OT tech can configure the system locally. |
-### Week 34 — Architecture Diagrams (C4 Model) & ADRs
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | C4 Context Diagram. | Draw Hardware -> Gateway -> Dual Cloud -> UI. | Context Level Diagram. | High-level diagram. | Is the big picture clear? |
-| **2** | C4 Container Diagram. | Draw K3s, Postgres, Kafka, and C# modules. | Container Level Diagram. | Microservices diagram. | Are the technology choices visible? |
-| **3** | ADR 1: K3s over Docker. | Write Architecture Decision Record justifying Kubernetes. | Markdown ADR document. | ADR 1 file. | Did I explain the trade-offs? |
-| **4** | ADR 2 & 3: CQRS & Cloud. | Write ADRs for EF Core + Dapper and Dual-Cloud routing. | Database & Cloud ADR documents. | ADR 2 & 3 files. | Are decisions grounded in performance metrics? |
-| **5** | Presentation Readiness. | Review all visual documentation for the portfolio. | Finalized documentation. | Polished diagrams. | Prove your reasoning reflects Senior Architect seniority. |
-### Week 35 — Capstone Wiring & End-to-End System Polish
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | V2 System Wiring. | Wire Simulator -> C# Gateway -> Kafka -> Postgres/Cloud. | Unified system boot script. | System orchestrator. | Does it boot with one command? |
-| **2** | Repository Structure. | Clean the repo (src, docs, infra, edge). | Professional GitHub repository structure. | Cleaned codebase. | Would a German hiring manager respect this repo? |
-| **3** | Full Integration Test. | Ensure queue, storage, status, metrics, auth connect perfectly. | Complete integration test. | Test suite passed. | Are there any dead ends? |
-| **4** | Log Retention Policies. | Run a final pass to prevent disk-full errors. | Finalized Serilog configurations. | Logging setup. | Are logs rotating safely? |
-| **5** | SOLID Refactoring. | Refactor any messy "hacky" code from earlier months. | Clean, decoupled code. | Finalized core logic. | Ensure the codebase follows SOLID principles. |
-### Week 36 — Performance Load Testing & Profiling
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Load Test Planning. | Design scenarios: Broker down, DB slow, high volume. | Load test plan. | Test documentation. | Are the scenarios realistic? |
-| **2** | Stress Testing. | Hit the C# gateway with 10,000 requests/sec. | Load test execution. | Stress testing scripts. | Did the system crash? |
-| **3** | Resource Profiling. | Measure GC pauses, CPU usage, and memory leaks. | Performance profile report. | Profiling metrics. | Is memory stable under load? |
-| **4** | System Tuning. | Tune weak points (e.g., Kafka batching or Dapper inserts). | Tuned codebase. | Performance patches. | Did the bottleneck move? |
-| **5** | Performance Gains. | Re-run tests and document the optimizations. | Final benchmark report. | Optimization documentation. | Prove the system handles enterprise industrial loads. |
-### Week 37 — DACH Vocabulary & Pitch Translation
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Technical German. | Map software/hardware terms to German (B2 level). | B2 German technical vocabulary list. | Study sheet. | Do I know the German word for Edge Computing? |
-| **2** | Bilingual Documentation. | Translate C4 diagrams and ADR summaries into German. | Bilingual portfolio documentation. | Translated diagrams. | Are technical terms accurate? |
-| **3** | Oral Practice (SQLite). | Practice explaining SQLite offline buffering in German. | Recorded oral practice. | Audio recording. | Is my pronunciation clear? |
-| **4** | Professional Intro. | Practice "Werdegang" (Tell me about yourself) in German. | Polished professional introduction. | Pitch script. | Does it sound confident? |
-| **5** | Language Maintenance. | Setup a 30-minute daily language maintenance routine. | Routine schedule. | Study plan. | Prove you can discuss OT/IT integration in German. |
-### Week 38 — DACH Target Mapping & CV Formatting
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | DACH Sector Targeting. | List target sectors: Automation, IIoT, MedTech. | Targeted sector list. | Sector map. | Which sector fits my skills best? |
-| **2** | Company Shortlist. | Target Siemens, Bosch, Beckhoff, KUKA, Integrators. | Top 30 DACH company targets. | Lead list. | Do these companies use C#/.NET? |
-| **3** | *Lebenslauf* Formatting. | Format CV to German standards. | German CV PDF. | Final CV document. | Is it structured correctly? |
-| **4** | *Anschreiben* Formatting. | Prepare German Cover Letter highlighting TwinCAT/C#. | Tailored German cover letter. | Final Cover Letter. | Does it address integration specifically? |
-| **5** | Job Title Extraction. | Extract exact titles (Systemintegrator, Edge Developer). | Filtered job search queries. | Query list. | Verify profile bypasses generic "Fullstack" filters. |
-### Week 39 — KSA Target Mapping & Gigaproject Positioning
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Gigaproject Targeting. | List NEOM, STC, IOT Squared, Aramco digital initiatives. | KSA Target List. | Lead list. | Who holds the IoT budgets in KSA? |
-| **2** | Portfolio Repackaging. | Emphasize AWS, BACnet, and NCA OTCC compliance. | KSA-focused portfolio presentation. | Updated presentation. | Is it tailored to smart cities? |
-| **3** | GCC CV Formatting. | Format an English CV for corporate/consultancy roles. | KSA CV PDF. | Final CV document. | Does it highlight massive scale? |
-| **4** | Data Residency Answers. | Write answer for "How do you handle Saudi data residency?" | Sovereign cloud interview script. | Scripted answer. | Do I mention AWS Bahrain explicitly? |
-| **5** | Compensation Math. | Compare Iqama/Tax-free structures vs EU Blue Card. | Compensation breakdown. | Strategy note. | Ensure you understand the KSA total-package model. |
-### Week 40 — Execution: DACH Outreach Sprint
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Initial Applications. | Apply to the first batch of 10 targeted DACH roles. | Application tracker updated. | Submitted applications. | Did I use the correct keywords? |
-| **2** | Portfolio Customization. | Customize portfolio links and summaries per role type. | Tailored submissions. | Customized emails. | Is the context relevant to the job? |
-| **3** | Bypassing HR. | Send LinkedIn outreach to DACH Engineering Managers. | Direct outreach messages. | Sent messages. | Is the message short and technical? |
-| **4** | Scaling Applications. | Apply to 10 additional roles. | Application tracker updated. | Submitted applications. | Am I maintaining quality? |
-| **5** | Metrics Analysis. | Document which outreach messages get views/replies. | Conversion rate report. | Strategy adjustment plan. | Are they opening my GitHub? |
-### Week 41 — Execution: KSA Outreach Sprint
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Initial Applications. | Apply to 10 targeted KSA/GCC roles. | Application tracker updated. | Submitted applications. | Did I mention Vision 2030 relevance? |
-| **2** | Riyadh Networking. | Send LinkedIn outreach to technical leads in Riyadh. | Direct outreach messages. | Sent messages. | Am I targeting consultancies as well? |
-| **3** | Scaling Applications. | Apply to 10 additional KSA roles. | Application tracker updated. | Submitted applications. | Am I hitting the top gigaprojects? |
-| **4** | DACH Follow-ups. | Prepare follow-up messages for DACH connections. | Follow-up sequence. | Sent follow-ups. | Am I being persistent but polite? |
-| **5** | Cross-Track Analysis. | Analyze application conversion rates for both tracks. | Conversion rate report. | Strategy adjustment plan. | Which market is responding faster? |
-### Week 42 — Mock Technical Interview: Architecture Defense
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Architecture Defense. | Run a mock interview defending the Capstone (English/German). | Mock interview recording. | Performance notes. | Was I defensive or logical? |
-| **2** | Database & Orchestration. | Address weak answers regarding CQRS and Edge Kubernetes. | Refined answers. | Script updates. | Can I explain K3s smoothly? |
-| **3** | CI/CD & Deployment. | Run a mock interview on pipelines and Docker. | Mock interview recording. | Performance notes. | Did I stumble on volume mapping? |
-| **4** | Hardware Protocols. | Explain hardware protocols (Beckhoff ADS vs BACnet). | Protocol explanations. | Script updates. | Is the distinction clear? |
-| **5** | Weak Point Review. | Review top 5 architectural weak points and polish them. | Weak point mitigation plan. | Finalized answers. | Am I bulletproof on my own architecture? |
-### Week 43 — Mock Technical Interview: Resilience & Failures
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Data Loss Investigation. | Explain how you would investigate data loss from a factory. | Incident response mock. | Performance notes. | Did I trace from edge to cloud? |
-| **2** | Poison Messages. | Explain handling Azure DLQs and Kafka poison messages. | Resilience answers. | Script updates. | Did I mention dead-letter queues? |
-| **3** | Incident Storytelling. | Practice Situation -> Detection -> Containment -> Fix. | Structured storytelling practice. | Narrative outlines. | Is the story under 3 minutes? |
-| **4** | Opaque SDK Debugging. | Explain how to debug a failing hardware SDK. | SDK debugging mock. | Performance notes. | Did I mention Wireshark/logs? |
-| **5** | Presentation Polish. | Refine pacing and screen-sharing clarity for code reviews. | Screen-share rehearsal. | Presentation check. | Is my IDE font readable on a stream? |
-### Week 44 — Tradeoff Mastery & Whiteboarding
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Protocol Comparisons. | Verbally compare MQTT vs HTTP and Modbus vs OPC UA. | Verbal tradeoff practice. | Performance notes. | Are the latency tradeoffs clear? |
-| **2** | Offline-First Design. | Whiteboard an offline-first biometric fleet from scratch. | Whiteboard session. | Diagram output. | Did I include local SQLite? |
-| **3** | Architecture Comparisons. | Verbally compare EF Core vs Dapper and mTLS vs API keys. | Verbal tradeoff practice. | Performance notes. | Did I cite performance limits? |
-| **4** | Multi-Vendor Pipelines. | Whiteboard a multi-vendor event pipeline. | Whiteboard session. | Diagram output. | Is the anti-corruption layer present? |
-| **5** | Narrative Lockdown. | Lock in your tradeoff defense narrative. | Finalized tradeoff logic. | Defense scripts. | Am I confident in my decisions? |
-### Week 45 — Public Positioning Polish
-| Day | Study | Practice | Build & Push | Output | Self-Check |
-|---|---|---|---|---|---|
-| **1** | Capstone Demonstration. | Record a 5-minute Loom video demonstrating the system. | High-quality video recording. | Video file. | Is the audio and code clear? |
-| **2** | Profile Linking. | Add the video link to GitHub README and LinkedIn. | Updated public profiles. | Live profile links. | Do the links work perfectly? |
-| **3** | The Transition Pitch. | Write the 2-minute pitch: "Why am I transitioning to IoT?" | Pitch script. | Memorized pitch. | Is my motivation compelling? |
-| **4** | GitHub Purge. | Clean GitHub completely of irrelevant/hobby repositories. | Cleaned GitHub profile. | Professional profile view. | Does it scream "Systems Architect"? |
-| **5** | Cloud Cost Cap. | Ensure Azure/AWS resources are cost-capped or paused. | Billing configuration. | Safe cloud environments. | Will I avoid unexpected bills? |
-### Weeks 46–52 — The Forward Deployed Crucible
-*(This block represents the final 1.5 months dedicated entirely to the extraction protocol).*
-| Day | Action Protocol |
+# The 20-Week Market-Readiness Sprint
+## C#/.NET Integration Engineer — Biometric, Kiosk, Identity & Edge Systems — Germany
+
+**Target:** Be the most credible C# integration candidate from Yemen that German recruiters see this quarter.
+**Realistic extraction window:** Month 6–18 (H-+ scenario).
+**Success metric:** Interviews and feedback, not plane tickets.
+**Daily minimum:** 1 hour (45 min C# + 15 min German).
+**Daily target:** 2.25 hours (90 min C# + 45 min German).
+**Rule:** Missing a day is not failure. Missing the restart is failure.
+
+---
+
+## The Leverage Problem
+
+Your degree shows **H-+ on ANABIN** — partially recognized, pending High Ministry of Aden verification. You can fix this in Yemen but **cannot afford it now.** This means:
+
+- **Track A (Now):** Execute with H-+, ZAB Statement of Comparability, and undeniable niche skills.
+- **Track B (Later):** Upgrade to H+ when funded — from Germany salary, family support, or employer assistance.
+
+**Do not wait for perfect conditions. Fight with what you have.**
+
+---
+
+## The One Sentence (Your North Star)
+
+> "I build C#/.NET edge gateways that connect biometric/kiosk devices to APIs, local storage, cloud messaging, and operational dashboards."
+
+Every commit, every ADR, every German sentence serves this. Anything else dies.
+
+---
+
+## AI Policy (Non-Negotiable)
+
+1. Write your own solution first.
+2. Write your own tests.
+3. Explain design aloud in English (and German if possible).
+4. Then use AI for review, edge cases, refactors.
+5. Reimplement fixes manually. Never paste AI-generated code you cannot explain.
+
+---
+
+## Phase 0: Pre-Flight (Week 0)
+### Week 0 — Pre-Flight Checklist
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | ANABIN screenshot saved. Note exact H-+ conditions. | Output: File documented. Cost: $0 |
+| **2** | ZAB Statement of Comparability application. Submit online. Upload degree, transcripts, passport. Pay ~€200. | Output: Application submitted, receipt saved. Cost: ~€200 |
+| **3** | Email uncle/friend in Germany: €200 reimbursement offer + housing pre-ask for relocation. | Output: Network activated. Cost: $0 |
+| **4** | GitHub cleanup. Delete tutorial repos. Blank profile ready. | Output: Clean slate. Cost: $0 |
+| **5** | Open Wise multi-currency account. | Output: Can receive euros. Cost: $0 |
+
+**ZAB Intel:**
+- Regular processing: ~3 months.
+- Expedited (with job offer): ~2 weeks.
+- Cost: ~€200. Find this money. Borrow, sell, ask family. This is your highest-ROI investment.
+
+**Blue Card Salary Thresholds (2026):**
+- Standard: €50,700
+- Lower (shortage/young professionals): €45,934.20
+- **Your floor: €46k absolute minimum. Target: €52k. Anchor: €55k.**
+
+---
+
+## Phase 1: Foundation Repair (Weeks 1–5)
+**Goal:** Fix OOP. Build device abstraction layer. No web, no cloud, no Azure. Just C# done right.
+
+### Week 1 — C# Core & Device Abstraction
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Classes vs structs. Build `BiometricDevice` base class: `DeviceId`, `ConnectionStatus`, `LastScanTime`. | German Anki: 20 technical cards (*Klasse, Schnittstelle, Vererbung*) |
+| **2** | Inheritance. `FingerprintScanner : BiometricDevice`, `DocumentReader : BiometricDevice`. Override `Capture()`. | German: italki trial lesson (book 1x/week recurring — budget constraint) |
+| **3** | Interfaces. Extract `IBiometricDevice`, `IAuthenticationProvider`. Implement both. | German Anki: 20 cards |
+| **4** | Polymorphism. `DeviceManager` accepts `List<IBiometricDevice>`, calls `Capture()` without knowing concrete types. | German: Write 5 sentences about your project |
+| **5** | Encapsulation. All fields private. Validation in setters. No public fields. | German Anki review |
+
+**Weekend:** Push `BiometricIdentityGateway` repo. README in English. One clean commit per day.
+
+### Week 2 — Dependency Injection & Testing
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | DI concept. `ServiceCollection`. `ServiceProvider` resolves `IDeviceManager` → `DeviceManager`. | German italki (or Tandem app free alternative) |
+| **2** | Constructor injection. `DeviceManager` receives `ILogger`, `IConfiguration` via constructor. | German Anki |
+| **3** | xUnit tests. Mock `IBiometricDevice` with Moq or hand-rolled fakes. | German Anki |
+| **4** | Test failure paths: device offline, null scan, timeout. | German: Write paragraph "Mein Projekt ist ein Biometrie-Gateway" |
+| **5** | Refactor: eliminate `new` in business logic. Everything injected. | German italki/Tandem |
+
+**Weekend:** `/tests` folder. CI badge green. 80% coverage of critical paths.
+
+### Week 3 — Async, Cancellation & Resilience
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | `async Task`. Convert `Capture()` to `Task<ScanResult>`. | German Anki |
+| **2** | Cancellation tokens. Pass through every async method. | German italki/Tandem |
+| **3** | Timeouts and retries. `ResilientDeviceClient` with Polly: retry 3x, exponential backoff. | German Anki |
+| **4** | Parallel operations. `Task.WhenAll` for fingerprint + document scan simultaneously. | German: 10 sentences about async |
+| **5** | Custom exceptions: `DeviceOfflineException`, `ScanTimeoutException`. No generic `Exception`. | German italki/Tandem |
+
+**Weekend:** `Resilience` namespace. Tests for timeout scenarios.
+
+### Week 4 — Interop & Local Communication
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Native interop. `DllImport` for mock SDK. `HIDU30ASDKAdapter` simulates C DLL call. | German Anki |
+| **2** | Serial/TCP abstraction. `ISerialConnection`, `ITcpConnection`. `TcpDeviceClient`. | German italki/Tandem |
+| **3** | Binary framing. Header (4 bytes length) + payload (JSON). Parse with `Span<byte>`. | German Anki |
+| **4** | gRPC client. Send scan results to local server (build server in Week 5). | German: Project description for CV |
+| **5** | Code review. Find 3 SOLID violations. Fix them. Explain aloud. | German italki/Tandem |
+
+**Weekend:** Interop module complete. Document in README.
+
+### Week 5 — gRPC Server & Minimal React Dashboard
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | gRPC server. `IdentityGatewayService` with `StreamScanResults`. | German Anki |
+| **2** | ASP.NET Core minimal API. `/api/devices` returns connected devices. | German italki/Tandem |
+| **3** | React mini-UI. Device status page: online/offline, last scan, error count. Not a Netflix clone. Just your gateway's face. | German Anki |
+| **4** | Connect React to your API. `fetch()` or Axios. Display real data from your C# backend. | German: Write API docs in German |
+| **5** | Polish. Error handling, loading states, basic styling. | German italki/Tandem |
+
+**Weekend:** Full local demo runs: Device → C# Agent → gRPC → API → React Dashboard.
+
+---
+
+## Phase 2: Cloud & Distribution (Weeks 6–10)
+**Goal:** Make it distributed. Azure, Docker, CI/CD, messaging.
+
+### Week 6 — Docker & CI/CD
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Dockerfile for .NET 8. Multi-stage build. | German Anki |
+| **2** | Docker Compose: API + SQLite + Worker Service. One `docker compose up`. | German italki/Tandem |
+| **3** | GitHub Actions CI. Build → Test → Docker Push on every commit. | German Anki |
+| **4** | GitHub Actions CD. Push to GitHub Container Registry. | German: Write German README section |
+| **5** | Health checks. `/health` endpoint. DB connectivity check. | German italki/Tandem |
+
+**Weekend:** `.github/workflows/ci.yml`. Badges green. Repo is deployable with one command.
+
+### Week 7 — Azure IoT Hub & Messaging
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Azure IoT Hub free tier. Create hub. Device connection string. | German Anki |
+| **2** | Azure IoT SDK in C#. Connect worker service. Send telemetry: `deviceId`, `scanType`, `timestamp`, `success`. | German italki/Tandem |
+| **3** | Skip DPS for MVP. Direct connection only. Document: "DPS would be used in production for fleet provisioning." | German Anki |
+| **4** | Azure Service Bus or Event Hubs. Route scan events to queue. | German: "Das Gateway sendet Daten an Azure" |
+| **5** | Offline buffering. SQLite local store. Buffer 1000 events. Sync when online. | German italki/Tandem |
+
+**Weekend:** Cloud pipeline working. Screenshot Azure Metrics.
+
+### Week 8 — Data, Identity & SOAP Legacy
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | EF Core + SQLite. `Device` → `ScanSession` → `IdentityVerification`. | German Anki |
+| **2** | Mock government identity API. Fake REST API: `verified: true/false` for passport scan. | German italki/Tandem |
+| **3** | Full flow: Document scan → local verification → gov API check → store → event to Azure. | German Anki |
+| **4** | Idempotency. Same scan ID = no duplicate. Implement idempotency keys. | German: Email template "Bewerbung als C# Integration Engineer" |
+| **5** | SOAP legacy. `ILegacyERPAdapter` → `SapErpAdapter`. Anti-Corruption Layer. Mock SOAP call. | German italki/Tandem |
+
+**Weekend:** Legacy integration namespace. Document why SOAP is wrapped, not exposed.
+
+**HARD KILL-SWITCH:** By end of Week 8, the following must be stable:
+- [ ] Local simulated device
+- [ ] C# REST API
+- [ ] SQLite offline buffer
+- [ ] React dashboard (device status only)
+- [ ] Docker Compose (`docker compose up` works)
+- [ ] Tests pass (CI green)
+- [ ] Basic cloud telemetry OR documented cloud stub
+
+**If any item is unstable, Week 9 becomes stabilization week.** No MQTT. No OPC UA. No Modbus. Kill them all.
+
+### Week 9 — Industrial Flavor Mini-Module
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | MQTT fundamentals. Deploy Mosquitto broker (free). Pub/sub test. | German Anki |
+| **2** | OPC UA basics. Nodes, namespaces, subscriptions. Read, do not write. | German italki/Tandem |
+| **3** | Modbus frame structure. Holding registers, input registers, CRC. Parse, do not program. | German Anki |
+| **4** | Build interfaces: `IOpcUaTelemetrySource`, `IModbusRegisterReader`. Mock implementations. | German: 5 sentences about OT/IT integration |
+| **5** | Small demo: Python Modbus slave → C# reader → MQTT → Azure. | German italki/Tandem |
+
+**Weekend:** `IndustrialProtocols` namespace. You can now say: *"I have worked with OPC UA and Modbus in simulation, and I understand how edge gateways bridge OT to IT."*
+
+### Week 10 — Security & Fleet Simulation
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | TLS basics. HTTPS in Kestrel. | German Anki |
+| **2** | JWT authentication. Protect API endpoints. Roles: `operator`, `admin`. | German italki/Tandem |
+| **3** | Fleet simulation. `IDeviceFleetManager` tracks 10 devices across locations. | German Anki |
+| **4** | Remote config. Cloud-to-device desired properties: change poll rate, threshold. | German: LinkedIn "About" draft |
+| **5** | Secrets management. No hardcoded strings. Environment variables or Docker secrets. Document production Key Vault use. | German italki/Tandem |
+
+**Weekend:** Security audit pass. No secrets in code. Threat model in README.
+
+---
+
+## Phase 3: Documentation & Proof (Weeks 11–13)
+**Goal:** Make it German-market-ready. C4 diagrams, ADRs, video, bilingual README.
+
+### Week 11 — Architecture & Documentation
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | C4 Model Level 1: System Context. User, gateway, Azure, government API. Draw.io. | German Anki technical terms |
+| **2** | C4 Model Level 2: Container diagram. API, Worker, SQLite, Azure IoT. | German italki/Tandem |
+| **3** | ADR 1: Why SQLite over PostgreSQL for edge. | German: ADR summary |
+| **4** | ADR 2: Why REST primary (gRPC optional). ADR 3: Why SOAP Anti-Corruption Layer. | German Anki |
+| **5** | German README (`README.de.md`). Architecture overview. DeepL + italki/Tandem review. | German italki/Tandem |
+
+**Weekend:** `/docs` folder with C4 PNGs, 3 ADRs, bilingual README.
+
+### Week 12 — Video, Polish & Profile
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Record 5-minute video. English voiceover. Walk through C4 diagram + live demo. | German Anki |
+| **2** | Add German subtitles. Upload unlisted to YouTube. Embed in README. | German italki/Tandem |
+| **3** | Screenshot architecture. Dashboard. Device status page. Add to README. | German Anki |
+| **4** | LinkedIn rewrite. Headline: "C# Integration Engineer | Biometric Identity & Kiosk Systems | Azure" | German: LinkedIn "About" in German |
+| **5** | XING profile creation. Mirror LinkedIn. In German. XING is mandatory in Germany. | German italki/Tandem |
+
+**Weekend:** Public profiles locked. One repo, one video, two profiles.
+
+### Week 13 — Quality Lock & Test Applications
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Code freeze. No new features. Bug fixes only. Tag `v1.0.0`. | German Anki |
+| **2** | Final test run. `dotnet test`. All green. | German italki/Tandem |
+| **3** | CV German (1 page, strict format: photo, DOB, Ausbildung, Berufserfahrung). | German Anki |
+| **4** | CV English (1 page). | German: CV review with italki/Tandem |
+| **5** | 5 test applications. Observe what gets rejected. Learn. Do not expect offers. | German italki/Tandem |
+
+**Weekend:** Application tracking spreadsheet. 5 apps sent. Market feedback begins.
+
+---
+
+## Phase 4: Market Entry (Weeks 14–20)
+**Goal:** Interviews. Not perfection. Interviews.
+
+### Week 14 — First Serious Wave
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Research 10 companies. C# / .NET / Integration / IoT / Identity. Save to spreadsheet. | German Anki |
+| **2** | Write 3 tailored Anschreiben. Each references company's specific tech. Include: "My degree is undergoing ZAB recognition assessment." | German italki/Tandem |
+| **3** | Apply to 5 companies. LinkedIn Easy Apply + direct email. | German Anki |
+| **4** | Apply to 5 more. Prioritize Berlin, Hamburg, Stuttgart, uncle/friend cities. | German italki/Tandem |
+| **5** | LinkedIn outreach. 10 connection requests to engineering managers. Short German message. | German: Message template |
+
+**Weekend:** 15 apps total. Spreadsheet tracking: Company, Title, Date, Status, Rejection Reason, Language, Salary, Visa Response.
+
+### Week 15 — Outreach & Recruiters
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Engage 3 German tech recruiters specializing in .NET/IoT. | German Anki |
+| **2** | Follow up on Week 14 applications. Polite German email. | German italki/Tandem |
+| **3** | Uncle/friend outreach. Ask for referral introductions at their companies/networks. | German Anki |
+| **4** | Apply to 5 more roles. Expand to consultancies: adesso, M&M Software, etc. | German italki/Tandem |
+| **5** | Mock technical interview. Record yourself. Review. | German: Mock with italki/Tandem |
+
+**Weekend:** 20 apps. Recruiter conversations started. Referral requests sent.
+
+### Week 16 — Interview Prep Intensity
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Whiteboard practice. Draw C4 diagram from memory in 5 minutes. | German Anki |
+| **2** | Explain async/await to non-technical person. In German. | German italki/Tandem |
+| **3** | Salary negotiation: "Meine Gehaltsvorstellung liegt bei 55.000 Euro brutto pro Jahr." | German Anki |
+| **4** | Mock interview: "The gateway stops sending data at 3 AM. How do you debug?" | German italki/Tandem |
+| **5** | Apply to 5 more. Track everything. | German Anki |
+
+**Weekend:** 3 mock interviews completed. Salary anchor: €55k. Floor: €46k.
+
+### Week 17 — Sustained Pressure
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | 5 applications. Backend .NET roles with integration/API/messaging. | German Anki |
+| **2** | 5 applications. IoT/edge roles. | German italki/Tandem |
+| **3** | Follow up on all pending applications. | German Anki |
+| **4** | Portfolio iteration. Fix anything interviewers questioned. | German italki/Tandem |
+| **5** | LinkedIn content. Post technical article: "Connecting a Biometric Device to Azure in 2026." | German Anki |
+
+**Weekend:** 30 apps total. Public visibility established.
+
+### Week 18 — Feedback Loop
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Analyze all feedback. Recurring gaps? | German Anki |
+| **2** | Deep-dive weakest area (e.g., PROFINET, Kubernetes, German fluency). | German italki/Tandem |
+| **3** | Portfolio patch. Add mini-project or documentation addressing gap. | German Anki |
+| **4** | Re-apply to companies that rejected you after 6 months with new evidence. | German italki/Tandem |
+| **5** | Apply to 5 more. Never stop. | German Anki |
+
+**Weekend:** 35 apps. Iteration cycle active.
+
+### Week 19 — Offer Negotiation Prep
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | If offer received: negotiate. Anchor €55k. Floor €46k. Request relocation support. | German Anki |
+| **2** | Blue Card paperwork: degree, contract, passport photos. Employer handles most. | German italki/Tandem |
+| **3** | If no offer: expand search. Frankfurt, Munich, Nuremberg. 10 more apps. | German Anki |
+| **4** | Chancenkarte backup research. Points calculation. €1,091/month proof. | German italki/Tandem |
+| **5** | Evaluate all active conversations. Use matrix: salary, location, tech, visa, start date. | German Anki |
+
+**Weekend:** Visa file ready. Offer negotiation script rehearsed. Chancenkarte backup mapped.
+
+### Week 20 — Decision & Commitment
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Final 5 applications to dream companies. No generic letters. | German Anki |
+| **2** | Portfolio final polish. Update repo with all interview feedback fixes. | German italki/Tandem |
+| **3** | Evaluate offers. Signed contract or clear pipeline? | German Anki |
+| **4** | If offer: sign. Send resignation to current employer. | German italki/Tandem |
+| **5** | If no offer: do not panic. Continue to Month 6–18 phase. This is normal with H-+. | German Anki |
+
+**Weekend:** Either celebrating or executing Month 6–18 plan. Both are progress.
+
+---
+
+## Phase 5: Post-Sprint (Month 6–18)
+### Week 21 — Month 6–18 Extended Campaign
+| Day | Morning (45–90 min) | Evening (15–45 min) |
+|---|---|---|
+| **1** | Month 6: 80 applications total. Deepen German to solid B1. | Target: 5–10 interviews |
+| **2** | Months 7–9: Expand to consultancies, system integrators, energy companies. Push ministry recognition if funded. | Target: Serious pipeline |
+| **3** | Months 10–12: Offer negotiation. Visa execution. | Target: Offer secured |
+| **4** | Months 13–18: Relocation prep. Anmeldung. Health insurance. First apartment. Ministry recognition upgrade from Germany. | Target: Germany |
+| **5** | If no offer by Month 9: Activate KSA/GCC hedge. Do not split focus before Month 9. | Backup plan mapped |
+
+---
+
+## Reference: Daily Minimum Viable Schedule
+
+| Day Type | C# Study | German | Total |
+|---|---|---|---|
+| **Minimum (5x/week)** | 45 min | 15 min Anki | **1 hour** |
+| **Target (3x/week)** | 90 min | 45 min (Anki + italki/Tandem) | **2.25 hours** |
+| **Weekend** | 0 | 30 min review | **30 min** |
+
+**Hit minimum 5 days. Hit target 3 days. One good day = two bad days psychologically.**
+
+**Budget constraint:** Reduce italki to 1x/week. Use Tandem app (free) for conversation practice. Use DW Learn German (free) for structured learning.
+
+---
+
+## Reference: Portfolio Quality Checklist
+
+| Metric | Target |
 |---|---|
-| **Daily Operations** | **1.** Execute high-volume technical interviews. 
- **2.** Complete technical take-home assignments or live whiteboarding. 
- **3.** Deliver final round DACH/KSA presentations. 
- **4.** Assess feedback, patch knowledge gaps immediately, and re-apply. |
-| **Negotiation Phase** | Deploy negotiation strategies for the €55k-€65k+ (Blue Card) / SAR 18k+ brackets. Secure relocation/visa logistics. |
-| **Final Output** | **The Contract is Signed. The Extraction Pod Launches.** |
+| Commits | 80–120 meaningful |
+| Tests | 20+, covering real failure modes |
+| ADRs | 3 maximum |
+| C4 diagrams | 2 (System Context + Containers) |
+| Demo video | 5 min, English voiceover, German subtitles |
+| README | Bilingual EN/DE |
+| CI/CD | GitHub Actions green |
+| Docker | One command: `docker compose up` |
+| React UI | Device status + config panel only |
+
+### Test Type Matrix
+
+| Test Type | Minimum | Purpose |
+|---|---|---|
+| Device abstraction/resilience | 8–10 | Prove OOP and fault handling |
+| Offline buffer | 4–5 | Prove edge thinking |
+| API integration | 3–4 | Prove backend contract |
+| Auth/security | 2 | Prove threat awareness |
+| End-to-end happy path | 1 | Prove system works |
+| End-to-end offline/reconnect | 1 | Prove resilience |
+
+---
+
+## Reference: Application Targets
+
+| Milestone | Apps | Cumulative |
+|---|---|---|
+| Week 13 | 5 test apps | 5 |
+| Week 14 | 10 apps | 15 |
+| Week 16 | 10 apps | 25 |
+| Week 17 | 5 apps | 30 |
+| Week 18 | 5 apps | 35 |
+| Week 20 | 5 apps | 40 |
+| Month 6 | 40 apps | 80 |
+| Month 9 | 40 apps | 120 |
+
+---
+
+## Reference: H-+ Employer Pitch (Use in Cover Letters)
+
+> "I hold a Computer Science degree from [University], currently assessed as partially equivalent in the German ANABIN database. I have submitted a Statement of Comparability application to ZAB for formal clarification, expected completion [Month]. My practical experience in C# biometric integration, kiosk systems, and government identity platforms is my primary qualification for this role."
+
+This signals transparency, proactive problem-solving, and niche value.
+
+---
+
+## Reference: Final Honest Probability (H-+ + Limited Funds)
+
+| Outcome | Probability | Condition |
+|---|---|---|
+| Portfolio v1 by Week 13 | 70% | Execute kill-switch |
+| German A2+/early B1 by Week 13 | 50% | Daily practice |
+| 30+ applications by Month 4 | 70% | Week 10 soft outreach |
+| 1–3 interviews by Month 4 | 25–35% | Portfolio quality + H-+ friction |
+| German offer by Month 6 | 5–10% | H-+ makes this hard |
+| German offer by Month 10 | 30–40% | ZAB clears, niche skills compensate |
+| Relocation within 12 months | 20–30% | H-+ adds 2–3 months |
+| Relocation within 18 months | 40–55% | More realistic H-+ timeline |
+
+---
+
+## The Non-Negotiables (Read Every Morning)
+
+1. **One project only.** `BiometricIdentityGateway`. No tutorial scatter.
+2. **German every day.** 15 min minimum. No exceptions.
+3. **Apply before perfect.** Week 13 test apps. Week 14 serious apps.
+4. **Current job is your lab.** Document everything. Architecture, APIs, device quirks.
+5. **AI after attempt, not before.** Write your own code first.
+6. **Restart is always allowed.** Missing a day is not failure. Missing the restart is.
+7. **H-+ is a speed bump, not a wall.** Execute with what you have. Upgrade when funded.
+
+---
+
+## The One Action Today
+
+1. **ZAB application submitted** (find €200).
+2. **Repo created:** `BiometricIdentityGateway`.
+3. **Week 1, Day 1:** C# classes.
+
+**The enemy is no longer a bad plan. The enemy is planning addiction.**
+
+Execute.

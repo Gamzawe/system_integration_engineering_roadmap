@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Systems Integration Engineering Roadmap</title>
+  <title>20-Week Market-Readiness Sprint</title>
   <meta name="description"
-    content="A structured learning roadmap for .NET Systems Integration Engineering — from zero-allocation C# to dual-cloud sovereignty.">
+    content="A 20-week sprint roadmap for C#/.NET Integration Engineer — Biometric, Kiosk, Identity & Edge Systems targeting Germany.">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -15,8 +15,8 @@
 
   <!-- Header -->
   <header class="roadmap-header">
-    <h1>Systems Integration Engineering Roadmap</h1>
-    <p class="header-subtitle">Zero-Allocation C# &middot; Industrial Protocols &middot; Dual-Cloud Sovereignty &middot; 45 Weeks &middot; 228 Exercises</p>
+    <h1>20-Week Market-Readiness Sprint</h1>
+    <p class="header-subtitle">C#/.NET Integration Engineer &middot; Biometric & Kiosk Systems &middot; Germany &middot; 22 Weeks &middot; 110 Exercises</p>
     <div class="progress-bar-container">
       <div class="progress-bar" id="progressBar">
         <span class="progress-text" id="progressText">0%</span>
@@ -26,7 +26,7 @@
 
   <!-- Legend -->
   <div class="legend">
-    <div class="legend-item"><span class="legend-swatch main-swatch"></span> Month</div>
+    <div class="legend-item"><span class="legend-swatch main-swatch"></span> Phase</div>
     <div class="legend-item"><span class="legend-swatch sub-swatch"></span> Week</div>
     <div class="legend-item"><span class="legend-swatch day-swatch"></span> Day</div>
     <div class="legend-item"><span class="legend-swatch milestone-swatch"></span> Milestone</div>
@@ -39,1259 +39,607 @@
   <div class="roadmap-canvas" id="roadmapCanvas">
     <svg class="connectors" id="connectorSvg"></svg>
     <div class="tip-callout" id="rulesCallout" data-parent="" data-side="right">
-      Weekly pattern: Study &middot; Practice &middot; Build &amp; Push &middot; Self-Check.
-      Each week has 5 focused days. Right-click nodes to track progress.
+      Daily: 45&ndash;90 min C# (Morning) + 15&ndash;45 min German (Evening).
+      Right-click nodes to track progress.
     </div>
 
-    <!-- ======= PHASE 1: ZERO-ALLOCATION C#, PYTHON INJECTION & INTEROP ======= -->
-    <div class="year-label year-label-1" id="phase1Label" data-parent="" data-side="center">⚡ PHASE 1<br><small>Zero-Allocation C# & Interop</small></div>
+    <!-- ======= PHASE 0: PRE-FLIGHT ======= -->
+    <div class="year-label year-label-1" id="phase0Label" data-parent="" data-side="center">🚀 PHASE 0<br><small>Pre-Flight</small></div>
 
-    <!-- MONTH 1 -->
-    <div class="node main-node" id="month1" data-parent="phase1Label" data-side="center"
-      data-details="⚡ Zero-Allocation C# & Interop|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 15 hours per week">
-      ⚡ Month 1: Zero-Allocation C# & Interop
-      <span class="months-badge">~40 hrs</span>
+    <!-- PHASE 0 BLOCK -->
+    <div class="node main-node" id="phase0" data-parent="phase0Label" data-side="center"
+      data-details="🚀 Pre-Flight|⏱️ 1 weeks|📅 5 study days">
+      🚀 Pre-Flight
+      <span class="months-badge">1 weeks</span>
     </div>
-    <div class="node sub-node has-days" id="w1" data-parent="month1" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Primitive types, stack/heap allocation, value vs. reference types.|Day 2: struct (Value) vs class (Reference) behavior.|Day 3: DeviceStatus struct mutation.|Day 4: Input reading and format boundaries.|Day 5: Null-handling and exception flow.">
-      📅 Week 1: C# Fundamentals & Memory Stack
+    <div class="node sub-node has-days" id="w0" data-parent="phase0" data-side="left"
+      data-details="⏱️ 5 days|Day 1: ANABIN screenshot saved. Note exact H-+ conditions.|Day 2: ZAB Statement of Comparability application. Submit online. Upload degree, transc|Day 3: Email uncle/friend in Germany: €200 reimbursement offer + housing pre-ask for re|Day 4: GitHub cleanup. Delete tutorial repos. Blank profile ready.|Day 5: Open Wise multi-currency account.">
+      📅 Week 0: Pre-Flight Checklist
+    </div>
+    <div class="node day-node" id="w0_d1" data-parent="w0" data-side="left"
+      data-details="🌅 Morning: ANABIN screenshot saved. Note exact H-+ conditions.|🌙 Evening: Output: File documented. Cost: $0">
+      Day 1 — ANABIN screenshot saved. Note exact H...
+    </div>
+    <div class="node day-node" id="w0_d2" data-parent="w0" data-side="left"
+      data-details="🌅 Morning: ZAB Statement of Comparability application. Submit online. Upload degree, transcripts, passport. Pay ~€200.|🌙 Evening: Output: Application submitted, receipt saved. Cost: ~€200">
+      Day 2 — ZAB Statement of Comparability applic...
+    </div>
+    <div class="node day-node" id="w0_d3" data-parent="w0" data-side="left"
+      data-details="🌅 Morning: Email uncle/friend in Germany: €200 reimbursement offer + housing pre-ask for relocation.|🌙 Evening: Output: Network activated. Cost: $0">
+      Day 3 — Email uncle/friend in Germany: €200 r...
+    </div>
+    <div class="node day-node" id="w0_d4" data-parent="w0" data-side="left"
+      data-details="🌅 Morning: GitHub cleanup. Delete tutorial repos. Blank profile ready.|🌙 Evening: Output: Clean slate. Cost: $0">
+      Day 4 — GitHub cleanup. Delete tutorial repos...
+    </div>
+    <div class="node day-node" id="w0_d5" data-parent="w0" data-side="left"
+      data-details="🌅 Morning: Open Wise multi-currency account.|🌙 Evening: Output: Can receive euros. Cost: $0">
+      Day 5 — Open Wise multi-currency account.
+    </div>
+
+    <!-- ======= PHASE 1: FOUNDATION REPAIR ======= -->
+    <div class="year-label year-label-1" id="phase1Label" data-parent="" data-side="center">⚡ PHASE 1<br><small>Foundation Repair</small></div>
+
+    <!-- PHASE 1 BLOCK -->
+    <div class="node main-node" id="phase1" data-parent="phase1Label" data-side="center"
+      data-details="⚡ Foundation Repair|⏱️ 5 weeks|📅 25 study days">
+      ⚡ Foundation Repair
+      <span class="months-badge">5 weeks</span>
+    </div>
+    <div class="node sub-node has-days" id="w1" data-parent="phase1" data-side="left"
+      data-details="⏱️ 5 days|Day 1: Classes vs structs. Build `BiometricDevice` base class: `DeviceId`, `ConnectionS|Day 2: Inheritance. `FingerprintScanner : BiometricDevice`, `DocumentReader : Biometric|Day 3: Interfaces. Extract `IBiometricDevice`, `IAuthenticationProvider`. Implement bot|Day 4: Polymorphism. `DeviceManager` accepts `List&lt;IBiometricDevice&gt;`, calls `Capture()|Day 5: Encapsulation. All fields private. Validation in setters. No public fields.">
+      📅 Week 1: C# Core & Device Abstraction
     </div>
     <div class="node day-node" id="w1_d1" data-parent="w1" data-side="left"
-      data-details="📖 Study: Primitive types, stack/heap allocation, value vs. reference types.|🔧 Practice: Draw memory maps tracing heap vs stack lifecycles.|🏗️ Build: N/A (Theory baseline).|📦 Output: 1-page &quot;Stack vs Heap&quot; cheat sheet.|✅ Self-Check: Can I explain why structs copy natively?">
-      Day 1 — Primitive types, stack/heap allocatio...
+      data-details="🌅 Morning: Classes vs structs. Build `BiometricDevice` base class: `DeviceId`, `ConnectionStatus`, `LastScanTime`.|🌙 Evening: German Anki: 20 technical cards (*Klasse, Schnittstelle, Vererbung*)">
+      Day 1 — Classes vs structs. Build `BiometricD...
     </div>
     <div class="node day-node" id="w1_d2" data-parent="w1" data-side="left"
-      data-details="📖 Study: struct (Value) vs class (Reference) behavior.|🔧 Practice: Write allocation tests comparing object behavior.|🏗️ Build: Code showing memory allocation differences.|📦 Output: Committed code with README explanation.|✅ Self-Check: Do I understand when the GC triggers?">
-      Day 2 — struct (Value) vs class (Reference) b...
+      data-details="🌅 Morning: Inheritance. `FingerprintScanner : BiometricDevice`, `DocumentReader : BiometricDevice`. Override `Capture()`.|🌙 Evening: German: italki trial lesson (book 1x/week recurring — budget constraint)">
+      Day 2 — Inheritance. `FingerprintScanner : Bi...
     </div>
     <div class="node day-node" id="w1_d3" data-parent="w1" data-side="left"
-      data-details="📖 Study: DeviceStatus struct mutation.|🔧 Practice: Pass structs/classes through methods and track state changes.|🏗️ Build: DeviceStatus simulator testing method parameters.|📦 Output: Test result note showing mutation side effects.|✅ Self-Check: Did the class mutate globally while the struct didn't?">
-      Day 3 — DeviceStatus struct mutation.
+      data-details="🌅 Morning: Interfaces. Extract `IBiometricDevice`, `IAuthenticationProvider`. Implement both.|🌙 Evening: German Anki: 20 cards">
+      Day 3 — Interfaces. Extract `IBiometricDevice...
     </div>
     <div class="node day-node" id="w1_d4" data-parent="w1" data-side="left"
-      data-details="📖 Study: Input reading and format boundaries.|🔧 Practice: Parse mock hardware strings (e.g., TEMP:24).|🏗️ Build: First console app validating mock hardware strings.|📦 Output: Working C# program.|✅ Self-Check: Does it handle malformed data without crashing?">
-      Day 4 — Input reading and format boundaries.
+      data-details="🌅 Morning: Polymorphism. `DeviceManager` accepts `List&lt;IBiometricDevice&gt;`, calls `Capture()` without knowing concrete types.|🌙 Evening: German: Write 5 sentences about your project">
+      Day 4 — Polymorphism. `DeviceManager` accepts...
     </div>
     <div class="node day-node" id="w1_d5" data-parent="w1" data-side="left"
-      data-details="📖 Study: Null-handling and exception flow.|🔧 Practice: Inject nulls and format errors to break the app.|🏗️ Build: Updated app with robust try/catch boundaries.|📦 Output: Documented program flow rules.|✅ Self-Check: Are all exceptions caught safely?">
-      Day 5 — Null-handling and exception flow.
+      data-details="🌅 Morning: Encapsulation. All fields private. Validation in setters. No public fields.|🌙 Evening: German Anki review">
+      Day 5 — Encapsulation. All fields private. Va...
     </div>
-    <div class="node sub-node has-days" id="w2" data-parent="month1" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: List&lt;T&gt;, Dictionary, memory overhead of resizing.|Day 2: LINQ (Where, Select, GroupBy).|Day 3: High-volume parsing and grouping.|Day 4: ArrayPool&lt;T&gt; and buffer recycling.|Day 5: Null collections and duplicates.">
-      📅 Week 2: Collections, LINQ, & Data Shaping
+    <div class="node sub-node has-days" id="w2" data-parent="phase1" data-side="right"
+      data-details="⏱️ 5 days|Day 1: DI concept. `ServiceCollection`. `ServiceProvider` resolves `IDeviceManager` → `|Day 2: Constructor injection. `DeviceManager` receives `ILogger`, `IConfiguration` via |Day 3: xUnit tests. Mock `IBiometricDevice` with Moq or hand-rolled fakes.|Day 4: Test failure paths: device offline, null scan, timeout.|Day 5: Refactor: eliminate `new` in business logic. Everything injected.">
+      📅 Week 2: Dependency Injection & Testing
     </div>
     <div class="node day-node" id="w2_d1" data-parent="w2" data-side="right"
-      data-details="📖 Study: List&lt;T&gt;, Dictionary, memory overhead of resizing.|🔧 Practice: Compare list initialization vs dynamic resizing.|🏗️ Build: N/A.|📦 Output: Code examples of collection management.|✅ Self-Check: Why do dynamically resizing lists hurt performance?">
-      Day 1 — List&lt;T&gt;, Dictionary, memory overhead ...
+      data-details="🌅 Morning: DI concept. `ServiceCollection`. `ServiceProvider` resolves `IDeviceManager` → `DeviceManager`.|🌙 Evening: German italki (or Tandem app free alternative)">
+      Day 1 — DI concept. `ServiceCollection`. `Ser...
     </div>
     <div class="node day-node" id="w2_d2" data-parent="w2" data-side="right"
-      data-details="📖 Study: LINQ (Where, Select, GroupBy).|🔧 Practice: Query mock biometric data using LINQ.|🏗️ Build: LINQ data filtering logic.|📦 Output: Committed LINQ logic.|✅ Self-Check: Is the query executing efficiently?">
-      Day 2 — LINQ (Where, Select, GroupBy).
+      data-details="🌅 Morning: Constructor injection. `DeviceManager` receives `ILogger`, `IConfiguration` via constructor.|🌙 Evening: German Anki">
+      Day 2 — Constructor injection. `DeviceManager...
     </div>
     <div class="node day-node" id="w2_d3" data-parent="w2" data-side="right"
-      data-details="📖 Study: High-volume parsing and grouping.|🔧 Practice: Parse 10,000 records; group by terminal ID.|🏗️ Build: Large-dataset parser.|📦 Output: Benchmark results note.|✅ Self-Check: What is the execution time for 10k records?">
-      Day 3 — High-volume parsing and grouping.
+      data-details="🌅 Morning: xUnit tests. Mock `IBiometricDevice` with Moq or hand-rolled fakes.|🌙 Evening: German Anki">
+      Day 3 — xUnit tests. Mock `IBiometricDevice` ...
     </div>
     <div class="node day-node" id="w2_d4" data-parent="w2" data-side="right"
-      data-details="📖 Study: ArrayPool&lt;T&gt; and buffer recycling.|🔧 Practice: Replace standard arrays with pooled arrays.|🏗️ Build: Buffer pooling implementation.|📦 Output: Working C# buffer logic.|✅ Self-Check: Did I return the buffer to the pool?">
-      Day 4 — ArrayPool&lt;T&gt; and buffer recycling.
+      data-details="🌅 Morning: Test failure paths: device offline, null scan, timeout.|🌙 Evening: German: Write paragraph &quot;Mein Projekt ist ein Biometrie-Gateway&quot;">
+      Day 4 — Test failure paths: device offline, n...
     </div>
     <div class="node day-node" id="w2_d5" data-parent="w2" data-side="right"
-      data-details="📖 Study: Null collections and duplicates.|🔧 Practice: Test edge cases in collection logic.|🏗️ Build: Duplicate-handling logic.|📦 Output: Test scenario notes.|✅ Self-Check: Explain why ArrayPool prevents GC spikes.">
-      Day 5 — Null collections and duplicates.
+      data-details="🌅 Morning: Refactor: eliminate `new` in business logic. Everything injected.|🌙 Evening: German italki/Tandem">
+      Day 5 — Refactor: eliminate `new` in business...
     </div>
-    <div class="node sub-node has-days" id="w3" data-parent="month1" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Span&lt;T&gt; and GC pause mechanics.|Day 2: ReadOnlySpan&lt;byte&gt; casting.|Day 3: Slicing Span&lt;T&gt;.|Day 4: Memory&lt;T&gt; for async operations.|Day 5: Benchmarking allocations.">
-      📅 Week 3: High-Performance Memory (Span&lt;T&gt; & Memory&lt;T&gt;)
+    <div class="node sub-node has-days" id="w3" data-parent="phase1" data-side="left"
+      data-details="⏱️ 5 days|Day 1: `async Task`. Convert `Capture()` to `Task&lt;ScanResult&gt;`.|Day 2: Cancellation tokens. Pass through every async method.|Day 3: Timeouts and retries. `ResilientDeviceClient` with Polly: retry 3x, exponential |Day 4: Parallel operations. `Task.WhenAll` for fingerprint + document scan simultaneous|Day 5: Custom exceptions: `DeviceOfflineException`, `ScanTimeoutException`. No generic ">
+      📅 Week 3: Async, Cancellation & Resilience
     </div>
     <div class="node day-node" id="w3_d1" data-parent="w3" data-side="left"
-      data-details="📖 Study: Span&lt;T&gt; and GC pause mechanics.|🔧 Practice: Trace garbage collection triggers in edge devices.|🏗️ Build: N/A.|📦 Output: Study note on zero-allocation principles.|✅ Self-Check: Why do industrial gateways crash from GC?">
-      Day 1 — Span&lt;T&gt; and GC pause mechanics.
+      data-details="🌅 Morning: `async Task`. Convert `Capture()` to `Task&lt;ScanResult&gt;`.|🌙 Evening: German Anki">
+      Day 1 — `async Task`. Convert `Capture()` to ...
     </div>
     <div class="node day-node" id="w3_d2" data-parent="w3" data-side="left"
-      data-details="📖 Study: ReadOnlySpan&lt;byte&gt; casting.|🔧 Practice: Cast unmanaged byte arrays without copying.|🏗️ Build: Zero-allocation byte caster.|📦 Output: Committed C# memory parsing code.|✅ Self-Check: Is the memory truly uncopied?">
-      Day 2 — ReadOnlySpan&lt;byte&gt; casting.
+      data-details="🌅 Morning: Cancellation tokens. Pass through every async method.|🌙 Evening: German italki/Tandem">
+      Day 2 — Cancellation tokens. Pass through eve...
     </div>
     <div class="node day-node" id="w3_d3" data-parent="w3" data-side="left"
-      data-details="📖 Study: Slicing Span&lt;T&gt;.|🔧 Practice: Extract device IDs from raw binary headers via slicing.|🏗️ Build: Zero-allocation payload parser.|📦 Output: Working zero-allocation parser.|✅ Self-Check: Prove the parser triggers zero heap allocations.">
-      Day 3 — Slicing Span&lt;T&gt;.
+      data-details="🌅 Morning: Timeouts and retries. `ResilientDeviceClient` with Polly: retry 3x, exponential backoff.|🌙 Evening: German Anki">
+      Day 3 — Timeouts and retries. `ResilientDevic...
     </div>
     <div class="node day-node" id="w3_d4" data-parent="w3" data-side="left"
-      data-details="📖 Study: Memory&lt;T&gt; for async operations.|🔧 Practice: Use Memory&lt;T&gt; where Span cannot cross await.|🏗️ Build: Async memory parser.|📦 Output: Async memory parsing code.|✅ Self-Check: Why can Span not cross await boundaries?">
-      Day 4 — Memory&lt;T&gt; for async operations.
+      data-details="🌅 Morning: Parallel operations. `Task.WhenAll` for fingerprint + document scan simultaneously.|🌙 Evening: German: 10 sentences about async">
+      Day 4 — Parallel operations. `Task.WhenAll` f...
     </div>
     <div class="node day-node" id="w3_d5" data-parent="w3" data-side="left"
-      data-details="📖 Study: Benchmarking allocations.|🔧 Practice: Run BenchmarkDotNet on byte[] vs Span&lt;T&gt;.|🏗️ Build: Benchmark test suite.|📦 Output: Benchmark report.|✅ Self-Check: Does the data confirm zero allocations?">
-      Day 5 — Benchmarking allocations.
+      data-details="🌅 Morning: Custom exceptions: `DeviceOfflineException`, `ScanTimeoutException`. No generic `Exception`.|🌙 Evening: German italki/Tandem">
+      Day 5 — Custom exceptions: `DeviceOfflineExce...
     </div>
-    <div class="node sub-node has-days" id="w4" data-parent="month1" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Interfaces as hardware boundaries.|Day 2: IScanner & IDeviceConnection.|Day 3: Mock implementations.|Day 4: Dependency Injection (DI).|Day 5: Swapping implementations.">
-      📅 Week 4: Object-Oriented Boundaries & Interfaces
+    <div class="node sub-node has-days" id="w4" data-parent="phase1" data-side="right"
+      data-details="⏱️ 5 days|Day 1: Native interop. `DllImport` for mock SDK. `HIDU30ASDKAdapter` simulates C DLL ca|Day 2: Serial/TCP abstraction. `ISerialConnection`, `ITcpConnection`. `TcpDeviceClient`|Day 3: Binary framing. Header (4 bytes length) + payload (JSON). Parse with `Span&lt;byte&gt;|Day 4: gRPC client. Send scan results to local server (build server in Week 5).|Day 5: Code review. Find 3 SOLID violations. Fix them. Explain aloud.">
+      📅 Week 4: Interop & Local Communication
     </div>
     <div class="node day-node" id="w4_d1" data-parent="w4" data-side="right"
-      data-details="📖 Study: Interfaces as hardware boundaries.|🔧 Practice: Define strict boundaries between logic and hardware.|🏗️ Build: N/A.|📦 Output: Notes on Interface-Driven Design.|✅ Self-Check: Why do we hide hardware SDKs?">
-      Day 1 — Interfaces as hardware boundaries.
+      data-details="🌅 Morning: Native interop. `DllImport` for mock SDK. `HIDU30ASDKAdapter` simulates C DLL call.|🌙 Evening: German Anki">
+      Day 1 — Native interop. `DllImport` for mock ...
     </div>
     <div class="node day-node" id="w4_d2" data-parent="w4" data-side="right"
-      data-details="📖 Study: IScanner & IDeviceConnection.|🔧 Practice: Draft strict C# interface contracts.|🏗️ Build: Interface definitions.|📦 Output: C# interface contracts.|✅ Self-Check: Are the contracts free of vendor-specific logic?">
-      Day 2 — IScanner & IDeviceConnection.
+      data-details="🌅 Morning: Serial/TCP abstraction. `ISerialConnection`, `ITcpConnection`. `TcpDeviceClient`.|🌙 Evening: German italki/Tandem">
+      Day 2 — Serial/TCP abstraction. `ISerialConne...
     </div>
     <div class="node day-node" id="w4_d3" data-parent="w4" data-side="right"
-      data-details="📖 Study: Mock implementations.|🔧 Practice: Build a MockBiometricScanner implementing IScanner.|🏗️ Build: Mock hardware class.|📦 Output: Working mock scanner.|✅ Self-Check: Does the mock behave like real hardware?">
-      Day 3 — Mock implementations.
+      data-details="🌅 Morning: Binary framing. Header (4 bytes length) + payload (JSON). Parse with `Span&lt;byte&gt;`.|🌙 Evening: German Anki">
+      Day 3 — Binary framing. Header (4 bytes lengt...
     </div>
     <div class="node day-node" id="w4_d4" data-parent="w4" data-side="right"
-      data-details="📖 Study: Dependency Injection (DI).|🔧 Practice: Inject the mock scanner into a gateway service.|🏗️ Build: DI Container registration.|📦 Output: DI setup code.|✅ Self-Check: Is manual object creation removed?">
-      Day 4 — Dependency Injection (DI).
+      data-details="🌅 Morning: gRPC client. Send scan results to local server (build server in Week 5).|🌙 Evening: German: Project description for CV">
+      Day 4 — gRPC client. Send scan results to loc...
     </div>
     <div class="node day-node" id="w4_d5" data-parent="w4" data-side="right"
-      data-details="📖 Study: Swapping implementations.|🔧 Practice: Swap the mock scanner for a dummy class.|🏗️ Build: Updated DI configuration.|📦 Output: Swapped implementation test.|✅ Self-Check: Explain &quot;programming against your boundary.&quot;">
-      Day 5 — Swapping implementations.
+      data-details="🌅 Morning: Code review. Find 3 SOLID violations. Fix them. Explain aloud.|🌙 Evening: German italki/Tandem">
+      Day 5 — Code review. Find 3 SOLID violations....
     </div>
-
-    <!-- MONTH 2 -->
-    <div class="node main-node" id="month2" data-parent="month1" data-side="center"
-      data-details="⚡ Zero-Allocation C# & Interop|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 15 hours per week">
-      ⚡ Month 2: Zero-Allocation C# & Interop
-      <span class="months-badge">~40 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w5" data-parent="month2" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: [LibraryImport] and AOT marshaling.|Day 2: Unmanaged C++ libraries.|Day 3: C# Wrappers.|Day 4: Complex struct marshaling.|Day 5: Pointer cleanup & exceptions.">
-      📅 Week 5: Modern Native Interop ([LibraryImport])
+    <div class="node sub-node has-days" id="w5" data-parent="phase1" data-side="left"
+      data-details="⏱️ 5 days|Day 1: gRPC server. `IdentityGatewayService` with `StreamScanResults`.|Day 2: ASP.NET Core minimal API. `/api/devices` returns connected devices.|Day 3: React mini-UI. Device status page: online/offline, last scan, error count. Not a|Day 4: Connect React to your API. `fetch()` or Axios. Display real data from your C# ba|Day 5: Polish. Error handling, loading states, basic styling.">
+      📅 Week 5: gRPC Server & Minimal React Dashboard
     </div>
     <div class="node day-node" id="w5_d1" data-parent="w5" data-side="left"
-      data-details="📖 Study: [LibraryImport] and AOT marshaling.|🔧 Practice: Discard [DllImport]; learn compile-time generators.|🏗️ Build: N/A.|📦 Output: Notes on source generators.|✅ Self-Check: Why is AOT marshaling required for modern Edge?">
-      Day 1 — [LibraryImport] and AOT marshaling.
+      data-details="🌅 Morning: gRPC server. `IdentityGatewayService` with `StreamScanResults`.|🌙 Evening: German Anki">
+      Day 1 — gRPC server. `IdentityGatewayService`...
     </div>
     <div class="node day-node" id="w5_d2" data-parent="w5" data-side="left"
-      data-details="📖 Study: Unmanaged C++ libraries.|🔧 Practice: Create a dummy .dll/.so biometric SDK.|🏗️ Build: Compiled C++ binary.|📦 Output: C++ SDK dummy file.|✅ Self-Check: Does the unmanaged file compile?">
-      Day 2 — Unmanaged C++ libraries.
+      data-details="🌅 Morning: ASP.NET Core minimal API. `/api/devices` returns connected devices.|🌙 Evening: German italki/Tandem">
+      Day 2 — ASP.NET Core minimal API. `/api/devic...
     </div>
     <div class="node day-node" id="w5_d3" data-parent="w5" data-side="left"
-      data-details="📖 Study: C# Wrappers.|🔧 Practice: Write a LibraryImport wrapper for the C++ function.|🏗️ Build: C# interop wrapper.|📦 Output: Working interop code.|✅ Self-Check: Does C# call the C++ function safely?">
-      Day 3 — C# Wrappers.
+      data-details="🌅 Morning: React mini-UI. Device status page: online/offline, last scan, error count. Not a Netflix clone. Just your gateway's face.|🌙 Evening: German Anki">
+      Day 3 — React mini-UI. Device status page: on...
     </div>
     <div class="node day-node" id="w5_d4" data-parent="w5" data-side="left"
-      data-details="📖 Study: Complex struct marshaling.|🔧 Practice: Marshal fingerprint metadata from C to C#.|🏗️ Build: Marshaling logic mapped to C fields.|📦 Output: Marshaling layer.|✅ Self-Check: Is memory alignment correct?">
-      Day 4 — Complex struct marshaling.
+      data-details="🌅 Morning: Connect React to your API. `fetch()` or Axios. Display real data from your C# backend.|🌙 Evening: German: Write API docs in German">
+      Day 4 — Connect React to your API. `fetch()` ...
     </div>
     <div class="node day-node" id="w5_d5" data-parent="w5" data-side="left"
-      data-details="📖 Study: Pointer cleanup & exceptions.|🔧 Practice: Handle execution exceptions across boundaries.|🏗️ Build: Safe unmanaged cleanup logic.|📦 Output: Pointer cleanup strategy.|✅ Self-Check: Verify unmanaged memory is freed safely.">
-      Day 5 — Pointer cleanup & exceptions.
-    </div>
-    <div class="node sub-node has-days" id="w6" data-parent="month2" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Python syntax and scripting.|Day 2: Data generation scripting.|Day 3: AI-assisted glue code.|Day 4: C# to Python execution.|Day 5: Argument passing.">
-      📅 Week 6: The Python Injection & AI Workflow
-    </div>
-    <div class="node day-node" id="w6_d1" data-parent="w6" data-side="right"
-      data-details="📖 Study: Python syntax and scripting.|🔧 Practice: Learn variables, dicts, and basic data manipulation.|🏗️ Build: N/A.|📦 Output: Python script fundamentals.|✅ Self-Check: Can I write a basic Python function?">
-      Day 1 — Python syntax and scripting.
-    </div>
-    <div class="node day-node" id="w6_d2" data-parent="w6" data-side="right"
-      data-details="📖 Study: Data generation scripting.|🔧 Practice: Write a script to generate 50k JSON telemetry lines.|🏗️ Build: Python data generator.|📦 Output: Working Python script.|✅ Self-Check: Is the JSON schema correct?">
-      Day 2 — Data generation scripting.
-    </div>
-    <div class="node day-node" id="w6_d3" data-parent="w6" data-side="right"
-      data-details="📖 Study: AI-assisted glue code.|🔧 Practice: Use an LLM to generate an ML preprocessing script.|🏗️ Build: AI-generated Python glue code.|📦 Output: Preprocessing script.|✅ Self-Check: Did I review the AI code for edge-cases?">
-      Day 3 — AI-assisted glue code.
-    </div>
-    <div class="node day-node" id="w6_d4" data-parent="w6" data-side="right"
-      data-details="📖 Study: C# to Python execution.|🔧 Practice: Execute the Python script from C# via Process.Start.|🏗️ Build: C# process orchestration logic.|📦 Output: C# Python runner.|✅ Self-Check: Does C# capture the Python output?">
-      Day 4 — C# to Python execution.
-    </div>
-    <div class="node day-node" id="w6_d5" data-parent="w6" data-side="right"
-      data-details="📖 Study: Argument passing.|🔧 Practice: Pass variables between C# and Python.|🏗️ Build: Bidirectional argument passing.|📦 Output: Integration test note.|✅ Self-Check: Document Python's role strictly as &quot;Glue Code.&quot;">
-      Day 5 — Argument passing.
-    </div>
-    <div class="node sub-node has-days" id="w7" data-parent="month2" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Task, async, await, exceptions.|Day 2: Non-blocking methods.|Day 3: Simulating slow hardware.|Day 4: End-to-end refactor.|Day 5: Partial failures.">
-      📅 Week 7: async/await and Task
-    </div>
-    <div class="node day-node" id="w7_d1" data-parent="w7" data-side="left"
-      data-details="📖 Study: Task, async, await, exceptions.|🔧 Practice: Map main thread vs worker thread behavior.|🏗️ Build: N/A.|📦 Output: Notes on thread flow.|✅ Self-Check: What blocks the main thread?">
-      Day 1 — Task, async, await, exceptions.
-    </div>
-    <div class="node day-node" id="w7_d2" data-parent="w7" data-side="left"
-      data-details="📖 Study: Non-blocking methods.|🔧 Practice: Write async methods for connect, capture, and upload.|🏗️ Build: Asynchronous C# methods.|📦 Output: Async C# code.|✅ Self-Check: Are the methods truly non-blocking?">
-      Day 2 — Non-blocking methods.
-    </div>
-    <div class="node day-node" id="w7_d3" data-parent="w7" data-side="left"
-      data-details="📖 Study: Simulating slow hardware.|🔧 Practice: Use Task.Delay to mimic network/device lag.|🏗️ Build: Slow hardware simulator.|📦 Output: Test logs showing unblocked threads.|✅ Self-Check: Is the application still responsive?">
-      Day 3 — Simulating slow hardware.
-    </div>
-    <div class="node day-node" id="w7_d4" data-parent="w7" data-side="left"
-      data-details="📖 Study: End-to-end refactor.|🔧 Practice: Refactor the scanner workflow to use async everywhere.|🏗️ Build: Refactored async gateway.|📦 Output: Committed refactored logic.|✅ Self-Check: Are there any hidden Task.Wait calls?">
-      Day 4 — End-to-end refactor.
-    </div>
-    <div class="node day-node" id="w7_d5" data-parent="w7" data-side="left"
-      data-details="📖 Study: Partial failures.|🔧 Practice: Test timeouts and dropped tasks.|🏗️ Build: Exception handling for async.|📦 Output: Failure test documentation.|✅ Self-Check: Prove the gateway survives stalled hardware.">
-      Day 5 — Partial failures.
-    </div>
-    <div class="node sub-node has-days" id="w8" data-parent="month2" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: CancellationToken patterns.|Day 2: Cancellable methods.|Day 3: Simulating aborts.|Day 4: Flow integration.|Day 5: Leaked tasks.">
-      📅 Week 8: Cancellation and Timeouts
-    </div>
-    <div class="node day-node" id="w8_d1" data-parent="w8" data-side="right"
-      data-details="📖 Study: CancellationToken patterns.|🔧 Practice: Study graceful aborts and timeout boundaries.|🏗️ Build: N/A.|📦 Output: Notes on timeout boundaries.|✅ Self-Check: How does a token cancel a running task?">
-      Day 1 — CancellationToken patterns.
-    </div>
-    <div class="node day-node" id="w8_d2" data-parent="w8" data-side="right"
-      data-details="📖 Study: Cancellable methods.|🔧 Practice: Add tokens to capture and upload methods.|🏗️ Build: Token-enabled methods.|📦 Output: Methods accepting CancellationToken.|✅ Self-Check: Do the methods listen for the token?">
-      Day 2 — Cancellable methods.
-    </div>
-    <div class="node day-node" id="w8_d3" data-parent="w8" data-side="right"
-      data-details="📖 Study: Simulating aborts.|🔧 Practice: Trigger network timeouts and user cancellations.|🏗️ Build: Cancellation tests.|📦 Output: Logs showing graceful aborts.|✅ Self-Check: Did the system recover cleanly?">
-      Day 3 — Simulating aborts.
-    </div>
-    <div class="node day-node" id="w8_d4" data-parent="w8" data-side="right"
-      data-details="📖 Study: Flow integration.|🔧 Practice: Integrate cancellation into global app cleanup logic.|🏗️ Build: Gateway cancellation architecture.|📦 Output: Committed architecture code.|✅ Self-Check: Are resources freed on cancel?">
-      Day 4 — Flow integration.
-    </div>
-    <div class="node day-node" id="w8_d5" data-parent="w8" data-side="right"
-      data-details="📖 Study: Leaked tasks.|🔧 Practice: Test for background tasks that refuse to die.|🏗️ Build: Leak detection scripts.|📦 Output: Task cleanup report.|✅ Self-Check: Explain exactly where cancellation stops.">
-      Day 5 — Leaked tasks.
+      data-details="🌅 Morning: Polish. Error handling, loading states, basic styling.|🌙 Evening: German italki/Tandem">
+      Day 5 — Polish. Error handling, loading state...
     </div>
 
-    <!-- MONTH 3 -->
-    <div class="node main-node" id="month3" data-parent="month2" data-side="center"
-      data-details="⚡ Zero-Allocation C# & Interop|⏱️ ~40 hrs (4 weeks × 10 hrs)|📅 15 hours per week">
-      ⚡ Month 3: Zero-Allocation C# & Interop
-      <span class="months-badge">~40 hrs</span>
+    <!-- ======= PHASE 2: CLOUD & DISTRIBUTION ======= -->
+    <div class="year-label year-label-1" id="phase2Label" data-parent="" data-side="center">☁️ PHASE 2<br><small>Cloud & Distribution</small></div>
+
+    <!-- PHASE 2 BLOCK -->
+    <div class="node main-node" id="phase2" data-parent="phase2Label" data-side="center"
+      data-details="☁️ Cloud & Distribution|⏱️ 5 weeks|📅 25 study days">
+      ☁️ Cloud & Distribution
+      <span class="months-badge">5 weeks</span>
     </div>
-    <div class="node sub-node has-days" id="w9" data-parent="month3" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: System.Threading.Channels.|Day 2: Producer/Consumer setup.|Day 3: High-velocity simulation.|Day 4: Backpressure handling.|Day 5: Shutdown draining.">
-      📅 Week 9: High-Throughput Queues (System.Threading.Channels)
+    <div class="node sub-node has-days" id="w6" data-parent="phase2" data-side="left"
+      data-details="⏱️ 5 days|Day 1: Dockerfile for .NET 8. Multi-stage build.|Day 2: Docker Compose: API + SQLite + Worker Service. One `docker compose up`.|Day 3: GitHub Actions CI. Build → Test → Docker Push on every commit.|Day 4: GitHub Actions CD. Push to GitHub Container Registry.|Day 5: Health checks. `/health` endpoint. DB connectivity check.">
+      📅 Week 6: Docker & CI/CD
     </div>
-    <div class="node day-node" id="w9_d1" data-parent="w9" data-side="left"
-      data-details="📖 Study: System.Threading.Channels.|🔧 Practice: Learn async producer/consumer queues and capacity.|🏗️ Build: N/A.|📦 Output: Notes on lock contention vs channels.|✅ Self-Check: Why use Channels over lock()?">
-      Day 1 — System.Threading.Channels.
+    <div class="node day-node" id="w6_d1" data-parent="w6" data-side="left"
+      data-details="🌅 Morning: Dockerfile for .NET 8. Multi-stage build.|🌙 Evening: German Anki">
+      Day 1 — Dockerfile for .NET 8. Multi-stage bu...
     </div>
-    <div class="node day-node" id="w9_d2" data-parent="w9" data-side="left"
-      data-details="📖 Study: Producer/Consumer setup.|🔧 Practice: Thread A produces data, Thread B consumes it.|🏗️ Build: Producer/Consumer queue.|📦 Output: Working Channel implementation.|✅ Self-Check: Are threads safely decoupled?">
-      Day 2 — Producer/Consumer setup.
+    <div class="node day-node" id="w6_d2" data-parent="w6" data-side="left"
+      data-details="🌅 Morning: Docker Compose: API + SQLite + Worker Service. One `docker compose up`.|🌙 Evening: German italki/Tandem">
+      Day 2 — Docker Compose: API + SQLite + Worker...
     </div>
-    <div class="node day-node" id="w9_d3" data-parent="w9" data-side="left"
-      data-details="📖 Study: High-velocity simulation.|🔧 Practice: Simulate rapid biometric scans filling the queue.|🏗️ Build: Load testing script.|📦 Output: Load test logs.|✅ Self-Check: Does the queue handle the volume?">
-      Day 3 — High-velocity simulation.
+    <div class="node day-node" id="w6_d3" data-parent="w6" data-side="left"
+      data-details="🌅 Morning: GitHub Actions CI. Build → Test → Docker Push on every commit.|🌙 Evening: German Anki">
+      Day 3 — GitHub Actions CI. Build → Test → Doc...
     </div>
-    <div class="node day-node" id="w9_d4" data-parent="w9" data-side="left"
-      data-details="📖 Study: Backpressure handling.|🔧 Practice: Implement bounded channels to drop or block data.|🏗️ Build: Bounded channel logic.|📦 Output: Backpressure management code.|✅ Self-Check: What happens when the consumer is too slow?">
-      Day 4 — Backpressure handling.
+    <div class="node day-node" id="w6_d4" data-parent="w6" data-side="left"
+      data-details="🌅 Morning: GitHub Actions CD. Push to GitHub Container Registry.|🌙 Evening: German: Write German README section">
+      Day 4 — GitHub Actions CD. Push to GitHub Con...
     </div>
-    <div class="node day-node" id="w9_d5" data-parent="w9" data-side="left"
-      data-details="📖 Study: Shutdown draining.|🔧 Practice: Test queue draining during application shutdown.|🏗️ Build: Graceful shutdown logic.|📦 Output: Shutdown behavior report.|✅ Self-Check: Are remaining messages processed before exit?">
-      Day 5 — Shutdown draining.
+    <div class="node day-node" id="w6_d5" data-parent="w6" data-side="left"
+      data-details="🌅 Morning: Health checks. `/health` endpoint. DB connectivity check.|🌙 Evening: German italki/Tandem">
+      Day 5 — Health checks. `/health` endpoint. DB...
     </div>
-    <div class="node sub-node has-days" id="w10" data-parent="month3" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: System.IO.Ports.SerialPort.|Day 2: Virtual COM port connection.|Day 3: String interception.|Day 4: DTO Serialization.|Day 5: Noisy lines.">
-      📅 Week 10: Serial, UART, and The Hardware Handshake
+    <div class="node sub-node has-days" id="w7" data-parent="phase2" data-side="right"
+      data-details="⏱️ 5 days|Day 1: Azure IoT Hub free tier. Create hub. Device connection string.|Day 2: Azure IoT SDK in C#. Connect worker service. Send telemetry: `deviceId`, `scanTy|Day 3: Skip DPS for MVP. Direct connection only. Document: &quot;DPS would be used in produc|Day 4: Azure Service Bus or Event Hubs. Route scan events to queue.|Day 5: Offline buffering. SQLite local store. Buffer 1000 events. Sync when online.">
+      📅 Week 7: Azure IoT Hub & Messaging
     </div>
-    <div class="node day-node" id="w10_d1" data-parent="w10" data-side="right"
-      data-details="📖 Study: System.IO.Ports.SerialPort.|🔧 Practice: Learn baud rates, parity, stop bits.|🏗️ Build: N/A.|📦 Output: Notes on UART communication.|✅ Self-Check: What causes serial data corruption?">
-      Day 1 — System.IO.Ports.SerialPort.
+    <div class="node day-node" id="w7_d1" data-parent="w7" data-side="right"
+      data-details="🌅 Morning: Azure IoT Hub free tier. Create hub. Device connection string.|🌙 Evening: German Anki">
+      Day 1 — Azure IoT Hub free tier. Create hub. ...
     </div>
-    <div class="node day-node" id="w10_d2" data-parent="w10" data-side="right"
-      data-details="📖 Study: Virtual COM port connection.|🔧 Practice: Connect C# to a Wokwi simulator or local loopback.|🏗️ Build: Serial port reader.|📦 Output: C# code reading a serial port.|✅ Self-Check: Is the port opening correctly?">
-      Day 2 — Virtual COM port connection.
+    <div class="node day-node" id="w7_d2" data-parent="w7" data-side="right"
+      data-details="🌅 Morning: Azure IoT SDK in C#. Connect worker service. Send telemetry: `deviceId`, `scanType`, `timestamp`, `success`.|🌙 Evening: German italki/Tandem">
+      Day 2 — Azure IoT SDK in C#. Connect worker s...
     </div>
-    <div class="node day-node" id="w10_d3" data-parent="w10" data-side="right"
-      data-details="📖 Study: String interception.|🔧 Practice: Intercept raw strings like TEMP:24.5,HUM:60.|🏗️ Build: Interception logic.|📦 Output: Serial string interception code.|✅ Self-Check: Can I capture the raw buffer?">
-      Day 3 — String interception.
+    <div class="node day-node" id="w7_d3" data-parent="w7" data-side="right"
+      data-details="🌅 Morning: Skip DPS for MVP. Direct connection only. Document: &quot;DPS would be used in production for fleet provisioning.&quot;|🌙 Evening: German Anki">
+      Day 3 — Skip DPS for MVP. Direct connection o...
     </div>
-    <div class="node day-node" id="w10_d4" data-parent="w10" data-side="right"
-      data-details="📖 Study: DTO Serialization.|🔧 Practice: Parse the messy string into a canonical JSON DTO.|🏗️ Build: DTO mapping logic.|📦 Output: Clean DTO conversion code.|✅ Self-Check: Is the messy string successfully structured?">
-      Day 4 — DTO Serialization.
+    <div class="node day-node" id="w7_d4" data-parent="w7" data-side="right"
+      data-details="🌅 Morning: Azure Service Bus or Event Hubs. Route scan events to queue.|🌙 Evening: German: &quot;Das Gateway sendet Daten an Azure&quot;">
+      Day 4 — Azure Service Bus or Event Hubs. Rout...
     </div>
-    <div class="node day-node" id="w10_d5" data-parent="w10" data-side="right"
-      data-details="📖 Study: Noisy lines.|🔧 Practice: Handle truncated or corrupted serial lines.|🏗️ Build: Error-tolerant parser.|📦 Output: Noise-handling logic.|✅ Self-Check: Prove extraction works despite hardware noise.">
-      Day 5 — Noisy lines.
+    <div class="node day-node" id="w7_d5" data-parent="w7" data-side="right"
+      data-details="🌅 Morning: Offline buffering. SQLite local store. Buffer 1000 events. Sync when online.|🌙 Evening: German italki/Tandem">
+      Day 5 — Offline buffering. SQLite local store...
     </div>
-    <div class="node sub-node has-days" id="w11" data-parent="month3" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: System.IO.Pipelines.|Day 2: TCP Server with Pipelines.|Day 3: Payload simulation.|Day 4: Parser integration.|Day 5: Fragmented packets.">
-      📅 Week 11: TCP Sockets & System.IO.Pipelines
+    <div class="node sub-node has-days" id="w8" data-parent="phase2" data-side="left"
+      data-details="⏱️ 5 days|Day 1: EF Core + SQLite. `Device` → `ScanSession` → `IdentityVerification`.|Day 2: Mock government identity API. Fake REST API: `verified: true/false` for passport|Day 3: Full flow: Document scan → local verification → gov API check → store → event to|Day 4: Idempotency. Same scan ID = no duplicate. Implement idempotency keys.|Day 5: SOAP legacy. `ILegacyERPAdapter` → `SapErpAdapter`. Anti-Corruption Layer. Mock ">
+      📅 Week 8: Data, Identity & SOAP Legacy
+    </div>
+    <div class="node day-node" id="w8_d1" data-parent="w8" data-side="left"
+      data-details="🌅 Morning: EF Core + SQLite. `Device` → `ScanSession` → `IdentityVerification`.|🌙 Evening: German Anki">
+      Day 1 — EF Core + SQLite. `Device` → `ScanSes...
+    </div>
+    <div class="node day-node" id="w8_d2" data-parent="w8" data-side="left"
+      data-details="🌅 Morning: Mock government identity API. Fake REST API: `verified: true/false` for passport scan.|🌙 Evening: German italki/Tandem">
+      Day 2 — Mock government identity API. Fake RE...
+    </div>
+    <div class="node day-node" id="w8_d3" data-parent="w8" data-side="left"
+      data-details="🌅 Morning: Full flow: Document scan → local verification → gov API check → store → event to Azure.|🌙 Evening: German Anki">
+      Day 3 — Full flow: Document scan → local veri...
+    </div>
+    <div class="node day-node" id="w8_d4" data-parent="w8" data-side="left"
+      data-details="🌅 Morning: Idempotency. Same scan ID = no duplicate. Implement idempotency keys.|🌙 Evening: German: Email template &quot;Bewerbung als C# Integration Engineer&quot;">
+      Day 4 — Idempotency. Same scan ID = no duplic...
+    </div>
+    <div class="node day-node" id="w8_d5" data-parent="w8" data-side="left"
+      data-details="🌅 Morning: SOAP legacy. `ILegacyERPAdapter` → `SapErpAdapter`. Anti-Corruption Layer. Mock SOAP call.|🌙 Evening: German italki/Tandem">
+      Day 5 — SOAP legacy. `ILegacyERPAdapter` → `S...
+    </div>
+    <div class="node sub-node has-days" id="w9" data-parent="phase2" data-side="right"
+      data-details="⏱️ 5 days|Day 1: MQTT fundamentals. Deploy Mosquitto broker (free). Pub/sub test.|Day 2: OPC UA basics. Nodes, namespaces, subscriptions. Read, do not write.|Day 3: Modbus frame structure. Holding registers, input registers, CRC. Parse, do not p|Day 4: Build interfaces: `IOpcUaTelemetrySource`, `IModbusRegisterReader`. Mock impleme|Day 5: Small demo: Python Modbus slave → C# reader → MQTT → Azure.">
+      📅 Week 9: Industrial Flavor Mini-Module
+    </div>
+    <div class="node day-node" id="w9_d1" data-parent="w9" data-side="right"
+      data-details="🌅 Morning: MQTT fundamentals. Deploy Mosquitto broker (free). Pub/sub test.|🌙 Evening: German Anki">
+      Day 1 — MQTT fundamentals. Deploy Mosquitto b...
+    </div>
+    <div class="node day-node" id="w9_d2" data-parent="w9" data-side="right"
+      data-details="🌅 Morning: OPC UA basics. Nodes, namespaces, subscriptions. Read, do not write.|🌙 Evening: German italki/Tandem">
+      Day 2 — OPC UA basics. Nodes, namespaces, sub...
+    </div>
+    <div class="node day-node" id="w9_d3" data-parent="w9" data-side="right"
+      data-details="🌅 Morning: Modbus frame structure. Holding registers, input registers, CRC. Parse, do not program.|🌙 Evening: German Anki">
+      Day 3 — Modbus frame structure. Holding regis...
+    </div>
+    <div class="node day-node" id="w9_d4" data-parent="w9" data-side="right"
+      data-details="🌅 Morning: Build interfaces: `IOpcUaTelemetrySource`, `IModbusRegisterReader`. Mock implementations.|🌙 Evening: German: 5 sentences about OT/IT integration">
+      Day 4 — Build interfaces: `IOpcUaTelemetrySou...
+    </div>
+    <div class="node day-node" id="w9_d5" data-parent="w9" data-side="right"
+      data-details="🌅 Morning: Small demo: Python Modbus slave → C# reader → MQTT → Azure.|🌙 Evening: German italki/Tandem">
+      Day 5 — Small demo: Python Modbus slave → C# ...
+    </div>
+    <div class="node sub-node has-days" id="w10" data-parent="phase2" data-side="left"
+      data-details="⏱️ 5 days|Day 1: TLS basics. HTTPS in Kestrel.|Day 2: JWT authentication. Protect API endpoints. Roles: `operator`, `admin`.|Day 3: Fleet simulation. `IDeviceFleetManager` tracks 10 devices across locations.|Day 4: Remote config. Cloud-to-device desired properties: change poll rate, threshold.|Day 5: Secrets management. No hardcoded strings. Environment variables or Docker secret">
+      📅 Week 10: Security & Fleet Simulation
+    </div>
+    <div class="node day-node" id="w10_d1" data-parent="w10" data-side="left"
+      data-details="🌅 Morning: TLS basics. HTTPS in Kestrel.|🌙 Evening: German Anki">
+      Day 1 — TLS basics. HTTPS in Kestrel.
+    </div>
+    <div class="node day-node" id="w10_d2" data-parent="w10" data-side="left"
+      data-details="🌅 Morning: JWT authentication. Protect API endpoints. Roles: `operator`, `admin`.|🌙 Evening: German italki/Tandem">
+      Day 2 — JWT authentication. Protect API endpo...
+    </div>
+    <div class="node day-node" id="w10_d3" data-parent="w10" data-side="left"
+      data-details="🌅 Morning: Fleet simulation. `IDeviceFleetManager` tracks 10 devices across locations.|🌙 Evening: German Anki">
+      Day 3 — Fleet simulation. `IDeviceFleetManage...
+    </div>
+    <div class="node day-node" id="w10_d4" data-parent="w10" data-side="left"
+      data-details="🌅 Morning: Remote config. Cloud-to-device desired properties: change poll rate, threshold.|🌙 Evening: German: LinkedIn &quot;About&quot; draft">
+      Day 4 — Remote config. Cloud-to-device desire...
+    </div>
+    <div class="node day-node" id="w10_d5" data-parent="w10" data-side="left"
+      data-details="🌅 Morning: Secrets management. No hardcoded strings. Environment variables or Docker secrets. Document production Key Vault use.|🌙 Evening: German italki/Tandem">
+      Day 5 — Secrets management. No hardcoded stri...
+    </div>
+    <div class="node milestone-node" id="milestone_cloud" data-parent="phase2" data-side="center"
+      data-details="🎉 Cloud pipeline working. Docker, CI/CD, Azure telemetry, industrial protocols integrated.">
+      🎉 Cloud & Industrial Foundation Complete
+    </div>
+
+    <!-- ======= PHASE 3: DOCUMENTATION & PROOF ======= -->
+    <div class="year-label year-label-2" id="phase3Label" data-parent="" data-side="center">📋 PHASE 3<br><small>Documentation & Proof</small></div>
+
+    <!-- PHASE 3 BLOCK -->
+    <div class="node main-node" id="phase3" data-parent="phase3Label" data-side="center"
+      data-details="📋 Documentation & Proof|⏱️ 3 weeks|📅 15 study days">
+      📋 Documentation & Proof
+      <span class="months-badge">3 weeks</span>
+    </div>
+    <div class="node sub-node has-days" id="w11" data-parent="phase3" data-side="left"
+      data-details="⏱️ 5 days|Day 1: C4 Model Level 1: System Context. User, gateway, Azure, government API. Draw.io.|Day 2: C4 Model Level 2: Container diagram. API, Worker, SQLite, Azure IoT.|Day 3: ADR 1: Why SQLite over PostgreSQL for edge.|Day 4: ADR 2: Why REST primary (gRPC optional). ADR 3: Why SOAP Anti-Corruption Layer.|Day 5: German README (`README.de.md`). Architecture overview. DeepL + italki/Tandem rev">
+      📅 Week 11: Architecture & Documentation
     </div>
     <div class="node day-node" id="w11_d1" data-parent="w11" data-side="left"
-      data-details="📖 Study: System.IO.Pipelines.|🔧 Practice: Study PipeReader, PipeWriter, framing, delimiters.|🏗️ Build: N/A.|📦 Output: Notes on socket buffering.|✅ Self-Check: Why do Pipelines replace manual byte arrays?">
-      Day 1 — System.IO.Pipelines.
+      data-details="🌅 Morning: C4 Model Level 1: System Context. User, gateway, Azure, government API. Draw.io.|🌙 Evening: German Anki technical terms">
+      Day 1 — C4 Model Level 1: System Context. Use...
     </div>
     <div class="node day-node" id="w11_d2" data-parent="w11" data-side="left"
-      data-details="📖 Study: TCP Server with Pipelines.|🔧 Practice: Write a high-performance TCP server utilizing Pipelines.|🏗️ Build: TCP Pipeline server.|📦 Output: Working server code.|✅ Self-Check: Is buffer management automated?">
-      Day 2 — TCP Server with Pipelines.
+      data-details="🌅 Morning: C4 Model Level 2: Container diagram. API, Worker, SQLite, Azure IoT.|🌙 Evening: German italki/Tandem">
+      Day 2 — C4 Model Level 2: Container diagram. ...
     </div>
     <div class="node day-node" id="w11_d3" data-parent="w11" data-side="left"
-      data-details="📖 Study: Payload simulation.|🔧 Practice: Simulate messages with length, command, payload, checksums.|🏗️ Build: Simulated TCP traffic generator.|📦 Output: Traffic simulation script.|✅ Self-Check: Are checksums correctly formed?">
-      Day 3 — Payload simulation.
+      data-details="🌅 Morning: ADR 1: Why SQLite over PostgreSQL for edge.|🌙 Evening: German: ADR summary">
+      Day 3 — ADR 1: Why SQLite over PostgreSQL for...
     </div>
     <div class="node day-node" id="w11_d4" data-parent="w11" data-side="left"
-      data-details="📖 Study: Parser integration.|🔧 Practice: Integrate the packet parser into the gateway.|🏗️ Build: TCP integration logic.|📦 Output: Working TCP integration.|✅ Self-Check: Does it decode the simulated traffic?">
-      Day 4 — Parser integration.
+      data-details="🌅 Morning: ADR 2: Why REST primary (gRPC optional). ADR 3: Why SOAP Anti-Corruption Layer.|🌙 Evening: German Anki">
+      Day 4 — ADR 2: Why REST primary (gRPC optiona...
     </div>
     <div class="node day-node" id="w11_d5" data-parent="w11" data-side="left"
-      data-details="📖 Study: Fragmented packets.|🔧 Practice: Test broken frames and fragmented network packets.|🏗️ Build: Fragmentation test logic.|📦 Output: Test results on fragmented packets.|✅ Self-Check: Does the pipeline wait for the full frame?">
-      Day 5 — Fragmented packets.
+      data-details="🌅 Morning: German README (`README.de.md`). Architecture overview. DeepL + italki/Tandem review.|🌙 Evening: German italki/Tandem">
+      Day 5 — German README (`README.de.md`). Archi...
     </div>
-    <div class="node sub-node has-days" id="w12" data-parent="month3" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Gateway translation & filtering.|Day 2: Refactor to canonical events.|Day 3: Validation boundaries.|Day 4: Rejection rules.|Day 5: Invalid IDs.">
-      📅 Week 12: The Local TCP Gateway Concept
+    <div class="node sub-node has-days" id="w12" data-parent="phase3" data-side="right"
+      data-details="⏱️ 5 days|Day 1: Record 5-minute video. English voiceover. Walk through C4 diagram + live demo.|Day 2: Add German subtitles. Upload unlisted to YouTube. Embed in README.|Day 3: Screenshot architecture. Dashboard. Device status page. Add to README.|Day 4: LinkedIn rewrite. Headline: &quot;C# Integration Engineer|Day 5: XING profile creation. Mirror LinkedIn. In German. XING is mandatory in Germany.">
+      📅 Week 12: Video, Polish & Profile
     </div>
     <div class="node day-node" id="w12_d1" data-parent="w12" data-side="right"
-      data-details="📖 Study: Gateway translation & filtering.|🔧 Practice: Map the boundary logic from edge to backend.|🏗️ Build: N/A.|📦 Output: System diagram (Device -&gt; Gateway -&gt; Backend).|✅ Self-Check: What is the gateway's primary responsibility?">
-      Day 1 — Gateway translation & filtering.
+      data-details="🌅 Morning: Record 5-minute video. English voiceover. Walk through C4 diagram + live demo.|🌙 Evening: German Anki">
+      Day 1 — Record 5-minute video. English voiceo...
     </div>
     <div class="node day-node" id="w12_d2" data-parent="w12" data-side="right"
-      data-details="📖 Study: Refactor to canonical events.|🔧 Practice: Refactor local service to emit unified canonical events.|🏗️ Build: Unified gateway architecture.|📦 Output: Refactored gateway code.|✅ Self-Check: Are vendor specifics stripped out?">
-      Day 2 — Refactor to canonical events.
+      data-details="🌅 Morning: Add German subtitles. Upload unlisted to YouTube. Embed in README.|🌙 Evening: German italki/Tandem">
+      Day 2 — Add German subtitles. Upload unlisted...
     </div>
     <div class="node day-node" id="w12_d3" data-parent="w12" data-side="right"
-      data-details="📖 Study: Validation boundaries.|🔧 Practice: Add strict protocol separation and data validation.|🏗️ Build: Validation boundary code.|📦 Output: Validation logic implementation.|✅ Self-Check: Does the gateway catch malformed data?">
-      Day 3 — Validation boundaries.
+      data-details="🌅 Morning: Screenshot architecture. Dashboard. Device status page. Add to README.|🌙 Evening: German Anki">
+      Day 3 — Screenshot architecture. Dashboard. D...
     </div>
     <div class="node day-node" id="w12_d4" data-parent="w12" data-side="right"
-      data-details="📖 Study: Rejection rules.|🔧 Practice: Implement rules for discarding bad payloads.|🏗️ Build: Rejection logging logic.|📦 Output: Logging and rejection code.|✅ Self-Check: Are bad payloads logged efficiently?">
-      Day 4 — Rejection rules.
+      data-details="🌅 Morning: LinkedIn rewrite. Headline: &quot;C# Integration Engineer|🌙 Evening: Biometric Identity & Kiosk Systems">
+      Day 4 — LinkedIn rewrite. Headline: &quot;C# Integ...
     </div>
     <div class="node day-node" id="w12_d5" data-parent="w12" data-side="right"
-      data-details="📖 Study: Invalid IDs.|🔧 Practice: Test behavior with unauthorized or invalid device IDs.|🏗️ Build: Unauthorized access simulation.|📦 Output: Security test results.|✅ Self-Check: Prove the gateway shields the cloud from bad data.">
-      Day 5 — Invalid IDs.
+      data-details="🌅 Morning: XING profile creation. Mirror LinkedIn. In German. XING is mandatory in Germany.|🌙 Evening: German italki/Tandem">
+      Day 5 — XING profile creation. Mirror LinkedI...
     </div>
-
-    <!-- ======= PHASE 2: EDGE ORCHESTRATION & INDUSTRIAL PROTOCOLS ======= -->
-    <div class="year-label year-label-1" id="phase2Label" data-parent="" data-side="center">🏭 PHASE 2<br><small>Edge Orchestration & Protocols</small></div>
-
-    <!-- MONTH 4 -->
-    <div class="node main-node" id="month4" data-parent="phase2Label" data-side="center"
-      data-details="🏭 Edge Orchestration & Protocols|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🏭 Month 4: Edge Orchestration & Protocols
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w13" data-parent="month4" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: .NET Generic Host on Linux.|Day 2: Worker Service build.|Day 3: UseSystemd() integration.|Day 4: Journal logging.|Day 5: Graceful shutdowns.">
-      📅 Week 13: Linux Systemd & Headless Daemons
+    <div class="node sub-node has-days" id="w13" data-parent="phase3" data-side="left"
+      data-details="⏱️ 5 days|Day 1: Code freeze. No new features. Bug fixes only. Tag `v1.0.0`.|Day 2: Final test run. `dotnet test`. All green.|Day 3: CV German (1 page, strict format: photo, DOB, Ausbildung, Berufserfahrung).|Day 4: CV English (1 page).|Day 5: 5 test applications. Observe what gets rejected. Learn. Do not expect offers.">
+      📅 Week 13: Quality Lock & Test Applications
     </div>
     <div class="node day-node" id="w13_d1" data-parent="w13" data-side="left"
-      data-details="📖 Study: .NET Generic Host on Linux.|🔧 Practice: Study worker lifecycles and background hosting.|🏗️ Build: N/A.|📦 Output: Notes on daemons vs console apps.|✅ Self-Check: Why run as a daemon?">
-      Day 1 — .NET Generic Host on Linux.
+      data-details="🌅 Morning: Code freeze. No new features. Bug fixes only. Tag `v1.0.0`.|🌙 Evening: German Anki">
+      Day 1 — Code freeze. No new features. Bug fix...
     </div>
     <div class="node day-node" id="w13_d2" data-parent="w13" data-side="left"
-      data-details="📖 Study: Worker Service build.|🔧 Practice: Scaffold the C# gateway as a Worker Service.|🏗️ Build: Background service.|📦 Output: Working background service code.|✅ Self-Check: Does it run silently?">
-      Day 2 — Worker Service build.
+      data-details="🌅 Morning: Final test run. `dotnet test`. All green.|🌙 Evening: German italki/Tandem">
+      Day 2 — Final test run. `dotnet test`. All gr...
     </div>
     <div class="node day-node" id="w13_d3" data-parent="w13" data-side="left"
-      data-details="📖 Study: UseSystemd() integration.|🔧 Practice: Install Microsoft.Extensions.Hosting.Systemd.|🏗️ Build: Systemd integration code.|📦 Output: Code utilizing UseSystemd().|✅ Self-Check: Is it bound to Linux service managers?">
-      Day 3 — UseSystemd() integration.
+      data-details="🌅 Morning: CV German (1 page, strict format: photo, DOB, Ausbildung, Berufserfahrung).|🌙 Evening: German Anki">
+      Day 3 — CV German (1 page, strict format: pho...
     </div>
     <div class="node day-node" id="w13_d4" data-parent="w13" data-side="left"
-      data-details="📖 Study: Journal logging.|🔧 Practice: Configure the daemon to route output to Linux journal.|🏗️ Build: Logging configuration.|📦 Output: Logging integration code.|✅ Self-Check: Can logs be viewed via journalctl?">
-      Day 4 — Journal logging.
+      data-details="🌅 Morning: CV English (1 page).|🌙 Evening: German: CV review with italki/Tandem">
+      Day 4 — CV English (1 page).
     </div>
     <div class="node day-node" id="w13_d5" data-parent="w13" data-side="left"
-      data-details="📖 Study: Graceful shutdowns.|🔧 Practice: Simulate power loss and Linux SIGTERM signals.|🏗️ Build: Shutdown testing.|📦 Output: Test logs on graceful exit.|✅ Self-Check: Explain how Linux manages the C# process.">
-      Day 5 — Graceful shutdowns.
+      data-details="🌅 Morning: 5 test applications. Observe what gets rejected. Learn. Do not expect offers.|🌙 Evening: German italki/Tandem">
+      Day 5 — 5 test applications. Observe what get...
     </div>
-    <div class="node sub-node has-days" id="w14" data-parent="month4" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Image layers & isolation.|Day 2: Alpine Linux multi-stage.|Day 3: Volume mounting.|Day 4: Docker Compose.|Day 5: Startup failure.">
-      📅 Week 14: Containerization (Docker)
-    </div>
-    <div class="node day-node" id="w14_d1" data-parent="w14" data-side="right"
-      data-details="📖 Study: Image layers & isolation.|🔧 Practice: Learn Docker network and runtime basics.|🏗️ Build: Base Dockerfile.|📦 Output: Base Dockerfile created.|✅ Self-Check: What keeps image sizes small?">
-      Day 1 — Image layers & isolation.
-    </div>
-    <div class="node day-node" id="w14_d2" data-parent="w14" data-side="right"
-      data-details="📖 Study: Alpine Linux multi-stage.|🔧 Practice: Optimize the image using multi-stage builds.|🏗️ Build: Optimized Dockerfile.|📦 Output: Optimized Dockerfile.|✅ Self-Check: Did the image size drop significantly?">
-      Day 2 — Alpine Linux multi-stage.
-    </div>
-    <div class="node day-node" id="w14_d3" data-parent="w14" data-side="right"
-      data-details="📖 Study: Volume mounting.|🔧 Practice: Mount volumes for local SQLite database persistence.|🏗️ Build: Volume binding logic.|📦 Output: Docker run commands mapped.|✅ Self-Check: Does data survive container destruction?">
-      Day 3 — Volume mounting.
-    </div>
-    <div class="node day-node" id="w14_d4" data-parent="w14" data-side="right"
-      data-details="📖 Study: Docker Compose.|🔧 Practice: Spin up the gateway and a mock database together.|🏗️ Build: docker-compose.yml.|📦 Output: Compose file committed.|✅ Self-Check: Do the services network locally?">
-      Day 4 — Docker Compose.
-    </div>
-    <div class="node day-node" id="w14_d5" data-parent="w14" data-side="right"
-      data-details="📖 Study: Startup failure.|🔧 Practice: Test auto-restart policies on container crash.|🏗️ Build: Crash simulation.|📦 Output: Test results on restart policy.|✅ Self-Check: Prove the app survives container restarts.">
-      Day 5 — Startup failure.
+    <div class="node milestone-node" id="milestone_portfolio" data-parent="phase3" data-side="center"
+      data-details="🎉 Portfolio v1.0 locked. C4 diagrams, ADRs, video demo, bilingual README, CV ready.">
+      🎉 Portfolio v1.0 Locked
     </div>
 
-    <!-- MONTH 5 -->
-    <div class="node main-node" id="month5" data-parent="month4" data-side="center"
-      data-details="🏭 Edge Orchestration & Protocols|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🏭 Month 5: Edge Orchestration & Protocols
-      <span class="months-badge">~20 hrs</span>
+    <!-- ======= PHASE 4: MARKET ENTRY ======= -->
+    <div class="year-label year-label-2" id="phase4Label" data-parent="" data-side="center">🎯 PHASE 4<br><small>Market Entry</small></div>
+
+    <!-- PHASE 4 BLOCK -->
+    <div class="node main-node" id="phase4" data-parent="phase4Label" data-side="center"
+      data-details="🎯 Market Entry|⏱️ 7 weeks|📅 35 study days">
+      🎯 Market Entry
+      <span class="months-badge">7 weeks</span>
     </div>
-    <div class="node sub-node has-days" id="w15" data-parent="month5" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: K3s vs standard Kubernetes.|Day 2: Local K3s installation.|Day 3: K8s YAML translation.|Day 4: K3s Deployment.|Day 5: Pod eviction.">
-      📅 Week 15: K3s (Lightweight Edge Kubernetes)
+    <div class="node sub-node has-days" id="w14" data-parent="phase4" data-side="left"
+      data-details="⏱️ 5 days|Day 1: Research 10 companies. C# / .NET / Integration / IoT / Identity. Save to spreads|Day 2: Write 3 tailored Anschreiben. Each references company's specific tech. Include: |Day 3: Apply to 5 companies. LinkedIn Easy Apply + direct email.|Day 4: Apply to 5 more. Prioritize Berlin, Hamburg, Stuttgart, uncle/friend cities.|Day 5: LinkedIn outreach. 10 connection requests to engineering managers. Short German ">
+      📅 Week 14: First Serious Wave
     </div>
-    <div class="node day-node" id="w15_d1" data-parent="w15" data-side="left"
-      data-details="📖 Study: K3s vs standard Kubernetes.|🔧 Practice: Study why DACH/KSA demands K3s for industrial PCs.|🏗️ Build: N/A.|📦 Output: Notes on K3s architecture.|✅ Self-Check: Why not use full Kubernetes on the edge?">
-      Day 1 — K3s vs standard Kubernetes.
+    <div class="node day-node" id="w14_d1" data-parent="w14" data-side="left"
+      data-details="🌅 Morning: Research 10 companies. C# / .NET / Integration / IoT / Identity. Save to spreadsheet.|🌙 Evening: German Anki">
+      Day 1 — Research 10 companies. C# / .NET / In...
     </div>
-    <div class="node day-node" id="w15_d2" data-parent="w15" data-side="left"
-      data-details="📖 Study: Local K3s installation.|🔧 Practice: Install a local K3s cluster.|🏗️ Build: K3s environment.|📦 Output: Running K3s cluster.|✅ Self-Check: Is kubectl responding locally?">
-      Day 2 — Local K3s installation.
+    <div class="node day-node" id="w14_d2" data-parent="w14" data-side="left"
+      data-details="🌅 Morning: Write 3 tailored Anschreiben. Each references company's specific tech. Include: &quot;My degree is undergoing ZAB recognition assessment.&quot;|🌙 Evening: German italki/Tandem">
+      Day 2 — Write 3 tailored Anschreiben. Each re...
     </div>
-    <div class="node day-node" id="w15_d3" data-parent="w15" data-side="left"
-      data-details="📖 Study: K8s YAML translation.|🔧 Practice: Translate Compose file into Deployment/Service YAMLs.|🏗️ Build: Kubernetes YAMLs.|📦 Output: Working YAML files.|✅ Self-Check: Are ports and volumes mapped correctly?">
-      Day 3 — K8s YAML translation.
+    <div class="node day-node" id="w14_d3" data-parent="w14" data-side="left"
+      data-details="🌅 Morning: Apply to 5 companies. LinkedIn Easy Apply + direct email.|🌙 Evening: German Anki">
+      Day 3 — Apply to 5 companies. LinkedIn Easy A...
     </div>
-    <div class="node day-node" id="w15_d4" data-parent="w15" data-side="left"
-      data-details="📖 Study: K3s Deployment.|🔧 Practice: Deploy the C# Gateway into the local cluster.|🏗️ Build: Gateway running as a Pod.|📦 Output: K8s deployment logs.|✅ Self-Check: Is the pod status 'Running'?">
-      Day 4 — K3s Deployment.
+    <div class="node day-node" id="w14_d4" data-parent="w14" data-side="left"
+      data-details="🌅 Morning: Apply to 5 more. Prioritize Berlin, Hamburg, Stuttgart, uncle/friend cities.|🌙 Evening: German italki/Tandem">
+      Day 4 — Apply to 5 more. Prioritize Berlin, H...
     </div>
-    <div class="node day-node" id="w15_d5" data-parent="w15" data-side="left"
-      data-details="📖 Study: Pod eviction.|🔧 Practice: Test pod eviction and rescheduling manually.|🏗️ Build: Eviction simulation.|📦 Output: Rescheduling behavior notes.|✅ Self-Check: Explain K3s node management on a factory floor.">
-      Day 5 — Pod eviction.
+    <div class="node day-node" id="w14_d5" data-parent="w14" data-side="left"
+      data-details="🌅 Morning: LinkedIn outreach. 10 connection requests to engineering managers. Short German message.|🌙 Evening: German: Message template">
+      Day 5 — LinkedIn outreach. 10 connection requ...
     </div>
-    <div class="node sub-node has-days" id="w16" data-parent="month5" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: GitHub Actions workflows.|Day 2: Automated unit tests.|Day 3: Docker image building.|Day 4: Multi-architecture builds.|Day 5: Broken build tracing.">
-      📅 Week 16: CI/CD & GitHub Actions
+    <div class="node sub-node has-days" id="w15" data-parent="phase4" data-side="right"
+      data-details="⏱️ 5 days|Day 1: Engage 3 German tech recruiters specializing in .NET/IoT.|Day 2: Follow up on Week 14 applications. Polite German email.|Day 3: Uncle/friend outreach. Ask for referral introductions at their companies/network|Day 4: Apply to 5 more roles. Expand to consultancies: adesso, M&M Software, etc.|Day 5: Mock technical interview. Record yourself. Review.">
+      📅 Week 15: Outreach & Recruiters
     </div>
-    <div class="node day-node" id="w16_d1" data-parent="w16" data-side="right"
-      data-details="📖 Study: GitHub Actions workflows.|🔧 Practice: Setup triggers, runners, and stages.|🏗️ Build: Base CI pipeline .yml.|📦 Output: Basic CI pipeline file.|✅ Self-Check: Does it trigger on push?">
-      Day 1 — GitHub Actions workflows.
+    <div class="node day-node" id="w15_d1" data-parent="w15" data-side="right"
+      data-details="🌅 Morning: Engage 3 German tech recruiters specializing in .NET/IoT.|🌙 Evening: German Anki">
+      Day 1 — Engage 3 German tech recruiters speci...
     </div>
-    <div class="node day-node" id="w16_d2" data-parent="w16" data-side="right"
-      data-details="📖 Study: Automated unit tests.|🔧 Practice: Run Span&lt;T&gt; parser tests automatically.|🏗️ Build: Automated test steps.|📦 Output: CI file with testing logic.|✅ Self-Check: Does it block failed tests?">
-      Day 2 — Automated unit tests.
+    <div class="node day-node" id="w15_d2" data-parent="w15" data-side="right"
+      data-details="🌅 Morning: Follow up on Week 14 applications. Polite German email.|🌙 Evening: German italki/Tandem">
+      Day 2 — Follow up on Week 14 applications. Po...
     </div>
-    <div class="node day-node" id="w16_d3" data-parent="w16" data-side="right"
-      data-details="📖 Study: Docker image building.|🔧 Practice: Automate container build on push to main.|🏗️ Build: Container build steps.|📦 Output: Pipeline producing an image.|✅ Self-Check: Is the image tagged properly?">
-      Day 3 — Docker image building.
+    <div class="node day-node" id="w15_d3" data-parent="w15" data-side="right"
+      data-details="🌅 Morning: Uncle/friend outreach. Ask for referral introductions at their companies/networks.|🌙 Evening: German Anki">
+      Day 3 — Uncle/friend outreach. Ask for referr...
     </div>
-    <div class="node day-node" id="w16_d4" data-parent="w16" data-side="right"
-      data-details="📖 Study: Multi-architecture builds.|🔧 Practice: Cross-compile the image for ARM64 and x64.|🏗️ Build: Multi-arch CI pipeline.|📦 Output: Pipeline handling multiple architectures.|✅ Self-Check: Can this deploy to a Raspberry Pi?">
-      Day 4 — Multi-architecture builds.
+    <div class="node day-node" id="w15_d4" data-parent="w15" data-side="right"
+      data-details="🌅 Morning: Apply to 5 more roles. Expand to consultancies: adesso, M&M Software, etc.|🌙 Evening: German italki/Tandem">
+      Day 4 — Apply to 5 more roles. Expand to cons...
     </div>
-    <div class="node day-node" id="w16_d5" data-parent="w16" data-side="right"
-      data-details="📖 Study: Broken build tracing.|🔧 Practice: Intentionally break code and trace the pipeline failure.|🏗️ Build: Failure test.|📦 Output: Logs showing rejected build.|✅ Self-Check: Verify deployment baseline is fully automated.">
-      Day 5 — Broken build tracing.
+    <div class="node day-node" id="w15_d5" data-parent="w15" data-side="right"
+      data-details="🌅 Morning: Mock technical interview. Record yourself. Review.|🌙 Evening: German: Mock with italki/Tandem">
+      Day 5 — Mock technical interview. Record your...
+    </div>
+    <div class="node sub-node has-days" id="w16" data-parent="phase4" data-side="left"
+      data-details="⏱️ 5 days|Day 1: Whiteboard practice. Draw C4 diagram from memory in 5 minutes.|Day 2: Explain async/await to non-technical person. In German.|Day 3: Salary negotiation: &quot;Meine Gehaltsvorstellung liegt bei 55.000 Euro brutto pro J|Day 4: Mock interview: &quot;The gateway stops sending data at 3 AM. How do you debug?&quot;|Day 5: Apply to 5 more. Track everything.">
+      📅 Week 16: Interview Prep Intensity
+    </div>
+    <div class="node day-node" id="w16_d1" data-parent="w16" data-side="left"
+      data-details="🌅 Morning: Whiteboard practice. Draw C4 diagram from memory in 5 minutes.|🌙 Evening: German Anki">
+      Day 1 — Whiteboard practice. Draw C4 diagram ...
+    </div>
+    <div class="node day-node" id="w16_d2" data-parent="w16" data-side="left"
+      data-details="🌅 Morning: Explain async/await to non-technical person. In German.|🌙 Evening: German italki/Tandem">
+      Day 2 — Explain async/await to non-technical ...
+    </div>
+    <div class="node day-node" id="w16_d3" data-parent="w16" data-side="left"
+      data-details="🌅 Morning: Salary negotiation: &quot;Meine Gehaltsvorstellung liegt bei 55.000 Euro brutto pro Jahr.&quot;|🌙 Evening: German Anki">
+      Day 3 — Salary negotiation: &quot;Meine Gehaltsvor...
+    </div>
+    <div class="node day-node" id="w16_d4" data-parent="w16" data-side="left"
+      data-details="🌅 Morning: Mock interview: &quot;The gateway stops sending data at 3 AM. How do you debug?&quot;|🌙 Evening: German italki/Tandem">
+      Day 4 — Mock interview: &quot;The gateway stops se...
+    </div>
+    <div class="node day-node" id="w16_d5" data-parent="w16" data-side="left"
+      data-details="🌅 Morning: Apply to 5 more. Track everything.|🌙 Evening: German Anki">
+      Day 5 — Apply to 5 more. Track everything.
+    </div>
+    <div class="node sub-node has-days" id="w17" data-parent="phase4" data-side="right"
+      data-details="⏱️ 5 days|Day 1: 5 applications. Backend .NET roles with integration/API/messaging.|Day 2: 5 applications. IoT/edge roles.|Day 3: Follow up on all pending applications.|Day 4: Portfolio iteration. Fix anything interviewers questioned.|Day 5: LinkedIn content. Post technical article: &quot;Connecting a Biometric Device to Azur">
+      📅 Week 17: Sustained Pressure
+    </div>
+    <div class="node day-node" id="w17_d1" data-parent="w17" data-side="right"
+      data-details="🌅 Morning: 5 applications. Backend .NET roles with integration/API/messaging.|🌙 Evening: German Anki">
+      Day 1 — 5 applications. Backend .NET roles wi...
+    </div>
+    <div class="node day-node" id="w17_d2" data-parent="w17" data-side="right"
+      data-details="🌅 Morning: 5 applications. IoT/edge roles.|🌙 Evening: German italki/Tandem">
+      Day 2 — 5 applications. IoT/edge roles.
+    </div>
+    <div class="node day-node" id="w17_d3" data-parent="w17" data-side="right"
+      data-details="🌅 Morning: Follow up on all pending applications.|🌙 Evening: German Anki">
+      Day 3 — Follow up on all pending applications.
+    </div>
+    <div class="node day-node" id="w17_d4" data-parent="w17" data-side="right"
+      data-details="🌅 Morning: Portfolio iteration. Fix anything interviewers questioned.|🌙 Evening: German italki/Tandem">
+      Day 4 — Portfolio iteration. Fix anything int...
+    </div>
+    <div class="node day-node" id="w17_d5" data-parent="w17" data-side="right"
+      data-details="🌅 Morning: LinkedIn content. Post technical article: &quot;Connecting a Biometric Device to Azure in 2026.&quot;|🌙 Evening: German Anki">
+      Day 5 — LinkedIn content. Post technical arti...
+    </div>
+    <div class="node sub-node has-days" id="w18" data-parent="phase4" data-side="left"
+      data-details="⏱️ 5 days|Day 1: Analyze all feedback. Recurring gaps?|Day 2: Deep-dive weakest area (e.g., PROFINET, Kubernetes, German fluency).|Day 3: Portfolio patch. Add mini-project or documentation addressing gap.|Day 4: Re-apply to companies that rejected you after 6 months with new evidence.|Day 5: Apply to 5 more. Never stop.">
+      📅 Week 18: Feedback Loop
+    </div>
+    <div class="node day-node" id="w18_d1" data-parent="w18" data-side="left"
+      data-details="🌅 Morning: Analyze all feedback. Recurring gaps?|🌙 Evening: German Anki">
+      Day 1 — Analyze all feedback. Recurring gaps?
+    </div>
+    <div class="node day-node" id="w18_d2" data-parent="w18" data-side="left"
+      data-details="🌅 Morning: Deep-dive weakest area (e.g., PROFINET, Kubernetes, German fluency).|🌙 Evening: German italki/Tandem">
+      Day 2 — Deep-dive weakest area (e.g., PROFINE...
+    </div>
+    <div class="node day-node" id="w18_d3" data-parent="w18" data-side="left"
+      data-details="🌅 Morning: Portfolio patch. Add mini-project or documentation addressing gap.|🌙 Evening: German Anki">
+      Day 3 — Portfolio patch. Add mini-project or ...
+    </div>
+    <div class="node day-node" id="w18_d4" data-parent="w18" data-side="left"
+      data-details="🌅 Morning: Re-apply to companies that rejected you after 6 months with new evidence.|🌙 Evening: German italki/Tandem">
+      Day 4 — Re-apply to companies that rejected y...
+    </div>
+    <div class="node day-node" id="w18_d5" data-parent="w18" data-side="left"
+      data-details="🌅 Morning: Apply to 5 more. Never stop.|🌙 Evening: German Anki">
+      Day 5 — Apply to 5 more. Never stop.
+    </div>
+    <div class="node sub-node has-days" id="w19" data-parent="phase4" data-side="right"
+      data-details="⏱️ 5 days|Day 1: If offer received: negotiate. Anchor €55k. Floor €46k. Request relocation suppor|Day 2: Blue Card paperwork: degree, contract, passport photos. Employer handles most.|Day 3: If no offer: expand search. Frankfurt, Munich, Nuremberg. 10 more apps.|Day 4: Chancenkarte backup research. Points calculation. €1,091/month proof.|Day 5: Evaluate all active conversations. Use matrix: salary, location, tech, visa, sta">
+      📅 Week 19: Offer Negotiation Prep
+    </div>
+    <div class="node day-node" id="w19_d1" data-parent="w19" data-side="right"
+      data-details="🌅 Morning: If offer received: negotiate. Anchor €55k. Floor €46k. Request relocation support.|🌙 Evening: German Anki">
+      Day 1 — If offer received: negotiate. Anchor ...
+    </div>
+    <div class="node day-node" id="w19_d2" data-parent="w19" data-side="right"
+      data-details="🌅 Morning: Blue Card paperwork: degree, contract, passport photos. Employer handles most.|🌙 Evening: German italki/Tandem">
+      Day 2 — Blue Card paperwork: degree, contract...
+    </div>
+    <div class="node day-node" id="w19_d3" data-parent="w19" data-side="right"
+      data-details="🌅 Morning: If no offer: expand search. Frankfurt, Munich, Nuremberg. 10 more apps.|🌙 Evening: German Anki">
+      Day 3 — If no offer: expand search. Frankfurt...
+    </div>
+    <div class="node day-node" id="w19_d4" data-parent="w19" data-side="right"
+      data-details="🌅 Morning: Chancenkarte backup research. Points calculation. €1,091/month proof.|🌙 Evening: German italki/Tandem">
+      Day 4 — Chancenkarte backup research. Points ...
+    </div>
+    <div class="node day-node" id="w19_d5" data-parent="w19" data-side="right"
+      data-details="🌅 Morning: Evaluate all active conversations. Use matrix: salary, location, tech, visa, start date.|🌙 Evening: German Anki">
+      Day 5 — Evaluate all active conversations. Us...
+    </div>
+    <div class="node sub-node has-days" id="w20" data-parent="phase4" data-side="left"
+      data-details="⏱️ 5 days|Day 1: Final 5 applications to dream companies. No generic letters.|Day 2: Portfolio final polish. Update repo with all interview feedback fixes.|Day 3: Evaluate offers. Signed contract or clear pipeline?|Day 4: If offer: sign. Send resignation to current employer.|Day 5: If no offer: do not panic. Continue to Month 6–18 phase. This is normal with H-+">
+      📅 Week 20: Decision & Commitment
+    </div>
+    <div class="node day-node" id="w20_d1" data-parent="w20" data-side="left"
+      data-details="🌅 Morning: Final 5 applications to dream companies. No generic letters.|🌙 Evening: German Anki">
+      Day 1 — Final 5 applications to dream compani...
+    </div>
+    <div class="node day-node" id="w20_d2" data-parent="w20" data-side="left"
+      data-details="🌅 Morning: Portfolio final polish. Update repo with all interview feedback fixes.|🌙 Evening: German italki/Tandem">
+      Day 2 — Portfolio final polish. Update repo w...
+    </div>
+    <div class="node day-node" id="w20_d3" data-parent="w20" data-side="left"
+      data-details="🌅 Morning: Evaluate offers. Signed contract or clear pipeline?|🌙 Evening: German Anki">
+      Day 3 — Evaluate offers. Signed contract or c...
+    </div>
+    <div class="node day-node" id="w20_d4" data-parent="w20" data-side="left"
+      data-details="🌅 Morning: If offer: sign. Send resignation to current employer.|🌙 Evening: German italki/Tandem">
+      Day 4 — If offer: sign. Send resignation to c...
+    </div>
+    <div class="node day-node" id="w20_d5" data-parent="w20" data-side="left"
+      data-details="🌅 Morning: If no offer: do not panic. Continue to Month 6–18 phase. This is normal with H-+.|🌙 Evening: German Anki">
+      Day 5 — If no offer: do not panic. Continue t...
     </div>
 
-    <!-- MONTH 6 -->
-    <div class="node main-node" id="month6" data-parent="month5" data-side="center"
-      data-details="🏭 Edge Orchestration & Protocols|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🏭 Month 6: Edge Orchestration & Protocols
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w17" data-parent="month6" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: TwinCAT 3 & ADS Protocol.|Day 2: Structured Text (ST).|Day 3: Beckhoff.TwinCAT.Ads.|Day 4: Read/Write PLC memory.|Day 5: Reactive Extensions (Rx).">
-      📅 Week 17: DACH Target: Beckhoff TwinCAT 3 & ADS
-    </div>
-    <div class="node day-node" id="w17_d1" data-parent="w17" data-side="left"
-      data-details="📖 Study: TwinCAT 3 & ADS Protocol.|🔧 Practice: Install TwinCAT 3 XAE locally. Study Port 851.|🏗️ Build: Virtual PLC setup.|📦 Output: Local TwinCAT running.|✅ Self-Check: How does ADS route over TCP/IP?">
-      Day 1 — TwinCAT 3 & ADS Protocol.
-    </div>
-    <div class="node day-node" id="w17_d2" data-parent="w17" data-side="left"
-      data-details="📖 Study: Structured Text (ST).|🔧 Practice: Write a PLC program simulating machine state.|🏗️ Build: Working virtual PLC.|📦 Output: ST code committed.|✅ Self-Check: Is the virtual machine changing states?">
-      Day 2 — Structured Text (ST).
-    </div>
-    <div class="node day-node" id="w17_d3" data-parent="w17" data-side="left"
-      data-details="📖 Study: Beckhoff.TwinCAT.Ads.|🔧 Practice: Import the NuGet package into your service.|🏗️ Build: C# ADS Client.|📦 Output: C# ADS Client setup.|✅ Self-Check: Can C# connect to the AMS Net ID?">
-      Day 3 — Beckhoff.TwinCAT.Ads.
-    </div>
-    <div class="node day-node" id="w17_d4" data-parent="w17" data-side="left"
-      data-details="📖 Study: Read/Write PLC memory.|🔧 Practice: Write logic to read and mutate PLC variables.|🏗️ Build: C# ADS read/write logic.|📦 Output: Interop integration code.|✅ Self-Check: Are data types mapped perfectly?">
-      Day 4 — Read/Write PLC memory.
-    </div>
-    <div class="node day-node" id="w17_d5" data-parent="w17" data-side="left"
-      data-details="📖 Study: Reactive Extensions (Rx).|🔧 Practice: Subscribe to real-time PLC variable changes (No polling).|🏗️ Build: Reactive event listener.|📦 Output: Working Rx subscription.|✅ Self-Check: Prove you can control Mittelstand machinery via C#.">
-      Day 5 — Reactive Extensions (Rx).
-    </div>
-    <div class="node sub-node has-days" id="w18" data-parent="month6" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: BACnet/IP & KNX.|Day 2: BACnet Simulator.|Day 3: C# BACnet client.|Day 4: JSON DTO Translation.|Day 5: Protocol timeouts.">
-      📅 Week 18: KSA Target: BACnet, KNX, & Smart Buildings
-    </div>
-    <div class="node day-node" id="w18_d1" data-parent="w18" data-side="right"
-      data-details="📖 Study: BACnet/IP & KNX.|🔧 Practice: Study protocols for NEOM/Smart City infrastructure.|🏗️ Build: N/A.|📦 Output: Notes on building automation.|✅ Self-Check: How does BACnet differ from Modbus?">
-      Day 1 — BACnet/IP & KNX.
-    </div>
-    <div class="node day-node" id="w18_d2" data-parent="w18" data-side="right"
-      data-details="📖 Study: BACnet Simulator.|🔧 Practice: Spin up a software BACnet simulator (e.g., Yabe).|🏗️ Build: Running BACnet simulator.|📦 Output: Simulator configuration.|✅ Self-Check: Are device objects visible?">
-      Day 2 — BACnet Simulator.
-    </div>
-    <div class="node day-node" id="w18_d3" data-parent="w18" data-side="right"
-      data-details="📖 Study: C# BACnet client.|🔧 Practice: Read temperature, HVAC, and occupancy states via C#.|🏗️ Build: C# BACnet integration.|📦 Output: C# client code.|✅ Self-Check: Is C# pulling live building data?">
-      Day 3 — C# BACnet client.
-    </div>
-    <div class="node day-node" id="w18_d4" data-parent="w18" data-side="right"
-      data-details="📖 Study: JSON DTO Translation.|🔧 Practice: Translate the BACnet payload into the canonical DTO.|🏗️ Build: BACnet to JSON translator.|📦 Output: Translation layer code.|✅ Self-Check: Is the DTO standard across vendors?">
-      Day 4 — JSON DTO Translation.
-    </div>
-    <div class="node day-node" id="w18_d5" data-parent="w18" data-side="right"
-      data-details="📖 Study: Protocol timeouts.|🔧 Practice: Test polling latency and offline sensors.|🏗️ Build: Timeout tests.|📦 Output: Latency report.|✅ Self-Check: Prove you can integrate Saudi smart buildings.">
-      Day 5 — Protocol timeouts.
-    </div>
+    <!-- ======= PHASE 5: POST-SPRINT ======= -->
+    <div class="year-label year-label-2" id="phase5Label" data-parent="" data-side="center">🔄 PHASE 5<br><small>Post-Sprint (Month 6–18)</small></div>
 
-    <!-- MONTH 7 -->
-    <div class="node main-node" id="month7" data-parent="month6" data-side="center"
-      data-details="🏭 Edge Orchestration & Protocols|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🏭 Month 7: Edge Orchestration & Protocols
-      <span class="months-badge">~20 hrs</span>
+    <!-- PHASE 5 BLOCK -->
+    <div class="node main-node" id="phase5" data-parent="phase5Label" data-side="center"
+      data-details="🔄 Post-Sprint (Month 6–18)|⏱️ 1 weeks|📅 5 study days">
+      🔄 Post-Sprint (Month 6–18)
+      <span class="months-badge">1 weeks</span>
     </div>
-    <div class="node sub-node has-days" id="w19" data-parent="month7" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: MQTT Broker, QoS, Sessions.|Day 2: Publisher/Subscriber.|Day 3: Real-time events.|Day 4: Subscription recovery.|Day 5: Retained messages.">
-      📅 Week 19: MQTT Fundamentals
-    </div>
-    <div class="node day-node" id="w19_d1" data-parent="w19" data-side="left"
-      data-details="📖 Study: MQTT Broker, QoS, Sessions.|🔧 Practice: Learn topics, pub/sub, retained messages.|🏗️ Build: N/A.|📦 Output: Notes on MQTT mechanics.|✅ Self-Check: What is QoS 2 overhead?">
-      Day 1 — MQTT Broker, QoS, Sessions.
-    </div>
-    <div class="node day-node" id="w19_d2" data-parent="w19" data-side="left"
-      data-details="📖 Study: Publisher/Subscriber.|🔧 Practice: Write a simple C# publisher/subscriber using MQTTnet.|🏗️ Build: Working MQTT client.|📦 Output: C# MQTTnet implementation.|✅ Self-Check: Are messages traversing the broker?">
-      Day 2 — Publisher/Subscriber.
-    </div>
-    <div class="node day-node" id="w19_d3" data-parent="w19" data-side="left"
-      data-details="📖 Study: Real-time events.|🔧 Practice: Simulate biometric events flowing through MQTT.|🏗️ Build: Real-time publishing logic.|📦 Output: Telemetry generation code.|✅ Self-Check: Is JSON structured correctly?">
-      Day 3 — Real-time events.
-    </div>
-    <div class="node day-node" id="w19_d4" data-parent="w19" data-side="left"
-      data-details="📖 Study: Subscription recovery.|🔧 Practice: Configure reconnect behavior.|🏗️ Build: Resilient connection logic.|📦 Output: C# reconnect loops.|✅ Self-Check: Does it reconnect automatically?">
-      Day 4 — Subscription recovery.
-    </div>
-    <div class="node day-node" id="w19_d5" data-parent="w19" data-side="left"
-      data-details="📖 Study: Retained messages.|🔧 Practice: Test broker outages and retained states.|🏗️ Build: Broker failure tests.|📦 Output: Retained state notes.|✅ Self-Check: Explain QoS 0, 1, and 2 tradeoffs.">
-      Day 5 — Retained messages.
-    </div>
-    <div class="node sub-node has-days" id="w20" data-parent="month7" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: OPC UA Node Trees.|Day 2: C# OPC UA Client.|Day 3: Canonical Mapping.|Day 4: Architecture Comparison.|Day 5: Node structure changes.">
-      📅 Week 20: OPC UA Basics
-    </div>
-    <div class="node day-node" id="w20_d1" data-parent="w20" data-side="right"
-      data-details="📖 Study: OPC UA Node Trees.|🔧 Practice: Learn security models and rich metadata vs Modbus.|🏗️ Build: N/A.|📦 Output: Notes on OPC UA vs polling.|✅ Self-Check: Why is OPC UA the Industry 4.0 standard?">
-      Day 1 — OPC UA Node Trees.
-    </div>
-    <div class="node day-node" id="w20_d2" data-parent="w20" data-side="right"
-      data-details="📖 Study: C# OPC UA Client.|🔧 Practice: Study or write a simple OPC UA client.|🏗️ Build: C# OPC UA client.|📦 Output: OPC UA connection code.|✅ Self-Check: Are certificates exchanged?">
-      Day 2 — C# OPC UA Client.
-    </div>
-    <div class="node day-node" id="w20_d3" data-parent="w20" data-side="right"
-      data-details="📖 Study: Canonical Mapping.|🔧 Practice: Map an OPC UA device status concept into your DTO.|🏗️ Build: Translation layer.|📦 Output: Canonical mapping code.|✅ Self-Check: Is the hierarchy flattened?">
-      Day 3 — Canonical Mapping.
-    </div>
-    <div class="node day-node" id="w20_d4" data-parent="w20" data-side="right"
-      data-details="📖 Study: Architecture Comparison.|🔧 Practice: Compare OPC UA modeling to Beckhoff ADS approach.|🏗️ Build: N/A.|📦 Output: Architecture comparison note.|✅ Self-Check: Which is faster for telemetry?">
-      Day 4 — Architecture Comparison.
-    </div>
-    <div class="node day-node" id="w20_d5" data-parent="w20" data-side="right"
-      data-details="📖 Study: Node structure changes.|🔧 Practice: Test dynamic changes in the hardware node tree.|🏗️ Build: Node parsing tests.|📦 Output: Resilience report.|✅ Self-Check: Document why OPC UA semantics win.">
-      Day 5 — Node structure changes.
-    </div>
-    <div class="node milestone-node" id="milestone_edge" data-parent="month7" data-side="center"
-      data-details="🎉 Edge foundations complete — you can build, deploy, and communicate with industrial hardware.">
-      🎉 Edge Foundations Complete
-    </div>
-
-    <!-- ======= PHASE 3: CQRS, KAFKA, & OBSERVABILITY ======= -->
-    <div class="year-label year-label-2" id="phase3Label" data-parent="" data-side="center">📊 PHASE 3<br><small>CQRS, Kafka & Observability</small></div>
-
-    <!-- MONTH 8 -->
-    <div class="node main-node" id="month8" data-parent="phase3Label" data-side="center"
-      data-details="📊 CQRS, Kafka & Observability|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      📊 Month 8: CQRS, Kafka & Observability
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w21" data-parent="month8" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Local durable queues.|Day 2: SQLite Integration.|Day 3: Disk Persistence.|Day 4: State Management.|Day 5: App restarts.">
-      📅 Week 21: SQLite Edge Queuing (Offline Survival)
+    <div class="node sub-node has-days" id="w21" data-parent="phase5" data-side="left"
+      data-details="⏱️ 5 days|Day 1: Month 6: 80 applications total. Deepen German to solid B1.|Day 2: Months 7–9: Expand to consultancies, system integrators, energy companies. Push |Day 3: Months 10–12: Offer negotiation. Visa execution.|Day 4: Months 13–18: Relocation prep. Anmeldung. Health insurance. First apartment. Min|Day 5: If no offer by Month 9: Activate KSA/GCC hedge. Do not split focus before Month ">
+      📅 Week 21: Month 6–18 Extended Campaign
     </div>
     <div class="node day-node" id="w21_d1" data-parent="w21" data-side="left"
-      data-details="📖 Study: Local durable queues.|🔧 Practice: Learn why edge agents buffer during factory network drops.|🏗️ Build: N/A.|📦 Output: SQLite schema design.|✅ Self-Check: Why not use RAM for buffering?">
-      Day 1 — Local durable queues.
+      data-details="🌅 Morning: Month 6: 80 applications total. Deepen German to solid B1.|🌙 Evening: Target: 5–10 interviews">
+      Day 1 — Month 6: 80 applications total. Deepe...
     </div>
     <div class="node day-node" id="w21_d2" data-parent="w21" data-side="left"
-      data-details="📖 Study: SQLite Integration.|🔧 Practice: Create a local DB and table for queued biometric events.|🏗️ Build: C# SQLite integration.|📦 Output: SQLite database code.|✅ Self-Check: Is the file saved to the mounted Docker volume?">
-      Day 2 — SQLite Integration.
+      data-details="🌅 Morning: Months 7–9: Expand to consultancies, system integrators, energy companies. Push ministry recognition if funded.|🌙 Evening: Target: Serious pipeline">
+      Day 2 — Months 7–9: Expand to consultancies, ...
     </div>
     <div class="node day-node" id="w21_d3" data-parent="w21" data-side="left"
-      data-details="📖 Study: Disk Persistence.|🔧 Practice: Save incoming events to disk *before* uploading.|🏗️ Build: Local persistence logic.|📦 Output: Edge queue implementation.|✅ Self-Check: Is data written instantly?">
-      Day 3 — Disk Persistence.
+      data-details="🌅 Morning: Months 10–12: Offer negotiation. Visa execution.|🌙 Evening: Target: Offer secured">
+      Day 3 — Months 10–12: Offer negotiation. Visa...
     </div>
     <div class="node day-node" id="w21_d4" data-parent="w21" data-side="left"
-      data-details="📖 Study: State Management.|🔧 Practice: Implement pending, sent, and failed states.|🏗️ Build: State management code.|📦 Output: Row update logic.|✅ Self-Check: How do you prevent race conditions on rows?">
-      Day 4 — State Management.
+      data-details="🌅 Morning: Months 13–18: Relocation prep. Anmeldung. Health insurance. First apartment. Ministry recognition upgrade from Germany.|🌙 Evening: Target: Germany">
+      Day 4 — Months 13–18: Relocation prep. Anmeld...
     </div>
     <div class="node day-node" id="w21_d5" data-parent="w21" data-side="left"
-      data-details="📖 Study: App restarts.|🔧 Practice: Test restarts and verify queued events survive.|🏗️ Build: Crash recovery test.|📦 Output: Data survival report.|✅ Self-Check: Prove the device loses zero data during an outage.">
-      Day 5 — App restarts.
-    </div>
-    <div class="node sub-node has-days" id="w22" data-parent="month8" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Sync loop logic.|Day 2: Cloud acknowledgments.|Day 3: Network loss simulation.|Day 4: Queue draining.|Day 5: Partial batch failures.">
-      📅 Week 22: Sync Recovery & State Discipline
-    </div>
-    <div class="node day-node" id="w22_d1" data-parent="w22" data-side="right"
-      data-details="📖 Study: Sync loop logic.|🔧 Practice: Write a loop that uploads events when connection returns.|🏗️ Build: Background sync process.|📦 Output: Sync loop code.|✅ Self-Check: Does the loop throttle to prevent flooding?">
-      Day 1 — Sync loop logic.
-    </div>
-    <div class="node day-node" id="w22_d2" data-parent="w22" data-side="right"
-      data-details="📖 Study: Cloud acknowledgments.|🔧 Practice: Add mark-sent behavior *only* after cloud confirmation.|🏗️ Build: Acknowledgment logic.|📦 Output: Safe-state update code.|✅ Self-Check: Are unacknowledged events retried?">
-      Day 2 — Cloud acknowledgments.
-    </div>
-    <div class="node day-node" id="w22_d3" data-parent="w22" data-side="right"
-      data-details="📖 Study: Network loss simulation.|🔧 Practice: Drop network via Docker/OS and verify the queue builds.|🏗️ Build: Outage simulation.|📦 Output: Load test logs during outage.|✅ Self-Check: Is the SQLite DB expanding?">
-      Day 3 — Network loss simulation.
-    </div>
-    <div class="node day-node" id="w22_d4" data-parent="w22" data-side="right"
-      data-details="📖 Study: Queue draining.|🔧 Practice: Reconnect the network and verify the queue drains.|🏗️ Build: Reconnect tests.|📦 Output: Drain test logs.|✅ Self-Check: Did everything arrive upstream?">
-      Day 4 — Queue draining.
-    </div>
-    <div class="node day-node" id="w22_d5" data-parent="w22" data-side="right"
-      data-details="📖 Study: Partial batch failures.|🔧 Practice: Test scenario where half a batch fails upload.|🏗️ Build: Batch failure logic.|📦 Output: Exact-once replay contract.|✅ Self-Check: Document exactly-once vs at-least-once limits.">
-      Day 5 — Partial batch failures.
-    </div>
-
-    <!-- MONTH 9 -->
-    <div class="node main-node" id="month9" data-parent="month8" data-side="center"
-      data-details="📊 CQRS, Kafka & Observability|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      📊 Month 9: CQRS, Kafka & Observability
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w23" data-parent="month9" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: CQRS Architecture.|Day 2: EF Core (Write Model).|Day 3: Code-First Migrations.|Day 4: Dapper (Read/Ingest).|Day 5: Benchmarking.">
-      📅 Week 23: The Hybrid CQRS Database Pivot
-    </div>
-    <div class="node day-node" id="w23_d1" data-parent="w23" data-side="left"
-      data-details="📖 Study: CQRS Architecture.|🔧 Practice: Spin up PostgreSQL. Study EF Core vs Dapper logic.|🏗️ Build: N/A.|📦 Output: CQRS diagram.|✅ Self-Check: Why split reads and writes?">
-      Day 1 — CQRS Architecture.
-    </div>
-    <div class="node day-node" id="w23_d2" data-parent="w23" data-side="left"
-      data-details="📖 Study: EF Core (Write Model).|🔧 Practice: Implement EF Core for relational device configurations.|🏗️ Build: EF Core Context.|📦 Output: Configuration models.|✅ Self-Check: Are relations mapped correctly?">
-      Day 2 — EF Core (Write Model).
-    </div>
-    <div class="node day-node" id="w23_d3" data-parent="w23" data-side="left"
-      data-details="📖 Study: Code-First Migrations.|🔧 Practice: Build the device registry tables using EF Core.|🏗️ Build: Migrated Postgres schema.|📦 Output: Database tables.|✅ Self-Check: Did the migrations execute cleanly?">
-      Day 3 — Code-First Migrations.
-    </div>
-    <div class="node day-node" id="w23_d4" data-parent="w23" data-side="left"
-      data-details="📖 Study: Dapper (Read/Ingest).|🔧 Practice: Implement Dapper for high-velocity time-series ingestion.|🏗️ Build: Dapper SQL ingestion logic.|📦 Output: Micro-ORM integration.|✅ Self-Check: Is raw SQL faster than tracking?">
-      Day 4 — Dapper (Read/Ingest).
-    </div>
-    <div class="node day-node" id="w23_d5" data-parent="w23" data-side="left"
-      data-details="📖 Study: Benchmarking.|🔧 Practice: Benchmark EF Core insert speed vs Dapper insert speed.|🏗️ Build: Benchmark test.|📦 Output: Performance comparison report.|✅ Self-Check: Document why Dapper is required for telemetry.">
-      Day 5 — Benchmarking.
-    </div>
-    <div class="node sub-node has-days" id="w24" data-parent="month9" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Kafka Clusters.|Day 2: Confluent.Kafka Producer.|Day 3: Kafka Consumer.|Day 4: Consumer Group scaling.|Day 5: Offset rewinds.">
-      📅 Week 24: Apache Kafka Event Streaming
-    </div>
-    <div class="node day-node" id="w24_d1" data-parent="w24" data-side="right"
-      data-details="📖 Study: Kafka Clusters.|🔧 Practice: Spin up local Kafka. Study topics and consumer groups.|🏗️ Build: Running Kafka environment.|📦 Output: Local Kafka cluster.|✅ Self-Check: What is a partition?">
-      Day 1 — Kafka Clusters.
-    </div>
-    <div class="node day-node" id="w24_d2" data-parent="w24" data-side="right"
-      data-details="📖 Study: Confluent.Kafka Producer.|🔧 Practice: Write a Producer to publish biometric events.|🏗️ Build: Kafka Producer implementation.|📦 Output: C# Publisher code.|✅ Self-Check: Are messages routing to the topic?">
-      Day 2 — Confluent.Kafka Producer.
-    </div>
-    <div class="node day-node" id="w24_d3" data-parent="w24" data-side="right"
-      data-details="📖 Study: Kafka Consumer.|🔧 Practice: Write a Consumer to ingest Kafka streams into Postgres.|🏗️ Build: Kafka Consumer implementation.|📦 Output: C# Consumer code.|✅ Self-Check: Is the data hitting the DB?">
-      Day 3 — Kafka Consumer.
-    </div>
-    <div class="node day-node" id="w24_d4" data-parent="w24" data-side="right"
-      data-details="📖 Study: Consumer Group scaling.|🔧 Practice: Test load balancing with two running C# consumer instances.|🏗️ Build: Scalability tests.|📦 Output: Load balancing logs.|✅ Self-Check: Do the instances share the partition load?">
-      Day 4 — Consumer Group scaling.
-    </div>
-    <div class="node day-node" id="w24_d5" data-parent="w24" data-side="right"
-      data-details="📖 Study: Offset rewinds.|🔧 Practice: Simulate offset rewinds and partition failures.|🏗️ Build: Failure tests.|📦 Output: System resilience report.|✅ Self-Check: Prove you can handle enterprise data securely.">
-      Day 5 — Offset rewinds.
-    </div>
-
-    <!-- MONTH 10 -->
-    <div class="node main-node" id="month10" data-parent="month9" data-side="center"
-      data-details="📊 CQRS, Kafka & Observability|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      📊 Month 10: CQRS, Kafka & Observability
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w25" data-parent="month10" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: InfluxDB Deployment.|Day 2: Numerical Telemetry.|Day 3: High-Cardinality Tags.|Day 4: Retention Policies.|Day 5: Heavy Load Ingestion.">
-      📅 Week 25: Time-Series Observability (InfluxDB)
-    </div>
-    <div class="node day-node" id="w25_d1" data-parent="w25" data-side="left"
-      data-details="📖 Study: InfluxDB Deployment.|🔧 Practice: Deploy InfluxDB. Learn time-series vs relational modeling.|🏗️ Build: Running InfluxDB container.|📦 Output: Time-series database.|✅ Self-Check: Why use NoSQL for telemetry?">
-      Day 1 — InfluxDB Deployment.
-    </div>
-    <div class="node day-node" id="w25_d2" data-parent="w25" data-side="left"
-      data-details="📖 Study: Numerical Telemetry.|🔧 Practice: Route latency, CPU, and scanner status to InfluxDB.|🏗️ Build: C# InfluxDB client.|📦 Output: Telemetry routing code.|✅ Self-Check: Is data structured by time?">
-      Day 2 — Numerical Telemetry.
-    </div>
-    <div class="node day-node" id="w25_d3" data-parent="w25" data-side="left"
-      data-details="📖 Study: High-Cardinality Tags.|🔧 Practice: Structure buckets and tags for high-cardinality queries.|🏗️ Build: Tagging schema.|📦 Output: Tag implementation.|✅ Self-Check: Will these tags slow down queries?">
-      Day 3 — High-Cardinality Tags.
-    </div>
-    <div class="node day-node" id="w25_d4" data-parent="w25" data-side="left"
-      data-details="📖 Study: Retention Policies.|🔧 Practice: Set up policies to automatically drop old telemetry.|🏗️ Build: Data lifecycle configuration.|📦 Output: Retention settings.|✅ Self-Check: Is old data purging automatically?">
-      Day 4 — Retention Policies.
-    </div>
-    <div class="node day-node" id="w25_d5" data-parent="w25" data-side="left"
-      data-details="📖 Study: Heavy Load Ingestion.|🔧 Practice: Test InfluxDB ingestion under heavy load.|🏗️ Build: Load tests.|📦 Output: Performance metrics.|✅ Self-Check: Explain why Postgres isn't used for raw telemetry.">
-      Day 5 — Heavy Load Ingestion.
-    </div>
-    <div class="node sub-node has-days" id="w26" data-parent="month10" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Grafana connections.|Day 2: OEE Dashboards.|Day 3: Serilog & Correlation IDs.|Day 4: Unified tracing.|Day 5: Visual debugging.">
-      📅 Week 26: Dashboards (Grafana) & Structured Logging
-    </div>
-    <div class="node day-node" id="w26_d1" data-parent="w26" data-side="right"
-      data-details="📖 Study: Grafana connections.|🔧 Practice: Connect Grafana to InfluxDB and Postgres sources.|🏗️ Build: Running Grafana instance.|📦 Output: Data source connections.|✅ Self-Check: Are queries returning data?">
-      Day 1 — Grafana connections.
-    </div>
-    <div class="node day-node" id="w26_d2" data-parent="w26" data-side="right"
-      data-details="📖 Study: OEE Dashboards.|🔧 Practice: Build Overall Equipment Effectiveness dashboard for hardware.|🏗️ Build: Operational dashboard.|📦 Output: Grafana JSON export.|✅ Self-Check: Can an operator understand this screen?">
-      Day 2 — OEE Dashboards.
-    </div>
-    <div class="node day-node" id="w26_d3" data-parent="w26" data-side="right"
-      data-details="📖 Study: Serilog & Correlation IDs.|🔧 Practice: Implement structured logging in C# using Serilog.|🏗️ Build: Serilog configuration.|📦 Output: Structured logging setup.|✅ Self-Check: Why use JSON logs instead of text?">
-      Day 3 — Serilog & Correlation IDs.
-    </div>
-    <div class="node day-node" id="w26_d4" data-parent="w26" data-side="right"
-      data-details="📖 Study: Unified tracing.|🔧 Practice: Integrate logging across Kafka and Edge Gateway.|🏗️ Build: Unified log tracing.|📦 Output: Cross-service logs.|✅ Self-Check: Do correlation IDs match across services?">
-      Day 4 — Unified tracing.
-    </div>
-    <div class="node day-node" id="w26_d5" data-parent="w26" data-side="right"
-      data-details="📖 Study: Visual debugging.|🔧 Practice: Simulate a failure and trace the ID from edge to DB.|🏗️ Build: Incident tracing test.|📦 Output: Debugging report.|✅ Self-Check: Prove you can debug the system visually.">
-      Day 5 — Visual debugging.
-    </div>
-
-    <!-- ======= PHASE 4: CLOUD SOVEREIGNTY & CYBERSECURITY ======= -->
-    <div class="year-label year-label-2" id="phase4Label" data-parent="" data-side="center">🔐 PHASE 4<br><small>Cloud Sovereignty & Security</small></div>
-
-    <!-- MONTH 11 -->
-    <div class="node main-node" id="month11" data-parent="phase4Label" data-side="center"
-      data-details="🔐 Cloud Sovereignty & Security|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🔐 Month 11: Cloud Sovereignty & Security
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w27" data-parent="month11" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: edgeAgent & edgeHub.|Day 2: Edge Provisioning.|Day 3: Edge Modules.|Day 4: Remote Deployment.|Day 5: Message Routing.">
-      📅 Week 27: Azure IoT Edge Runtime
-    </div>
-    <div class="node day-node" id="w27_d1" data-parent="w27" data-side="left"
-      data-details="📖 Study: edgeAgent & edgeHub.|🔧 Practice: Study the difference between IoT Hub and IoT Edge.|🏗️ Build: N/A.|📦 Output: Notes on edge orchestration.|✅ Self-Check: Why deploy logic *to* the edge?">
-      Day 1 — edgeAgent & edgeHub.
-    </div>
-    <div class="node day-node" id="w27_d2" data-parent="w27" data-side="left"
-      data-details="📖 Study: Edge Provisioning.|🔧 Practice: Provision an Azure IoT Edge device in the cloud.|🏗️ Build: Provisioned Edge identity.|📦 Output: Azure setup documentation.|✅ Self-Check: Is the device online in Azure?">
-      Day 2 — Edge Provisioning.
-    </div>
-    <div class="node day-node" id="w27_d3" data-parent="w27" data-side="left"
-      data-details="📖 Study: Edge Modules.|🔧 Practice: Package your C# Gateway as a custom IoT Edge Module.|🏗️ Build: IoT Edge deployment manifest.|📦 Output: Deployment JSON file.|✅ Self-Check: Are container routes defined?">
-      Day 3 — Edge Modules.
-    </div>
-    <div class="node day-node" id="w27_d4" data-parent="w27" data-side="left"
-      data-details="📖 Study: Remote Deployment.|🔧 Practice: Deploy the module remotely from Azure to local runtime.|🏗️ Build: Successful remote deployment.|📦 Output: Verification logs.|✅ Self-Check: Did the cloud push the container?">
-      Day 4 — Remote Deployment.
-    </div>
-    <div class="node day-node" id="w27_d5" data-parent="w27" data-side="left"
-      data-details="📖 Study: Message Routing.|🔧 Practice: Route messages through edgeHub to the cloud.|🏗️ Build: Cloud routing tests.|📦 Output: End-to-end data validation.|✅ Self-Check: Document how central IT pushes updates to remote factories.">
-      Day 5 — Message Routing.
-    </div>
-    <div class="node sub-node has-days" id="w28" data-parent="month11" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: KSA Data Residency.|Day 2: X.509 Device Auth.|Day 3: Parallel Publishing.|Day 4: AWS IoT Rules.|Day 5: Cross-Cloud Failover.">
-      📅 Week 28: Dual-Cloud Routing (AWS IoT Core for KSA)
-    </div>
-    <div class="node day-node" id="w28_d1" data-parent="w28" data-side="right"
-      data-details="📖 Study: KSA Data Residency.|🔧 Practice: Study AWS IoT Core and AWS Bahrain Region controls.|🏗️ Build: N/A.|📦 Output: Notes on Sovereign Cloud.|✅ Self-Check: Why must KSA data stay in the region?">
-      Day 1 — KSA Data Residency.
-    </div>
-    <div class="node day-node" id="w28_d2" data-parent="w28" data-side="right"
-      data-details="📖 Study: X.509 Device Auth.|🔧 Practice: Provision AWS IoT Core. Generate certificates.|🏗️ Build: AWS certificates loaded locally.|📦 Output: Key management setup.|✅ Self-Check: Are keys stored securely?">
-      Day 2 — X.509 Device Auth.
-    </div>
-    <div class="node day-node" id="w28_d3" data-parent="w28" data-side="right"
-      data-details="📖 Study: Parallel Publishing.|🔧 Practice: Implement MQTT publishing to both Azure and AWS routes.|🏗️ Build: Multi-cloud routing logic.|📦 Output: Gateway C# code.|✅ Self-Check: Is the gateway cloud-agnostic?">
-      Day 3 — Parallel Publishing.
-    </div>
-    <div class="node day-node" id="w28_d4" data-parent="w28" data-side="right"
-      data-details="📖 Study: AWS IoT Rules.|🔧 Practice: Route data into an S3 bucket or DynamoDB via rules.|🏗️ Build: AWS backend integration.|📦 Output: Cloud architecture setup.|✅ Self-Check: Is AWS receiving telemetry?">
-      Day 4 — AWS IoT Rules.
-    </div>
-    <div class="node day-node" id="w28_d5" data-parent="w28" data-side="right"
-      data-details="📖 Study: Cross-Cloud Failover.|🔧 Practice: Test failover from Azure to AWS.|🏗️ Build: Failover tests.|📦 Output: Failover logic confirmed.|✅ Self-Check: Explain how you maintain KSA data residency.">
-      Day 5 — Cross-Cloud Failover.
-    </div>
-
-    <!-- MONTH 12 -->
-    <div class="node main-node" id="month12" data-parent="month11" data-side="center"
-      data-details="🔐 Cloud Sovereignty & Security|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🔐 Month 12: Cloud Sovereignty & Security
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w29" data-parent="month12" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: IEC 62443-4-1.|Day 2: Zones & Conduits.|Day 3: SAST in CI/CD.|Day 4: Software Bill of Materials.|Day 5: Threat Modeling.">
-      📅 Week 29: DACH Target: IEC 62443 Compliance
-    </div>
-    <div class="node day-node" id="w29_d1" data-parent="w29" data-side="left"
-      data-details="📖 Study: IEC 62443-4-1.|🔧 Practice: Study Secure Product Development Lifecycle principles.|🏗️ Build: N/A.|📦 Output: Notes on secure-by-design.|✅ Self-Check: What are the mandatory security checks?">
-      Day 1 — IEC 62443-4-1.
-    </div>
-    <div class="node day-node" id="w29_d2" data-parent="w29" data-side="left"
-      data-details="📖 Study: Zones & Conduits.|🔧 Practice: Map architecture into strict Industrial vs Enterprise zones.|🏗️ Build: Zone & Conduit network diagram.|📦 Output: Architecture diagram.|✅ Self-Check: Are the boundaries isolated?">
-      Day 2 — Zones & Conduits.
-    </div>
-    <div class="node day-node" id="w29_d3" data-parent="w29" data-side="left"
-      data-details="📖 Study: SAST in CI/CD.|🔧 Practice: Implement Static Application Security Testing in GitHub.|🏗️ Build: Automated security scanning.|📦 Output: CI pipeline update.|✅ Self-Check: Does it block insecure code?">
-      Day 3 — SAST in CI/CD.
-    </div>
-    <div class="node day-node" id="w29_d4" data-parent="w29" data-side="left"
-      data-details="📖 Study: Software Bill of Materials.|🔧 Practice: Generate an SBOM for the C# application to comply with CRA.|🏗️ Build: Exported SBOM XML/JSON.|📦 Output: SBOM file.|✅ Self-Check: Are all dependencies tracked?">
-      Day 4 — Software Bill of Materials.
-    </div>
-    <div class="node day-node" id="w29_d5" data-parent="w29" data-side="left"
-      data-details="📖 Study: Threat Modeling.|🔧 Practice: Document Spoofing, Tampering, Replay mitigations.|🏗️ Build: Threat model report.|📦 Output: Security documentation.|✅ Self-Check: Prove the architecture complies with the EU Cyber Resilience Act.">
-      Day 5 — Threat Modeling.
-    </div>
-    <div class="node sub-node has-days" id="w30" data-parent="month12" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: NCA OTCC-1:2022.|Day 2: Supply Chain Risks.|Day 3: Encryption at Rest.|Day 4: Remote Access Controls.|Day 5: Compliance Matrix.">
-      📅 Week 30: KSA Target: NCA OTCC-1:2022 Compliance
-    </div>
-    <div class="node day-node" id="w30_d1" data-parent="w30" data-side="right"
-      data-details="📖 Study: NCA OTCC-1:2022.|🔧 Practice: Study Saudi National Cybersecurity Authority OT controls.|🏗️ Build: N/A.|📦 Output: Notes on KSA asset management.|✅ Self-Check: What triggers an NCA audit?">
-      Day 1 — NCA OTCC-1:2022.
-    </div>
-    <div class="node day-node" id="w30_d2" data-parent="w30" data-side="right"
-      data-details="📖 Study: Supply Chain Risks.|🔧 Practice: Audit third-party SDK dependencies.|🏗️ Build: Dependency audit report.|📦 Output: Security audit logs.|✅ Self-Check: Are there compromised libraries?">
-      Day 2 — Supply Chain Risks.
-    </div>
-    <div class="node day-node" id="w30_d3" data-parent="w30" data-side="right"
-      data-details="📖 Study: Encryption at Rest.|🔧 Practice: Encrypt local edge data (SQLite Cipher).|🏗️ Build: Encryption-at-rest implementation.|📦 Output: Encrypted DB code.|✅ Self-Check: Can the DB be read without a key?">
-      Day 3 — Encryption at Rest.
-    </div>
-    <div class="node day-node" id="w30_d4" data-parent="w30" data-side="right"
-      data-details="📖 Study: Remote Access Controls.|🔧 Practice: Verify network segmentation and remote firewall rules.|🏗️ Build: Firewall/routing documentation.|📦 Output: Network policy map.|✅ Self-Check: Is arbitrary external access blocked?">
-      Day 4 — Remote Access Controls.
-    </div>
-    <div class="node day-node" id="w30_d5" data-parent="w30" data-side="right"
-      data-details="📖 Study: Compliance Matrix.|🔧 Practice: Finalize the NCA compliance matrix for your portfolio.|🏗️ Build: NCA compliance matrix.|📦 Output: Portfolio security asset.|✅ Self-Check: Explain how you prevent a 25M SAR fine.">
-      Day 5 — Compliance Matrix.
-    </div>
-
-    <!-- MONTH 13 -->
-    <div class="node main-node" id="month13" data-parent="month12" data-side="center"
-      data-details="🔐 Cloud Sovereignty & Security|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🔐 Month 13: Cloud Sovereignty & Security
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w31" data-parent="month13" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: mTLS & Machine Identity.|Day 2: Broker Authentication.|Day 3: C# mTLS Client.|Day 4: Spoofing Scenarios.|Day 5: Certificate Rotation.">
-      📅 Week 31: Machine Trust (mTLS)
-    </div>
-    <div class="node day-node" id="w31_d1" data-parent="w31" data-side="left"
-      data-details="📖 Study: mTLS & Machine Identity.|🔧 Practice: Learn mutual TLS and client certificates at scale.|🏗️ Build: N/A.|📦 Output: Notes on certificate lifecycles.|✅ Self-Check: Why are API keys insufficient?">
-      Day 1 — mTLS & Machine Identity.
-    </div>
-    <div class="node day-node" id="w31_d2" data-parent="w31" data-side="left"
-      data-details="📖 Study: Broker Authentication.|🔧 Practice: Configure local MQTT/Kafka to require client certificates.|🏗️ Build: Strict broker authentication.|📦 Output: Configuration files.|✅ Self-Check: Does it reject uncertified connections?">
-      Day 2 — Broker Authentication.
-    </div>
-    <div class="node day-node" id="w31_d3" data-parent="w31" data-side="left"
-      data-details="📖 Study: C# mTLS Client.|🔧 Practice: Update edge gateway to authenticate using mTLS.|🏗️ Build: mTLS C# client configuration.|📦 Output: Secure client code.|✅ Self-Check: Is the handshake successful?">
-      Day 3 — C# mTLS Client.
-    </div>
-    <div class="node day-node" id="w31_d4" data-parent="w31" data-side="left"
-      data-details="📖 Study: Spoofing Scenarios.|🔧 Practice: Test invalid or missing client certs to trigger denial.|🏗️ Build: Access denied logs.|📦 Output: Security test results.|✅ Self-Check: Was the rogue agent blocked?">
-      Day 4 — Spoofing Scenarios.
-    </div>
-    <div class="node day-node" id="w31_d5" data-parent="w31" data-side="left"
-      data-details="📖 Study: Certificate Rotation.|🔧 Practice: Document rotating client certificates without dropping comms.|🏗️ Build: Rotation strategy document.|📦 Output: Lifecycle management plan.|✅ Self-Check: Prove API keys are insufficient for edge hardware.">
-      Day 5 — Certificate Rotation.
-    </div>
-    <div class="node sub-node has-days" id="w32" data-parent="month13" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Environment config strategy.|Day 2: Site Deployment Profiles.|Day 3: Multi-Tenant Database.|Day 4: Independent Publishing.|Day 5: Offline Site Simulation.">
-      📅 Week 32: Multi-Site Topology & Configuration Profiles
-    </div>
-    <div class="node day-node" id="w32_d1" data-parent="w32" data-side="right"
-      data-details="📖 Study: Environment config strategy.|🔧 Practice: Study site-specific configuration and defaults.|🏗️ Build: N/A.|📦 Output: JSON config layering approach.|✅ Self-Check: How does dev differ from prod?">
-      Day 1 — Environment config strategy.
-    </div>
-    <div class="node day-node" id="w32_d2" data-parent="w32" data-side="right"
-      data-details="📖 Study: Site Deployment Profiles.|🔧 Practice: Model Site A (Stuttgart) and Site B (Riyadh) logic.|🏗️ Build: Distinct site deployment profiles.|📦 Output: Config files.|✅ Self-Check: Are regional endpoints defined?">
-      Day 2 — Site Deployment Profiles.
-    </div>
-    <div class="node day-node" id="w32_d3" data-parent="w32" data-side="right"
-      data-details="📖 Study: Multi-Tenant Database.|🔧 Practice: Add site-aware routing grouping into PostgreSQL.|🏗️ Build: Multi-tenant database design.|📦 Output: Schema updates.|✅ Self-Check: Can you query by site?">
-      Day 3 — Multi-Tenant Database.
-    </div>
-    <div class="node day-node" id="w32_d4" data-parent="w32" data-side="right"
-      data-details="📖 Study: Independent Publishing.|🔧 Practice: Simulate multiple edge gateways publishing independently.|🏗️ Build: End-to-end multi-site load test.|📦 Output: Load test logs.|✅ Self-Check: Does the backend handle parallel streams?">
-      Day 4 — Independent Publishing.
-    </div>
-    <div class="node day-node" id="w32_d5" data-parent="w32" data-side="right"
-      data-details="📖 Study: Offline Site Simulation.|🔧 Practice: Test Site A going offline while Site B continues seamlessly.|🏗️ Build: Isolation testing.|📦 Output: Resilience report.|✅ Self-Check: Explain how central architecture handles global sites.">
-      Day 5 — Offline Site Simulation.
-    </div>
-    <div class="node milestone-node" id="milestone_cloud" data-parent="month13" data-side="center"
-      data-details="🎉 Cloud sovereignty and cybersecurity — your system is production-grade and compliant.">
-      🎉 Production-Grade Architecture
-    </div>
-
-    <!-- ======= PHASE 5: CAPSTONE, UI, C4 MODELS, & MARKET EXECUTION ======= -->
-    <div class="year-label year-label-2" id="phase5Label" data-parent="" data-side="center">🎯 PHASE 5<br><small>Capstone & Market Execution</small></div>
-
-    <!-- MONTH 14 -->
-    <div class="node main-node" id="month14" data-parent="phase5Label" data-side="center"
-      data-details="🎯 Capstone & Market Execution|⏱️ ~30 hrs (3 weeks × 10 hrs)|📅 15 hours per week">
-      🎯 Month 14: Capstone & Market Execution
-      <span class="months-badge">~30 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w33" data-parent="month14" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Vite & React.|Day 2: C# Minimal APIs.|Day 3: Operational Dashboard.|Day 4: Full Stack Connection.|Day 5: Kestrel Serving.">
-      📅 Week 33: The Local Configuration UI (React & TypeScript)
-    </div>
-    <div class="node day-node" id="w33_d1" data-parent="w33" data-side="left"
-      data-details="📖 Study: Vite & React.|🔧 Practice: Scaffold a lightweight React/TypeScript frontend.|🏗️ Build: Running React development server.|📦 Output: Frontend repository.|✅ Self-Check: Is the build tool running?">
-      Day 1 — Vite & React.
-    </div>
-    <div class="node day-node" id="w33_d2" data-parent="w33" data-side="left"
-      data-details="📖 Study: C# Minimal APIs.|🔧 Practice: Build a local REST API on the gateway to serve config.|🏗️ Build: C# Minimal API endpoints.|📦 Output: Backend API code.|✅ Self-Check: Are endpoints returning JSON?">
-      Day 2 — C# Minimal APIs.
-    </div>
-    <div class="node day-node" id="w33_d3" data-parent="w33" data-side="left"
-      data-details="📖 Study: Operational Dashboard.|🔧 Practice: Create a UI to set MQTT endpoints and view local logs.|🏗️ Build: Operational React UI components.|📦 Output: React components.|✅ Self-Check: Is the UI intuitive for a technician?">
-      Day 3 — Operational Dashboard.
-    </div>
-    <div class="node day-node" id="w33_d4" data-parent="w33" data-side="left"
-      data-details="📖 Study: Full Stack Connection.|🔧 Practice: Connect the React frontend to the C# gateway API.|🏗️ Build: Full stack local configuration flow.|📦 Output: Integration code.|✅ Self-Check: Does changing the UI update the backend?">
-      Day 4 — Full Stack Connection.
-    </div>
-    <div class="node day-node" id="w33_d5" data-parent="w33" data-side="left"
-      data-details="📖 Study: Kestrel Serving.|🔧 Practice: Serve React static files directly from the C# Kestrel server.|🏗️ Build: Hosted application.|📦 Output: Deployment logic.|✅ Self-Check: Prove an OT tech can configure the system locally.">
-      Day 5 — Kestrel Serving.
-    </div>
-    <div class="node sub-node has-days" id="w34" data-parent="month14" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: C4 Context Diagram.|Day 2: C4 Container Diagram.|Day 3: ADR 1: K3s over Docker.|Day 4: ADR 2 & 3: CQRS & Cloud.|Day 5: Presentation Readiness.">
-      📅 Week 34: Architecture Diagrams (C4 Model) & ADRs
-    </div>
-    <div class="node day-node" id="w34_d1" data-parent="w34" data-side="right"
-      data-details="📖 Study: C4 Context Diagram.|🔧 Practice: Draw Hardware -&gt; Gateway -&gt; Dual Cloud -&gt; UI.|🏗️ Build: Context Level Diagram.|📦 Output: High-level diagram.|✅ Self-Check: Is the big picture clear?">
-      Day 1 — C4 Context Diagram.
-    </div>
-    <div class="node day-node" id="w34_d2" data-parent="w34" data-side="right"
-      data-details="📖 Study: C4 Container Diagram.|🔧 Practice: Draw K3s, Postgres, Kafka, and C# modules.|🏗️ Build: Container Level Diagram.|📦 Output: Microservices diagram.|✅ Self-Check: Are the technology choices visible?">
-      Day 2 — C4 Container Diagram.
-    </div>
-    <div class="node day-node" id="w34_d3" data-parent="w34" data-side="right"
-      data-details="📖 Study: ADR 1: K3s over Docker.|🔧 Practice: Write Architecture Decision Record justifying Kubernetes.|🏗️ Build: Markdown ADR document.|📦 Output: ADR 1 file.|✅ Self-Check: Did I explain the trade-offs?">
-      Day 3 — ADR 1: K3s over Docker.
-    </div>
-    <div class="node day-node" id="w34_d4" data-parent="w34" data-side="right"
-      data-details="📖 Study: ADR 2 & 3: CQRS & Cloud.|🔧 Practice: Write ADRs for EF Core + Dapper and Dual-Cloud routing.|🏗️ Build: Database & Cloud ADR documents.|📦 Output: ADR 2 & 3 files.|✅ Self-Check: Are decisions grounded in performance metrics?">
-      Day 4 — ADR 2 & 3: CQRS & Cloud.
-    </div>
-    <div class="node day-node" id="w34_d5" data-parent="w34" data-side="right"
-      data-details="📖 Study: Presentation Readiness.|🔧 Practice: Review all visual documentation for the portfolio.|🏗️ Build: Finalized documentation.|📦 Output: Polished diagrams.|✅ Self-Check: Prove your reasoning reflects Senior Architect seniority.">
-      Day 5 — Presentation Readiness.
-    </div>
-    <div class="node sub-node has-days" id="w35" data-parent="month14" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: V2 System Wiring.|Day 2: Repository Structure.|Day 3: Full Integration Test.|Day 4: Log Retention Policies.|Day 5: SOLID Refactoring.">
-      📅 Week 35: Capstone Wiring & End-to-End System Polish
-    </div>
-    <div class="node day-node" id="w35_d1" data-parent="w35" data-side="left"
-      data-details="📖 Study: V2 System Wiring.|🔧 Practice: Wire Simulator -&gt; C# Gateway -&gt; Kafka -&gt; Postgres/Cloud.|🏗️ Build: Unified system boot script.|📦 Output: System orchestrator.|✅ Self-Check: Does it boot with one command?">
-      Day 1 — V2 System Wiring.
-    </div>
-    <div class="node day-node" id="w35_d2" data-parent="w35" data-side="left"
-      data-details="📖 Study: Repository Structure.|🔧 Practice: Clean the repo (src, docs, infra, edge).|🏗️ Build: Professional GitHub repository structure.|📦 Output: Cleaned codebase.|✅ Self-Check: Would a German hiring manager respect this repo?">
-      Day 2 — Repository Structure.
-    </div>
-    <div class="node day-node" id="w35_d3" data-parent="w35" data-side="left"
-      data-details="📖 Study: Full Integration Test.|🔧 Practice: Ensure queue, storage, status, metrics, auth connect perfectly.|🏗️ Build: Complete integration test.|📦 Output: Test suite passed.|✅ Self-Check: Are there any dead ends?">
-      Day 3 — Full Integration Test.
-    </div>
-    <div class="node day-node" id="w35_d4" data-parent="w35" data-side="left"
-      data-details="📖 Study: Log Retention Policies.|🔧 Practice: Run a final pass to prevent disk-full errors.|🏗️ Build: Finalized Serilog configurations.|📦 Output: Logging setup.|✅ Self-Check: Are logs rotating safely?">
-      Day 4 — Log Retention Policies.
-    </div>
-    <div class="node day-node" id="w35_d5" data-parent="w35" data-side="left"
-      data-details="📖 Study: SOLID Refactoring.|🔧 Practice: Refactor any messy &quot;hacky&quot; code from earlier months.|🏗️ Build: Clean, decoupled code.|📦 Output: Finalized core logic.|✅ Self-Check: Ensure the codebase follows SOLID principles.">
-      Day 5 — SOLID Refactoring.
-    </div>
-
-    <!-- MONTH 15 -->
-    <div class="node main-node" id="month15" data-parent="month14" data-side="center"
-      data-details="🎯 Capstone & Market Execution|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🎯 Month 15: Capstone & Market Execution
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w36" data-parent="month15" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Load Test Planning.|Day 2: Stress Testing.|Day 3: Resource Profiling.|Day 4: System Tuning.|Day 5: Performance Gains.">
-      📅 Week 36: Performance Load Testing & Profiling
-    </div>
-    <div class="node day-node" id="w36_d1" data-parent="w36" data-side="left"
-      data-details="📖 Study: Load Test Planning.|🔧 Practice: Design scenarios: Broker down, DB slow, high volume.|🏗️ Build: Load test plan.|📦 Output: Test documentation.|✅ Self-Check: Are the scenarios realistic?">
-      Day 1 — Load Test Planning.
-    </div>
-    <div class="node day-node" id="w36_d2" data-parent="w36" data-side="left"
-      data-details="📖 Study: Stress Testing.|🔧 Practice: Hit the C# gateway with 10,000 requests/sec.|🏗️ Build: Load test execution.|📦 Output: Stress testing scripts.|✅ Self-Check: Did the system crash?">
-      Day 2 — Stress Testing.
-    </div>
-    <div class="node day-node" id="w36_d3" data-parent="w36" data-side="left"
-      data-details="📖 Study: Resource Profiling.|🔧 Practice: Measure GC pauses, CPU usage, and memory leaks.|🏗️ Build: Performance profile report.|📦 Output: Profiling metrics.|✅ Self-Check: Is memory stable under load?">
-      Day 3 — Resource Profiling.
-    </div>
-    <div class="node day-node" id="w36_d4" data-parent="w36" data-side="left"
-      data-details="📖 Study: System Tuning.|🔧 Practice: Tune weak points (e.g., Kafka batching or Dapper inserts).|🏗️ Build: Tuned codebase.|📦 Output: Performance patches.|✅ Self-Check: Did the bottleneck move?">
-      Day 4 — System Tuning.
-    </div>
-    <div class="node day-node" id="w36_d5" data-parent="w36" data-side="left"
-      data-details="📖 Study: Performance Gains.|🔧 Practice: Re-run tests and document the optimizations.|🏗️ Build: Final benchmark report.|📦 Output: Optimization documentation.|✅ Self-Check: Prove the system handles enterprise industrial loads.">
-      Day 5 — Performance Gains.
-    </div>
-    <div class="node sub-node has-days" id="w37" data-parent="month15" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Technical German.|Day 2: Bilingual Documentation.|Day 3: Oral Practice (SQLite).|Day 4: Professional Intro.|Day 5: Language Maintenance.">
-      📅 Week 37: DACH Vocabulary & Pitch Translation
-    </div>
-    <div class="node day-node" id="w37_d1" data-parent="w37" data-side="right"
-      data-details="📖 Study: Technical German.|🔧 Practice: Map software/hardware terms to German (B2 level).|🏗️ Build: B2 German technical vocabulary list.|📦 Output: Study sheet.|✅ Self-Check: Do I know the German word for Edge Computing?">
-      Day 1 — Technical German.
-    </div>
-    <div class="node day-node" id="w37_d2" data-parent="w37" data-side="right"
-      data-details="📖 Study: Bilingual Documentation.|🔧 Practice: Translate C4 diagrams and ADR summaries into German.|🏗️ Build: Bilingual portfolio documentation.|📦 Output: Translated diagrams.|✅ Self-Check: Are technical terms accurate?">
-      Day 2 — Bilingual Documentation.
-    </div>
-    <div class="node day-node" id="w37_d3" data-parent="w37" data-side="right"
-      data-details="📖 Study: Oral Practice (SQLite).|🔧 Practice: Practice explaining SQLite offline buffering in German.|🏗️ Build: Recorded oral practice.|📦 Output: Audio recording.|✅ Self-Check: Is my pronunciation clear?">
-      Day 3 — Oral Practice (SQLite).
-    </div>
-    <div class="node day-node" id="w37_d4" data-parent="w37" data-side="right"
-      data-details="📖 Study: Professional Intro.|🔧 Practice: Practice &quot;Werdegang&quot; (Tell me about yourself) in German.|🏗️ Build: Polished professional introduction.|📦 Output: Pitch script.|✅ Self-Check: Does it sound confident?">
-      Day 4 — Professional Intro.
-    </div>
-    <div class="node day-node" id="w37_d5" data-parent="w37" data-side="right"
-      data-details="📖 Study: Language Maintenance.|🔧 Practice: Setup a 30-minute daily language maintenance routine.|🏗️ Build: Routine schedule.|📦 Output: Study plan.|✅ Self-Check: Prove you can discuss OT/IT integration in German.">
-      Day 5 — Language Maintenance.
-    </div>
-
-    <!-- MONTH 16 -->
-    <div class="node main-node" id="month16" data-parent="month15" data-side="center"
-      data-details="🎯 Capstone & Market Execution|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🎯 Month 16: Capstone & Market Execution
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w38" data-parent="month16" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: DACH Sector Targeting.|Day 2: Company Shortlist.|Day 3: *Lebenslauf* Formatting.|Day 4: *Anschreiben* Formatting.|Day 5: Job Title Extraction.">
-      📅 Week 38: DACH Target Mapping & CV Formatting
-    </div>
-    <div class="node day-node" id="w38_d1" data-parent="w38" data-side="left"
-      data-details="📖 Study: DACH Sector Targeting.|🔧 Practice: List target sectors: Automation, IIoT, MedTech.|🏗️ Build: Targeted sector list.|📦 Output: Sector map.|✅ Self-Check: Which sector fits my skills best?">
-      Day 1 — DACH Sector Targeting.
-    </div>
-    <div class="node day-node" id="w38_d2" data-parent="w38" data-side="left"
-      data-details="📖 Study: Company Shortlist.|🔧 Practice: Target Siemens, Bosch, Beckhoff, KUKA, Integrators.|🏗️ Build: Top 30 DACH company targets.|📦 Output: Lead list.|✅ Self-Check: Do these companies use C#/.NET?">
-      Day 2 — Company Shortlist.
-    </div>
-    <div class="node day-node" id="w38_d3" data-parent="w38" data-side="left"
-      data-details="📖 Study: *Lebenslauf* Formatting.|🔧 Practice: Format CV to German standards.|🏗️ Build: German CV PDF.|📦 Output: Final CV document.|✅ Self-Check: Is it structured correctly?">
-      Day 3 — *Lebenslauf* Formatting.
-    </div>
-    <div class="node day-node" id="w38_d4" data-parent="w38" data-side="left"
-      data-details="📖 Study: *Anschreiben* Formatting.|🔧 Practice: Prepare German Cover Letter highlighting TwinCAT/C#.|🏗️ Build: Tailored German cover letter.|📦 Output: Final Cover Letter.|✅ Self-Check: Does it address integration specifically?">
-      Day 4 — *Anschreiben* Formatting.
-    </div>
-    <div class="node day-node" id="w38_d5" data-parent="w38" data-side="left"
-      data-details="📖 Study: Job Title Extraction.|🔧 Practice: Extract exact titles (Systemintegrator, Edge Developer).|🏗️ Build: Filtered job search queries.|📦 Output: Query list.|✅ Self-Check: Verify profile bypasses generic &quot;Fullstack&quot; filters.">
-      Day 5 — Job Title Extraction.
-    </div>
-    <div class="node sub-node has-days" id="w39" data-parent="month16" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Gigaproject Targeting.|Day 2: Portfolio Repackaging.|Day 3: GCC CV Formatting.|Day 4: Data Residency Answers.|Day 5: Compensation Math.">
-      📅 Week 39: KSA Target Mapping & Gigaproject Positioning
-    </div>
-    <div class="node day-node" id="w39_d1" data-parent="w39" data-side="right"
-      data-details="📖 Study: Gigaproject Targeting.|🔧 Practice: List NEOM, STC, IOT Squared, Aramco digital initiatives.|🏗️ Build: KSA Target List.|📦 Output: Lead list.|✅ Self-Check: Who holds the IoT budgets in KSA?">
-      Day 1 — Gigaproject Targeting.
-    </div>
-    <div class="node day-node" id="w39_d2" data-parent="w39" data-side="right"
-      data-details="📖 Study: Portfolio Repackaging.|🔧 Practice: Emphasize AWS, BACnet, and NCA OTCC compliance.|🏗️ Build: KSA-focused portfolio presentation.|📦 Output: Updated presentation.|✅ Self-Check: Is it tailored to smart cities?">
-      Day 2 — Portfolio Repackaging.
-    </div>
-    <div class="node day-node" id="w39_d3" data-parent="w39" data-side="right"
-      data-details="📖 Study: GCC CV Formatting.|🔧 Practice: Format an English CV for corporate/consultancy roles.|🏗️ Build: KSA CV PDF.|📦 Output: Final CV document.|✅ Self-Check: Does it highlight massive scale?">
-      Day 3 — GCC CV Formatting.
-    </div>
-    <div class="node day-node" id="w39_d4" data-parent="w39" data-side="right"
-      data-details="📖 Study: Data Residency Answers.|🔧 Practice: Write answer for &quot;How do you handle Saudi data residency?&quot;|🏗️ Build: Sovereign cloud interview script.|📦 Output: Scripted answer.|✅ Self-Check: Do I mention AWS Bahrain explicitly?">
-      Day 4 — Data Residency Answers.
-    </div>
-    <div class="node day-node" id="w39_d5" data-parent="w39" data-side="right"
-      data-details="📖 Study: Compensation Math.|🔧 Practice: Compare Iqama/Tax-free structures vs EU Blue Card.|🏗️ Build: Compensation breakdown.|📦 Output: Strategy note.|✅ Self-Check: Ensure you understand the KSA total-package model.">
-      Day 5 — Compensation Math.
-    </div>
-
-    <!-- MONTH 17 -->
-    <div class="node main-node" id="month17" data-parent="month16" data-side="center"
-      data-details="🎯 Capstone & Market Execution|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🎯 Month 17: Capstone & Market Execution
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w40" data-parent="month17" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Initial Applications.|Day 2: Portfolio Customization.|Day 3: Bypassing HR.|Day 4: Scaling Applications.|Day 5: Metrics Analysis.">
-      📅 Week 40: Execution: DACH Outreach Sprint
-    </div>
-    <div class="node day-node" id="w40_d1" data-parent="w40" data-side="left"
-      data-details="📖 Study: Initial Applications.|🔧 Practice: Apply to the first batch of 10 targeted DACH roles.|🏗️ Build: Application tracker updated.|📦 Output: Submitted applications.|✅ Self-Check: Did I use the correct keywords?">
-      Day 1 — Initial Applications.
-    </div>
-    <div class="node day-node" id="w40_d2" data-parent="w40" data-side="left"
-      data-details="📖 Study: Portfolio Customization.|🔧 Practice: Customize portfolio links and summaries per role type.|🏗️ Build: Tailored submissions.|📦 Output: Customized emails.|✅ Self-Check: Is the context relevant to the job?">
-      Day 2 — Portfolio Customization.
-    </div>
-    <div class="node day-node" id="w40_d3" data-parent="w40" data-side="left"
-      data-details="📖 Study: Bypassing HR.|🔧 Practice: Send LinkedIn outreach to DACH Engineering Managers.|🏗️ Build: Direct outreach messages.|📦 Output: Sent messages.|✅ Self-Check: Is the message short and technical?">
-      Day 3 — Bypassing HR.
-    </div>
-    <div class="node day-node" id="w40_d4" data-parent="w40" data-side="left"
-      data-details="📖 Study: Scaling Applications.|🔧 Practice: Apply to 10 additional roles.|🏗️ Build: Application tracker updated.|📦 Output: Submitted applications.|✅ Self-Check: Am I maintaining quality?">
-      Day 4 — Scaling Applications.
-    </div>
-    <div class="node day-node" id="w40_d5" data-parent="w40" data-side="left"
-      data-details="📖 Study: Metrics Analysis.|🔧 Practice: Document which outreach messages get views/replies.|🏗️ Build: Conversion rate report.|📦 Output: Strategy adjustment plan.|✅ Self-Check: Are they opening my GitHub?">
-      Day 5 — Metrics Analysis.
-    </div>
-    <div class="node sub-node has-days" id="w41" data-parent="month17" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Initial Applications.|Day 2: Riyadh Networking.|Day 3: Scaling Applications.|Day 4: DACH Follow-ups.|Day 5: Cross-Track Analysis.">
-      📅 Week 41: Execution: KSA Outreach Sprint
-    </div>
-    <div class="node day-node" id="w41_d1" data-parent="w41" data-side="right"
-      data-details="📖 Study: Initial Applications.|🔧 Practice: Apply to 10 targeted KSA/GCC roles.|🏗️ Build: Application tracker updated.|📦 Output: Submitted applications.|✅ Self-Check: Did I mention Vision 2030 relevance?">
-      Day 1 — Initial Applications.
-    </div>
-    <div class="node day-node" id="w41_d2" data-parent="w41" data-side="right"
-      data-details="📖 Study: Riyadh Networking.|🔧 Practice: Send LinkedIn outreach to technical leads in Riyadh.|🏗️ Build: Direct outreach messages.|📦 Output: Sent messages.|✅ Self-Check: Am I targeting consultancies as well?">
-      Day 2 — Riyadh Networking.
-    </div>
-    <div class="node day-node" id="w41_d3" data-parent="w41" data-side="right"
-      data-details="📖 Study: Scaling Applications.|🔧 Practice: Apply to 10 additional KSA roles.|🏗️ Build: Application tracker updated.|📦 Output: Submitted applications.|✅ Self-Check: Am I hitting the top gigaprojects?">
-      Day 3 — Scaling Applications.
-    </div>
-    <div class="node day-node" id="w41_d4" data-parent="w41" data-side="right"
-      data-details="📖 Study: DACH Follow-ups.|🔧 Practice: Prepare follow-up messages for DACH connections.|🏗️ Build: Follow-up sequence.|📦 Output: Sent follow-ups.|✅ Self-Check: Am I being persistent but polite?">
-      Day 4 — DACH Follow-ups.
-    </div>
-    <div class="node day-node" id="w41_d5" data-parent="w41" data-side="right"
-      data-details="📖 Study: Cross-Track Analysis.|🔧 Practice: Analyze application conversion rates for both tracks.|🏗️ Build: Conversion rate report.|📦 Output: Strategy adjustment plan.|✅ Self-Check: Which market is responding faster?">
-      Day 5 — Cross-Track Analysis.
-    </div>
-
-    <!-- MONTH 18 -->
-    <div class="node main-node" id="month18" data-parent="month17" data-side="center"
-      data-details="🎯 Capstone & Market Execution|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🎯 Month 18: Capstone & Market Execution
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w42" data-parent="month18" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Architecture Defense.|Day 2: Database & Orchestration.|Day 3: CI/CD & Deployment.|Day 4: Hardware Protocols.|Day 5: Weak Point Review.">
-      📅 Week 42: Mock Technical Interview: Architecture Defense
-    </div>
-    <div class="node day-node" id="w42_d1" data-parent="w42" data-side="left"
-      data-details="📖 Study: Architecture Defense.|🔧 Practice: Run a mock interview defending the Capstone (English/German).|🏗️ Build: Mock interview recording.|📦 Output: Performance notes.|✅ Self-Check: Was I defensive or logical?">
-      Day 1 — Architecture Defense.
-    </div>
-    <div class="node day-node" id="w42_d2" data-parent="w42" data-side="left"
-      data-details="📖 Study: Database & Orchestration.|🔧 Practice: Address weak answers regarding CQRS and Edge Kubernetes.|🏗️ Build: Refined answers.|📦 Output: Script updates.|✅ Self-Check: Can I explain K3s smoothly?">
-      Day 2 — Database & Orchestration.
-    </div>
-    <div class="node day-node" id="w42_d3" data-parent="w42" data-side="left"
-      data-details="📖 Study: CI/CD & Deployment.|🔧 Practice: Run a mock interview on pipelines and Docker.|🏗️ Build: Mock interview recording.|📦 Output: Performance notes.|✅ Self-Check: Did I stumble on volume mapping?">
-      Day 3 — CI/CD & Deployment.
-    </div>
-    <div class="node day-node" id="w42_d4" data-parent="w42" data-side="left"
-      data-details="📖 Study: Hardware Protocols.|🔧 Practice: Explain hardware protocols (Beckhoff ADS vs BACnet).|🏗️ Build: Protocol explanations.|📦 Output: Script updates.|✅ Self-Check: Is the distinction clear?">
-      Day 4 — Hardware Protocols.
-    </div>
-    <div class="node day-node" id="w42_d5" data-parent="w42" data-side="left"
-      data-details="📖 Study: Weak Point Review.|🔧 Practice: Review top 5 architectural weak points and polish them.|🏗️ Build: Weak point mitigation plan.|📦 Output: Finalized answers.|✅ Self-Check: Am I bulletproof on my own architecture?">
-      Day 5 — Weak Point Review.
-    </div>
-    <div class="node sub-node has-days" id="w43" data-parent="month18" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Data Loss Investigation.|Day 2: Poison Messages.|Day 3: Incident Storytelling.|Day 4: Opaque SDK Debugging.|Day 5: Presentation Polish.">
-      📅 Week 43: Mock Technical Interview: Resilience & Failures
-    </div>
-    <div class="node day-node" id="w43_d1" data-parent="w43" data-side="right"
-      data-details="📖 Study: Data Loss Investigation.|🔧 Practice: Explain how you would investigate data loss from a factory.|🏗️ Build: Incident response mock.|📦 Output: Performance notes.|✅ Self-Check: Did I trace from edge to cloud?">
-      Day 1 — Data Loss Investigation.
-    </div>
-    <div class="node day-node" id="w43_d2" data-parent="w43" data-side="right"
-      data-details="📖 Study: Poison Messages.|🔧 Practice: Explain handling Azure DLQs and Kafka poison messages.|🏗️ Build: Resilience answers.|📦 Output: Script updates.|✅ Self-Check: Did I mention dead-letter queues?">
-      Day 2 — Poison Messages.
-    </div>
-    <div class="node day-node" id="w43_d3" data-parent="w43" data-side="right"
-      data-details="📖 Study: Incident Storytelling.|🔧 Practice: Practice Situation -&gt; Detection -&gt; Containment -&gt; Fix.|🏗️ Build: Structured storytelling practice.|📦 Output: Narrative outlines.|✅ Self-Check: Is the story under 3 minutes?">
-      Day 3 — Incident Storytelling.
-    </div>
-    <div class="node day-node" id="w43_d4" data-parent="w43" data-side="right"
-      data-details="📖 Study: Opaque SDK Debugging.|🔧 Practice: Explain how to debug a failing hardware SDK.|🏗️ Build: SDK debugging mock.|📦 Output: Performance notes.|✅ Self-Check: Did I mention Wireshark/logs?">
-      Day 4 — Opaque SDK Debugging.
-    </div>
-    <div class="node day-node" id="w43_d5" data-parent="w43" data-side="right"
-      data-details="📖 Study: Presentation Polish.|🔧 Practice: Refine pacing and screen-sharing clarity for code reviews.|🏗️ Build: Screen-share rehearsal.|📦 Output: Presentation check.|✅ Self-Check: Is my IDE font readable on a stream?">
-      Day 5 — Presentation Polish.
-    </div>
-
-    <!-- MONTH 19 -->
-    <div class="node main-node" id="month19" data-parent="month18" data-side="center"
-      data-details="🎯 Capstone & Market Execution|⏱️ ~20 hrs (2 weeks × 10 hrs)|📅 15 hours per week">
-      🎯 Month 19: Capstone & Market Execution
-      <span class="months-badge">~20 hrs</span>
-    </div>
-    <div class="node sub-node has-days" id="w44" data-parent="month19" data-side="left"
-      data-details="⏱️ ~10 hours|Day 1: Protocol Comparisons.|Day 2: Offline-First Design.|Day 3: Architecture Comparisons.|Day 4: Multi-Vendor Pipelines.|Day 5: Narrative Lockdown.">
-      📅 Week 44: Tradeoff Mastery & Whiteboarding
-    </div>
-    <div class="node day-node" id="w44_d1" data-parent="w44" data-side="left"
-      data-details="📖 Study: Protocol Comparisons.|🔧 Practice: Verbally compare MQTT vs HTTP and Modbus vs OPC UA.|🏗️ Build: Verbal tradeoff practice.|📦 Output: Performance notes.|✅ Self-Check: Are the latency tradeoffs clear?">
-      Day 1 — Protocol Comparisons.
-    </div>
-    <div class="node day-node" id="w44_d2" data-parent="w44" data-side="left"
-      data-details="📖 Study: Offline-First Design.|🔧 Practice: Whiteboard an offline-first biometric fleet from scratch.|🏗️ Build: Whiteboard session.|📦 Output: Diagram output.|✅ Self-Check: Did I include local SQLite?">
-      Day 2 — Offline-First Design.
-    </div>
-    <div class="node day-node" id="w44_d3" data-parent="w44" data-side="left"
-      data-details="📖 Study: Architecture Comparisons.|🔧 Practice: Verbally compare EF Core vs Dapper and mTLS vs API keys.|🏗️ Build: Verbal tradeoff practice.|📦 Output: Performance notes.|✅ Self-Check: Did I cite performance limits?">
-      Day 3 — Architecture Comparisons.
-    </div>
-    <div class="node day-node" id="w44_d4" data-parent="w44" data-side="left"
-      data-details="📖 Study: Multi-Vendor Pipelines.|🔧 Practice: Whiteboard a multi-vendor event pipeline.|🏗️ Build: Whiteboard session.|📦 Output: Diagram output.|✅ Self-Check: Is the anti-corruption layer present?">
-      Day 4 — Multi-Vendor Pipelines.
-    </div>
-    <div class="node day-node" id="w44_d5" data-parent="w44" data-side="left"
-      data-details="📖 Study: Narrative Lockdown.|🔧 Practice: Lock in your tradeoff defense narrative.|🏗️ Build: Finalized tradeoff logic.|📦 Output: Defense scripts.|✅ Self-Check: Am I confident in my decisions?">
-      Day 5 — Narrative Lockdown.
-    </div>
-    <div class="node sub-node has-days" id="w45" data-parent="month19" data-side="right"
-      data-details="⏱️ ~10 hours|Day 1: Capstone Demonstration.|Day 2: Profile Linking.|Day 3: The Transition Pitch.|Day 4: GitHub Purge.|Day 5: Cloud Cost Cap.|Day 6: Daily Operations: Execute high-volume technical interviews.|Day 7: Negotiation Phase: Deploy negotiation strategies for the €55k-€65k+ (Blue Card) |Day 8: Final Output: **The Contract is Signed. The Extraction Pod Launches.**">
-      📅 Week 45: Public Positioning Polish
-    </div>
-    <div class="node day-node" id="w45_d1" data-parent="w45" data-side="right"
-      data-details="📖 Study: Capstone Demonstration.|🔧 Practice: Record a 5-minute Loom video demonstrating the system.|🏗️ Build: High-quality video recording.|📦 Output: Video file.|✅ Self-Check: Is the audio and code clear?">
-      Day 1 — Capstone Demonstration.
-    </div>
-    <div class="node day-node" id="w45_d2" data-parent="w45" data-side="right"
-      data-details="📖 Study: Profile Linking.|🔧 Practice: Add the video link to GitHub README and LinkedIn.|🏗️ Build: Updated public profiles.|📦 Output: Live profile links.|✅ Self-Check: Do the links work perfectly?">
-      Day 2 — Profile Linking.
-    </div>
-    <div class="node day-node" id="w45_d3" data-parent="w45" data-side="right"
-      data-details="📖 Study: The Transition Pitch.|🔧 Practice: Write the 2-minute pitch: &quot;Why am I transitioning to IoT?&quot;|🏗️ Build: Pitch script.|📦 Output: Memorized pitch.|✅ Self-Check: Is my motivation compelling?">
-      Day 3 — The Transition Pitch.
-    </div>
-    <div class="node day-node" id="w45_d4" data-parent="w45" data-side="right"
-      data-details="📖 Study: GitHub Purge.|🔧 Practice: Clean GitHub completely of irrelevant/hobby repositories.|🏗️ Build: Cleaned GitHub profile.|📦 Output: Professional profile view.|✅ Self-Check: Does it scream &quot;Systems Architect&quot;?">
-      Day 4 — GitHub Purge.
-    </div>
-    <div class="node day-node" id="w45_d5" data-parent="w45" data-side="right"
-      data-details="📖 Study: Cloud Cost Cap.|🔧 Practice: Ensure Azure/AWS resources are cost-capped or paused.|🏗️ Build: Billing configuration.|📦 Output: Safe cloud environments.|✅ Self-Check: Will I avoid unexpected bills?">
-      Day 5 — Cloud Cost Cap.
-    </div>
-    <div class="node day-node" id="w45_d6" data-parent="w45" data-side="right"
-      data-details="📖 Study: Daily Operations: Execute high-volume technical interviews.">
-      Day 6 — Daily Operations: Execute high-volume...
-    </div>
-    <div class="node day-node" id="w45_d7" data-parent="w45" data-side="right"
-      data-details="📖 Study: Negotiation Phase: Deploy negotiation strategies for the €55k-€65k+ (Blue Card) / SAR 18k+ brackets. Secure relocation/visa logistics.">
-      Day 7 — Negotiation Phase: Deploy negotiation...
-    </div>
-    <div class="node day-node" id="w45_d8" data-parent="w45" data-side="right"
-      data-details="📖 Study: Final Output: **The Contract is Signed. The Extraction Pod Launches.**">
-      Day 8 — Final Output: **The Contract is Signe...
-    </div>
-    <div class="node milestone-node" id="milestone_final" data-parent="month19" data-side="center"
-      data-details="🏆 The Contract is Signed. The Extraction is Complete.">
+      data-details="🌅 Morning: If no offer by Month 9: Activate KSA/GCC hedge. Do not split focus before Month 9.|🌙 Evening: Backup plan mapped">
+      Day 5 — If no offer by Month 9: Activate KSA/...
+    </div>
+    <div class="node milestone-node" id="milestone_final" data-parent="phase5" data-side="center"
+      data-details="🏆 40+ applications sent. Interview pipeline active. Contract negotiation or relocation.">
       🏆 Mission Complete — Contract Signed
     </div>
   </div>
