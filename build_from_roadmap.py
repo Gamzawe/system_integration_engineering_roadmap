@@ -3,7 +3,9 @@
 Parse roadmap.txt (markdown with week/day tables) and generate index.html
 for the interactive flowchart engine.
 
-New format: 4 phases, 20 weeks, 2-column day tables (Morning / Evening).
+Format: 6 phases, 22 weeks, 2-column day tables (Morning / Evening).
+Supports both plain `| N |` and bold `| **N** |` day numbers.
+Supports both `### Week N — Title` and `### Week N: Title` headers.
 """
 
 import re
@@ -27,7 +29,7 @@ def parse_roadmap(filepath):
 
     lines = content.split('\n')
 
-    sections = []  # Top-level sections (## Phase N: ...)
+    sections = []
     current_section = None
     current_week = None
 
@@ -46,8 +48,8 @@ def parse_roadmap(filepath):
             i += 1
             continue
 
-        # Match week header: ### Week N — Title
-        week_match = re.match(r'^### (Week (\d+)\s*[–—-]\s*(.+))', line)
+        # Match week header: ### Week N — Title  OR  ### Week N: Title
+        week_match = re.match(r'^### (Week (\d+)\s*[–—\-:]\s*(.+))', line)
         if week_match:
             week_num = int(week_match.group(2))
             week_title = week_match.group(3).strip()
@@ -62,8 +64,8 @@ def parse_roadmap(filepath):
             i += 1
             continue
 
-        # Match table rows: | **N** | Morning text | Evening text |
-        day_match = re.match(r'^\|\s*\*\*(\d+)\*\*\s*\|(.+)$', line)
+        # Match table rows: | N | ... |  OR  | **N** | ... |
+        day_match = re.match(r'^\|\s*(?:\*\*)?(\d+)(?:\*\*)?\s*\|(.+)$', line)
         if day_match and current_week:
             day_num = int(day_match.group(1))
             rest = day_match.group(2)
@@ -102,7 +104,7 @@ def build_day_details(day):
 
 def build_week_details(week):
     """Build pipe-delimited data-details string for a week node."""
-    parts = [f"⏱️ 5 days"]
+    parts = [f"⏱️ {len(week['days'])} days"]
     for day in week['days']:
         short = day['morning'][:80] if day['morning'] else f"Day {day['num']}"
         parts.append(f"Day {day['num']}: {short}")
@@ -143,16 +145,16 @@ def generate_html(sections):
         },
         {
             'num': 4,
-            'label': 'MARKET ENTRY',
+            'label': 'KSA/GCC MARKET ENTRY',
             'emoji': '🎯',
-            'short': 'Market Entry',
+            'short': 'KSA/GCC Market Entry',
             'year_class': 'year-label-2',
         },
         {
             'num': 5,
             'label': 'POST-SPRINT',
             'emoji': '🔄',
-            'short': 'Post-Sprint (Month 6–18)',
+            'short': 'Post-Sprint (Month 6–27)',
             'year_class': 'year-label-2',
         },
     ]
@@ -180,12 +182,12 @@ def generate_html(sections):
         weeks = section['weeks']
         num_weeks = len(weeks)
 
-        # Single main-node per phase (replaces month nodes)
+        # Single main-node per phase
         phase_node_id = f"phase{phase['num']}"
         phase_details = escape_detail(
             f"{phase['emoji']} {phase['short']}|"
-            f"⏱️ {num_weeks} weeks|"
-            f"📅 {num_weeks * 5} study days"
+            f"⏱️ {num_weeks} week{'s' if num_weeks != 1 else ''}|"
+            f"📅 {sum(len(w['days']) for w in weeks)} study days"
         )
 
         nodes_html.append(f'\n    <!-- PHASE {phase["num"]} BLOCK -->')
@@ -194,7 +196,7 @@ def generate_html(sections):
             f'data-parent="{phase_id}" data-side="center"\n'
             f'      data-details="{phase_details}">\n'
             f'      {phase["emoji"]} {escape_detail(phase["short"])}\n'
-            f'      <span class="months-badge">{num_weeks} weeks</span>\n'
+            f'      <span class="months-badge">{num_weeks} week{"s" if num_weeks != 1 else ""}</span>\n'
             f'    </div>'
         )
 
@@ -249,7 +251,7 @@ def generate_html(sections):
             nodes_html.append(
                 f'    <div class="node milestone-node" id="milestone_portfolio" '
                 f'data-parent="{phase_node_id}" data-side="center"\n'
-                f'      data-details="🎉 Portfolio v1.0 locked. C4 diagrams, ADRs, video demo, bilingual README, CV ready.">\n'
+                f'      data-details="🎉 Portfolio v1.0 locked. C4 diagrams, ADRs, video demo, CV EN+AR ready. 5 test apps sent.">\n'
                 f'      🎉 Portfolio v1.0 Locked\n'
                 f'    </div>'
             )
@@ -258,8 +260,8 @@ def generate_html(sections):
     nodes_html.append(
         f'    <div class="node milestone-node" id="milestone_final" '
         f'data-parent="phase5" data-side="center"\n'
-        f'      data-details="🏆 40+ applications sent. Interview pipeline active. Contract negotiation or relocation.">\n'
-        f'      🏆 Mission Complete — Contract Signed\n'
+        f'      data-details="🏆 KSA/GCC offer secured → 2-3 years experience → Blue Card experience route → Germany. No degree required.">\n'
+        f'      🏆 Bridge Built — Germany Next\n'
         f'    </div>'
     )
 
@@ -271,9 +273,9 @@ def generate_html(sections):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>20-Week Market-Readiness Sprint</title>
+  <title>20-Week KSA/GCC Extraction Roadmap</title>
   <meta name="description"
-    content="A 20-week sprint roadmap for C#/.NET Integration Engineer — Biometric, Kiosk, Identity & Edge Systems targeting Germany.">
+    content="A 20-week sprint roadmap for C#/.NET Integration Engineer — Biometric, Kiosk, Identity & Edge Systems targeting KSA/GCC as bridge to Germany.">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -282,8 +284,8 @@ def generate_html(sections):
 
   <!-- Header -->
   <header class="roadmap-header">
-    <h1>20-Week Market-Readiness Sprint</h1>
-    <p class="header-subtitle">C#/.NET Integration Engineer &middot; Biometric & Kiosk Systems &middot; Germany &middot; {total_weeks} Weeks &middot; {total_days} Exercises</p>
+    <h1>20-Week KSA/GCC Extraction Roadmap</h1>
+    <p class="header-subtitle">C#/.NET Integration Engineer &middot; Biometric & Kiosk Systems &middot; KSA &rarr; Germany &middot; {total_weeks} Weeks &middot; {total_days} Exercises</p>
     <div class="progress-bar-container">
       <div class="progress-bar" id="progressBar">
         <span class="progress-text" id="progressText">0%</span>
@@ -306,8 +308,8 @@ def generate_html(sections):
   <div class="roadmap-canvas" id="roadmapCanvas">
     <svg class="connectors" id="connectorSvg"></svg>
     <div class="tip-callout" id="rulesCallout" data-parent="" data-side="right">
-      Daily: 45&ndash;90 min C# (Morning) + 15&ndash;45 min German (Evening).
-      Right-click nodes to track progress.
+      Daily: 45&ndash;90 min C# (Morning) + 15 min Anki (Evening).
+      KSA &rarr; Germany. Right-click nodes to track progress.
     </div>
 {nodes_content}
   </div>
