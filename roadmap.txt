@@ -478,10 +478,3 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 | 2 | Write `BiometricDevice` abstract class. Commit. | 45 min |
 | 3 | Save 5 KSA job postings to spreadsheet | 15 min |
 | 4 | Anki: 10 technical cards | 15 min |
-
-**Your next message to me must be:**
-- "Repo created: [GitHub link]"
-- "Week 1 Day 1 committed"
-- "KSA job postings saved: [list]"
-
-**Execute. Germany will wait for you. KSA will not.**
