@@ -13,25 +13,15 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 ---
 
-## AI Policy (Locked)
+## Pre-Flight: Week 0
 
-1. Write your own solution first.
-2. Write your own tests.
-3. Explain design aloud in English.
-4. Then use AI for review, edge cases, refactors.
-5. Reimplement fixes manually. Never paste code you cannot whiteboard.
-
----
-
-## Phase 0: Pre-Flight (Week 0)
-### Week 0: Pre-Flight Checklist
-| Day | Action | Output |
-|---|---|---|
-| 1 | Create `BiometricIdentityGateway` repository on GitHub. Empty README. | Repo exists (15 min) |
-| 2 | Screenshot ANABIN H-+ result. File in `/docs/visa`. | Degree status documented (10 min) |
-| 3 | Open Bayt.com, LinkedIn, Naukrigulf. Save 10 KSA "C# Developer" / "Integration Engineer" / "IoT Developer" job postings to spreadsheet. | Target market mapped (30 min) |
-| 4 | Create application tracking spreadsheet: Company, Title, Date, Status, Rejection Reason, Salary, Location, Visa Response. | Tracking system ready (15 min) |
-| 5 | Install Anki. Create deck "C# Technical English". Add 20 cards: `class`, `interface`, `inheritance`, `polymorphism`, `dependency injection`, `async`, `await`, `CancellationToken`, `xUnit`, `Moq`, `gRPC`, `REST API`, `Docker`, `Azure IoT Hub`, `SQLite`, `JWT`, `SOAP`, `biometric device`, `kiosk system`, `identity verification`. | Study system ready (20 min) |
+| Day | Action | Output | Time |
+|---|---|---|---|
+| 0 | Create `BiometricIdentityGateway` repository on GitHub. Empty README. | Repo exists | 15 min |
+| 0 | Screenshot ANABIN H-+ result. File in `/docs/visa`. | Degree status documented | 10 min |
+| 0 | Open Bayt.com, LinkedIn, Naukrigulf. Save 10 KSA "C# Developer" / "Integration Engineer" / "IoT Developer" job postings to spreadsheet. | Target market mapped | 30 min |
+| 0 | Create application tracking spreadsheet: Company, Title, Date, Status, Rejection Reason, Salary, Location, Visa Response | Tracking system ready | 15 min |
+| 0 | Install Anki. Create deck "C# Technical English". Add 20 cards: `class`, `interface`, `inheritance`, `polymorphism`, `dependency injection`, `async`, `await`, `CancellationToken`, `xUnit`, `Moq`, `gRPC`, `REST API`, `Docker`, `Azure IoT Hub`, `SQLite`, `JWT`, `SOAP`, `biometric device`, `kiosk system`, `identity verification` | Study system ready | 20 min |
 
 **Daily Schedule Locked:**
 
@@ -41,6 +31,13 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 | Target (3×/week) | 90 min | 20 min Anki + 10 min Tandem (free) | 2 hours |
 | Weekend | 0 | 15 min review | 15 min |
 
+**AI Policy (Locked):**
+1. Write your own solution first.
+2. Write your own tests.
+3. Explain design aloud in English.
+4. Then use AI for review, edge cases, refactors.
+5. Reimplement fixes manually. Never paste code you cannot whiteboard.
+
 ---
 
 ## Phase 1: Foundation Repair (Weeks 1–5)
@@ -48,6 +45,7 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 **Goal:** Fix OOP. Build device abstraction layer. One repo. No cloud, no Azure, no Docker yet. Just C# done right.
 
 ### Week 1: C# Core & Device Abstraction
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **Class design.** `BiometricDevice` abstract class. Properties: `DeviceId` (string), `ConnectionStatus` (enum: Online, Offline, Error), `LastScanTime` (DateTime?). Methods: `abstract Task<ScanResult> CaptureAsync(CancellationToken ct)`. Commit. | Anki: 10 new cards (`class`, `abstract`, `property`, `method`) |
@@ -58,18 +56,24 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 **Weekend Output:** `BiometricIdentityGateway` repo with `/src/Devices` namespace. 5 commits. README: "C# device abstraction layer for biometric identity systems."
 
+---
+
 ### Week 2: Dependency Injection & Testing
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **DI concept.** Install `Microsoft.Extensions.DependencyInjection`. Build `ServiceCollection`. Register `DeviceManager` as singleton. Register `FingerprintScanner` and `DocumentReader` as transient. Build `ServiceProvider`. Resolve `DeviceManager` from container. Commit. | Anki: 10 new cards (`DI`, `ServiceCollection`, `singleton`, `transient`, `ServiceProvider`) |
 | 2 | **Constructor injection.** Refactor `DeviceManager` to receive `ILogger<DeviceManager>` and `IConfiguration` via constructor. No `new` keywords in business logic. Commit. | Anki: review |
-| 3 | **xUnit setup.** Create test project `BiometricIdentityGateway.Tests`. Install `xUnit`, `Microsoft.NET.Test.Sdk`, `xunit.runner.visualstudio`. Write first test: `DeviceManager_CaptureAllAsync_ReturnsResultsFromAllDevices`. Commit. | Anki: 10 new cards (`xUnit`, `Fact`, `Assert`, `Arrange`, `Act`) |
+| 3 | **xUnit setup.** Create test project `BiometricIdentityGateway.Tests`. Install `xUnit`, `Microsoft.NET.Test.Sdk`, `xunit.runner.visualstudio`. Write first test: `DeviceManager_CaptureAllAsync_ReturnsResultsFromAllDevices`. Commit. | Anki: 10 new cards (`xUnit`, `Fact`, `Assert`, `Arrange`, `Act`, `Assert`) |
 | 4 | **Mocking.** Install `Moq` OR build hand-rolled fake `FakeBiometricDevice : IBiometricDevice`. Test failure path: device throws `DeviceOfflineException`. Assert `DeviceManager` handles gracefully (does not crash, returns partial results). Commit. | Anki: review |
 | 5 | **Test coverage.** Add tests: device offline, null scan data, timeout, empty device list. Aim: 8–10 tests covering real failure modes. Not line coverage — scenario coverage. Commit. | Anki: review |
 
-**Weekend Output:** `/tests` folder. 8–10 tests. Local `dotnet test` passes. Document test scenarios in README.
+**Weekend Output:** `/tests` folder. 8–10 tests. CI not yet — local `dotnet test` passes. Document test scenarios in README.
+
+---
 
 ### Week 3: Async, Cancellation & Resilience
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **Async fundamentals.** Convert all `Capture` methods to `Task<ScanResult> CaptureAsync(CancellationToken ct)`. Ensure no `async void`. Commit. | Anki: 10 new cards (`async`, `await`, `Task`, `CancellationToken`) |
@@ -78,12 +82,15 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 | 4 | **Circuit breaker (optional stretch).** Add `CircuitBreakerPolicy`. If device fails 5× consecutively, mark offline for 30 seconds. Test. Commit if time. | Anki: review |
 | 5 | **Custom exceptions.** Create `DeviceOfflineException`, `ScanTimeoutException`, `InvalidScanDataException`. All inherit from `BiometricDeviceException`. No generic `Exception` throws anywhere in codebase. Commit. | Anki: review |
 
-**Weekend Output:** `Resilience` namespace. Polly retry working. Tests for timeout, retry, cancellation.
+**Weekend Output:** `Resilience` namespace. Polly retry working. Tests for timeout, retry, cancellation. Document in README.
+
+---
 
 ### Week 4: Interop & Local Communication
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
-| 1 | **Native interop mock.** Build `HIDU30ASDKAdapter` simulating C DLL call. Use `DllImport` with mock function. Document: "In production, this calls proprietary HID SDK. Here simulated for architecture demonstration." Commit. | Anki: 10 new cards (`DllImport`, `interop`, `SDK`, `adapter`) |
+| 1 | **Native interop mock.** Build `HIDU30ASDKAdapter` simulating C DLL call. Use `DllImport` with mock function. In reality, use `LoadLibrary` pattern or pure C# simulation (since you do not have actual SDK). Document: "In production, this calls proprietary HID SDK. Here simulated for architecture demonstration." Commit. | Anki: 10 new cards (`DllImport`, `interop`, `SDK`, `adapter`) |
 | 2 | **Serial/TCP abstraction.** Interfaces: `ISerialConnection` (Open, Close, Read, Write) and `ITcpConnection` (Connect, Disconnect, Send, Receive). Implement `TcpDeviceClient` with `TcpClient`. Simulate network biometric device. Commit. | Anki: review |
 | 3 | **Binary framing.** Read mock byte stream: 4-byte header (length) + JSON payload. Parse safely with `Span<byte>` and `BinaryPrimitives.ReadInt32BigEndian`. Handle incomplete reads. Commit. | Anki: 10 new cards (`Span`, `BinaryPrimitives`, `framing`, `protocol`) |
 | 4 | **gRPC client.** Install `Grpc.Net.Client`. Build proto file: `message ScanResultProto`, `service IdentityGateway`, `rpc StreamScanResults`. Client sends scan results to local server (server built Week 5). Commit. | Anki: review |
@@ -91,18 +98,21 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 **Weekend Output:** `Interop` namespace. gRPC client ready. README documents architecture.
 
+---
+
 ### Week 5: gRPC Server & Minimal React Dashboard
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **gRPC server.** `IdentityGatewayService : IdentityGateway.IdentityGatewayBase`. Implement `StreamScanResults` server-side streaming. Accept `ScanResultProto`, log, forward to in-memory queue. Commit. | Anki: 10 new cards (`gRPC`, `server streaming`, `proto`, `service`) |
 | 2 | **ASP.NET Core minimal API.** `Program.cs`. Endpoint `GET /api/devices` returns JSON list of connected devices with status. Endpoint `GET /api/scans` returns recent scan history. Commit. | Anki: review |
-| 3 | **React mini-UI.** Create React app (Vite). Single page: device status table. Columns: DeviceId, Type, Status, LastScanTime, ErrorCount. Fetch from `/api/devices` every 5 seconds. Plain CSS. This is a demo, not a product. Commit in `/ui` folder. | Anki: 10 new cards (`React`, `fetch`, `useEffect`, `useState`, `dashboard`) |
+| 3 | **React mini-UI.** Create React app (Vite, not CRA). Single page: device status table. Columns: DeviceId, Type, Status, LastScanTime, ErrorCount. Fetch from `/api/devices` every 5 seconds. No styling library — plain CSS or inline. This is a demo, not a product. Commit in `/ui` folder. | Anki: 10 new cards (`React`, `fetch`, `useEffect`, `useState`, `dashboard`) |
 | 4 | **Connect UI to backend.** Ensure CORS configured. Test: start API, start React, see real device data flowing. Add "Simulate Scan" button that triggers mock scan via API call. Commit. | Anki: review |
 | 5 | **Polish.** Error handling (red border if API down). Loading states. Basic responsive layout. Commit. | Anki: review |
 
 **Weekend Output:** Full local demo: Device → C# Agent → gRPC → API → React Dashboard. Screenshot. Add to README.
 
-**Hard Checkpoint:** If React UI is broken or incomplete, cut scope. A working API with Swagger UI is acceptable fallback.
+**Hard Checkpoint:** If React UI is broken or incomplete, cut scope. A working API with Swagger UI is acceptable fallback. Dashboard is demo prop, not core architecture.
 
 ---
 
@@ -111,39 +121,37 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 **Goal:** Make it deployable. Docker, Azure IoT, offline buffer, CI/CD.
 
 ### Week 6: Docker & CI/CD
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
-| 1 | **Dockerfile.** Multi-stage build. `mcr.microsoft.com/dotnet/aspnet:8.0` runtime. `mcr.microsoft.com/dotnet/sdk:8.0` build. Copy, restore, build, publish, run. Commit. | Anki: 10 new cards (`Docker`, `Dockerfile`, `multi-stage`, `image`) |
-| 2 | **Docker Compose.** `docker-compose.yml`: API service, worker service (future), SQLite volume. One command `docker compose up` starts everything. Test on fresh rebuild. Commit. | Anki: review |
+| 1 | **Dockerfile.** Multi-stage build. `mcr.microsoft.com/dotnet/aspnet:8.0` runtime. `mcr.microsoft.com/dotnet/sdk:8.0` build. Copy, restore, build, publish, run. Image size target: < 150MB (do not obsess — working > small). Commit. | Anki: 10 new cards (`Docker`, `Dockerfile`, `multi-stage`, `image`) |
+| 2 | **Docker Compose.** `docker-compose.yml`: API service, worker service (future), SQLite volume. One command `docker compose up` starts everything. Test on fresh machine (or delete containers, rebuild). Commit. | Anki: review |
 | 3 | **GitHub Actions CI.** `.github/workflows/ci.yml`. Trigger: push to main. Steps: checkout, setup .NET 8, restore, build, test, Docker build. Badge in README. Commit. | Anki: 10 new cards (`GitHub Actions`, `CI`, `workflow`, `badge`) |
 | 4 | **GitHub Actions CD.** Push to GitHub Container Registry (`ghcr.io`). Tag with commit SHA. Document pull command in README. Commit. | Anki: review |
 | 5 | **Health checks.** `GET /health` endpoint. Returns `Healthy` if API + SQLite responding. Add to Docker Compose `healthcheck` directive. Test: stop DB, assert `Unhealthy`. Commit. | Anki: review |
 
-**Weekend Output:** `.github/workflows/ci.yml` green. `docker compose up` works from clean clone.
+**Weekend Output:** `.github/workflows/ci.yml` green. `docker compose up` works from clean clone. README has setup instructions.
+
+---
 
 ### Week 7: Azure IoT Hub & Messaging
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **Azure IoT Hub free tier.** Create hub at portal.azure.com. Generate device connection string (symmetric key). Document: "In production, use DPS with X.509. Direct connection used here for MVP." Commit docs only. | Anki: 10 new cards (`Azure IoT Hub`, `device`, `connection string`, `telemetry`) |
-| 2 | **Azure IoT SDK.** Install `Microsoft.Azure.Devices.Client`. Connect worker service. Send telemetry: JSON with `deviceId`, `scanType`, `timestamp`, `success`, `location`. Test: message appears in IoT Hub Metrics. Screenshot. Commit. | Anki: review |
+| 2 | **Azure IoT SDK.** Install `Microsoft.Azure.Devices.Client`. Connect worker service. Send telemetry: JSON with `deviceId`, `scanType`, `timestamp`, `success` (bool), `location` (string). Test: message appears in IoT Hub Metrics. Screenshot. Commit. | Anki: review |
 | 3 | **Message routing.** Route telemetry to Azure Service Bus queue OR Event Hub (free tier). Document routing rule in README. Commit. | Anki: 10 new cards (`Service Bus`, `Event Hub`, `routing`, `queue`) |
-| 4 | **Offline buffer.** SQLite table `BufferedTelemetry`. Fields: `Id`, `DeviceId`, `Payload` (JSON), `Timestamp`, `Synced` (bool). When Azure unreachable, insert to SQLite. Background task every 60s: sync unsynced rows, mark `Synced = true`. Test: disconnect internet, buffer 10 messages, reconnect, assert all synced. Commit. | Anki: review |
+| 4 | **Offline buffer.** SQLite table `BufferedTelemetry`. Fields: `Id`, `DeviceId`, `Payload` (JSON), `Timestamp`, `Synced` (bool). When Azure unreachable, insert to SQLite. Background task every 60s: sync unsynced rows to IoT Hub, mark `Synced = true`. Test: disconnect internet, buffer 10 messages, reconnect, assert all synced. Commit. | Anki: review |
 | 5 | **Buffer limits.** Max 1000 rows. When full, drop oldest (FIFO). Test. Commit. | Anki: review |
 
-**Weekend Output:** Cloud telemetry flowing. Offline buffer tested. Screenshot Azure Metrics. Add to README.
+**Weekend Output:** Cloud telemetry flowing. Offline buffer tested. Screenshot Azure Metrics dashboard. Add to README.
+
+---
 
 ### Week 8: Data, Identity & SOAP Legacy
-| Day | Morning (45–90 min) | Evening (15 min) |
-|---|---|---|
-| 1 | **EF Core + SQLite.** Install `Microsoft.EntityFrameworkCore.Sqlite`. Models: `Device`, `ScanSession`, `IdentityVerification`. Relations: Device 1→N ScanSession, ScanSession 1→1 IdentityVerification. Migrations. Commit. | Anki: 10 new cards (`EF Core`, `SQLite`, `migration`, `relation`) |
-| 2 | **Mock government identity API.** `POST /api/verify` accepts `ScanResult`, returns `{ verified: true/false, confidence: 0.0-1.0, source: "mock-government" }`. Simulate 200ms delay. Random 5% failure rate. Commit. | Anki: review |
-| 3 | **Full integration flow.** Document scan → local `DocumentReader` → `DeviceManager` → `IdentityVerification` record → mock gov API check → result stored in SQLite → event queued for Azure. Log every step. Test end-to-end. Commit. | Anki: 10 new cards (`integration`, `workflow`, `end-to-end`, `pipeline`) |
-| 4 | **Idempotency.** `IdempotencyKey` header on scan requests. Same key = same response, no duplicate DB records. SQLite table `IdempotencyKeys`. Test: send same scan 10×, assert 1 record. Commit. | Anki: review |
-| 5 | **SOAP legacy integration.** `ILegacyERPAdapter` interface. `SapErpAdapter : ILegacyERPAdapter`. Mock SOAP call using `HttpClient` with XML payload. Anti-Corruption Layer: your modern code never sees XML. Document: "Legacy ERP integration via Anti-Corruption Layer." Commit. | Anki: review |
 
-**Weekend Output:** `LegacyIntegration` namespace. Full scan flow tested. Idempotency proven.
+**HARD KILL-SWITCH WEEK.** By end of this week, the following must be stable:
 
-**HARD KILL-SWITCH:** By end of Week 8, the following must be stable:
 - [ ] Local simulated device
 - [ ] C# REST API responding
 - [ ] SQLite offline buffer working
@@ -154,24 +162,42 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 **If any item unstable: Week 9 becomes stabilization week.** Cut MQTT. Cut OPC UA. Cut Modbus. Cut gRPC stretch. Stabilize core or nothing else matters.
 
+| Day | Morning (45–90 min) | Evening (15 min) |
+|---|---|---|
+| 1 | **EF Core + SQLite.** Install `Microsoft.EntityFrameworkCore.Sqlite`. Models: `Device`, `ScanSession`, `IdentityVerification`. Relations: Device 1→N ScanSession, ScanSession 1→1 IdentityVerification. Migrations. Commit. | Anki: 10 new cards (`EF Core`, `SQLite`, `migration`, `relation`) |
+| 2 | **Mock government identity API.** `POST /api/verify` accepts `ScanResult`, returns `{ verified: true/false, confidence: 0.0-1.0, source: "mock-government" }`. Simulate 200ms delay. Random 5% failure rate. Commit. | Anki: review |
+| 3 | **Full integration flow.** Document scan → local `DocumentReader` → `DeviceManager` → `IdentityVerification` record → mock gov API check → result stored in SQLite → event queued for Azure. Log every step. Test end-to-end. Commit. | Anki: 10 new cards (`integration`, `workflow`, `end-to-end`, `pipeline`) |
+| 4 | **Idempotency.** `IdempotencyKey` header on scan requests. Same key = same response, no duplicate DB records. SQLite table `IdempotencyKeys`. Test: send same scan 10×, assert 1 record. Commit. | Anki: review |
+| 5 | **SOAP legacy integration.** `ILegacyERPAdapter` interface. `SapErpAdapter : ILegacyERPAdapter`. Mock SOAP call using `HttpClient` with XML payload. Anti-Corruption Layer: your modern code never sees XML. Map SOAP faults to your exception hierarchy. Document: "Legacy ERP integration via Anti-Corruption Layer." Commit. | Anki: review |
+
+**Weekend Output:** `LegacyIntegration` namespace. Full scan flow tested. Idempotency proven. README documents architecture.
+
+---
+
 ### Week 9: Industrial Flavor Mini-Module
+
+**Not PLC programming. Vocabulary and interface design for keyword insurance.**
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **MQTT fundamentals.** Deploy Mosquitto broker locally (Docker). Test pub/sub with `mqttnet` client in C#. Topic: `biometric/gateway/+/telemetry`. Commit. | Anki: 10 new cards (`MQTT`, `Mosquitto`, `pub/sub`, `topic`) |
-| 2 | **OPC UA basics.** Read only. Build `IOpcUaTelemetrySource` interface. Mock implementation reads simulated temperature/vibration data. Document: "OPC UA adapter for industrial sensor integration." Commit. | Anki: review |
+| 2 | **OPC UA basics.** Read only. Install `Opc.Ua.Client` or document conceptually. Build `IOpcUaTelemetrySource` interface. Mock implementation reads simulated temperature/vibration data. Document: "OPC UA adapter for industrial sensor integration." Commit interface + mock. | Anki: review |
 | 3 | **Modbus frame structure.** Read holding registers, input registers, CRC-16. Build `IModbusRegisterReader` interface. Mock implementation parses simulated byte stream. Document frame format in README. Commit. | Anki: 10 new cards (`OPC UA`, `Modbus`, `holding register`, `CRC`) |
-| 4 | **Small demo.** Python script (or C# mock) simulates Modbus slave → C# reader → MQTT publish → Azure IoT Hub. Purpose: interview story, not production feature. Commit. | Anki: review |
+| 4 | **Small demo.** Python script (or C# mock) simulates Modbus slave → C# reader → MQTT publish → Azure IoT Hub. This is 50 lines of code. Purpose: interview story, not production feature. Commit. | Anki: review |
 | 5 | **Interview sentence practice.** "I have worked with OPC UA and Modbus in simulation, and I understand how edge gateways bridge OT to IT." Say it aloud 10×. Write it in README. Commit. | Anki: review |
 
-**Weekend Output:** `IndustrialProtocols` namespace. 3 interfaces. 1 small demo.
+**Weekend Output:** `IndustrialProtocols` namespace. 3 interfaces. 1 small demo. README documents OT/IT bridge concept.
+
+---
 
 ### Week 10: Security & Fleet Simulation
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **TLS basics.** HTTPS in Kestrel. Self-signed certificate for local dev. Document: "Production uses proper CA certificate." Commit. | Anki: 10 new cards (`TLS`, `HTTPS`, `certificate`, `Kestrel`) |
 | 2 | **JWT authentication.** Install `Microsoft.AspNetCore.Authentication.JwtBearer`. Protect `POST /api/scans` and `DELETE` endpoints. Roles: `operator` (read), `admin` (read/write). Mock token generator for tests. Commit. | Anki: review |
-| 3 | **Fleet simulation.** `IDeviceFleetManager` interface. Implementation tracks 10 mock devices across 3 locations. Methods: `GetDeviceStatus(location)`, `GetOfflineDevices()`, `GetHealthSummary()`. Expose `GET /api/fleet` endpoint. Commit. | Anki: 10 new cards (`JWT`, `authentication`, `role`, `fleet`) |
-| 4 | **Remote configuration.** Cloud-to-device desired properties mock. `POST /api/devices/{id}/config` updates `PollRate`, `Threshold`, `Calibration`. Stored in SQLite. Document: "Azure IoT Hub Device Twin used in production." Commit. | Anki: review |
+| 3 | **Fleet simulation.** `IDeviceFleetManager` interface. Implementation tracks 10 mock devices across 3 locations. Methods: `GetDeviceStatus(location)`, `GetOfflineDevices()`, `GetHealthSummary()`. Expose `GET /api/fleet` endpoint. Dashboard shows fleet map (text list acceptable). Commit. | Anki: 10 new cards (`JWT`, `authentication`, `role`, `fleet`) |
+| 4 | **Remote configuration.** Cloud-to-device desired properties mock. `POST /api/devices/{id}/config` updates `PollRate`, `Threshold`, `Calibration`. Stored in SQLite. Device reads on next startup. Document: "Azure IoT Hub Device Twin used in production." Commit. | Anki: review |
 | 5 | **Secrets management.** No hardcoded connection strings. Use `IConfiguration` + environment variables. Docker Compose reads from `.env` file (gitignored). Document production: Azure Key Vault. Commit. | Anki: review |
 
 **Weekend Output:** Security audit: `grep -r "password\|secret\|key" --include="*.cs"` returns only config keys. No secrets in code. Fleet endpoint working.
@@ -180,9 +206,10 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 ## Phase 3: Documentation & Proof (Weeks 11–13)
 
-**Goal:** Make it interview-ready. C4 diagrams, ADRs, video, profiles.
+**Goal:** Make it interview-ready. C4 diagrams, ADRs, video, bilingual README.
 
 ### Week 11: Architecture & Documentation
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **C4 Model Level 1: System Context.** Draw.io. Actor: Operator. Systems: BiometricIdentityGateway, Azure IoT Hub, Government Identity API, Legacy ERP. Relationships labeled. Export PNG. Commit to `/docs`. | Anki: review |
@@ -193,25 +220,31 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 **Weekend Output:** `/docs` folder: 2 PNG diagrams, 3 ADRs.
 
+---
+
 ### Week 12: Video, Polish & Profile
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
-| 1 | **Record 5-minute video.** Script: (0:00) "This is BiometricIdentityGateway." (0:30) C4 System Context. (1:00) Live demo: React dashboard with 2 devices online. (1:30) Trigger scan. (2:00) Offline buffer demo. (2:30) Reconnect sync to Azure. (3:00) SOAP adapter code. (3:30) Test suite running. (4:00) Docker Compose. (4:30) "I built this in 12 weeks." English voiceover. OBS or phone screen recording. | Anki: review |
-| 2 | **Subtitles.** YouTube auto-captions → edit for accuracy. Upload video unlisted to YouTube. Embed link in README. Commit. | Anki: review |
+| 1 | **Record 5-minute video.** Script: (0:00) "This is BiometricIdentityGateway." (0:30) Show C4 System Context. (1:00) Live demo: React dashboard with 2 devices online. (1:30) Trigger scan, show result in dashboard. (2:00) Disconnect internet, show offline buffer. (2:30) Reconnect, show sync to Azure. (3:00) Show SOAP adapter code. (3:30) Show test suite running. (4:00) Show Docker Compose starting all services. (4:30) "I built this in 12 weeks. I am ready for production integration challenges." English voiceover. OBS or phone screen recording. | Anki: review |
+| 2 | **Add subtitles.** YouTube auto-captions → edit for accuracy. Export SRT. Upload video unlisted to YouTube. Embed link in README. Commit. | Anki: review |
 | 3 | **Screenshots.** Dashboard with data. Azure Metrics page. Docker Compose terminal. Test output (all green). Add to `/docs/screenshots`. Commit. | Anki: review |
-| 4 | **LinkedIn optimization.** Headline: "C# Integration Engineer | Biometric Identity & Kiosk Systems | IoT & Edge | Azure". Summary: "I architect C#/.NET edge gateways that integrate biometric hardware with REST APIs, cloud messaging, and operational dashboards." Featured section: GitHub repo + video. | Anki: review |
-| 5 | **XING profile creation.** Mirror LinkedIn. In English. XING is for Germany later. Create now while motivation is high. | Anki: review |
+| 4 | **LinkedIn optimization.** Headline: "C# Integration Engineer | Biometric Identity & Kiosk Systems | IoT & Edge | Azure" Summary: "I architect C#/.NET edge gateways that integrate biometric hardware — fingerprint scanners, passport readers, document scanners — with REST APIs, cloud messaging, and operational dashboards. Built offline-resilient identity verification systems for kiosk and government platforms." Featured section: GitHub repo + video. | Anki: review |
+| 5 | **XING profile creation.** Mirror LinkedIn. In English (German comes Year 2). XING is mandatory for Germany later. Create now while motivation is high. | Anki: review |
 
 **Weekend Output:** Public profiles locked. One repo, one video, two profiles.
 
+---
+
 ### Week 13: Quality Lock & Test Applications
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **Code freeze.** Tag `v1.0.0`. No new features. Bug fixes only. Update README with final architecture description. Commit. | Anki: review |
 | 2 | **Final test run.** `dotnet test`. All green. Count tests: target 20+. Document count in README. Commit. | Anki: review |
-| 3 | **CV English (1 page).** Profile (3 lines), Skills (C#, .NET, Azure IoT, Docker, gRPC, REST, SQLite, EF Core, xUnit, JWT, React), Experience (current job: "C# Integration Developer — Biometric Kiosk Systems"), Projects (BiometricIdentityGateway with GitHub link), Education (Sana'a University, CS — "Degree assessment in progress"). | Anki: review |
+| 3 | **CV English (1 page).** Sections: Profile (3 lines), Skills (C#, .NET, Azure IoT, Docker, gRPC, REST, SQLite, EF Core, xUnit, JWT, React), Experience (current job: "C# Integration Developer — Biometric Kiosk Systems"), Projects (BiometricIdentityGateway with GitHub link), Education (Sana'a University, CS — note: "Degree assessment in progress"). | Anki: review |
 | 4 | **CV Arabic (1 page).** Mirror English. Gulf employers often prefer Arabic CV alongside English. Use formal Arabic. | Anki: review |
-| 5 | **5 test applications.** Bayt.com or LinkedIn Easy Apply. KSA-based companies only. Observe: what gets rejected instantly? What gets "viewed"? Track in spreadsheet. Purpose: learn the market. | Anki: review |
+| 5 | **5 test applications.** Bayt.com or LinkedIn Easy Apply. KSA-based companies only. Observe: what gets rejected instantly? What gets "viewed"? Track in spreadsheet. Do not expect responses. Purpose: learn the market. | Anki: review |
 
 **Weekend Output:** CV locked. 5 test apps sent. Market feedback loop started.
 
@@ -222,17 +255,21 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 **Goal:** Job offers. Not German applications. KSA/GCC only.
 
 ### Week 14: First Serious Wave
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
-| 1 | **Research 10 companies.** Target: STC, Elm, Al-Moammar, SDAIA, NEOM contractors, biometric vendors (HID, Idemia, Thales KSA partners), Hajj/Umrah tech platforms, smart city integrators. Save to spreadsheet with hiring manager names. | Anki: review |
-| 2 | **Write 3 tailored cover letters.** Template: "I noticed [Company] is building [specific system]. I have built C# edge gateways integrating biometric devices with cloud messaging for identity verification platforms. My project [GitHub link] demonstrates offline-resilient architecture with Azure IoT, Docker, and legacy SOAP integration." | Anki: review |
+| 1 | **Research 10 companies.** Target: STC, Elm, Al-Moammar, SDAIA, NEOM contractors, biometric vendors (HID, Idemia, Thales KSA partners), Hajj/Umrah tech platforms, smart city integrators. Save to spreadsheet with hiring manager names if visible. | Anki: review |
+| 2 | **Write 3 tailored cover letters.** Template: "I noticed [Company] is building [specific system]. I have built C# edge gateways integrating biometric devices with cloud messaging for identity verification platforms. My project [GitHub link] demonstrates offline-resilient architecture with Azure IoT, Docker, and legacy SOAP integration. I am ready to contribute immediately." | Anki: review |
 | 3 | **Apply to 5 companies.** Direct email to jobs@ or LinkedIn message to engineering manager. Attach CV EN + AR. Include GitHub link and video link. Track in spreadsheet. | Anki: review |
 | 4 | **Apply to 5 more.** Prioritize Jeddah (Hajj tech), Riyadh (government/SDAIA), NEOM (smart city). | Anki: review |
 | 5 | **LinkedIn outreach.** 10 connection requests to KSA-based engineering managers, integration leads, IoT architects. Message: "I am a C# integration engineer specializing in biometric identity systems. I would value your perspective on the KSA market." No job ask. Relationship first. | Anki: review |
 
 **Weekend Output:** 15 apps total. 10 LinkedIn connections. Spreadsheet updated.
 
+---
+
 ### Week 15: Outreach & Recruiters
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **Engage 3 Gulf recruiters.** Michael Page KSA, Hays KSA, Robert Half KSA. Upload CV. State: "C# Integration Engineer, biometric/identity systems, open to Jeddah/Riyadh/NEOM, immediate availability." | Anki: review |
@@ -243,51 +280,66 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 **Weekend Output:** 20 apps. 3 recruiter conversations. 1 mock interview recorded.
 
+---
+
 ### Week 16: Interview Prep Intensity
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **Whiteboard practice.** Draw C4 System Context from memory in 3 minutes. Draw Container diagram in 5 minutes. Time yourself. Repeat until smooth. | Anki: review |
 | 2 | **Technical Q&A practice.** "Explain async/await to a non-technical person." "Why SQLite over PostgreSQL?" "How do you handle a device that stops responding at 3 AM?" Record answers. Review. | Anki: review |
-| 3 | **Salary negotiation practice.** "My salary expectation is 12,000 SAR per month." (≈$3,200/month). Floor: 9,375 SAR ($2,500). Anchor: 12,000 SAR. Do not accept below floor. | Anki: review |
+| 3 | **Salary negotiation practice.** "My salary expectation is 12,000 SAR per month, based on my specialized integration experience and the market rate for C# IoT engineers in Jeddah." (≈$3,200/month). Floor: 9,375 SAR ($2,500). Anchor: 12,000 SAR. Do not accept below floor. | Anki: review |
 | 4 | **Mock interview 2.** Friend or family member asks: "Tell me about a time you solved a difficult integration problem." Use STAR method. Record. Review. | Anki: review |
 | 5 | **Apply to 5 more.** Track everything. Follow up on pending. | Anki: review |
 
 **Weekend Output:** 25 apps. 2 mock interviews. Salary anchor locked: 12,000 SAR.
 
+---
+
 ### Week 17: Sustained Pressure
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **5 applications.** Backend .NET roles with integration/API/messaging focus. | Anki: review |
 | 2 | **5 applications.** IoT/edge roles. Biometric/identity keywords. | Anki: review |
 | 3 | **Follow up on all pending.** Polite, brief, professional. | Anki: review |
-| 4 | **Portfolio iteration.** If interviewers asked about Kubernetes, add a 1-page doc. If they asked about Azure Functions, add a mock serverless adapter. Do not implement — document. Commit to `/docs/interview-feedback/`. | Anki: review |
+| 4 | **Portfolio iteration.** If interviewers asked about Kubernetes, add a 1-page doc: "Kubernetes deployment strategy for BiometricIdentityGateway." If they asked about Azure Functions, add a mock serverless adapter. Do not implement — document. Commit to `/docs/interview-feedback/`. | Anki: review |
 | 5 | **LinkedIn content.** Post: "Built a C# edge gateway for biometric identity verification. Offline-resilient with SQLite, Azure IoT Hub, and legacy SOAP integration. Demo: [video link]. Open to integration engineering roles in KSA." Tag #dotnet #iot #identity #ksa #neom | Anki: review |
 
 **Weekend Output:** 35 apps. Public visibility established. Portfolio responsive to market feedback.
 
+---
+
 ### Week 18: Feedback Loop
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
-| 1 | **Analyze all feedback.** Spreadsheet column: Rejection Reason. Patterns? "Need more experience" = apply to junior roles. "Need Arabic" = apply to Saudi-national companies. "Need Kubernetes" = add doc. "Salary too high" = negotiate or accept floor. | Anki: review |
-| 2 | **Deep-dive weakest area.** If 50% cite "cloud cert," study AZ-204 free modules (Microsoft Learn) — do not pay for exam. If "no Gulf experience," emphasize transferable identity platform work. If "weak frontend," polish React dashboard. | Anki: review |
+| 1 | **Analyze all feedback.** Spreadsheet columns: Rejection Reason. Patterns? "Need more experience" = apply to junior roles. "Need Arabic" = apply to Saudi-national companies. "Need Kubernetes" = add doc. "Salary too high" = negotiate or accept floor. | Anki: review |
+| 2 | **Deep-dive weakest area.** If 50% of rejections cite "cloud cert," study AZ-204 free modules (Microsoft Learn) — do not pay for exam. If "no Gulf experience," emphasize transferable identity platform work. If "weak frontend," polish React dashboard. | Anki: review |
 | 3 | **Portfolio patch.** Address #1 feedback item with documentation or small code addition. Commit. | Anki: review |
 | 4 | **Re-apply to strong-fit companies.** If rejected by STC but fit is perfect, re-apply in 6 weeks with "Updated portfolio: added [X]." Persistence signals seriousness in Gulf culture. | Anki: review |
 | 5 | **Apply to 5 more.** Never stop. | Anki: review |
 
 **Weekend Output:** 40 apps. Iteration cycle active. Portfolio improving with market feedback.
 
+---
+
 ### Week 19: Offer Negotiation Prep
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **If offer received:** Negotiate. Anchor 12,000 SAR. Floor 9,375 SAR. Request: housing allowance OR company housing, flight ticket, health insurance, annual leave 30 days. Do not accept verbal offer. Request written contract. | Anki: review |
 | 2 | **If offer received:** Research company. Glassdoor reviews. LinkedIn current employees. "Is this a real company or a visa shop?" Verify Saudi Commercial Registration (CR) number. | Anki: review |
 | 3 | **If no offer:** Expand to UAE (Dubai, Abu Dhabi) and Qatar (Doha). 10 more applications. These markets pay more but competition is higher. | Anki: review |
 | 4 | **If no offer:** Consider remote contract work. Upwork, Toptal, or direct outreach to European companies needing C# integration. $15–25/hour. Builds experience count toward 3-year Blue Card route. | Anki: review |
-| 5 | **Evaluate all active conversations.** Matrix: Salary, Location, Tech Stack, Company Reputation, Visa Sponsorship Speed, Start Date. Score 1–5 each. Highest score wins. | Anki: review |
+| 5 | **Evaluate all active conversations.** Matrix: Salary, Location, Tech Stack, Company Reputation, Visa Sponsorship Speed, Start Date. Score 1–5 each. Highest score wins if multiple offers. | Anki: review |
 
 **Weekend Output:** Offer negotiated OR expanded pipeline OR remote contract secured.
 
+---
+
 ### Week 20: Decision & Commitment
+
 | Day | Morning (45–90 min) | Evening (15 min) |
 |---|---|---|
 | 1 | **Final 5 applications to dream companies.** No generic letters. Each references specific project or news article. | Anki: review |
@@ -300,16 +352,16 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 ---
 
-## Phase 5: Post-Sprint (Month 6–27)
-### Week 21: Month 6–27 Extended Campaign
-| Day | Morning (45–90 min) | Evening (15 min) |
+## Post-Week 20: Month 6–18 Plan
+
+| Month | Focus | Target |
 |---|---|---|
-| 1 | Month 6: 80 applications total. Continue KSA + UAE + Qatar. Add remote contracts. | Target: 5–10 interviews |
-| 2 | Months 7–9: Deepen niche. Azure Functions, Service Bus advanced patterns. Contribute to open-source C# IoT libraries. Blog technical articles. | Target: Seniority signals |
-| 3 | Months 10–12: KSA job secured OR remote contracts sustained. Total experience: 1.5 years. Savings: $18,000–24,000. German A2 functional. | Target: Extraction from Yemen |
-| 4 | Months 12–18: KSA Year 2. German B1 (30 min/day + italki 1×/week, now affordable). Apply to German jobs remotely. Blue Card experience route: 3 years required. | Target: German interviews |
-| 5 | Months 18–24: Final KSA months. Total experience: 3 years. Savings: $40,000–48,000. German B1 certificate. Job offer in Germany. | Target: Blue Card experience route unlocked |
-| 6 | Months 24–27: Blue Card application. No ZAB. No degree. Just 3 years experience + €46k+ offer. Relocate to Germany. | Target: Germany |
+| **6** | 80 applications total. Continue KSA + UAE + Qatar. Add remote contracts. | 5–10 interviews |
+| **7–9** | Deepen niche. Learn Azure Functions, Service Bus advanced patterns. Contribute to open-source C# IoT libraries. Blog technical articles. | Seniority signals |
+| **10–12** | KSA job secured OR remote contracts sustained. Total experience: 1.5 years. Savings: $18,000–24,000. German A2 functional. | Extraction from Yemen |
+| **12–18** | KSA Year 2. German B1 (30 min/day + italki 1×/week, now affordable). Apply to German jobs remotely. Blue Card experience route: 3 years required. | German interviews |
+| **18–24** | Final KSA months. Total experience: 3 years. Savings: $40,000–48,000. German B1 certificate. Job offer in Germany. | Blue Card experience route unlocked |
+| **24–27** | Blue Card application. No ZAB. No degree. Just 3 years experience + €46k+ offer. Relocate to Germany. | Germany |
 
 ---
 
@@ -332,7 +384,7 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 | Now – Month 1 | $300 | $250 | Keep current job. Study after hours. Sell non-essential items. |
 | Month 2–4 | $300 | $200 | Continue. Minimal spending. $100/month emergency fund. |
 | Month 4–6 | $300 (or $0 if quit for interviews) | $150 | Negotiate leave for KSA video interviews. Do not quit until offer signed. |
-| KSA Job | $2,500–4,000/month | $750–1,000 | Save 70%. Live like you earn $300. No car. No restaurant. |
+| KSA Job | $2,500–4,000/month | $750–1,000 | Save 70%. Live like you earn $300. No car. No restaurant. No remittance except family emergency. |
 | Year 2 | $3,000–5,000/month | $1,000–1,500 | Continue. German italki 1×/week. AZ-204 exam if employer pays. |
 
 **Emergency fund targets:**
@@ -357,7 +409,19 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 ---
 
-## Reference: Portfolio Quality Checklist
+## Daily Minimum Viable Schedule (Locked)
+
+| Day Type | C# / Job Search | German (Background) | Total |
+|---|---|---|---|
+| Minimum (5×/week) | 45 min | 15 min Anki | 1 hour |
+| Target (3×/week) | 90 min | 20 min Anki + 10 min Tandem free | 2 hours |
+| Weekend | 0 | 15 min review | 15 min |
+
+**Restart rule:** Miss a day? Restart next day. No guilt. No "catch up" spirals. One good day equals two bad days psychologically.
+
+---
+
+## Portfolio Quality Checklist
 
 | Metric | Target |
 |---|---|
@@ -373,7 +437,7 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 ---
 
-## Reference: Application Targets
+## Application Targets
 
 | Milestone | Applications | Cumulative |
 |---|---|---|
@@ -388,7 +452,7 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 ---
 
-## Reference: Final Honest Probability
+## Final Honest Probability
 
 | Outcome | Probability | Condition |
 |---|---|---|
@@ -408,9 +472,16 @@ Your degree (H-+, Sana'a University) is politically stranded. The Blue Card degr
 
 ## The Action Today
 
-1. Create `BiometricIdentityGateway` repo on GitHub (15 min)
-2. Write `BiometricDevice` abstract class. Commit. (45 min)
-3. Save 5 KSA job postings to spreadsheet (15 min)
-4. Anki: 10 technical cards (15 min)
+| Priority | Action | Time |
+|---|---|---|
+| 1 | Create `BiometricIdentityGateway` repo on GitHub | 15 min |
+| 2 | Write `BiometricDevice` abstract class. Commit. | 45 min |
+| 3 | Save 5 KSA job postings to spreadsheet | 15 min |
+| 4 | Anki: 10 technical cards | 15 min |
+
+**Your next message to me must be:**
+- "Repo created: [GitHub link]"
+- "Week 1 Day 1 committed"
+- "KSA job postings saved: [list]"
 
 **Execute. Germany will wait for you. KSA will not.**

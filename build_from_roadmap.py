@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Parse roadmap.txt (markdown with week/day tables) and generate index.html
-for the interactive flowchart engine.
+Parse roadmap.txt and generate index.html for the interactive flowchart engine.
 
-Format: 6 phases, 22 weeks, 2-column day tables (Morning / Evening).
-Supports both plain `| N |` and bold `| **N** |` day numbers.
-Supports both `### Week N — Title` and `### Week N: Title` headers.
+Handles:
+- ## Pre-Flight: Week 0  (auto-creates Week 0, 4-column table, duplicate day 0s)
+- ## Phase N: Title       (standard phases with ### Week N: sub-headers)
+- ## Post-Week 20: ...    (auto-creates Week 21, bold month ranges like **7–9**)
+- Day rows: | 0 |, | N |, | **N** |, | **N–M** |
 """
 
 import re
@@ -13,17 +14,14 @@ import html
 
 
 def escape_attr(text):
-    """Escape text for use in HTML attribute values."""
     return html.escape(text, quote=True).replace('|', '&#124;')
 
 
 def escape_detail(text):
-    """Escape for data-details pipe-delimited attribute."""
     return text.replace('"', '&quot;').replace('<', '&lt;').replace('>', '&gt;')
 
 
 def parse_roadmap(filepath):
-    """Parse roadmap.txt into structured data."""
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
@@ -37,18 +35,68 @@ def parse_roadmap(filepath):
     while i < len(lines):
         line = lines[i].rstrip('\r')
 
-        # Match top-level section: ## Phase N: Title (Weeks X–Y)
-        section_match = re.match(r'^## (Phase \d+:.+)', line)
-        if section_match:
+        # Pre-Flight section (auto-creates Week 0)
+        preflight_match = re.match(r'^## Pre-Flight:\s*Week\s*0', line)
+        if preflight_match:
             current_section = {
-                'title': section_match.group(1).strip(),
+                'title': 'Pre-Flight',
+                'type': 'preflight',
                 'weeks': []
             }
+            current_week = {
+                'num': 0,
+                'title': 'Pre-Flight Checklist',
+                'full_title': 'Week 0 — Pre-Flight Checklist',
+                'days': [],
+                '_day_counter': 0,  # auto-increment for duplicate day 0s
+            }
+            current_section['weeks'].append(current_week)
             sections.append(current_section)
             i += 1
             continue
 
-        # Match week header: ### Week N — Title  OR  ### Week N: Title
+        # Post-Week 20 section (auto-creates Week 21)
+        postweek_match = re.match(r'^## Post-Week 20:', line)
+        if postweek_match:
+            current_section = {
+                'title': 'Post-Sprint: Month 6–27',
+                'type': 'postsprint',
+                'weeks': []
+            }
+            current_week = {
+                'num': 21,
+                'title': 'Month 6–27 Plan',
+                'full_title': 'Week 21 — Month 6–27 Plan',
+                'days': [],
+                '_day_counter': 0,
+            }
+            current_section['weeks'].append(current_week)
+            sections.append(current_section)
+            i += 1
+            continue
+
+        # Standard Phase section: ## Phase N: Title
+        section_match = re.match(r'^## (Phase \d+:.+)', line)
+        if section_match:
+            current_section = {
+                'title': section_match.group(1).strip(),
+                'type': 'phase',
+                'weeks': []
+            }
+            sections.append(current_section)
+            current_week = None
+            i += 1
+            continue
+
+        # Any other ## header (reference sections, kill-switches, etc.)
+        # — stop parsing day rows into the previous section
+        if re.match(r'^## ', line) and not preflight_match and not postweek_match:
+            current_week = None
+            current_section = None
+            i += 1
+            continue
+
+        # Week header: ### Week N: Title  OR  ### Week N — Title
         week_match = re.match(r'^### (Week (\d+)\s*[–—\-:]\s*(.+))', line)
         if week_match:
             week_num = int(week_match.group(2))
@@ -57,30 +105,34 @@ def parse_roadmap(filepath):
                 'num': week_num,
                 'title': week_title,
                 'full_title': week_match.group(1).strip(),
-                'days': []
+                'days': [],
+                '_day_counter': 0,
             }
             if current_section:
                 current_section['weeks'].append(current_week)
             i += 1
             continue
 
-        # Match table rows: | N | ... |  OR  | **N** | ... |
-        day_match = re.match(r'^\|\s*(?:\*\*)?(\d+)(?:\*\*)?\s*\|(.+)$', line)
+        # Day/month rows: | 0 |, | N |, | **N** |, | **N–M** |
+        day_match = re.match(r'^\|\s*(?:\*\*)?(\d+(?:[–\-]\d+)?)(?:\*\*)?\s*\|(.+)$', line)
         if day_match and current_week:
-            day_num = int(day_match.group(1))
+            raw_num = day_match.group(1)
             rest = day_match.group(2)
 
-            # Split by | but handle the trailing |
             cells = [c.strip() for c in rest.split('|')]
-            # Remove empty trailing cell
             while cells and cells[-1] == '':
                 cells.pop()
 
             morning = cells[0] if len(cells) > 0 else ''
             evening = cells[1] if len(cells) > 1 else ''
 
+            # Auto-increment for unique IDs (handles duplicate day 0s)
+            current_week['_day_counter'] += 1
+            seq_num = current_week['_day_counter']
+
             current_week['days'].append({
-                'num': day_num,
+                'num': seq_num,        # unique sequential number for IDs
+                'raw_num': raw_num,    # original display number ("0", "7–9")
                 'morning': morning,
                 'evening': evening,
             })
@@ -93,82 +145,88 @@ def parse_roadmap(filepath):
 
 
 def build_day_details(day):
-    """Build pipe-delimited data-details string for a day node."""
     parts = []
     if day['morning']:
-        parts.append(f"🌅 Morning: {day['morning']}")
+        parts.append(f"🌅 {day['morning']}")
     if day['evening']:
-        parts.append(f"🌙 Evening: {day['evening']}")
+        parts.append(f"🌙 {day['evening']}")
     return '|'.join(parts)
 
 
 def build_week_details(week):
-    """Build pipe-delimited data-details string for a week node."""
-    parts = [f"⏱️ {len(week['days'])} days"]
+    parts = [f"⏱️ {len(week['days'])} items"]
     for day in week['days']:
-        short = day['morning'][:80] if day['morning'] else f"Day {day['num']}"
-        parts.append(f"Day {day['num']}: {short}")
+        short = day['morning'][:80] if day['morning'] else f"Item {day['raw_num']}"
+        parts.append(f"{day['raw_num']}: {short}")
     return '|'.join(parts)
 
 
 def generate_html(sections):
-    """Generate the full index.html content."""
-
-    phase_config = [
-        {
+    phase_config = {
+        'preflight': {
             'num': 0,
             'label': 'PRE-FLIGHT',
             'emoji': '🚀',
             'short': 'Pre-Flight',
             'year_class': 'year-label-1',
         },
-        {
+        'Phase 1': {
             'num': 1,
             'label': 'FOUNDATION REPAIR',
             'emoji': '⚡',
             'short': 'Foundation Repair',
             'year_class': 'year-label-1',
         },
-        {
+        'Phase 2': {
             'num': 2,
             'label': 'CLOUD & DISTRIBUTION',
             'emoji': '☁️',
             'short': 'Cloud & Distribution',
             'year_class': 'year-label-1',
         },
-        {
+        'Phase 3': {
             'num': 3,
             'label': 'DOCUMENTATION & PROOF',
             'emoji': '📋',
             'short': 'Documentation & Proof',
             'year_class': 'year-label-2',
         },
-        {
+        'Phase 4': {
             'num': 4,
             'label': 'KSA/GCC MARKET ENTRY',
             'emoji': '🎯',
             'short': 'KSA/GCC Market Entry',
             'year_class': 'year-label-2',
         },
-        {
+        'postsprint': {
             'num': 5,
             'label': 'POST-SPRINT',
             'emoji': '🔄',
             'short': 'Post-Sprint (Month 6–27)',
             'year_class': 'year-label-2',
         },
-    ]
+    }
+
+    def get_phase(section):
+        if section['type'] == 'preflight':
+            return phase_config['preflight']
+        elif section['type'] == 'postsprint':
+            return phase_config['postsprint']
+        else:
+            # Extract "Phase N" from title
+            m = re.match(r'(Phase \d+)', section['title'])
+            key = m.group(1) if m else None
+            return phase_config.get(key, phase_config['Phase 1'])
 
     total_weeks = sum(len(s['weeks']) for s in sections)
     total_days = sum(len(w['days']) for s in sections for w in s['weeks'])
 
-    # Build all nodes
     nodes_html = []
 
     for sec_idx, section in enumerate(sections):
-        phase = phase_config[sec_idx] if sec_idx < len(phase_config) else phase_config[-1]
+        phase = get_phase(section)
 
-        # Phase label (year-label on center spine)
+        # Phase label
         phase_id = f"phase{phase['num']}Label"
         phase_html = (
             f'    <div class="year-label {phase["year_class"]}" id="{phase_id}" '
@@ -182,12 +240,13 @@ def generate_html(sections):
         weeks = section['weeks']
         num_weeks = len(weeks)
 
-        # Single main-node per phase
+        # Main-node per phase
         phase_node_id = f"phase{phase['num']}"
+        day_count = sum(len(w['days']) for w in weeks)
         phase_details = escape_detail(
             f"{phase['emoji']} {phase['short']}|"
             f"⏱️ {num_weeks} week{'s' if num_weeks != 1 else ''}|"
-            f"📅 {sum(len(w['days']) for w in weeks)} study days"
+            f"📅 {day_count} items"
         )
 
         nodes_html.append(f'\n    <!-- PHASE {phase["num"]} BLOCK -->')
@@ -200,7 +259,7 @@ def generate_html(sections):
             f'    </div>'
         )
 
-        # Add weeks as sub-nodes (alternating left/right)
+        # Weeks as sub-nodes
         for w_idx, week in enumerate(weeks):
             week_num = week['num']
             week_id = f"w{week_num}"
@@ -208,7 +267,6 @@ def generate_html(sections):
 
             week_details = escape_detail(build_week_details(week))
             week_label = escape_detail(week['title'])
-
             has_days_class = ' has-days' if week['days'] else ''
 
             nodes_html.append(
@@ -219,27 +277,29 @@ def generate_html(sections):
                 f'    </div>'
             )
 
-            # Add day nodes
+            # Day nodes
             for day in week['days']:
                 day_id = f"{week_id}_d{day['num']}"
                 day_details = escape_detail(build_day_details(day))
 
-                # Short day label from morning session
-                day_label = day['morning'][:40] if day['morning'] else f"Day {day['num']}"
+                day_label = day['morning'][:40] if day['morning'] else f"Item {day['raw_num']}"
                 if day['morning'] and len(day['morning']) > 40:
                     day_label = day_label[:37] + '...'
                 day_label = escape_detail(day_label)
+
+                # Use raw_num for display (shows "0", "7–9", etc.)
+                display_num = day['raw_num']
 
                 nodes_html.append(
                     f'    <div class="node day-node" id="{day_id}" '
                     f'data-parent="{week_id}" data-side="{side}"\n'
                     f'      data-details="{day_details}">\n'
-                    f'      Day {day["num"]} — {day_label}\n'
+                    f'      Day {display_num} — {day_label}\n'
                     f'    </div>'
                 )
 
-        # Add milestones after key phases
-        if sec_idx == 2:  # After Phase 2 (Cloud & Distribution)
+        # Milestones
+        if phase['num'] == 2:
             nodes_html.append(
                 f'    <div class="node milestone-node" id="milestone_cloud" '
                 f'data-parent="{phase_node_id}" data-side="center"\n'
@@ -247,7 +307,7 @@ def generate_html(sections):
                 f'      🎉 Cloud & Industrial Foundation Complete\n'
                 f'    </div>'
             )
-        elif sec_idx == 3:  # After Phase 3 (Documentation & Proof)
+        elif phase['num'] == 3:
             nodes_html.append(
                 f'    <div class="node milestone-node" id="milestone_portfolio" '
                 f'data-parent="{phase_node_id}" data-side="center"\n'
@@ -354,13 +414,12 @@ def generate_html(sections):
 def main():
     sections = parse_roadmap('roadmap.txt')
 
-    # Debug output
     total_weeks = sum(len(s['weeks']) for s in sections)
     total_days = sum(len(w['days']) for s in sections for w in s['weeks'])
     print(f"Parsed {len(sections)} sections, {total_weeks} weeks, {total_days} days")
 
     for i, sec in enumerate(sections):
-        print(f"  Section {i+1}: {sec['title']} — {len(sec['weeks'])} weeks")
+        print(f"  Section {i+1}: {sec['title']} ({sec['type']}) — {len(sec['weeks'])} weeks")
         for w in sec['weeks']:
             print(f"    Week {w['num']}: {w['title']} — {len(w['days'])} days")
 
